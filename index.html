@@ -41,12 +41,12 @@ font-family: "Big Shoulders Stencil", sans-serif;
     
    .page-wrapper p {
     margin-bottom: 25px;
-    font-size: 32px;
+    font-size: 22px;
     color: #fff;
     letter-spacing: 1px;
-    z-index: 1;
+        z-index: 1;
     position: relative;
-    line-height: 1.4;
+    line-height: 1.9em;
     font-weight: 400;
     font-family: "Big Shoulders", sans-serif;
    }
@@ -115,7 +115,7 @@ font-family: "Big Shoulders Stencil", sans-serif;
    .page-wrapper h2 {
     font-family: "Big Shoulders", sans-serif;
     font-size: 58px;
-    transform: scale(1.5);
+    transform: scale(1.1);
     color: #f85396;
     transform-origin: left;
    }
@@ -140,13 +140,13 @@ font-family: "Big Shoulders Stencil", sans-serif;
     
    }
    .page-wrapper h6 {
-           color: #ffffff;
-    font-size: 38px;
+        color: #ffffff;
+    font-size: 30px;
     opacity: 1;
     font-family: "Big Shoulders", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     z-index: 1;
     position: relative;
    }
@@ -276,20 +276,135 @@ font-family: "Big Shoulders Stencil", sans-serif;
     margin-left: 7%;
    }
    .page-wrapper .aboutSection p{
-        font-size: 38px;
+    font-size: 38px;
     color: #a8a7a1;
     font-weight: 400;
-    margin-top: 75px;
+    margin-top: 45px; 
     line-height: 1.6;
     letter-spacing: 1px;
    }
    .page-wrapper .rightContent {
     margin-left: 50px;
    }
+   .page-wrapper .aboutSection {
+    padding: 100px 0;
+    /* background-color: #fefdce; */
+    background-color: #000;
+   }
+   .page-wrapper .aboutSection:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1764050127phprNNtcK.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.04;
+   }
+   .page-wrapper .milkshakeSection {
+    padding: 100px 0;
+   }
+   .page-wrapper .drinkImg img {
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding-top: 70px;
+   }
+   .page-wrapper .drinkImg::after {
+    content: '';
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    width: 600px;
+    height: 300px;
+    background: #f7408b;
+    border-radius: 100% 100% 0 0;
+    z-index: -1;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    transform: scale(1.9) translateX(-50%);
+    transform-origin: top left;
+
+   }
+   .page-wrapper .shakeImgOne {
+        position: absolute;
+    width: 360px;
+    bottom: 50px;
+   }
+   .page-wrapper .shakeImgTwo {
+        position: absolute;
+    width: 100%;
+    max-width: 400px;
+    right: 0;
+    top: 100px;
+   }
+   .page-wrapper .gallerySection {
+        padding: 100px 0;
+    background: #34b2cd;
+    border-radius: 100px 100px 0 0;
+   }
+   .page-wrapper .gallerySection h2 {
+    transform: scale(1.5);
+    color: #ffffff00;
+    text-align: center;
+    transform-origin: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 900;
+   }
+   .page-wrapper .galleryImg.one {
+        border-radius: 50% 50% 0;
+   }
+   .page-wrapper .galleryImg.two {
+        border-radius: 50% 50% 0 0;
+   }
+   .page-wrapper .galleryImg.three {
+        border-radius: 50% 50% 50% 0;
+   }
+   .page-wrapper .galleryImg.four {
+        border-radius: 50% 50% 0;
+   }
+   .page-wrapper .galleryImg {
+    filter: drop-shadow(2px 4px 6px #0000006b);
+    border: 5px solid #fff;
+   }
+   .page-wrapper .orderBtn.two {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #292929;
+    font-weight: 700;
+   }
+   .page-wrapper .galleryContainer {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .page-wrapper .galleryContainer:hover .orderBtn.two{
+        background: #fbd800;
+        transition: all 0.2s linear;
+   }
+   .page-wrapper .galleryContainer:hover .galleryImg{
+    border: 5px solid #fbd800;
+        transition: all 0.2s linear;
+   }
 
 /* RESPONSIVE VIEW */
 
-    @media(min-width:1200px){
+   
+/* RESPONSIVE VIEW */
+
+@media(min-width:1200px){
         .page-wrapper .container{
             max-width: 1140px;
         }
@@ -318,8 +433,8 @@ font-family: "Big Shoulders Stencil", sans-serif;
             font-size: 22px;
         }
         .page-wrapper .aboutSection p {
-                font-size: 32px; 
-    margin-top: 45px;
+            font-size: 30px;
+            margin-top: 35px;
         }
         .page-wrapper .orderBtn {
                 font-size: 20px;
@@ -352,6 +467,34 @@ font-family: "Big Shoulders Stencil", sans-serif;
 }
 .page-wrapper h3 {
     font-size: 50px;
+}
+.page-wrapper .textSection {
+    margin-bottom: 75px;
+}
+.page-wrapper .drinkImg img {
+    max-width: 600px; 
+    padding-top: 70px;
+}
+.page-wrapper .drinkImg::after {
+    transform: scale(1.6) translateX(-50%);
+}
+.page-wrapper .shakeImgOne { 
+    width: 300px;
+    bottom: 50px;
+}
+.page-wrapper .shakeImgTwo { 
+    max-width: 300px; 
+    top: 50px;
+}
+.page-wrapper .gallerySection {
+    padding: 80px 0; 
+    border-radius: 80px 80px 0 0;
+}
+.page-wrapper .gallerySection h2 {
+        transform: scale(1.2);
+}
+.page-wrapper .orderBtn.two {
+    font-size: 27px;
 }
     }
 
@@ -393,6 +536,51 @@ font-family: "Big Shoulders Stencil", sans-serif;
     }
         .page-wrapper .headerImgThree {
         width: 170px; 
+    }
+    .page-wrapper .textSection {
+        margin-bottom: 55px;
+        padding: 25px 0;
+    }
+    .page-wrapper .aboutSection {
+        padding: 75px 0;
+    }
+    .page-wrapper .leftImgParent {
+        justify-content: center;
+    }
+    .page-wrapper .leftImgOne {
+        transform: rotate(0deg);
+    }
+    .page-wrapper .leftImgTwo {
+        transform: rotate(0deg);
+          margin-top: 0; 
+    }
+    .page-wrapper .leftImgThree {
+        margin-top: 25px;
+        margin-left: 0;
+        transform: rotate(0deg);
+    }
+    .page-wrapper .shakeImgOne {
+        width: 250px; 
+    } 
+    .page-wrapper .shakeImgTwo {
+        max-width: 250px; 
+    }
+    .page-wrapper .drinkImg img {
+        max-width: 500px; 
+    }
+    .page-wrapper .drinkImg::after {
+        transform: scale(1.5) translateX(-50%);
+    }
+        .page-wrapper .gallerySection {
+        padding: 50px 0;
+        border-radius: 40px 40px 0 0;
+    }
+        .page-wrapper .gallerySection h2 { 
+        margin-bottom: 30px;
+    }
+        .page-wrapper .orderBtn.two {
+        font-size: 22px;
+        margin-top: 20px;
     }
     }
 
@@ -451,6 +639,39 @@ font-family: "Big Shoulders Stencil", sans-serif;
         .page-wrapper .aboutSection p {
         font-size: 19px;
         margin-top: 15px;
+    }
+    .page-wrapper .leftImgOne {
+        border-radius: 0px 40px 40px;
+    }
+    .page-wrapper .leftImgTwo {
+        border-radius: 40px 0 40px 40px;
+    }
+    .page-wrapper .leftImgThree {
+        border-radius: 40px 40px 40px 0;
+    }
+    .page-wrapper .shakeImgOne {
+        width: 180px;
+    }
+    .page-wrapper .shakeImgTwo {
+        max-width: 180px;
+    }
+    .page-wrapper .drinkImg img {
+        max-width: 400px;
+    }
+    .page-wrapper .drinkImg::after {
+        transform: scale(1.2) translateX(-50%);
+    }
+    .page-wrapper .galleryImg.three, .page-wrapper .galleryImg.one {
+            border-radius: 50% 50% 0 0;
+    }
+    .page-wrapper .galleryContainer {
+        margin-bottom: 50px;
+    }
+    .page-wrapper .orderBtn.two {
+        margin-top: 15px;
+    }
+    .page-wrapper .gallerySection {
+                padding: 50px 0 0;
     }
     }
 
@@ -546,6 +767,25 @@ content: '';
         font-size: 19px;
         margin-top: 15px;
     }
+    .page-wrapper .textSection {
+        padding: 20px 0;
+        margin-bottom: 40px;
+    }
+    .page-wrapper .shakeImgOne {
+        width: 160px;
+    }
+    .page-wrapper .shakeImgTwo {
+        max-width: 160px;
+    }
+    .page-wrapper .drinkImg img {
+        max-width: 350px;
+    }
+    .page-wrapper .drinkImg::after {
+        transform: scale(0.9) translateX(-50%);
+    }
+        .page-wrapper .gallerySection h2 {
+        transform: scale(1.0);
+    }
     }
 
     @media (max-width:575px)
@@ -565,6 +805,11 @@ content: '';
         padding: 5px 12px;
         border-radius: 5px;
     }
+        .page-wrapper .galleryContainer {
+        max-width: 350px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
     .page-wrapper .headerImgOne {
         height: 100%;
         width: 100%;
@@ -579,7 +824,7 @@ content: '';
         gap: 20px;
         width: 100%;
     }
-    .page-wrapper .headerImgTwo {
+    .page-wrapper .headerImgTwoParent {
                 max-width: 450px;
         margin: auto;
         display: flex;
@@ -590,9 +835,11 @@ content: '';
     width: 90px;
     }
     .page-wrapper .paymentSection {
-    padding: 50px 0px;
-    width: 90%;
-    margin: auto;
+        padding: 50px 0px;
+        width: 90%;
+        max-width: 300px;
+        margin: auto;
+        position: relative;
 } 
 .page-wrapper .paymentContainer.two::after {
     border-radius: 0;
@@ -610,6 +857,44 @@ content: '';
     font-size: 28px;
     letter-spacing: 5px;
 }
+.page-wrapper .leftImgOne {
+        border-radius: 0px 20px 20px;
+    }
+    .page-wrapper .leftImgTwo {
+        border-radius: 20px 0 20px 20px;
+    }
+    .page-wrapper .leftImgThree {
+        border-radius: 20px 20px 20px 0;
+    }
+    .page-wrapper .aboutSection {
+        padding: 50px 0;
+    }
+    .page-wrapper h2 {
+        font-size: 30px;
+    }
+    .page-wrapper .rightContent {
+        margin-top: 40px;
+    }
+        .page-wrapper .shakeImgTwo {
+        max-width: 100px;
+        z-index: -2;
+    }
+        .page-wrapper .shakeImgOne {
+        width: 100px;
+    }
+    .page-wrapper .drinkImg img {
+        padding-top: 15px;
+    }
+        .page-wrapper .drinkImg::after {
+        transform: scale(0.9) translateX(-50%);
+        width: 100%;
+        height: 25%;
+        top: unset;
+        bottom: 50px;
+        border-bottom-left-radius: 300px;
+        border-bottom-right-radius: 300px;
+        filter: drop-shadow(2px 4px 6px);
+    }
     }
     
     @media (max-width:375px)
@@ -655,7 +940,7 @@ content: '';
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
-            <div>
+            <div class="headerImgTwoParent">
                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763967603phpLRqmlA.png" class="img-fluid headerImgTwo" alt="">
 
                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763967768phpZg3ogm.jpg" class="img-fluid headerImgThree" alt="">
@@ -712,27 +997,73 @@ content: '';
     </h3>
 </section>
 
-<section class="aboutSection">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="leftImgParent">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpkuYFas.jpg" class="img-fluid leftImgOne" alt="">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpkuYFas.jpg" class="img-fluid leftImgTwo" alt="">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpkuYFas.jpg" class="img-fluid leftImgThree" alt="">
+    <section class="aboutSection">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="leftImgParent">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpkuYFas.jpg" class="img-fluid leftImgOne" alt="">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpkuYFas.jpg" class="img-fluid leftImgTwo" alt="">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpkuYFas.jpg" class="img-fluid leftImgThree" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="rightContent">
+                        <h2>
+                            Handmade with Love, <br> Served with Joy!
+                        </h2>
+                        <p>
+                            Satisfy your sweet tooth from the comfort of your home with Domain930 Do not Touch in . Our freshly made desserts are perfect for any occasion—whether it's a midweek treat, a family gathering, or a late-night craving. Order now and let us bring the sweetness to you!
+                        </p>
+                        <a class="orderBtn" href="/order-now">
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="rightContent">
-                    <h2>
-                        Handmade with Love, <br> Served with Joy!
-                    </h2>
-                    <p>
-                        Satisfy your sweet tooth from the comfort of your home with Domain930 Do not Touch in . Our freshly made desserts are perfect for any occasion—whether it's a midweek treat, a family gathering, or a late-night craving. Order now and let us bring the sweetness to you!
-                    </p>
-                    <a class="orderBtn" href="/order-now">
-                        Order Now
-                    </a>
+        </div>
+    </section>
+
+<section class="milkshakeSection">
+
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1764050819phpYevINP.png" class="img-fluid shakeImgOne" alt="">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1764050819phpDSmMmC.png" class="img-fluid shakeImgTwo" alt="">
+
+    <div class="container">
+        <div class="drinkImg">
+            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763627617phpS1wcxA.png" class="img-fluid" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="gallerySection">
+    <div class="container">
+        <h2>
+            Sweet Treats That Melt in Your Mouth!
+        </h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="galleryContainer">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpyX63Xm.jpg" class="img-fluid galleryImg one" alt="">
+                    <a href="/order-now" class="orderBtn two"> Order Now </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="galleryContainer">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpyX63Xm.jpg" class="img-fluid galleryImg two" alt="">
+                    <a href="/order-now" class="orderBtn two"> Order Now </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="galleryContainer">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpyX63Xm.jpg" class="img-fluid galleryImg three" alt="">
+                    <a href="/order-now" class="orderBtn two"> Order Now </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="galleryContainer">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763976867phpyX63Xm.jpg" class="img-fluid galleryImg two" alt="">
+                    <a href="/order-now" class="orderBtn two"> Order Now </a>
                 </div>
             </div>
         </div>
