@@ -590,6 +590,9 @@ content: '';
         .page-wrapper h3 {
         font-size: 30px;
     }
+        .page-wrapper h4 {
+        font-size: 20px;
+    }
         .page-wrapper .spanOne {
         margin: 20px 0 15px;
         transform-origin: center;
@@ -601,6 +604,32 @@ content: '';
     }
     .page-wrapper .headerContent {
         text-align: center;
+    }
+        .page-wrapper .paymentSection {
+        padding: 100px 0 60px;
+    }
+        .page-wrapper .paymentContainer {
+        width: 240px;
+        height: 240px;
+        padding: 30px 20px 0;
+    }
+        .page-wrapper .paymentImg {
+height: 75px;
+        width: 75px;
+        padding: 15px;
+        border: 2px solid var(--white-color);
+        top: -35px;
+    }
+        .page-wrapper .paymentContainer p {
+        font-size: 13px;
+    }
+        .page-wrapper .serviceSection {
+        padding: 70px 0 25px;
+    }
+        .page-wrapper .serviceContent::after {
+        width: 240px;
+        height: 240px;
+        top: -30px;
     }
     }
 
@@ -623,6 +652,59 @@ content: '';
         transform-origin: center;
         padding-top: 6px;
         transform: scale(1.3);
+    }
+        .page-wrapper .aboutSection {
+        padding: 70px 0 80px;
+    }
+    .page-wrapper .slantingTxt {
+            line-height: 1.5;
+    font-size: 35px;
+    letter-spacing: 0;
+    text-align: center;
+    transform: unset;
+        writing-mode: unset;
+    }
+    .page-wrapper .aboutContent {
+            position: relative;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 50px;
+            padding: 35px 15px 10px;
+        border-radius: 25px;
+    }
+        .page-wrapper .aboutContent::after {
+        width: 45px;
+        height: 45px;
+        top: -25px;
+    }
+    .page-wrapper .slantingTxt.two {
+        display: none;
+    }
+    .page-wrapper .paymentContainer {
+        margin: auto;
+        margin-bottom: 70px;
+    }
+    .page-wrapper .serviceContent { 
+    max-width: 280px;
+    margin: auto;
+}
+    .page-wrapper .serviceContent::after {
+        width: 200px;
+        height: 200px;
+        top: -30px;
+        opacity: 0.7;
+    }
+        .page-wrapper .serviceSection {
+        padding: 75px 0 75px;
+    }
+    .page-wrapper .serviceSection .row {
+        padding-left: 0;
+    }
+        .page-wrapper .galleryContainer {
+        transform: rotate(0deg);
+        max-width: 350px;
+        margin: auto;
+        margin-bottom: 50px;
     }
     }
     
@@ -684,7 +766,7 @@ content: '';
                         About Us
                     </p>
                 </div>
-                <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="col-lg-5 col-md-5 col-sm-7">
                     <div class="aboutContent">
                         <p>
                             Hunger shouldn't slow you down! {TAKEAWAY NAME} , {TAKEAWAY TOWN} brings you fresh, flavourful meals fast—no long waits, no hassle.
@@ -699,7 +781,7 @@ content: '';
     <section class="paymentSection">
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="paymentContainer">
                         <div class="paymentImg">
                             <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
@@ -712,7 +794,7 @@ content: '';
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="paymentContainer">
                         <div class="paymentImg">
                             <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
@@ -725,7 +807,7 @@ content: '';
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="paymentContainer mb-0">
                         <div class="paymentImg">
                             <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
@@ -745,7 +827,7 @@ content: '';
     <section class="serviceSection">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-8">
+                <div class="col-lg-6 col-md-8 col-sm-8">
                     <div class="serviceContent">
                         <h2>
                             Our <br> Services
@@ -766,7 +848,7 @@ content: '';
                 Our Menu
             </h3>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="galleryContainer">
                         <div class="galleryImg">
                             <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
@@ -776,7 +858,7 @@ content: '';
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="galleryContainer">
                         <div class="galleryImg">
                             <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
@@ -786,8 +868,8 @@ content: '';
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="galleryContainer mb-md-0">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="galleryContainer mb-sm-0">
                         <div class="galleryImg">
                             <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
                         </div>
@@ -796,8 +878,8 @@ content: '';
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="galleryContainer mb-0">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="galleryContainer mb-sm-0 mb-0">
                         <div class="galleryImg">
                             <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
                         </div>
