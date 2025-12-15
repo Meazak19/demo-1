@@ -8,7 +8,8 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;family=Outfit:wght@100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -16,8 +17,7 @@
 <!--swiper-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
-
-
+ 
 <style type="text/css">
 
 
@@ -30,7 +30,7 @@ font-family: "Afacad Flux", sans-serif;
 */  
 
     body .page-wrapper { 
-    font-family: "Poppins", sans-serif; 
+    font-family: "Jost", sans-serif; 
     line-height: 24px; 
     overflow: hidden; 
     scroll-behavior: smooth; 
@@ -43,12 +43,14 @@ font-family: "Afacad Flux", sans-serif;
     --purple-color: #341a9c;
     --purple-light-color: #6857e3;
     --pink-color: #ff9cee;
+    background-image: url('https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765804893phpdZMvRH.png');
+    background-size: contain;
     } 
     
    .page-wrapper p {
     margin-bottom: 25px;
     font-size: 30px;
-   font-family: "Poppins", sans-serif;
+   font-family: "Jost", sans-serif;
     color: #fbf0e0;
     letter-spacing: 2px;
     line-height: 1.5;
@@ -60,7 +62,7 @@ font-family: "Afacad Flux", sans-serif;
    }
    .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
    line-height: 1.3;
-    font-family: "Montserrat", sans-serif;
+   font-family: "Outfit", sans-serif;
    }
    .page-wrapper .row {
    margin: 0 -15px!important;
@@ -129,7 +131,7 @@ font-size: 95px;
     color: var(--purple-light-color);
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     }
    .page-wrapper h4 {
     font-size: 40px;
@@ -177,12 +179,14 @@ font-size: 95px;
         z-index: 1;
     position: relative;
    }
+   
    .page-wrapper .headerSection {
         min-height: 95vh;
     align-items: center;
     justify-content: center;
     display: flex;
     padding: 100px 0;
+        background: #ffffffe3;
    }
    .page-wrapper .backgroundBg::after {
     content: '';
@@ -195,6 +199,9 @@ font-size: 95px;
     z-index: 0;
     transform: scaleX(49.5) scaleY(1.1);
 
+   }
+   .page-wrapper .poppins {
+    font-family: "Poppins", sans-serif;
    }
 
    /* About Section */
@@ -258,6 +265,19 @@ font-size: 95px;
    }
 
    /* Payment Section */
+   .page-wrapper .paymentSection::after {
+    content: '';
+    background-image: url('https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765804893phpCt1NhO.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+   }
 
    .page-wrapper .paymentSection {
     padding: 150px 0 100px;
@@ -332,7 +352,7 @@ content: '';
    /* Gallery Section */
    .page-wrapper .menuSection {
     padding: 100px 0;
-    background: #fff;
+    background: #ffffff9e;
     text-align: center;
    }
    .page-wrapper .galleryContainer {
@@ -737,7 +757,7 @@ height: 75px;
                             Every bite is a 
                             <span class="backgroundBg">
                                 <span class="spanOne"> Moment Of </span>
-                                <span class="spanTwo"> Pure Bliss </span>
+                                <span class="spanTwo poppins"> Pure Bliss </span>
                             </span>
                         </h1>
                         <a href="/order-now" class="orderBtn">
@@ -757,7 +777,7 @@ height: 75px;
         <div class="container">
             <div class="row">
                 <div class="col-lg-1 col-md-1 col-sm-1">
-                    <p class="slantingTxt two">
+                    <p class="slantingTxt two poppins">
                         About Us
                     </p>
                 </div>
@@ -769,7 +789,7 @@ height: 75px;
                 <div class="col-lg-5 col-md-5 col-sm-7">
                     <div class="aboutContent">
                         <p>
-                            Hunger shouldn't slow you down! {TAKEAWAY NAME} , {TAKEAWAY TOWN} brings you fresh, flavourful meals fast—no long waits, no hassle.
+                            Hunger shouldn't slow you down! TEMP-1069-Kabana - 879533  GB ,  brings you fresh, flavourful meals fast—no long waits, no hassle.
                             From {Dish Name 1} to {Dish Name 2} , every dish is made to order, ensuring it's hot, delicious, and just the way you like it.
                         </p>
                     </div>
@@ -784,7 +804,7 @@ height: 75px;
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="paymentContainer">
                         <div class="paymentImg">
-                            <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
                         </div>
                         <h4>
                             Order in <br> Seconds
@@ -797,7 +817,7 @@ height: 75px;
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="paymentContainer">
                         <div class="paymentImg">
-                            <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
                         </div>
                         <h4>
                             Order in <br> Seconds
@@ -810,7 +830,7 @@ height: 75px;
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="paymentContainer mb-0">
                         <div class="paymentImg">
-                            <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
                         </div>
                         <h4>
                             Order in <br> Seconds
@@ -833,7 +853,7 @@ height: 75px;
                             Our <br> Services
                         </h2>
                         <p>                          
-                            Looking for the best takeaway in {TAKEAWAY TOWN}? At {TAKEAWAY NAME}, we're here to serve you delicious food, whether you need a quick bite, a family meal, or catering for a special occasion.            
+                            Looking for the best takeaway in ? At TEMP-1069-Kabana - 879533  GB, we're here to serve you delicious food, whether you need a quick bite, a family meal, or catering for a special occasion.            
                         </p>
                         <a href="http://">Order Now</a>
                     </div>
@@ -851,7 +871,7 @@ height: 75px;
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="galleryContainer">
                         <div class="galleryImg">
-                            <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
                         </div>
                         <p class="galleryTxt">
                             Cookie Dough
@@ -861,7 +881,7 @@ height: 75px;
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="galleryContainer">
                         <div class="galleryImg">
-                            <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
                         </div>
                         <p class="galleryTxt">
                             Cookie Dough
@@ -871,7 +891,7 @@ height: 75px;
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="galleryContainer mb-sm-0">
                         <div class="galleryImg">
-                            <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
                         </div>
                         <p class="galleryTxt">
                             Cookie Dough
@@ -881,7 +901,7 @@ height: 75px;
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="galleryContainer mb-sm-0 mb-0">
                         <div class="galleryImg">
-                            <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
                         </div>
                         <p class="galleryTxt">
                             Cookie Dough
@@ -956,3 +976,13 @@ height: 75px;
 </body>
 </html>
  
+
+
+<!-- 
+ 
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765804893phpCt1NhO.png 
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765804893phpdZMvRH.png
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765805338php7oRewr.jpg 
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765805386phpzZgwZ9.jpg
+ 
+ -->
