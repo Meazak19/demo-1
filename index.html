@@ -8,8 +8,7 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;family=Outfit:wght@100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -21,16 +20,13 @@
 <style type="text/css">
 
 
-/* 
-
-font-family: "Marcellus", serif; 
-font-family: "Afacad", sans-serif;
-font-family: "Afacad Flux", sans-serif;
-
-*/  
+    /* font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Big Shoulders', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif; */
+ 
 
     body .page-wrapper { 
-    font-family: "Jost", sans-serif; 
+    font-family: 'Bebas Neue', sans-serif; 
     line-height: 24px; 
     overflow: hidden; 
     scroll-behavior: smooth; 
@@ -43,18 +39,16 @@ font-family: "Afacad Flux", sans-serif;
     --purple-color: #341a9c;
     --purple-light-color: #6857e3;
     --pink-color: #ff9cee;
-    background-image: url('https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765804893phpdZMvRH.png');
-    background-size: contain;
     } 
     
    .page-wrapper p {
-    margin-bottom: 25px;
+   margin-bottom: 25px;
     font-size: 30px;
-   font-family: "Jost", sans-serif;
     color: #fbf0e0;
     letter-spacing: 2px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
    }
 
    .page-wrapper p > a {
@@ -62,7 +56,7 @@ font-family: "Afacad Flux", sans-serif;
    }
    .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
    line-height: 1.3;
-   font-family: "Outfit", sans-serif;
+   font-family: "Big Shoulders", sans-serif;
    }
    .page-wrapper .row {
    margin: 0 -15px!important;
@@ -113,283 +107,265 @@ font-family: "Afacad Flux", sans-serif;
    }
 
    .page-wrapper h1 {
-    font-size: 100px;
+font-size: 100px;
     font-weight: 800;
+    letter-spacing: 0px;
     text-transform: uppercase;
     color: var(--blue-color);
-    margin-bottom: 60px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    -webkit-text-stroke: 1px var(--white-color);
+    -webkit-text-fill-color: transparent;
    }
-   .page-wrapper h2 {
-font-size: 95px;
-    color: #fbf0e0;
-    margin-bottom: 20px;
+    .page-wrapper h1 span{ 
+    font-size: 60px;
     font-weight: 800;
-    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: #000;
+    -webkit-text-stroke: 0;
+    -webkit-text-fill-color: #000;
+    display: block;
+    margin-bottom: -20px;
+    }
+   .page-wrapper h2 {
+    font-size: 90px;
+    color: #ed0200;
+    margin-bottom: 20px;
+    font-weight: 600;
    }
    .page-wrapper h3 {
-font-size: 95px;
-    color: var(--purple-light-color);
+font-size: 70px;
+    color: #fff;
     font-weight: 900;
     text-transform: uppercase;
-    padding-bottom: 50px;
     }
    .page-wrapper h4 {
-    font-size: 40px;
-    margin-bottom: 15px;
-    line-height: 1.2;
-    color: var(--purple-color);
-    font-weight: 800;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 900;
     text-transform: uppercase;
    }
    .page-wrapper h5 {
-     font-family: "Marcellus", serif;
-    color: #000;
+   color: #ed0200;
     font-size: 40px;
     text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 30px;
-    transition: all 0.2s linear;
-
-    /*  */
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-    letter-spacing: 8px;
-    font-size: 50px;
-    margin: 0;
-    color: #fff;
-    font-weight: 100;
+    font-weight: 500;
    }
-   .page-wrapper .spanOne {
-    color: var(--white-color);
-    transform: scale(1.5);
-    display: block;
-    transform-origin: left;
-    margin: 30px 0;
-        z-index: 1;
-    position: relative;
-   }
-   .page-wrapper .backgroundBg {
-        position: relative;
-    display: block;
-   }
-   .page-wrapper .spanTwo {
-        -webkit-text-stroke: 1px var(--white-color);
-    -webkit-text-fill-color: transparent;
-        z-index: 1;
-    position: relative;
-   }
-   
    .page-wrapper .headerSection {
-        min-height: 95vh;
+    background: linear-gradient(90deg, #a61208 0%, #e8ab36 100%);
+    padding: 100px 0;
+   }
+   .page-wrapper .orderBtn {
+        font-size: 32px;
+    font-weight: 500;
+    color: #b83c17;
+    background: #000000;
+    padding: 20px 30px;
+    display: inline-block;
+    font-family: "Big Shoulders", sans-serif;
+   }
+   .page-wrapper .orderBtn.two {
+        background: #ed0200;
+    color: #ffffff;
+   }
+   .page-wrapper .aboutSection {
+    background-color: #000;
+    padding: 100px 0;
+   }
+   .page-wrapper h2 span {
+        display: block;
+    -webkit-text-stroke: 2px #ed0200;
+    -webkit-text-fill-color: transparent;
+   line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 3px;
+   }
+
+   /* --- SVG Badge Styling --- */
+        .badge-wrapper {
+                position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    margin-right: 10%;
+    margin-left: auto;
+    border-radius: 50%;
+        }
+
+        .badge-svg {
+            width: 100%;
+            height: 100%;
+            animation: rotateBadge 20s linear infinite;
+            padding: 5px;
+        }
+
+        .inner-circle-static {
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    background-color: #ed0200;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-    padding: 100px 0;
-        background: #ffffffe3;
-   }
-   .page-wrapper .backgroundBg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--blue-color);
-    z-index: 0;
-    transform: scaleX(49.5) scaleY(1.1);
+    z-index: 5;
+        }
 
-   }
-   .page-wrapper .poppins {
-    font-family: "Poppins", sans-serif;
-   }
-
-   /* About Section */
-
-   .page-wrapper .aboutSection{  
-    background-image: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1754736365phpI1e4ma.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 100px 0;
-   }
-
-   .page-wrapper .aboutSection::after, .page-wrapper .serviceSection::after {  
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.5;
-    z-index: -1;
-   }
-   .page-wrapper .aboutSection .row {
-    justify-content: end;
-    align-items: center;
-   }
-   .page-wrapper .slantingTxt { 
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-    letter-spacing: 4px;
-    font-size: 110px;
-    line-height: 0;
-    margin: 0;
-    color: #fff;
-    font-weight: 900;
-    text-transform: uppercase;
-   }
-   .page-wrapper .slantingTxt.two {  
-    -webkit-text-stroke: 2px var(--white-color);
-    -webkit-text-fill-color: transparent;
-   }
-   .page-wrapper .aboutContent {
-    background: var(--orange-color);
-    padding: 100px 50px;
+        @keyframes rotateBadge {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .page-wrapper .svgTxt {
+        font-size: 19px;
+    letter-spacing: 1px;
+    font-family: 'Roboto Condensed', sans-serif;
+        }
+        .page-wrapper .dishName {
+                color: #d8842a;
+        }
+        .page-wrapper .gallerySection {
+                padding: 100px 0;
+    background: #e30000;
+    z-index: 2;        }
+        .page-wrapper .dishCard {
+                background: #000;
+    padding: 50px 30px;
+    border-radius: 0 250px 250px;
     text-align: center;
-    border-radius: 75px;
-   }
-
-   .page-wrapper .aboutContent::after {
-    content: '';
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75px;
-    height: 75px;
+        }
+        .page-wrapper .dishCard.two{
+            border-radius: 250px 250px 0 250px;
+        }
+        .page-wrapper .galleryImg {
+            border-radius: 50%;
+            margin-bottom: 25px;
+        }
+        .page-wrapper .cartImg {
+            background: #d8842a;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    background-color: var(--white-color);
-   }
-
-   /* Payment Section */
-   .page-wrapper .paymentSection::after {
-    content: '';
-    background-image: url('https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765804893phpCt1NhO.png');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
+        }
+        .page-wrapper .patternSection {
+                background: #000;
+    padding: 400px 0;
+    text-align: center;
+        }
+        .page-wrapper .leftImg {
+            position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.1;
-   }
-
-   .page-wrapper .paymentSection {
-    padding: 150px 0 100px;
-    background: #E0F2FE;
-   }
-   .page-wrapper .paymentContainer {
-        display: flex;
+    left: 0; 
+    width: 200px;
+    transform: scale(4.0);
+        }
+        .page-wrapper .rightImg {
+            position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    transform: scale(4);
+        }
+        .page-wrapper .paymentSection {
+            z-index: 1;
+    background: #000;
+        }
+        .page-wrapper .paymentContainer {
+            display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--pink-color);
-    width: 430px;
-    height: 430px;
-    border-radius: 50%;
     text-align: center;
-    padding: 50px 40px 0;
-    filter: drop-shadow(1px 1px 10px #00000057);
-   }
-   .page-wrapper .paymentImg {
-    height: 175px;
-    width: 175px;
-    padding: 35px;
-    border: 10px solid var(--white-color);
-    border-radius: 50%;
-    background: var(--purple-light-color);
+    min-height: 750px;
+    color: red;
+        }
+        .page-wrapper .paymentContainer p {
+            color: red;
+        }
+        .page-wrapper .paymentImg {
+            width: 150px;
+            margin-bottom: 55px;
+        }
+        .page-wrapper .paymentContainer h5 {
+                transform: scale(1.5);
+    margin-bottom: 25px;
+        }
+        .page-wrapper .paymentContainer.two::after {
+                content: '';
     position: absolute;
-    top: -75px;
-   }
-   .page-wrapper .paymentImg img {
-    filter: invert(1);
-   }
-   .page-wrapper .paymentContainer p {
-    font-size: 22px;
-    color: var(--gray-color);
-    font-weight: 500;
-   }
-
-   /* Service Section */
-
-   .page-wrapper .serviceSection {
-        background-image: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1754736365phpI1e4ma.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 150px 0 100px;
-    text-align: center;
-    overflow: hidden;
-   }
-   .page-wrapper .serviceSection .row {
-    align-items: center;
-    justify-content: left;
-    padding-left: 10%;
-   }
-   .page-wrapper .serviceContent::after {
-content: '';
-    position: absolute;
-    top: -80px;
-    left: 50%;
-    transform: translateX(-50%) scale(1.8);
-    width: 500px;
-    transform-origin: top;
-    height: 500px;
-    background:var(--pink-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
     z-index: -1;
-    border-radius: 50%;
-   }
-   .page-wrapper .serviceContent {
-        position: relative;
-    z-index: 0;
-   }
+        }
+        .page-wrapper .paymentContainer.two h5, .page-wrapper .paymentContainer.two p{
+            color: #000;
+        }
+        .page-wrapper .lastSection {
+            background-color: #000;
+            padding: 100px 0;
+        }
 
-   /* Gallery Section */
-   .page-wrapper .menuSection {
-    padding: 100px 0;
-    background: #ffffff9e;
-    text-align: center;
-   }
-   .page-wrapper .galleryContainer {
-        background: var(--gray-color);
-    padding: 30px;
-    border-radius: 30px;
-    transform: rotate(-5deg);
-   }
-   .page-wrapper .galleryImg img {
-    border-radius: 30px;
-    transition: all 0.2s linear;
-
-   }
-   .page-wrapper .galleryTxt {
-        margin-bottom: 0;
-    padding: 15px 0 0;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0;
-    font-size: 33px;
-    color: var(--blue-color);
-        transition: all 0.2s linear;
-   }
-   .page-wrapper .galleryImg {
-        overflow: hidden;
-    border-radius: 30px;
-   }
-   .page-wrapper .galleryContainer:hover .galleryImg img{
-        transform: scale(1.1) rotate(5deg);
-        transition: all 0.2s linear;
-   }
-   .page-wrapper .galleryContainer:hover .galleryTxt{ 
-        letter-spacing: 1px;
-        transition: all 0.2s linear;
-   }
+        
+  .headerImg {
+    max-width: 350px;
+    margin: auto;
+  }
+ .circleImgOne {
+    filter: brightness(0) saturate(100%) invert(21%) sepia(75%) saturate(5909%) hue-rotate(348deg) brightness(93%) contrast(94%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -60%) scale(1.5);
+    z-index: -1;
+    animation: zoom-in 2s linear infinite;
+    width: 50%;
+ }
+ .circleImgTwo {
+    filter: brightness(0) saturate(100%) invert(21%) sepia(75%) saturate(5909%) hue-rotate(348deg) brightness(93%) contrast(94%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -60%) scale(1.8);
+    z-index: -1;
+    animation: zoom-out 2s linear infinite;
+    width: 50%;
+ }
+ @keyframes zoom-in {
+    from {
+              -webkit-transform: translate(-40%, -60%) scale(1.5);
+              transform: translate(-40%, -60%) scale(1.5);
+    }
+    to {
+       -webkit-transform: translate(-40%, -60%) scale(1.8);
+              transform: translate(-40%, -60%) scale(1.8);
+    }
+  }
+ @keyframes zoom-out {
+    from {
+              -webkit-transform: translate(-40%, -60%) scale(1.8);
+              transform: translate(-40%, -60%) scale(1.8);
+    }
+    to {
+       -webkit-transform: translate(-40%, -60%) scale(1.5);
+              transform: translate(-40%, -60%) scale(1.5);
+    }
+  }
+ .mobileInnerImg {
+    z-index: 1;
+    position: relative;
+ }
 
    /* BUTTON */
+
    
    /* BUTTON */
 
@@ -413,319 +389,27 @@ content: '';
 
     @media (max-width:1500px)
     {
-        .page-wrapper h1 {
-            font-size: 75px;
-        }
-        .page-wrapper h2 {
-            font-size: 72px;
-        }
-        .page-wrapper h3 {
-            font-size: 70px;
-        }
-        .page-wrapper h4 {
-            font-size: 32px;
-        }
-        .page-wrapper p {
-            font-size: 24px;
-        }
-        .page-wrapper .paymentContainer p {
-            font-size: 16px;
-        }
-        .page-wrapper .headerSection {
-                min-height: 90vh;
-        }
-        .page-wrapper .slantingTxt {
-            font-size: 90px;
-        }
-        .page-wrapper .aboutContent {
-                padding: 50px 50px 25px;
-        }
-        .page-wrapper .paymentContainer {
-            width: 350px;
-    height: 350px;
-    padding: 35px 35px 0;
-        }
-        .page-wrapper .paymentImg {
-                height: 125px;
-    width: 125px;
-    padding: 25px;
-    border: 8px solid var(--white-color);
-        top: -65px;
-        }
-            .page-wrapper p {
-        font-size: 22px;
-    } 
-    .page-wrapper .serviceContent::after {
-            width: 430px;
-    transform-origin: top;
-    height: 430px;
-    }
-    .page-wrapper .galleryTxt {
-        font-size: 23px;
-    }
+       
     }
 
     @media (max-width:1199px)
     { 
-            .page-wrapper h1 {
-        font-size: 50px;
-        margin-bottom: 45px;
-    }
-    .page-wrapper h2 {
-        font-size: 48px;
-    }
-        .page-wrapper h3 {
-        font-size: 46px;
-        margin-bottom: 35px;
-    }
-            .page-wrapper .headerSection {
-        min-height: 80vh;
-    } 
-    .page-wrapper .spanOne {
-            margin: 20px 0 15px;
-    }
-    .page-wrapper .aboutContent {
-        padding: 50px 50px 25px;
-    }
-        .page-wrapper p {
-        font-size: 18px;
-    }
-        .page-wrapper .slantingTxt {
-        font-size: 70px;
-    }
-        .page-wrapper .aboutContent {
-        padding: 50px 40px 25px;
-    }
-    .page-wrapper .paymentSection {
-            padding: 125px 0 80px;
-    }
-        .page-wrapper .paymentImg {
-        height: 105px;
-        width: 105px;
-        padding: 20px;
-        border: 5px solid var(--white-color);
-        top: -40px;
-    }
-        .page-wrapper h4 {
-        font-size: 26px;
-    }
-        .page-wrapper .paymentContainer p {
-        font-size: 14px;
-    }
-        .page-wrapper .paymentContainer {
-        width: 300px;
-        height: 300px;
-        padding: 50px 35px 0;
-    }
-        .page-wrapper p {
-        font-size: 16px;
-    }
-    .page-wrapper .serviceSection {
-            padding: 100px 0 75px;
-    }
-        .page-wrapper .serviceContent::after {
-        width: 350px;
-        height: 350px;
-        top: -50px;
-    }
-    .page-wrapper .galleryContainer {
-        padding: 20px;
-    }
-    
-.page-wrapper .galleryImg, .page-wrapper .galleryContainer, .page-wrapper .galleryImg img {
-        border-radius: 20px;
-}
-    .page-wrapper .galleryTxt {
-        font-size: 18px;
-    }
-    .page-wrapper .menuSection {
-        padding: 80px 0;
-    }
+        
     }
 
     @media (max-width:991px)
     {
-        .page-wrapper h1 {
-        font-size: 40px;
-        margin-bottom: 40px;
-    }
-        .page-wrapper h2 {
-        font-size: 38px;
-    }
-        .page-wrapper h3 {
-        font-size: 36px;
-    }
-        .page-wrapper p {
-        font-size: 14px;
-    }
-           .page-wrapper .headerSection {
-        min-height: 65vh;
-        padding: 75px 0;
-    }
-    .page-wrapper .aboutSection {
-            padding: 100px 0 80px;
-    }
-    .page-wrapper .slantingTxt {
-        font-size: 50px;
-    }
-        .page-wrapper .aboutContent {
-        padding: 50px 20px 15px;
-        border-radius: 50px;
-    }
-    .page-wrapper .aboutContent::after {
-            width: 65px;
-    height: 65px;
-        top: -35px;
-    }
-    .page-wrapper .paymentContainer {
-        margin-bottom: 25px;
-    }
-    .page-wrapper .serviceContent::after {
-        width: 320px;
-        height: 320px;
-        top: -50px; 
-    }
-    .page-wrapper .galleryContainer {
-            transform: rotate(0deg);
-    margin-bottom: 50px;
-    }
-        .page-wrapper .menuSection {
-        padding: 50px 0;
-    }
-        .page-wrapper .galleryTxt {
-        font-size: 22px;
-    }
+      
     }
 
     @media (max-width:767px)
     {
-            .page-wrapper h1 {
-        font-size: 35px;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-        .page-wrapper h2 {
-        font-size: 32px;
-    }
-        .page-wrapper h3 {
-        font-size: 30px;
-    }
-        .page-wrapper h4 {
-        font-size: 20px;
-    }
-        .page-wrapper .spanOne {
-        margin: 20px 0 15px;
-        transform-origin: center;
-        padding-top: 6px;
-    }
-            .page-wrapper .headerSection {
-        min-height: unset;
-        padding: 50px 0;
-    }
-    .page-wrapper .headerContent {
-        text-align: center;
-    }
-        .page-wrapper .paymentSection {
-        padding: 100px 0 60px;
-    }
-        .page-wrapper .paymentContainer {
-        width: 240px;
-        height: 240px;
-        padding: 30px 20px 0;
-    }
-        .page-wrapper .paymentImg {
-height: 75px;
-        width: 75px;
-        padding: 15px;
-        border: 2px solid var(--white-color);
-        top: -35px;
-    }
-        .page-wrapper .paymentContainer p {
-        font-size: 13px;
-    }
-        .page-wrapper .serviceSection {
-        padding: 70px 0 25px;
-    }
-        .page-wrapper .serviceContent::after {
-        width: 240px;
-        height: 240px;
-        top: -30px;
-    }
+        
     }
 
     @media (max-width:575px)
     {
-    .page-wrapper h1 {
-        font-size: 30px;
-        margin-bottom: 25px;
-        text-align: center;
-    }
-        .page-wrapper h2 {
-        font-size: 28px;
-    }
-        .page-wrapper h3 {
-        font-size: 26px;
-        margin-bottom: 25px;
-    }
-        .page-wrapper .spanOne {
-        margin: 10px 0 5px;
-        transform-origin: center;
-        padding-top: 6px;
-        transform: scale(1.3);
-    }
-        .page-wrapper .aboutSection {
-        padding: 70px 0 80px;
-    }
-    .page-wrapper .slantingTxt {
-            line-height: 1.5;
-    font-size: 35px;
-    letter-spacing: 0;
-    text-align: center;
-    transform: unset;
-        writing-mode: unset;
-    }
-    .page-wrapper .aboutContent {
-            position: relative;
-    max-width: 450px;
-    margin: auto;
-    margin-top: 50px;
-            padding: 35px 15px 10px;
-        border-radius: 25px;
-    }
-        .page-wrapper .aboutContent::after {
-        width: 45px;
-        height: 45px;
-        top: -25px;
-    }
-    .page-wrapper .slantingTxt.two {
-        display: none;
-    }
-    .page-wrapper .paymentContainer {
-        margin: auto;
-        margin-bottom: 70px;
-    }
-    .page-wrapper .serviceContent { 
-    max-width: 280px;
-    margin: auto;
-}
-    .page-wrapper .serviceContent::after {
-        width: 200px;
-        height: 200px;
-        top: -30px;
-        opacity: 0.7;
-    }
-        .page-wrapper .serviceSection {
-        padding: 75px 0 75px;
-    }
-    .page-wrapper .serviceSection .row {
-        padding-left: 0;
-    }
-        .page-wrapper .galleryContainer {
-        transform: rotate(0deg);
-        max-width: 350px;
-        margin: auto;
-        margin-bottom: 50px;
-    }
+        
     }
     
     @media (max-width:375px)
@@ -748,166 +432,182 @@ height: 75px;
 
 <div class="page-wrapper">
  
-    <section class="headerSection">
+  
+     <section class="headerSection">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12">
-                    <div class="headerContent">
-                        <h1>
-                            Every bite is a 
-                            <span class="backgroundBg">
-                                <span class="spanOne"> Moment Of </span>
-                                <span class="spanTwo poppins"> Pure Bliss </span>
-                            </span>
-                        </h1>
-                        <a href="/order-now" class="orderBtn">
-                            <span> <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765357749phpR6fTv4.png" class="img-fluid plusButton" alt=""></span>
-                            Order Now 
-                        </a>
- 
-
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="headerContent text-center"> 
+                        <h1> <span> Authentic Chinese Flavours </span> MADE FRESH DAILY!</h1>
+                        <a href="/order-now" class="orderBtn">ORDER NOW</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12"></div>
+                <div class="col-md-6 text-center">
+                    <div class="headerImg">
+                        <img src="./img1.png" alt="Noodle Bowl" class="img-fluid">
+    
+                        <img src="./circleImg.png" class="img-fluid circleImgOne" alt="">
+                        <img src="./circleImg.png" class="img-fluid circleImgTwo" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="aboutSection">
+     <section class="aboutSection">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-1 col-md-1 col-sm-1">
-                    <p class="slantingTxt two poppins">
-                        About Us
-                    </p>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-1">
-                    <p class="slantingTxt">
-                        About Us
-                    </p>
-                </div>
-                <div class="col-lg-5 col-md-5 col-sm-7">
-                    <div class="aboutContent">
-                        <p>
-                            Hunger shouldn't slow you down! TEMP-1069-Kabana - 879533  GB ,  brings you fresh, flavourful meals fast—no long waits, no hassle.
-                            From {Dish Name 1} to {Dish Name 2} , every dish is made to order, ensuring it's hot, delicious, and just the way you like it.
-                        </p>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 order-2 order-md-1">
+                    <div class="badge-wrapper mb-4">
+                    <svg class="badge-svg" viewBox="0 0 200 200">
+                        <defs>
+                            <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                        </defs>
+                        <text fill="white" class="svgTxt">
+                            <textPath href="#circlePath">
+                                SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="inner-circle-static">
+                        <i class="fas fa-utensils text-white fa-2x"></i>
                     </div>
                 </div>
+
+                    <img src="./img2.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-md-6 order-1 order-md-2">
+                    <h2>FROM TAKEAWAY<span>TO DINE-IN</span></h2>
+                    <p>Welcome to the company where the choice of authentic Chinese flavours is vast. Our menu is filled with high quality ingredients and traditional cooking methods to ensure every bite is a journey through China's rich culinary history.</p>
+                    <a href="/order-now" class="orderBtn two">ORDER NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallerySection">
+        <div class="container-fluid">
+        </div>
+        <div class="container">
+            <h4 class="text-center">BEST SELLING DISHES</h4>
+            <div class="row pt-lg-5">
+                <div class="col-lg-3 col-md-3">
+                    <div class="dishCard">
+                        <div class="dish-img-container">
+                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid w-100 galleryImg" alt="">
+                        </div>
+                        <p class="dishName">FRIED RICE</p>
+                        <div class="cartImg">
+                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765357749phpR6fTv4.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-lg-3 col-md-3">
+                    <div class="dishCard two">
+                        <div class="dish-img-container">
+                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid w-100 galleryImg" alt="">
+                        </div>
+                        <p class="dishName">FRIED RICE</p>
+                        <div class="cartImg">
+                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765357749phpR6fTv4.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-lg-3 col-md-3">
+                    <div class="dishCard">
+                        <div class="dish-img-container">
+                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid w-100 galleryImg" alt="">
+                        </div>
+                        <p class="dishName">FRIED RICE</p>
+                        <div class="cartImg">
+                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765357749phpR6fTv4.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-lg-3 col-md-3">
+                    <div class="dishCard two">
+                        <div class="dish-img-container">
+                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid w-100 galleryImg" alt="">
+                        </div>
+                        <p class="dishName">FRIED RICE</p>
+                        <div class="cartImg">
+                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765357749phpR6fTv4.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </section>
+
+     <section class="patternSection">
+        <img src="./img3.png" class="img-fluid leftImg" alt="">
+        <img src="./img3.png" class="img-fluid rightImg" alt="">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                
+                <div class="col-md-6">
+                    <h4>A PERFECT BLEND OF TRADITION & TASTE IN EVERY DISH!</h4>
+                    <a href="/order-now" class="orderBtn two">ORDER NOW</a>
+                </div> 
+
             </div>
         </div>
     </section>
 
     <section class="paymentSection">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="container-fluid">
+            <div class="row paymentRow">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="paymentContainer">
-                        <div class="paymentImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
-                        </div>
-                        <h4>
-                            Order in <br> Seconds
-                        </h4>
-                        <p>
-                            Paying is effortless, so you can focus on the food.
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763627577phpKYT9V9.png" class="img-fluid paymentImg" alt="Domain930 Do not Touch food">
+                        <h5>
+                            Order in Seconds
+                        </h5>
+                        <p class="mb-0">
+                            Choose from a variety of tasty options.
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="paymentContainer">
-                        <div class="paymentImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
-                        </div>
-                        <h4>
-                            Order in <br> Seconds
-                        </h4>
-                        <p>
-                            Paying is effortless, so you can focus on the food.
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="paymentContainer two">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763627577phpKYT9V9.png" class="img-fluid paymentImg" alt="Domain930 Do not Touch food">
+                        <h5>
+                            Order in Seconds
+                        </h5>
+                        <p class="mb-0">
+                            Choose from a variety of tasty options.
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="paymentContainer mb-0">
-                        <div class="paymentImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
-                        </div>
-                        <h4>
-                            Order in <br> Seconds
-                        </h4>
-                        <p>
-                            Paying is effortless, so you can focus on the food.
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="paymentContainer">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763627577phpKYT9V9.png" class="img-fluid paymentImg" alt="Domain930 Do not Touch food">
+                        <h5>
+                            Order in Seconds
+                        </h5>
+                        <p class="mb-0">
+                            Choose from a variety of tasty options.
                         </p>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </section>
-
-    <section class="serviceSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-8 col-sm-8">
-                    <div class="serviceContent">
-                        <h2>
-                            Our <br> Services
-                        </h2>
-                        <p>                          
-                            Looking for the best takeaway in ? At TEMP-1069-Kabana - 879533  GB, we're here to serve you delicious food, whether you need a quick bite, a family meal, or catering for a special occasion.            
-                        </p>
-                        <a href="http://">Order Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="menuSection">
+     <section class="lastSection">
         <div class="container">
-            <h3>
-                Our Menu
-            </h3>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="galleryContainer">
-                        <div class="galleryImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
-                        </div>
-                        <p class="galleryTxt">
-                            Cookie Dough
-                        </p>
-                    </div>
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 col-md-6">
+                    <h2>DIVE INTO A WORLD <span> OF AUTHENTIC CHINESE CUISINE </span> </h2>
+                    <p>Welcome to the company where the choice of authentic Chinese flavours is vast. Our menu is filled with high quality ingredients and traditional cooking methods to ensure every bite is a journey through China's rich culinary history.</p>
+                    <a href="/order-now" class="orderBtn two">ORDER NOW</a>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="galleryContainer">
-                        <div class="galleryImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
-                        </div>
-                        <p class="galleryTxt">
-                            Cookie Dough
-                        </p>
-                    </div>
+
+                <div class="col-lg-6 col-md-6">
+                   <img src="./img4.png" alt="" class="img-fluid">
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="galleryContainer mb-sm-0">
-                        <div class="galleryImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
-                        </div>
-                        <p class="galleryTxt">
-                            Cookie Dough
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="galleryContainer mb-sm-0 mb-0">
-                        <div class="galleryImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1722767878phpjaCEkO.jpg" class="img-fluid" alt="">
-                        </div>
-                        <p class="galleryTxt">
-                            Cookie Dough
-                        </p>
-                    </div>
-                </div> 
+                
             </div>
         </div>
     </section>
@@ -980,9 +680,7 @@ height: 75px;
 
 <!-- 
  
- https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765804893phpCt1NhO.png 
- https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765804893phpdZMvRH.png
- https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765805338php7oRewr.jpg 
- https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1765805386phpzZgwZ9.jpg
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1766147804phpA6QjXx.jpg 
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1766147905phpJSV6y6.png
  
  -->
