@@ -134,8 +134,8 @@ font-size: 100px;
     font-weight: 600;
    }
    .page-wrapper h3 {
-font-size: 70px;
-    color: #fff;
+    font-size: 55px;
+color: #fff;
     font-weight: 900;
     text-transform: uppercase;
     }
@@ -235,6 +235,20 @@ font-size: 70px;
     padding: 50px 30px;
     border-radius: 0 250px 250px;
     text-align: center;
+                transition: all 0.2s linear;
+        }
+        .page-wrapper .dishCard:hover {
+                background: #d8842a;
+                transition: all 0.2s linear;
+        }
+        .page-wrapper .dishCard:hover .dishName{ 
+            color: #000;
+        }
+        .page-wrapper .dishCard:hover .cartImg{ 
+            background-color: #000;
+        }
+        .page-wrapper .dishCard:hover .cartImg img{ 
+            filter: invert(1);
         }
         .page-wrapper .dishCard.two{
             border-radius: 250px 250px 0 250px;
@@ -388,12 +402,130 @@ font-size: 70px;
 
     @media (max-width:1500px)
     {
+        .page-wrapper h1 {
+            font-size: 78px;
+            margin-bottom: 15px;
+        }
+        .page-wrapper h2 {
+            font-size: 70px;
+        }
+        .page-wrapper h3 {
+            font-size: 55px;
+        }
+        .page-wrapper h4 {
+            font-size: 40px;
+        }
+        .page-wrapper h5 {
+            font-size: 32px;
+        }
+        .page-wrapper h1 span {
+            font-size: 46px;
+        }
+       .page-wrapper .headerSection {
+            padding: 80px 0;
+       }
+       .page-wrapper p {
+        font-size: 24px;
+       }
+       .page-wrapper .orderBtn {
+            font-size: 30px; 
+    padding: 15px 25px;
+       }
+       .page-wrapper .badge-wrapper {
+        width: 180px;
+    height: 180px;
+       }
+       .page-wrapper .badge-svg {
+        padding: 2px;
+       }
+       .page-wrapper .svgTxt {
+            font-size: 17px;
+    letter-spacing: 2px;
+       }
+       .page-wrapper .aboutSection {
+        padding: 80px 0;
+       }
+       .page-wrapper .inner-circle-static {
+        width: 100px;
+        height: 100px;
+       }
+       .page-wrapper .gallerySection {
+        padding: 80px 0;
+       }
+       .page-wrapper .patternSection {
+        padding: 300px 0;
+       }
+       .page-wrapper .leftImg, .page-wrapper .rightImg  {
+            width: 150px;
+       }
+       .page-wrapper .paymentContainer {
+        min-height: 600px;
+       }
        
+
     }
 
     @media (max-width:1199px)
     { 
-        
+        .page-wrapper h1 {
+        font-size: 65px;
+        margin-bottom: 15px;
+    }
+        .page-wrapper h2 {
+        font-size: 50px;
+    }
+    .page-wrapper h2 span {
+            -webkit-text-stroke: 1px #ed0200;
+    }
+        .page-wrapper h3 {
+        font-size: 45px;
+    }
+    .page-wrapper h4 {
+        font-size: 35px;
+    }
+        .page-wrapper h5 {
+        font-size: 28px;
+    }
+        .page-wrapper p {
+        font-size: 20px;
+    }
+        .page-wrapper h1 span {
+        font-size: 38px;
+        margin-bottom: -12px;
+    }
+        .page-wrapper .orderBtn {
+        font-size: 26px;
+        padding: 13px 20px;
+    }
+    .page-wrapper .headerSection {
+        padding: 60px 0;
+    }
+        .page-wrapper .badge-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+        .page-wrapper .inner-circle-static {
+        width: 90px;
+        height: 90px;
+    }
+    .page-wrapper .dishCard {
+        padding: 40px 20px;
+    }
+    .page-wrapper .dishName { 
+    font-size: 22px;
+}
+.page-wrapper .patternSection {
+        padding: 220px 0;
+    }
+    .page-wrapper .leftImg, .page-wrapper .rightImg {
+        width: 120px;
+    }
+    .page-wrapper .paymentContainer {
+        min-height: 550px;
+    }
+    .page-wrapper .paymentImg { 
+    margin-bottom: 35px;
+}
     }
 
     @media (max-width:991px)
@@ -488,7 +620,7 @@ font-size: 70px;
         <div class="container-fluid">
         </div>
         <div class="container">
-            <h4 class="text-center">BEST SELLING DISHES</h4>
+            <h3 class="text-center">BEST SELLING DISHES</h3>
             <div class="row pt-lg-5">
                 <div class="col-lg-3 col-md-3">
                     <div class="dishCard">
