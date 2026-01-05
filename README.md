@@ -589,12 +589,172 @@ height: 320px;
 
     @media (max-width:767px)
     {
-
+            .page-wrapper h1 {
+        font-size: 38px;
+    }
+    .page-wrapper h2 {
+        font-size: 36px;
+    }
+        .page-wrapper h3 {
+        font-size: 34px;
+    }
+        .page-wrapper h4 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+        .page-wrapper h5 {
+        font-size: 19px;
+    }
+            .page-wrapper .headerSection {
+        padding: 45px 0;
+    }
+    .page-wrapper .headerContent {
+        text-align: center;
+    }
+        .page-wrapper h1:after { 
+        width: 100%;
+        height: 2px;
+    }
+        .page-wrapper p {
+        font-size: 16px;
+    }
+        .page-wrapper .headerImgOne {
+        transform: scale(1.0);
+        margin-top: 50px; 
+    }
+    .page-wrapper .headerSection::after {
+            width: 100%;
+    height: 60%;
+    top: unset;
+    bottom: 0;
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .page-wrapper .aboutSection .row {
+            flex-direction: column-reverse;
+    }
+        .page-wrapper .aboutImg {
+        max-width: 270px;
+        transform: scale(1.3) rotate(0deg);
+    }
+        .page-wrapper .aboutContent {
+        max-width: 455px;
+        padding: 25px 0 80px;
+        margin: auto;
+        margin-top: 65px;
+    }
+    .page-wrapper .gallerySection {
+                perspective: 120px;
+    }
+       .page-wrapper .gallerySection .slantingDiv {
+        width: 84%;
+        left: 53.5%;
+        -webkit-transform: translateX(-50%) rotateY(2deg);
+        border-radius: 25px;
+    }
+        .page-wrapper .gallerySection h3 {
+        margin-left: 0;
+        padding-top: 50px;
+        text-align: center;
+    }
+        .page-wrapper .carouselCenter {
+                width: 85%;
+        margin: auto;
+        margin-top: 30px;
+    }
+        .page-wrapper .paymentContainer {
+        padding: 5px 0;
+        padding-left: 3%;
+        width: 100%;
+    }
+        .page-wrapper .paymentImg img {
+        width: 50px;
+        height: 65px;
+        margin-right: 10px;
+    }
+        .page-wrapper .paymentContainer.two {
+        margin: 10px 0;
+        width: 100%;
+    }
+    .page-wrapper .hygieneContainer {
+        padding: 60px 15px 10px;
+    }
+        .page-wrapper .hygieneContent p {
+        font-size: 16px;
+    }
     }
 
     @media (max-width:575px)
     {
-        
+        .page-wrapper h1 {
+        font-size: 32px;
+    }
+        .page-wrapper h2 {
+        font-size: 30px;
+    }
+    .page-wrapper h3 {
+        font-size: 28px;
+    }
+        .page-wrapper h4 {
+        font-size: 26px; 
+    }
+        .page-wrapper h5 {
+        font-size: 18px;
+    }
+        .page-wrapper p {
+        font-size: 14px;
+    }
+        .page-wrapper h1:after {
+        width: 65%;
+        right: 0;
+        margin: auto;
+        height: 2px;
+    }
+        .page-wrapper .orderBtn {
+        font-size: 18px;
+        padding: 7px 18px;
+    }
+        .page-wrapper .headerSection {
+        padding: 40px 0;
+    }
+    .page-wrapper .aboutBg:after {
+            left: 50%;
+    transform: translateX(-50%);
+    width: 95%; 
+    border-radius: 40px;
+    max-width: 475px;
+    }
+    .page-wrapper .aboutContent {
+        margin-top: 0;
+    }
+        .page-wrapper .aboutImg {
+        max-width: 210px; 
+    }
+        .page-wrapper .paymentContainer {
+        padding: 5px 0;
+        padding-left: 0;
+        width: 100%;
+        max-width: 275px;
+        margin: auto;
+        border-radius: 200px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .page-wrapper .paymentContent {
+    width: unset;
+}
+    .page-wrapper .paymentContainer.two {
+        margin: 10px auto;
+        width: 100%;
+        border-radius: 200px;
+    }
+        .page-wrapper .hygieneContainer {
+        padding: 15px 15px 15px;
+        border-radius: 50px;
+    }
+    .page-wrapper .hygieneContainer.two { 
+        margin-top: 15px;
+    }
     }
     
     @media (max-width:375px)
@@ -777,7 +937,7 @@ height: 320px;
  <section class="paymentSection">
         <div class="container-fluid px-0">
             <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="paymentContainer">
                         <div class="paymentImg">
                             <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php3XEHAQ.png" class="img-fluid" alt="">
@@ -809,7 +969,7 @@ height: 320px;
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                     <div>
                         <img src="./1.png" class="img-fluid" alt="">
                     </div>
@@ -821,7 +981,7 @@ height: 320px;
     <section class="footerSection">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="col-lg-5 col-md-6 col-sm-6">
                     <div class="hygieneContainer">
                         <div class="hygieneContent">
                             <h4>
@@ -833,8 +993,8 @@ height: 320px;
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12">
-                    <div class="hygieneContainer">
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <div class="hygieneContainer two">
                         <div class="hygieneContent">
                             <h4>
                                 Our Hygiene
@@ -894,9 +1054,10 @@ height: 320px;
              0:{
                  items:1
              },
-             575:{
-                 items:3,
-                 margin:20
+             576:{
+                 items:2,
+                 margin:20,
+                 center:false
              },
              992:{
                  items:3,
