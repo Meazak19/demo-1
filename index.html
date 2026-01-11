@@ -17,7 +17,10 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
  
+
+
 
 <style type="text/css">
 
@@ -33,6 +36,7 @@
   background-color: #fff;
   background: #22C1C3;
   background: linear-gradient(90deg, rgb(212 172 224) 0%, rgb(243 180 225) 25%, rgb(236 179 232) 100%);
+  overflow: hidden;
   } 
   .page-wrapper p {
     margin-bottom: 25px;
@@ -57,6 +61,7 @@
  .page-wrapper h1 span{ 
   font-size: 75px;
   line-height: 1;
+  display: block;
  }
  .page-wrapper h2 {
   font-weight: 700;
@@ -152,6 +157,14 @@
       -webkit-mask-size: contain;
       -webkit-mask-position: center;
   }
+  .page-wrapper .mask::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767705941phpt5w4gW.png');
+  }
   .page-wrapper .rightImg {
       position: absolute;
       bottom: 30px;
@@ -222,7 +235,7 @@ right: 10px;
 left: -25%;
 }
 
-.animated-button .circle {
+.animated-button .circles {
 position: absolute;
 top: 50%;
 left: 50%;
@@ -244,7 +257,7 @@ transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 
 .animated-button:hover {
 box-shadow: 0 0 0 12px transparent;
-color: #212121; 
+color: #ffffff; 
 }
 
 .animated-button:hover .arr-1 {
@@ -262,24 +275,25 @@ transform: translateX(12px);
 .animated-button:hover svg {
 fill: #ffffff;
 }
-
-.animated-button:active {
-scale: 0.95;
-box-shadow: 0 0 0 4px greenyellow;
-}
+ 
 
 .animated-button:hover .circle {
-width: 220px;
-height: 220px;
-opacity: 1;
+  width: 220px;
+  height: 220px;
+  opacity: 1;
 }
 
 .page-wrapper .topImg {
-position: absolute;
+  position: absolute;
   top: 0;
   height: 150px;
   width: 100%;
   filter: brightness(0) saturate(100%) invert(22%) sepia(38%) saturate(3303%) hue-rotate(303deg) brightness(98%) contrast(94%);
+}
+.page-wrapper .topImg.two { 
+      top: unset;
+    bottom: 0;
+    transform: rotateX(180deg);
 }
   /* BUTTON HOVER */
 
@@ -294,6 +308,19 @@ position: absolute;
   align-items: center;
   margin-top: 200px;
   border-radius: 25px;
+      transform: scale(0.95);
+    transition: all 0.2s linear;
+  }
+  .page-wrapper .sellersContainer:hover { 
+    transform: scale(1);
+    transition: all 0.2s linear;
+  }
+  .page-wrapper .sellersContainer:hover .heartImg{   
+        transform: rotateY(180deg);
+    transition: all 0.2s linear;
+  }
+  .page-wrapper .sellersContainer .heartImg{ 
+    transition: all 0.2s linear;
   }
   .page-wrapper .sellersImg img {
     border-radius: 50%;
@@ -356,19 +383,15 @@ position: absolute;
   } 
   .page-wrapper .waveTwo {
     position: absolute;
-  bottom: 0;
+  bottom: -150px;
   z-index: -1;
   height: 500px;
   width: 100%;
   filter: brightness(0) saturate(100%) invert(22%) sepia(38%) saturate(3303%) hue-rotate(303deg) brightness(98%) contrast(94%);
   }
   .page-wrapper .paymentSection {
-    padding: 100px 0;
-  }
-  .page-wrapper .paymentSection h2 {
-    text-align: center;
-    transform: scale(1.5);
-  }
+    padding: 200px 0 100px;
+  } 
   .page-wrapper .paymentContainer {
     display: flex;
   flex-direction: column;
@@ -378,8 +401,8 @@ position: absolute;
   margin-top: -50px;
   }
   .page-wrapper .paymentImg {
-    width: 250px;
-  height: 250px;
+    width: 270px;
+  height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -497,14 +520,15 @@ position: absolute;
         transform: scale(0.5);
     }
     .page-wrapper .item-name {
-        text-transform: uppercase;
-        text-align: center;
-        color: #fff;
-        margin-bottom: 0;
-        z-index: 1;
-        font-weight: 600;
-        font-size: 16px;
-        padding-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    filter: drop-shadow(1px 1px 0px #fff);
+    color: #edb3e6;
+    margin-bottom: 0;
+    z-index: 1;
+    font-weight: 900;
+    font-size: 25px;
+    padding-bottom: 10px;
     }
     .page-wrapper .swiper-slide-active .slider-dish-wrapper {
         display: block;
@@ -531,15 +555,17 @@ position: absolute;
 .page-wrapper .menuBackground {
   margin: 25px 0 0;
   padding-bottom: 100px;
+  position: relative;
 }
 
 .page-wrapper .slider-wrapper .cartImg {
     width: 30px !important;
     height: 30px !important;
     position: absolute;
+    object-fit: contain;
+    border-radius: 0;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50px;
     filter: invert(1);
     z-index: 1;
     transition: all 0.2s linear;
@@ -548,6 +574,10 @@ position: absolute;
 .page-wrapper .slider-wrapper .cartImg:hover {
     filter: invert(47%) sepia(85%) saturate(7122%) hue-rotate(342deg) brightness(85%) contrast(94%);
     transition: all 0.2s linear;
+}
+
+.page-wrapper .sliderHoverContent button {
+  display: none;
 }
 
 .page-wrapper .dishName {
@@ -578,7 +608,94 @@ position: absolute;
 .page-wrapper .hoverText {
     position: relative;
 }
+ .page-wrapper .circle {
+  width: 30px;  
+  height: 30px;
+  background: #c22c6f;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(234 50 122) 0%, rgb(169 40 104) 100%);
+  filter: drop-shadow(4px 4px 6px #0000001f);
+  position: absolute;
+  left: 0;
+  animation: zoom-in-zoom-out 2s ease-out infinite;
+}
+.page-wrapper .circle.two { 
+  width: 75px;
+    height: 75px;
+    animation: zoom-in-zoom-out 6s ease-out infinite;
+    right: 50px;
+    left: unset;
+}
+.page-wrapper .circle.three { 
+  bottom: 10%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    animation: zoom-in-zoom-out 2s ease-out infinite;
+}
+.page-wrapper .circle.four { 
+     bottom: 5%;
+    left: unset;
+    right: 0%;
+    width: 50px;
+    height: 50px;
+    animation: zoom-in-zoom-out 4s ease-out infinite;
+}
+.page-wrapper .circle.five { 
+  top: 5%;
+    left: unset;
+    right: 30%;
+    width: 50px;
+    height: 50px;
+    animation: zoom-in-zoom-out 6s ease-out infinite;
+}
+.page-wrapper .circle.six { 
+  bottom: 10%;
+    left: unset;
+    right: 60%;
+    width: 40px;
+    height: 40px;
+    animation: zoom-in-zoom-out 4s ease-out infinite;
+}
+.page-wrapper .circle.seven { 
+  top: 10%;
+    left: 25%;
+    width: 40px;
+    height: 40px;
+    animation: zoom-in-zoom-out 4s ease-out infinite;
+    z-index: 1;
+}  
+.page-wrapper .circle.eight { 
+bottom: 0;
+    left: 25%;
+    right: unset;
+    width: 20px;
+    height: 20px;
+    animation: zoom-in-zoom-out 5s ease-out infinite;
+}  
+ 
 
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.page-wrapper .filterBackground {
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dcaee1;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(38%) saturate(3303%) hue-rotate(303deg) brightness(98%) contrast(94%) blur(17px);
+}
 
   
 /* RESPONSIVE VIEW */
@@ -636,7 +753,37 @@ position: absolute;
   left: 14px;
   fill: #000;
 }
-
+.page-wrapper .swiper-slide-active .slider-wrapper::after, .page-wrapper .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active img {
+  height: 300px;
+}
+.page-wrapper .swiper-slide img {
+  height: 300px;
+    margin-top: 50px;
+}
+.page-wrapper .circle {
+    width: 20px;
+    height: 20px;
+  }
+  .page-wrapper .circle.two {
+    width: 55px;
+    height: 55px;
+  }
+  .page-wrapper .circle.three, .page-wrapper .circle.five, .page-wrapper .circle.six, .page-wrapper .circle.seven {
+        width: 30px;
+    height: 30px;
+  }
+  .page-wrapper .circle.four {
+    width: 40px;
+    height: 40px;
+  }
+  .page-wrapper .circle.eight {
+        width: 15px;
+    height: 15px;
+  }
+  .page-wrapper .swiper {
+    width: 95%;
+    padding: 140px 0 230px 0;
+}
   }
 
   @media (max-width:1199px)
@@ -704,6 +851,34 @@ position: absolute;
 .page-wrapper .sellersContainer p {
         font-size: 23px;
     }
+    .page-wrapper .swiper {
+    width: 90%;
+    padding: 130px 0 150px 0;
+}
+.page-wrapper .swiper-slide img {
+  width: 180px;
+  height: 300px;
+}
+.page-wrapper .circle {
+        width: 15px;
+        height: 15px;
+    }
+        .page-wrapper .circle.two {
+        width: 35px;
+        height: 35px;
+    }
+        .page-wrapper .circle.three, .page-wrapper .circle.five, .page-wrapper .circle.six, .page-wrapper .circle.seven {
+        width: 25px;
+        height: 25px;
+    }
+        .page-wrapper .circle.four {
+        width: 30px;
+        height: 30px;
+    }
+        .page-wrapper .circle.eight {
+        width: 12px;
+        height: 12px;
+    }
   }
 
   @media (max-width:991px)
@@ -722,6 +897,30 @@ position: absolute;
     }
         .page-wrapper p {
         font-size: 18px;
+    }
+    .page-wrapper .circle {
+        width: 12px;
+        height: 12px;
+    }
+        .page-wrapper .circle.two {
+        width: 30px;
+        height: 30px;
+    }
+        .page-wrapper .circle.three, .page-wrapper .circle.five, .page-wrapper .circle.six, .page-wrapper .circle.seven {
+        width: 16px;
+        height: 16px;
+    }
+    .page-wrapper .circle.four {
+        width: 25px;
+        height: 25px;
+    }
+        .page-wrapper .circle.eight {
+        width: 8px;
+        height: 8px;
+    }
+        .animated-button {
+        font-size: 16px;
+        padding: 7px 31px;
     }
   }
 
@@ -753,6 +952,25 @@ position: absolute;
     .page-wrapper .topImg {
         height: 75px;
     }
+    .page-wrapper .filterBackground {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+        .page-wrapper .circle {
+        width: 10px;
+        height: 10px;
+    }
+        .page-wrapper .circle.two {
+        width: 25px;
+        height: 25px;
+    }
+        .page-wrapper .circle.three, .page-wrapper .circle.five, .page-wrapper .circle.six, .page-wrapper .circle.seven {
+        width: 12px;
+        height: 12px;
+    }
+        .page-wrapper .circle.four {
+        width: 22px;
+        height: 22px;
+    }
   }
 
   @media (max-width:575px)
@@ -781,6 +999,30 @@ position: absolute;
         font-size: 15px;
         padding: 5px 25px 0;
     }
+    .page-wrapper .headerRight {
+      max-width: 350px;
+      margin: auto;
+    }
+        .page-wrapper .circle {
+        width: 8px;
+        height: 8px;
+    }
+        .page-wrapper .circle.two {
+        width: 25px;
+        height: 25px;
+        right: 0;
+    }
+        .page-wrapper .circle.three, .page-wrapper .circle.five, .page-wrapper .circle.six, .page-wrapper .circle.seven {
+        width: 10px;
+        height: 10px;
+    }
+        .page-wrapper .circle.four {
+        width: 18px;
+        height: 18px;
+    }
+    .page-wrapper .circle.seven {
+      top: 6%;
+    }
   }
   
 
@@ -801,6 +1043,14 @@ position: absolute;
 <div class="page-wrapper">
 
   <section class="firstFold"> 
+    <div class="circle one"> </div>
+    <div class="circle two"> </div>
+    <div class="circle three"> </div>
+    <div class="circle four"> </div>
+    <div class="circle five"> </div>
+    <div class="circle six"> </div>
+    <div class="circle seven"> </div>
+    <div class="circle eight"> </div>
       <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767706697phpivyNsR.png" class="img-fluid topImg" alt="">
       <div class="container">
           <div class="row align-items-center">
@@ -818,20 +1068,22 @@ position: absolute;
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                       </svg>
                       <span class="text">ORDER NOW</span>
-                      <span class="circle"></span>
+                      <span class="circles"></span>
                       <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                       </svg>
                     </button>
                 </div>
-
               </div>
               <div class="col-lg-6 col-sm-6 firstRight">
                   <div class="d-flex justify-content-center">
 
+                    <div class="position-relative headerRight">
+                      <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767705941phpt5w4gW.png" class="img-fluid filterBackground" alt="">
                       <div class="mask">
-                          <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1729617682phpR2i1bz.png" class="img-fluid" alt="TEMP-1069-Kabana - 879533  GB Waffle">
+                          <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1760091508phpVudq9q.png" class="img-fluid" alt="TEMP-1069-Kabana - 879533  GB Waffle">
                       </div>
+                    </div>
                       
                   </div>
               </div>
@@ -840,6 +1092,7 @@ position: absolute;
   </section> 
 
   <section class="sellersSection">
+    <div class="circle eight"> </div>
     <div class="container position-relative">
       <div class="sellersBorder"></div>
       <h3 class="text-center">
@@ -849,7 +1102,19 @@ position: absolute;
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="sellersContainer">
             <div class="sellersImg">
-              <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1763388970phpiEEFfV.jpg" class="img-fluid" alt="">
+              <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767984184phpJIiz86.jpg" class="img-fluid" alt="">
+            </div>
+            <p class="text-white"> Chocolate <br> Brownie </p>
+            <div class="icons">
+              <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767792735phpkCA7jo.png" class="img-fluid heartImg" alt="">
+              <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767792735phpy60cdZ.png" class="img-fluid cartImg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="sellersContainer">
+            <div class="sellersImg">
+              <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767984184php8eC5la.jpg" class="img-fluid" alt="">
             </div>
             <p class="text-white"> Strawberry <br> Milkshake </p>
             <div class="icons">
@@ -861,21 +1126,9 @@ position: absolute;
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="sellersContainer">
             <div class="sellersImg">
-              <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1763388970phpiEEFfV.jpg" class="img-fluid" alt="">
+              <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767984184phph8QFzd.jpg" class="img-fluid" alt="">
             </div>
-            <p class="text-white"> Strawberry <br> Milkshake </p>
-            <div class="icons">
-              <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767792735phpkCA7jo.png" class="img-fluid heartImg" alt="">
-              <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767792735phpy60cdZ.png" class="img-fluid cartImg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="sellersContainer">
-            <div class="sellersImg">
-              <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1763388970phpiEEFfV.jpg" class="img-fluid" alt="">
-            </div>
-            <p class="text-white"> Strawberry <br> Milkshake </p>
+            <p class="text-white"> Ice <br> Crean </p>
             <div class="icons">
               <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767792735phpkCA7jo.png" class="img-fluid heartImg" alt="">
               <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767792735phpy60cdZ.png" class="img-fluid cartImg" alt="">
@@ -887,6 +1140,10 @@ position: absolute;
   </section>
 
   <section class="aboutSection">
+    <div class="circle one"> </div>
+    <div class="circle two"> </div>
+    <div class="circle eight"> </div>
+
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-5 col-sm-12">
@@ -907,7 +1164,7 @@ position: absolute;
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
               </svg>
               <span class="text">ORDER NOW</span>
-              <span class="circle"></span>
+              <span class="circles"></span>
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
               </svg>
@@ -922,7 +1179,11 @@ position: absolute;
     
   </section>
 
-  <section class="paymentSection">
+  <section class="paymentSection"> 
+    <div class="circle one"> </div>
+    <div class="circle five"> </div>
+    <div class="circle eight"> </div>
+
     <div class="container">
       <h3 class="text-center">
         How it works
@@ -947,7 +1208,7 @@ position: absolute;
         <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="paymentContainer two">
                 <div class="position-relative paymentImg">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767808774php6O4jrj.png" class="img-fluid paymentBackground" alt="TEMP-1069-Kabana - 879533  GB decoration">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767973800phpUUeh9g.png" class="img-fluid paymentBackground" alt="TEMP-1069-Kabana - 879533  GB decoration">
                     <img loading="lazy" src="https://assets.touch2success.com/static/0a240991920be7c739a1e2c8e3f37fb7/img/1653299274phpbDuHIO.png" class="paymentImgs" alt="TEMP-1069-Kabana - 879533  GB pick dish">
                 </div>
                 <div class="paymentContent">
@@ -983,6 +1244,9 @@ position: absolute;
 
 
  <div class="menuBackground zInd">
+  <div class="circle one"> </div>
+    <div class="circle two"> </div>
+    <div class="circle six"> </div>
   <div class="container">
     <h2 class="text-center">
         Our Gallery
@@ -991,7 +1255,48 @@ position: absolute;
   </div> 
   <div class="container-fluid p-0">
       <div class="swiper mySwiper swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
-          <div class="swiper-wrapper" id="swiper-wrapper-3e0bd25bcede6bfa" aria-live="polite" style="cursor: grab; transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); transition-delay: 0ms;"><div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible" role="group" aria-label="6 / 6" data-swiper-slide-index="5" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; width: 216.4px;">
+          <div class="swiper-wrapper" id="swiper-wrapper-3e0bd25bcede6bfa" aria-live="polite" style="cursor: grab; transition-duration: 0ms; transform: translate3d(-621px, 0px, 0px); transition-delay: 0ms;"><div class="swiper-slide" role="group" aria-label="4 / 6" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;" data-swiper-slide-index="3">
+                  <a href="/order-now">
+                      </a><div class="slider-wrapper"><a href="/order-now">
+                          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721749685phpDTG9ZN.png" alt="TEMP-1069-Kabana - 879533  GB Crepes">
+                          </a><div class="slider-dish-wrapper text-center">
+
+                              <div class="sliderHoverContent">
+                                  <a href="/order-now">
+                                  <p class="item-name mb-0">Crepes</p>
+                                  </a> 
+                                  <a href="/order-now">  
+                                      <button class="buttonTwo">
+                                          Order Now
+                                      </button>
+                                  </a>
+                              </div>
+                              <a href="/order-now">
+                                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php5ejGNx.png" class="img-fluid cartImg" alt="TEMP-1069-Kabana - 879533  GB Cart">
+                              </a>
+                          </div>
+                      </div>
+              </div><div class="swiper-slide" role="group" aria-label="5 / 6" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;" data-swiper-slide-index="4">
+                  <a href="/order-now">
+                      </a><div class="slider-wrapper"><a href="/order-now">
+                          <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1717761276php2RmJiQ.png" alt="TEMP-1069-Kabana - 879533  GB Sundae">
+                          </a><div class="slider-dish-wrapper text-center">
+                              <div class="sliderHoverContent">
+                                  <a href="/order-now">
+                                  <p class="item-name mb-0">Sundae</p>
+                                  </a> 
+                                  <a href="/order-now">  
+                                      <button class="buttonTwo">
+                                          Order Now
+                                      </button>
+                                  </a>
+                              </div>
+                              <a href="/order-now">
+                                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php5ejGNx.png" class="img-fluid cartImg" alt="TEMP-1069-Kabana - 879533  GB Cart">
+                              </a>
+                          </div>
+                      </div>
+              </div><div class="swiper-slide swiper-slide-visible swiper-slide-prev" role="group" aria-label="6 / 6" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;" data-swiper-slide-index="5">
                   <a href="/order-now">
                       </a><div class="slider-wrapper"><a href="/order-now">
                           <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1717761276php2RmJiQ.png" alt="TEMP-1069-Kabana - 879533  GB Sundae">
@@ -1018,7 +1323,27 @@ position: absolute;
               
               
               
-          <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-prev" role="group" aria-label="1 / 6" data-swiper-slide-index="0" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; width: 216.4px;">
+          <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" role="group" aria-label="1 / 6" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;" data-swiper-slide-index="0">
+                  <a href="/order-now">
+                      </a><div class="slider-wrapper"><a href="/order-now">
+                          <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1717761276php2RmJiQ.png" alt="TEMP-1069-Kabana - 879533  GB Sundae">
+                          </a><div class="slider-dish-wrapper text-center">
+                              <div class="sliderHoverContent">
+                                  <a href="/order-now">
+                                  <p class="item-name mb-0">Sundae</p>
+                                  </a> 
+                                  <a href="/order-now">  
+                                      <button class="buttonTwo">
+                                          Order Now
+                                      </button>
+                                  </a>
+                              </div>
+                              <a href="/order-now">
+                                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php5ejGNx.png" class="img-fluid cartImg" alt="TEMP-1069-Kabana - 879533  GB Cart">
+                              </a>
+                          </div>
+                      </div>
+              </div><div class="swiper-slide swiper-slide-visible swiper-slide-next" role="group" aria-label="2 / 6" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;" data-swiper-slide-index="1">
                   <a href="/order-now">
                       </a><div class="slider-wrapper"><a href="/order-now">
                           <img loading="lazy" src="https://assets.touch2success.com/static/c3a90d0d396dbbcf8a81bf93b534db7e/img/1666125919phpjUn7s0.jpg" alt="TEMP-1069-Kabana - 879533  GB Churros">
@@ -1040,7 +1365,7 @@ position: absolute;
                               </a>
                           </div>
                       </div>
-              </div><div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" role="group" aria-label="2 / 6" data-swiper-slide-index="1" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; width: 216.4px;">
+              </div><div class="swiper-slide" role="group" aria-label="3 / 6" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;" data-swiper-slide-index="2">
                   <a href="/order-now">
                       </a><div class="slider-wrapper"><a href="/order-now">
                           <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721749685php2knVfA.png" alt="TEMP-1069-Kabana - 879533  GB Cakes">
@@ -1063,76 +1388,13 @@ position: absolute;
 
                           </div>
                       </div>
-              </div><div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-next" role="group" aria-label="3 / 6" data-swiper-slide-index="2" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; width: 216.4px;">
-                  <a href="/order-now">
-                      </a><div class="slider-wrapper"><a href="/order-now">
-                          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721749685phpDTG9ZN.png" alt="TEMP-1069-Kabana - 879533  GB Crepes">
-                          </a><div class="slider-dish-wrapper text-center">
-
-                              <div class="sliderHoverContent">
-                                  <a href="/order-now">
-                                  <p class="item-name mb-0">Crepes</p>
-                                  </a> 
-                                  <a href="/order-now">  
-                                      <button class="buttonTwo">
-                                          Order Now
-                                      </button>
-                                  </a>
-                              </div>
-                              <a href="/order-now">
-                                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php5ejGNx.png" class="img-fluid cartImg" alt="TEMP-1069-Kabana - 879533  GB Cart">
-                              </a>
-                          </div>
-                      </div>
-              </div><div class="swiper-slide swiper-slide-visible" role="group" aria-label="4 / 6" data-swiper-slide-index="3" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; width: 216.4px;">
-                  <a href="/order-now">
-                      </a><div class="slider-wrapper"><a href="/order-now">
-                          <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1717761276php2RmJiQ.png" alt="TEMP-1069-Kabana - 879533  GB Sundae">
-                          </a><div class="slider-dish-wrapper text-center">
-                              <div class="sliderHoverContent">
-                                  <a href="/order-now">
-                                  <p class="item-name mb-0">Sundae</p>
-                                  </a> 
-                                  <a href="/order-now">  
-                                      <button class="buttonTwo">
-                                          Order Now
-                                      </button>
-                                  </a>
-                              </div>
-                              <a href="/order-now">
-                                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php5ejGNx.png" class="img-fluid cartImg" alt="TEMP-1069-Kabana - 879533  GB Cart">
-                              </a>
-                          </div>
-                      </div>
-              </div><div class="swiper-slide" role="group" aria-label="5 / 6" data-swiper-slide-index="4" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; width: 216.4px;">
-                  <a href="/order-now">
-                      </a><div class="slider-wrapper"><a href="/order-now">
-                          <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1717761276php2RmJiQ.png" alt="TEMP-1069-Kabana - 879533  GB Sundae">
-                          </a><div class="slider-dish-wrapper text-center">
-                              <div class="sliderHoverContent">
-                                  <a href="/order-now">
-                                  <p class="item-name mb-0">Sundae</p>
-                                  </a> 
-                                  <a href="/order-now">  
-                                      <button class="buttonTwo">
-                                          Order Now
-                                      </button>
-                                  </a>
-                              </div>
-                              <a href="/order-now">
-                                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1721927175php5ejGNx.png" class="img-fluid cartImg" alt="TEMP-1069-Kabana - 879533  GB Cart">
-                              </a>
-                          </div>
-                      </div>
               </div></div>
-      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
   </div>
 
+  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767706697phpivyNsR.png" class="img-fluid topImg two" alt="">
 
-
-  <!-- <div class="woodOverlay">
-
-  </div> -->
+ 
 </div>
   
 
@@ -1170,40 +1432,53 @@ position: absolute;
 
  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
 
 
-<script>
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js", function() {
-     $('.owl-carousel').owlCarousel({
-         center:true,
-         loop:true,
-         margin:50,
-         items:3,
-         nav:true,
-         dots:false,
-         autoplay:false,
-         autoplayTimeout:3000,
-         autoplayHoverPause:false,
-         responsive:{
-             0:{
-                 items:1
-             },
-             576:{
-                 items:2,
-                 margin:20,
-                 center:false
-             },
-             992:{
-                 items:3,
-                 margin:20,
-             },
-             1000:{
-                 items:3
-             }
-         }
-     })
-    });
- </script>
+
+
+ <script>
+  $.getScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js", function() {	
+      var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          loop:true,
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 0,
+            modifier: 0,
+            slideShadows: false,
+          },
+          pagination:false,
+          breakpoints: {
+              0: {
+                  slidesPerView: "auto",
+              },
+              600: {
+                  slidesPerView: "auto",
+                  spaceBetween: 0,
+              },
+              992: {
+                  slidesPerView: "3",
+                  spaceBetween: 0,
+                  
+              },
+              1200: {
+                  slidesPerView: "5",
+                  spaceBetween: 0,
+              },
+          },
+          loop: true,
+          autoplay:false,
+       autoplayTimeout:3000,
+      });
+  });
+  
+</script>
+
 </body>
 </html>
  
