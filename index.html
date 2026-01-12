@@ -200,7 +200,7 @@
   /* BUTTON HOVER */
 
   /* From Uiverse.io by ryota1231 */ 
-.animated-button {
+.page-wrapper .animated-button {
   position: relative;
   display: flex;
   gap: 4px;
@@ -219,7 +219,7 @@
   align-items: center;
 }
 
-.animated-button svg {
+.page-wrapper .animated-button svg {
 position: absolute;
 top: 10px;
 width: 32px;
@@ -228,15 +228,15 @@ z-index: 9;
 transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.animated-button .arr-1 {
+.page-wrapper .animated-button .arr-1 {
 right: 10px;
 }
 
-.animated-button .arr-2 {
+.page-wrapper .animated-button .arr-2 {
 left: -25%;
 }
 
-.animated-button .circles {
+.page-wrapper .animated-button .circles {
 position: absolute;
 top: 50%;
 left: 50%;
@@ -249,36 +249,36 @@ opacity: 0;
 transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.animated-button .text {
+.page-wrapper .animated-button .text {
 position: relative;
 z-index: 1;
 transform: translateX(-12px);
 transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.animated-button:hover {
+.page-wrapper .animated-button:hover {
 box-shadow: 0 0 0 12px transparent;
 color: #ffffff; 
 }
 
-.animated-button:hover .arr-1 {
+.page-wrapper .animated-button:hover .arr-1 {
 right: -25%;
 }
 
-.animated-button:hover .arr-2 {
+.page-wrapper .animated-button:hover .arr-2 {
 left: 16px;
 }
 
-.animated-button:hover .text {
+.page-wrapper .animated-button:hover .text {
 transform: translateX(12px);
 }
 
-.animated-button:hover svg {
+.page-wrapper .animated-button:hover svg {
 fill: #ffffff;
 }
  
 
-.animated-button:hover .circle {
+.page-wrapper .animated-button:hover .circle {
   width: 220px;
   height: 220px;
   opacity: 1;
@@ -740,18 +740,18 @@ bottom: 0;
 .page-wrapper p {
   font-size: 23px;
 }
-.animated-button .arr-1 {
+.page-wrapper .animated-button .arr-1 {
   right: 8px;
 }
-.animated-button svg {
+.page-wrapper .animated-button svg {
   width: 30px;
   top: 6px;
 }
-.animated-button {
+.page-wrapper .animated-button {
   font-size: 20px;
       padding: 12px 35px 8px;
 }
-.animated-button:hover .arr-2 {
+.page-wrapper .animated-button:hover .arr-2 {
   left: 14px; 
 }
 .page-wrapper .swiper-slide-active .slider-wrapper::after, .page-wrapper .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active img {
@@ -861,11 +861,7 @@ bottom: 0;
     .page-wrapper .swiper {
     width: 90%;
     padding: 130px 0 150px 0;
-}
-.page-wrapper .swiper-slide img {
-  width: 180px;
-  height: 300px;
-}
+} 
 .page-wrapper .circle {
         width: 15px;
         height: 15px;
@@ -917,6 +913,11 @@ bottom: 0;
 }
 .page-wrapper .paymentContainer.two {
         margin-top: 70px;
+    } 
+      .page-wrapper .swiper-slide img {
+      margin-top: 45px; 
+        width: 240px;
+        height: 300px;
     }
   }
 
@@ -957,11 +958,11 @@ bottom: 0;
         width: 8px;
         height: 8px;
     }
-        .animated-button {
+      .page-wrapper   .animated-button {
         font-size: 16px;
         padding: 7px 31px 5px;
     }
-        .animated-button svg {
+       .page-wrapper  .animated-button svg {
         width: 25px;
         top: 5px;
     }
@@ -997,11 +998,11 @@ bottom: 0;
     .page-wrapper h1 span {
         font-size: 26px;
     }
-        .animated-button {
+      .page-wrapper   .animated-button {
         font-size: 15px;
         padding: 5px 30px 2px;
     }
-    .animated-button svg {
+  .page-wrapper   .animated-button svg {
         width: 21px;
         top: 4px;
     }
@@ -1086,7 +1087,7 @@ bottom: 0;
   margin-bottom: 50px;
 }
     .page-wrapper .paymentSection {
-        padding: 55px 0 100px;
+        padding: 55px 0 50px;
     }
   }
 
@@ -1115,7 +1116,7 @@ bottom: 0;
     text-align: center;
     margin-bottom: 50px;
     }
-        .animated-button {
+      .page-wrapper   .animated-button {
         font-size: 15px;
         padding: 5px 25px 0;
     }
@@ -1191,6 +1192,48 @@ bottom: 0;
     align-items: center;
     margin-bottom: 50px;
     }
+    .page-wrapper .paymentContainer.one, .page-wrapper .paymentContainer.three {
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-wrapper .paymentContainer {
+  margin-bottom: 50px;
+}
+.page-wrapper .paymentSection .circle.five {
+  right: 0;
+}
+    .page-wrapper .paymentImg {
+        width: 150px;
+        height: 150px;
+    }
+        .page-wrapper .paymentImgs {
+        width: 60px;
+        top: -5px;
+        position: relative;
+    }
+    .page-wrapper .swiper-slide {
+      height: 100%;
+    }
+    .page-wrapper .swiper-slide-active {
+      transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1.0) !important;
+    }
+        .page-wrapper .swiper {
+        width: 100%;
+        padding: 20px 0 0px 0;
+    }
+    .page-wrapper .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active img, .page-wrapper .swiper-slide-active .slider-wrapper::after {
+              width: 100%;
+        max-width: 280px;
+    }
+    .page-wrapper .slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: auto;
+}
+.page-wrapper .slider-wrapper .cartImg {
+  right: 15px;
+}
   }
   
 
@@ -1390,7 +1433,7 @@ bottom: 0;
             </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="paymentContainer three">
+            <div class="paymentContainer three mb-0">
                 <div class="position-relative paymentImg">
                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767808774phpVmZWHT.png" class="img-fluid paymentBackground" alt="TEMP-1069-Kabana - 879533  GB decoration">
                     <img loading="lazy" src="https://assets.touch2success.com/static/e6fd7949ac7e6c7c8651795d21f59be4/img/1697567063phpFGe79f.png" class="paymentImgs" alt="TEMP-1069-Kabana - 879533  GB pick dish">
@@ -1623,7 +1666,7 @@ bottom: 0;
           pagination:false,
           breakpoints: {
               0: {
-                  slidesPerView: "auto",
+                  slidesPerView: "1",
               },
               600: {
                   slidesPerView: "auto",
