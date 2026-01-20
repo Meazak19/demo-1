@@ -1,1330 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dessert</title>
- 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
- 
-
-
-
-
-<style type="text/css">
-
-
-/* 
-
-font-family: "League Spartan", sans-serif; 
-
-*/  
-
-    body .page-wrapper { 
-    font-family: "League Spartan", sans-serif; 
-    color: #6c6a6a; 
-    line-height: 24px; 
-    overflow-x: hidden; 
-    scroll-behavior: smooth; 
-    background: #fceee3;
-    } 
-    
-   .page-wrapper p {
-    margin-bottom: 25px;
-    font-size: 18px;
-    font-family: "League Spartan", sans-serif;
-    color: #fff;
-    letter-spacing: 2px;
-    line-height: 1.3;
-   }
-
-   .page-wrapper p > a {
-   color: inherit;
-   }
-   .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
-   line-height: 1.3;
-   font-family: "League Spartan", sans-serif;
-   }
-   .page-wrapper .row {
-   margin: 0 -15px!important;
-   }
-   .page-wrapper .bg-dark {
-   background-color: #fc673f!important;
-   }
-
-   .page-wrapper .bg-primary {
-   background-color: #241e5e!important;
-   }
-   .page-wrapper .bg-light {
-   background-color: #f1f1f1!important;
-   }
-   .page-wrapper section {
-   position: relative;
-   z-index: 1;
-   background-size: cover;
-   background-position: center center;
-   background-repeat: no-repeat;
-   }   
-   .page-wrapper .btn {
-   font-size: 14px;
-   border-radius: 0;
-   padding: 0 30px;
-   line-height: 50px;
-   }  
-
-   .page-wrapper .overlay{
-      content: "";
-    background: rgb(0 0 0 / 58%);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-   }
-
-   .page-wrapper h1 {
-    font-size: 80px;
-    color: #fff;
-    font-weight: 300;
-    margin-bottom: 0;
-   }
-   .page-wrapper h2 {
-    font-size: 75px;
-    color: #b94201;
-    text-align: center;
-    transform: scale(1.1);
-    font-weight: 700;
-   }
-   .page-wrapper h2 span {
-    display: block;
-    font-size: 270px;
-    margin-top: -65px;
-   }
-   .page-wrapper h2 span img{ 
-    width: 45px;
-    transform: scale(3.5);
-   }
-   .page-wrapper h3 {
-    font-size: 55px;
-    font-weight: 700;
-    color: #892201;
-    text-transform: uppercase;
-    }
-    .page-wrapper h4 {
-    font-size: 40px;
-    color: #892201;
-    font-weight: 700;
-   }
-   .page-wrapper h5 {
-    font-size: 38px;
-    font-weight: 600;
-    text-transform: capitalize;
-    margin-bottom: 10px;
-   }
-   .page-wrapper h6 {
-    
-   }
-
-   .page-wrapper .headerSection {
-    padding: 150px 0 50px;
-    background: #6d1703;
-    background: radial-gradient(circle, rgb(184 65 0) 0%, rgb(91 12 2) 100%);
-   }
-
-   .page-wrapper .headerRow {
-    display: flex;
-    align-items: flex-end;
-   }
-   .page-wrapper .textBack {
-    position: absolute;
-    font-size: 200px;
-    color: #fff;
-    opacity: 0.1;
-    text-transform: uppercase;
-    line-height: 1;
-    top: 50px;
-    left: 0;
-    right: 0;
-    width: fit-content;
-    bottom: 0;
-    margin: auto;
-   }
-   .page-wrapper .textBack span{ 
-    display: block;
-    font-size: 80px;
-    text-align: right;
-   }
-
-.page-wrapper .rolling-text {  
-  text-transform: uppercase;
-  overflow-x: hidden;
-}
-.page-wrapper .text-position {
-  display: flex;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  min-width: 100%;
-}
-.page-wrapper .news-message {
-  display: flex;
-  flex-shrink: 0;
-  height: 80px;
-  align-items: center;
-  animation: slide-left 30s linear infinite;
-  gap: 20px;
-}
-.page-wrapper .news-message p {
-    font-size: 45px;
-    padding-left: 0.5em;
-    margin-bottom: 0px !important;
-    color: #000000;
-    font-weight: 300;
-    margin-top: 10px;
-}
-
-@keyframes slide-left {
-  from {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-60%);
-  }
-}
-
-.page-wrapper .galleryContent:after {
-    content: '';
-    position: absolute;
-}
-.page-wrapper .galleryImg {
-    border: 2px solid #963d1c;
-    height: 450px;
-    width: 100%;
-    object-fit: cover;
-}
-.page-wrapper .galleryContainer {
-    border: 2px solid #963d1c;
-    padding: 20px;
-    position: relative;
-}
-.page-wrapper .gallerySection {
-    padding: 50px 0;
-}
-.page-wrapper .galleryContainer::before {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: auto;
-    height: calc(100% - 44px);
-    width: calc(100% - 44px);
-    background: #fceee3;
-    background: linear-gradient(0deg, rgb(252 238 227) 15%, rgb(252 238 227 / 0%) 50%, rgb(253 187 45 / 0%) 100%);
-    transition: all 0.2s linear;
-    opacity: 0;
-}
-.page-wrapper .galleryContainer h4 {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    width: fit-content;
-    margin: auto;
-    transition: all 0.2s linear;
-    opacity: 0;
-}
-.page-wrapper .galleryContainer:hover::before, .page-wrapper .galleryContainer.active::before {
-    bottom: 0;
-    transition: all 0.2s linear; 
-    opacity: 1;
-}
-.page-wrapper .galleryContainer:hover h4, .page-wrapper .galleryContainer.active h4{
-    bottom: 30px;
-    transition: all 0.2s linear;
-    opacity: 1;
-}
-.page-wrapper .starImg {
-    filter: brightness(0) saturate(100%) invert(72%) sepia(95%) saturate(460%) hue-rotate(352deg) brightness(100%) contrast(106%) drop-shadow(2px 2px 0px #ae8b00);
-    width: 27px;
-}
-.page-wrapper .aboutContent p {
-    color: #000;
-    font-size: 24px;
-    font-weight: 400;
-}
-.page-wrapper .starImgs {
-    margin-bottom: 40px;
-    gap: 15px;
-    display: flex;
-    justify-content: center;
-}
-.page-wrapper .aboutSection {
-    text-align: center;
-    padding: 50px 0;
-}
-.page-wrapper .paymentContainer {
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-}
-.page-wrapper .paymentImgContainer img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 25px;
-    object-fit: contain;
-    object-position: bottom;
-    filter: brightness(0) saturate(100%) invert(21%) sepia(78%) saturate(2537%) hue-rotate(18deg) brightness(104%) contrast(99%);
-}
-.page-wrapper .paymentContainer p {
-    color: #736b64;
-    font-size: 21px;
-}
-.page-wrapper .paymentSection {
-    padding: 50px 0 100px;
-}
-
-.page-wrapper .posterContainer {
-    background-size: cover;
-    min-height: 650px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
- /* --- SVG Badge Styling --- */
-        .badge-wrapper {
-            position: relative;
-    width: 150px;
-    height: 150px;
-    border: 2px solid #fff;
-    margin-right: 5%;
-    margin-left: auto;
-    border-radius: 50%;
-    background: #fceee3;
-    padding: 5px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Spirits & Dining</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rye&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            /* Simulating the dark slate texture with noise and gradient */
+            background-image: 
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"),
+                radial-gradient(circle at 50% 0%, #2a2a2a 0%, #111111 100%);
         }
-
-        .badge-svg {
-            width: 100%;
-    height: 100%;
-    animation: rotateBadge 20s linear infinite;
-    padding: 5px;
-    background: #b94201;
-    border-radius: 50%;
+        .font-display {
+            font-family: 'Rye', serif;
         }
-
-        .inner-circle-static {
-            position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75px;
-    height: 75px;
-    padding: 15px;
-    background-color: #fceee3;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
+        /* Custom shape for the Hero button */
+        .btn-tag {
+            clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
         }
-
-        @keyframes rotateBadge {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .page-wrapper .svgTxt {
-        font-size: 19px;
-    letter-spacing: 1px;
-    font-family: 'Roboto Condensed', sans-serif;
-        }
-        .page-wrapper .posterHeader {
-            font-size: 100px;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: center;
-    padding-top: 30px;
-        }
-        .page-wrapper .p {
-            color: #fff;
-    font-size: 40px;
-    text-align: center;
-    -webkit-text-stroke: 2px #000000;
-    font-weight: 900;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 0;
-        }
-        .page-wrapper .posterPara {
-            color: #fff;
-    font-size: 40px;
-    text-align: center;
-    -webkit-text-stroke: 2px #000000;
-    font-weight: 900;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 0;
-        }
-        .page-wrapper .serviceContainer {
-            text-align: center;
-    width: 90%;
-    margin: auto;
-    min-height: 500px;
-        }
-        .page-wrapper .serviceContainer .paymentImgContainer {
-            padding-top: 100px;
-        }
-        .page-wrapper .serviceContainer h5{ 
-            transform: scale(1.3);
-            opacity: 0.3;
-            color: #b94102;
-            transform: scale(0.9);
-            transition: all 0.2s linear;
-        }
-        .page-wrapper .serviceContainer .paymentImgContainer img{ 
-            transform: scale(1.3);
-            margin-bottom: 40px;
-            filter: unset;
-            opacity: 0.2;
-            transform: scale(0.9);
-            transition: all 0.2s linear;
-        } 
-        .page-wrapper .serviceContainer p {
-            color: #666360;
-    padding-top: 5px;
-    opacity: 0.2;
-    transform: scale(0.9);
-    transition: all 0.2s linear;
-        }
-        .page-wrapper .serviceContainer.active p, .page-wrapper .serviceContainer:hover p, .page-wrapper .serviceContainer.active .paymentImgContainer img,.page-wrapper .serviceContainer:hover .paymentImgContainer img , .page-wrapper .serviceContainer.active h5, .page-wrapper .serviceContainer:hover h5{
-            opacity: 1;
-            transition: all 0.2s linear;
-            transform: scale(1);
-        }
-        .page-wrapper .serviceSection {
-            padding: 100px 0 50px;
-        }
-        .page-wrapper .serviceContainer.two::after {
-            content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 2px solid #bdb2a9;
-    border-top: 0;
-    border-bottom: 0;
-    width: 100%;
-    height: 100%;
-        }
-        .page-wrapper .serviceBorder {
-            border: 2px solid #bdb2a9;
-        }
-        .page-wrapper .rightContent {
-            width: 90%;
-            margin: auto;
-            text-align: center;
-        }
-        .page-wrapper .rightContent p{ 
-            color: #000;
-    text-align: center;
-    margin-top: -65px;
-        }
-         
-        /* From Uiverse.io by BHARGAVPATEL1244 */ 
-        .page-wrapper .orderBtn  {
-            background: #000000;
-    padding: 10px 25px 7px;
-    display: inline-block;
-    font-size: 20px;
-    color: #fff;
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-    border: none;
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    filter: drop-shadow(3px 3px 1px #000);
-}
-
-.page-wrapper .orderBtn span {
- position: relative;
- z-index: 10;
- transition: color 0.4s;
-}
-
-.page-wrapper .orderBtn:hover span {
- color: rgb(255, 255, 255);
-}
-
-.page-wrapper .orderBtn::before,
-.page-wrapper .orderBtn::after {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- z-index: 0;
-}
-
-.page-wrapper .orderBtn::before {
- content: "";
- background: #ad3b02;
- width: 120%;
- left: -10%;
- transform: skew(30deg);
- transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-}
-
-.page-wrapper .orderBtn:hover::before {
- transform: translate3d(100%, 0, 0);
-}
-.page-wrapper .bottomTxt {
-    font-size: 250px;
-    color: #dbcec6;
-    font-weight: 700;
-    letter-spacing: 0;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-
-
-    /* RESPONSIVE VIEW */
-
-    @media(min-width:1200px){
-        .page-wrapper .container{
-            max-width: 1140px;
-        }
-    }
-
-    @media(min-width:1500px){
-        .page-wrapper .container{
-            max-width: 1440px;
-        }
-    }
-
-
-
-    @media (max-width:1500px)
-    {
-        .page-wrapper h1 {
-            font-size: 70px;
-            line-height: 1.2; 
-            margin-bottom: 15px;
-        }
-        .page-wrapper h2 {
-            font-size: 62px;
-        }
-        .page-wrapper h3 {
-            font-size: 50px;
-        }
-        .page-wrapper h4 {
-            font-size: 35px;
-        }
-        .page-wrapper .textBack {
-            font-size: 165px;
-            top: 30px;
-        }
-        .page-wrapper h2 span img {
-            width: 35px;
-        }
-        .page-wrapper .bottomTxt {
-            font-size: 195px;
-        }
-        .page-wrapper .posterHeader {
-            font-size: 80px;
-        }
-        .page-wrapper .posterContainer {
-            min-height: 600px;
-        }
-        .page-wrapper .news-message {
-            height: 60px;
-        }
-        .page-wrapper .news-message p {
-            font-size: 40px;
-        }
-        .page-wrapper .galleryContainer::before {
-            height: calc(100% - 34px);
-    width: calc(100% - 34px);
-        }
-        .page-wrapper .galleryContainer {
-            padding: 15px;
-        }
-        .page-wrapper .galleryImg {
-            height: 400px;
-        }
-        .page-wrapper .galleryContainer:hover h4, .page-wrapper .galleryContainer.active h4 {
-            bottom: 20px;
-        }
-        .page-wrapper .posterHeader {
-        font-size: 75px;
-        filter: drop-shadow(2px 2px 1px black);
-    }
-    .page-wrapper .posterPara {
-        font-size: 35px;
-    }
-    .page-wrapper .serviceSection {
-    padding: 80px 0 80px;
-}
-.page-wrapper h2 span { 
-    font-size: 215px;
-    margin-top: -45px;
-}
-    .page-wrapper h2 span img {
-        width: 32px;
-    }
-    .page-wrapper .rightContent p {
-        margin-top: -30px;
-    }
-    }
-
-    @media (max-width:1199px)
-    {
-        .page-wrapper h1 {
-            font-size: 60px;
-        }
-            .page-wrapper h2 {
-        font-size: 50px;
-    }
-        .page-wrapper h3 {
-        font-size: 45px;
-    }
-    .page-wrapper h5 {
-        font-size: 33px;
-    }
-         
-        .page-wrapper .textBack {
-            font-size: 135px;
-            opacity: 0.05;
-    }
-    .page-wrapper .textBack span {
-    text-align: left;
-    font-size: 55px;
-}
-.page-wrapper .headerPara {
-    text-align: center;
-    margin-top: 50px;
-}
-.page-wrapper .news-message p {
-    font-size: 35px;
-}
-.page-wrapper .galleryImg {
-        height: 350px;
-    } 
-    .page-wrapper .galleryContainer {
-        padding: 10px;
-    }
-    .page-wrapper .galleryContainer::before {
-        height: calc(100% - 24px);
-        width: calc(100% - 24px);
-    }
-    .page-wrapper .gallerySection {
-    padding: 35px 0;
-}
-.page-wrapper .starImg {
-    width: 18px;
-}
-.page-wrapper .starImgs {
-    gap: 10px;
-}
-.page-wrapper .aboutContent p {
-    font-size: 20px;
-}
-.page-wrapper .aboutSection {
-    padding: 30px 0;
-}
-.page-wrapper .posterHeader {
-    font-size: 55px;
-}
-.page-wrapper .posterContainer {
-    min-height: 575px;
-}
-.badge-wrapper {
-        width: 130px;
-    height: 130px;
-} 
-.inner-circle-static {
-        width: 65px;
-    height: 65px;
-}
-.page-wrapper .serviceContainer .paymentImgContainer {
-    padding-top: 55px;
-}
-    .page-wrapper h2 span {
-        font-size: 170px;
-        margin-top: -40px;
-    }
-        .page-wrapper h2 span img {
-        width: 28px;
-    }
-        .page-wrapper .bottomTxt {
-        font-size: 160px;
-    }
-    }
-
-    @media (max-width:991px)
-    {
-
-            .page-wrapper h2 {
-        font-size: 38px;
-    }
-        .page-wrapper h3 {
-        font-size: 36px;
-    }
-    .page-wrapper h5 {
-        font-size: 28px;
-    }
-        .page-wrapper .textBack {
-        font-size: 100px;
-        opacity: 0.1;
-    }
-    .page-wrapper .textBack span { 
-        font-size: 35px;
-    }
-    .page-wrapper .rolling-text {
-        margin-top: 20px;
-    }
-    .page-wrapper .news-message {
-        height: 45px;
-    }
-    .page-wrapper .galleryContainer {
-        margin-bottom: 30px;
-    }
-    .page-wrapper .starImgs {
-        margin-bottom: 30px;
-    }
-        .page-wrapper .starImg {
-        width: 16px;
-    }
-        .page-wrapper .aboutContent p {
-        font-size: 18px;
-    }
-    .page-wrapper .paymentContainer p {
-            font-size: 19px;
-    letter-spacing: 0;
-    }
-    .page-wrapper .paymentSection {
-    padding: 50px 0 75px;
-}
-.page-wrapper .posterHeader {
-        font-size: 45px;
-    }
-        .page-wrapper .posterContainer {
-        min-height: 485px;
-    }
-        .page-wrapper .posterPara {
-        font-size: 25px;
-        -webkit-text-stroke: 1px #000000;
-    }
-        .badge-wrapper {
-        width: 110px;
-        height: 110px;
-    }
-        .inner-circle-static {
-        width: 45px;
-        height: 45px;
-        padding: 8px;
-    }
-    .page-wrapper .serviceContainer { 
-    width: 100%; 
-    min-height: 370px;
-}
-.page-wrapper .serviceContainer .paymentImgContainer {
-    padding-top: 25px;
-}
-.page-wrapper .serviceContainer .paymentImgContainer img {
-        margin-bottom: 20px; 
-    opacity: 1;
-}
-.page-wrapper .serviceContainer h5 {
-    opacity: 1;
-    margin-bottom: 0;
-}
-.page-wrapper .serviceContainer p {
-    padding-top: 0px;
-    opacity: 1;
-}
-    .page-wrapper h2 span {
-        font-size: 130px;
-        margin-top: -30px;
-    }
-        .page-wrapper .bottomTxt {
-        font-size: 120px;
-    }
-    }
-
-    @media (max-width:767px)
-    {
-        .page-wrapper h1 {
-        font-size: 50px;
-        margin-bottom: 5px;
-        text-align: center;
-    }
-        .page-wrapper h4 {
-        font-size: 30px;
-    }
-    .page-wrapper h5 {
-        font-size: 26px;
-        margin-bottom: 5px;
-    }
-        .page-wrapper .textBack {
-        font-size: 70px;
-    }
-    .page-wrapper .headerRow {
-        text-align: center;
-    }
-    .page-wrapper .headerPara { 
-        margin-top: 35px;
-    }
-    .page-wrapper .gallerySection {
-    padding: 25px 0 0;
-}
-.page-wrapper .news-message p {
-        font-size: 30px;
-    }
-        .page-wrapper .galleryImg {
-        height: 250px;
-    }
-        .page-wrapper .galleryContainer::before {
-        height: calc(100% - 13px);
-        width: calc(100% - 13px);
-    }
-        .page-wrapper .galleryContainer:hover h4, .page-wrapper .galleryContainer.active h4 {
-        bottom: 8px;
-    }
-    .page-wrapper .paymentSection {
-    padding: 50px 0 50px;
-}
-    .page-wrapper .posterContainer {
-        min-height: 370px;
-    }
-        .page-wrapper .posterHeader {
-        font-size: 30px;
-    }
-        .badge-wrapper {
-        width: 80px;
-        height: 80px;
-    }
-    .page-wrapper .svgTxt {
-    font-size: 28px;
-    letter-spacing: 5px;
-}
-        .inner-circle-static {
-        width: 32px;
-        height: 32px;
-        padding: 6px;
-    }
-    
-    .page-wrapper .posterPara {
-        font-size: 20px;
-    }
-        .page-wrapper .serviceContainer .paymentImgContainer img {
-        margin-bottom: 15px;
-        opacity: 1;
-        width: 40px;
-        height: 40px;
-    }
-    .page-wrapper .paymentTxt {
-        font-size: 16px;
-    }
-    }
-
-    @media (max-width:575px)
-    {
-        .page-wrapper h1 {
-        font-size: 45px;
-        padding-top: 35px;
-    }
-    .page-wrapper h2 {
-        font-size: 33px;
-    }
-        .page-wrapper h3 {
-        font-size: 31px;
-    }
-    .page-wrapper h5 {
-        font-size: 24px;
-    }
-        .page-wrapper .textBack {
-        font-size: 45px;
-        opacity: 0.2;
-    }
-    .page-wrapper .textBack span {
-        font-size: 20px;
-        text-align: center;
-    }
-    .page-wrapper .headerImg {
-        max-width: 350px;
-    width: 95%;
-    }
-    .page-wrapper .headerSection {
-        padding: 125px 0 50px;
-    }
-    .page-wrapper .headerPara {
-        margin-top: 30px;
-    }
-    .page-wrapper h1 br {
-        display: none;
-    }
-    .page-wrapper p {
-        font-size: 16px;
-    }
-    .page-wrapper .news-message {
-        height: 35px;
-    }
-    .page-wrapper .rolling-text {
-        margin-top: 15px;
-    }
-    .page-wrapper .news-message p {
-        font-size: 25px;
-    }
-    .page-wrapper .galleryContainer {
-        margin: auto;
-        margin-bottom: 20px;
-        max-width: 350px;
-    } 
-        .page-wrapper .galleryImg {
-        height: 100%;
-    }
-        .page-wrapper .starImgs {
-        gap: 5px;
-        margin-bottom: 25px;
-    }
-        .page-wrapper .aboutContent p {
-        font-size: 16px;
-    }
-    .page-wrapper .paymentSection {
-    padding: 25px 0 25px;
-}
-.page-wrapper .paymentContainer p {
-    font-size: 18px;
-}
-    .page-wrapper .posterContainer {
-        min-height: 370px;
-        max-width: 350px;
-        margin: auto;
-        margin-bottom: 50px;
-    }
-        .page-wrapper .serviceContainer { 
-        min-height: 100%;
-    }
-    }
-    
-    @media (max-width:375px)
-    {
-
-    }
-
-</style>
-
-
+    </style>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="antialiased overflow-x-hidden relative min-h-screen">
 
+    <!-- Top Red Decoration -->
+    <div class="absolute top-0 left-0 w-full h-[600px] overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute -top-[200px] -left-[200px] w-[600px] h-[600px] bg-[#b91c1c] rounded-full blur-3xl opacity-20"></div>
+        <svg class="absolute top-0 left-0 w-[500px] h-[300px] text-[#b91c1c]" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 0 L100 0 C 60 40 40 60 0 100 Z" fill="currentColor"/>
+        </svg>
+    </div>
 
-<body>
+    <!-- Main Content Wrapper -->
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-24 space-y-32">
 
-    
-
-<div id="page-top-margin"></div>
-
-
-<div class="page-wrapper">
-
-<section class="headerSection pb-0">
-  <div class="container">
-    <p class="textBack">
-        Freshly Made <span> Packed with Care </span>
-    </p>
-   <div class="row headerRow">
-        <div class="col-lg-3 col-md-4 col-sm-5 order-sm-1 order-2">
-            <h1>
-                Rich <br> Rustic &amp; <br> Authentic
-            </h1>
-            <a href="/order-now" class="orderBtn"> <span> Order Now </span> </a>
-        </div>
-        <div class="col-lg-6 col-md-8 col-sm-7 order-sm-2 order-1">
-            <div>
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768389039phpsvd3ph.png" class="img-fluid headerImg" alt="">
+        <!-- Hero Section -->
+        <section class="grid lg:grid-cols-2 gap-12 items-center relative">
+            <div class="space-y-8 z-10">
+                <h1 class="font-display text-5xl md:text-7xl leading-[1.1] tracking-tight text-white drop-shadow-lg">
+                    Elevate Your Evenings with Fine Spirits
+                </h1>
+                <p class="text-xl text-gray-300 leading-relaxed max-w-lg">
+                    Our bar is stocked with premium spirits, world-class wines, and handcrafted cocktails, served in an inviting setting perfect for both intimate evenings and lively celebrations.
+                </p>
+                <button class="group flex items-center bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold text-lg pl-8 pr-10 py-3 transition-all duration-300 btn-tag relative shadow-[0_0_20px_rgba(185,28,28,0.5)]">
+                    <span class="mr-3">Order Now</span>
+                    <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                </button>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-12 col-sm-12 order-sm-3 order-3">
-            <div class="headerPara">
-                <p class="mb-0">
-                    Craving something delicious but don’t have time to cook? We’ve got you covered! Domain930 Xpress Pizza 879249 Dec 2025 in  is your go-to spot for quick, fresh, and flavour-packed meals.
+            
+            <div class="relative flex justify-center items-center">
+                <!-- Red Circle Background -->
+                <div class="absolute w-[400px] h-[400px] md:w-[500px] md:h-[500px] bg-[#b91c1c] rounded-full blur-sm"></div>
+                <!-- Hero Image -->
+                <div class="relative z-10 w-[350px] md:w-[450px] rounded-full overflow-hidden border-4 border-[#3a3a3a] shadow-2xl rotate-3 bg-black">
+                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Whiskey on barrel" class="w-full h-full object-cover opacity-90 scale-110">
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section: Sip & Relax -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Left Image with Overlay -->
+            <div class="relative group">
+                <div class="absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-[#b91c1c] rounded-tr-3xl z-0"></div>
+                <div class="relative overflow-hidden rounded-lg shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop" alt="Cocktail preparation" class="w-full h-[500px] object-cover filter brightness-75">
+                    
+                    <!-- Floating Card -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[80%] bg-gradient-to-r from-[#7f1d1d] to-[#b91c1c] bg-opacity-90 backdrop-blur-md p-6 rounded-2xl shadow-xl text-center border border-white/10">
+                        <div class="bg-white text-[#b91c1c] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
+                            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-2xl tracking-tight text-white">Sip Back & Relax with Every Pour</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="space-y-6">
+                <h2 class="font-display text-4xl md:text-5xl tracking-tight text-white">
+                    A Symphony of Flavours <br/> <span class="text-gray-300">in Every Sip</span>
+                </h2>
+                <p class="text-xl text-gray-400 leading-relaxed">
+                    We offer more than just drinks—we offer an experience. Our carefully curated selection of fine wines, craft beers, and expertly mixed cocktails is designed to complement every occasion.
+                </p>
+                <button class="mt-4 bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold text-lg px-8 py-3 rounded-full transition-colors shadow-[0_4px_14px_rgba(185,28,28,0.4)]">
+                    Order Now
+                </button>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
+            <!-- Background Texture for this card -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 filter grayscale">
+                <div class="absolute inset-0 bg-[#1a1a1a]/80"></div>
+            </div>
+
+            <div class="relative z-10 grid md:grid-cols-3 gap-8 p-12 md:p-20 items-stretch">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center space-y-4 p-6">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                         <i data-lucide="concierge-bell" class="w-10 h-10 text-gray-900 stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight">Pick a Favourite</h3>
+                    <p class="text-gray-400 text-lg">Choose from a variety of tasty options.</p>
+                </div>
+
+                <!-- Step 2 (Highlighted) -->
+                <div class="flex flex-col items-center text-center space-y-4 p-6 border-4 border-[#b91c1c] bg-[#b91c1c]/10 rounded-3xl relative transform md:-translate-y-4">
+                    <div class="absolute -top-3 bg-[#b91c1c] text-xs font-bold px-3 py-1 rounded-full text-white uppercase tracking-wider">Most Popular</div>
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i data-lucide="smartphone" class="w-10 h-10 text-[#b91c1c] stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight">Secure Payment</h3>
+                    <p class="text-gray-400 text-lg">Pay securely in just a few taps.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center space-y-4 p-6">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i data-lucide="sparkles" class="w-10 h-10 text-gray-900 stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight">Fresh & Ready</h3>
+                    <p class="text-gray-400 text-lg">Freshly made and good to go when you are.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Text Content -->
+            <div class="space-y-8 order-2 lg:order-1">
+                <h2 class="font-display text-5xl md:text-6xl tracking-tight text-white">Our Menu</h2>
+                <div class="space-y-6 text-xl text-gray-400 leading-relaxed">
+                    <p>
+                        Hosting a gathering or enjoying a solo evening? <span class="text-white font-medium">{TAKEAWAY NAME}</span> brings bar-quality beverages straight to your doorstep.
+                    </p>
+                    <p>
+                        Our expertly selected takeaway menu features everything from smooth whiskies to refreshing beers, ensuring you never compromise on quality, even at home.
+                    </p>
+                </div>
+                <button class="bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold text-lg px-10 py-3 rounded-full shadow-[0_4px_14px_rgba(185,28,28,0.4)] transition-all">
+                    Order Now
+                </button>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-2 gap-4 order-1 lg:order-2">
+                <!-- Image 1 -->
+                <div class="relative group overflow-hidden rounded-tl-[3rem] rounded-br-[3rem] border border-white/10">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#b91c1c]"></div>
+                </div>
+                <!-- Image 2 -->
+                <div class="relative group overflow-hidden rounded-tr-[3rem] rounded-bl-[3rem] border border-white/10">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-[#b91c1c]"></div>
+                </div>
+                <!-- Image 3 (Vodka) -->
+                <div class="relative group overflow-hidden rounded-bl-[3rem] rounded-tr-[3rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1613243555988-441166d4d6fd?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded text-sm font-semibold text-white">Vodka</div>
+                    <div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-[#b91c1c]"></div>
+                </div>
+                <!-- Image 4 -->
+                <div class="relative group overflow-hidden rounded-br-[3rem] rounded-tl-[3rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#b91c1c]"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Banner -->
+        <section class="bg-[#2a2a2a] rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+            
+            <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+                <h2 class="font-display text-4xl md:text-6xl tracking-tight text-white drop-shadow-lg">
+                    Bold, Smooth, & Refreshing
+                </h2>
+                <p class="text-xl text-gray-400 leading-relaxed">
+                    Whether you're catching up with friends over a glass of wine, enjoying a classic cocktail, or exploring new flavours, our warm ambience and attentive service ensure an unforgettable time.
                 </p>
             </div>
-        </div>
-   </div>
+        </section>
 
-   <div class="offerSection py-md-5 py-sm-4 py-4">
-       <div id="offer-section">
-     
+    </main>
 
-</div>
-   </div>
-  </div>
-</section>
-
-<div class="rolling-text">
-    <div class="text-position">
-       <div class="news-message">
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-          <p>Order Now <span>*</span> </p>
-       </div>
+    <!-- Bottom Red Curve Decoration -->
+    <div class="absolute bottom-0 left-0 w-full h-32 md:h-48 overflow-hidden z-0 pointer-events-none">
+        <svg viewBox="0 0 1440 320" class="w-full h-full text-[#b91c1c] fill-current" preserveAspectRatio="none">
+            <path d="M0,160L80,149.3C160,139,320,117,480,128C640,139,800,181,960,186.7C1120,192,1280,160,1360,144L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
     </div>
- </div>
 
- <section class="gallerySection">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="galleryContainer">
-                    <a href="/order-now">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1743000753phpyPEkSU.jpg" class="img-fluid galleryImg" alt="">
-                        <h4>
-                            Garlic Bread
-                        </h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="galleryContainer active">
-                    <a href="/order-now">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid galleryImg" alt="">
-                        <h4>
-                            Donner Kebab
-                        </h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="galleryContainer mb-0">
-                    <a href="/order-now">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1761729658phpYlnnCI.png" class="img-fluid galleryImg" alt="">
-                        <h4>
-                            Calzone
-                        </h4>
-                    </a>
-                </div>
-            </div> 
-        </div>
-    </div>
- </section>
-
- <section class="aboutSection">
-    <div class="container">
-        <div class="aboutContent">
-            <h3 class="mb-0">
-                About Us
-            </h3>
-            <div class="starImgs">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768394837phpq4Jiuv.png" class="img-fluid starImg" alt="">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768394837phpq4Jiuv.png" class="img-fluid starImg" alt="">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768394837phpq4Jiuv.png" class="img-fluid starImg" alt="">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768394837phpq4Jiuv.png" class="img-fluid starImg" alt="">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768394837phpq4Jiuv.png" class="img-fluid starImg" alt="">
-            </div>
-            <p>
-                Delicious food, delivered fast! Domain930 Xpress Pizza 879249 Dec 2025 in  is here to make mealtime effortless. Whether it’s a quick lunch, a cozy dinner, or a late-night craving, we ensure you get fresh, high-quality meals without the wait. Our easy online ordering and speedy delivery mean no queues, no hassle—just great food brought straight to your door. Explore our menu, pick your favourites, and let us handle the rest.
-            </p>
-            <a href="/order-now" class="orderBtn"> <span> Order Now </span> </a>
-        </div>
-    </div>
- </section>
-
- <section class="paymentSection">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="paymentContainer">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396996phpe55bYo.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Search Icon" class="img-fluid">  
-                    </div>
-                    <h5>
-                        Order in Seconds
-                    </h5>
-                    <p class="">
-                        Choose your go-to meal from the menu
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4  col-sm-6">
-                <div class="paymentContainer two">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396995phpM5aN13.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Cards Icon" class="img-fluid">  
-                    </div>
-                        <h5>
-                            Secure Checkout
-                        </h5>
-                        <p class="paymentTxt">
-                            Paying is effortless, so you can focus on the food.
-                        </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4  col-sm-6">
-                <div class="paymentContainer three">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1727784786php1lMh5f.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Receive food" class="img-fluid">  
-                    </div>
-                        <h5>
-                            Served Fresh
-                        </h5>
-                        <p class="paymentTxt">
-                            Freshly made and good to go when you are.
-                        </p>
-                </div>
-            </div>
-        </div>
-    </div>
- </section>
-
- <section class="posterSection">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="posterContainer" style="background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768397581phpGbVNe6.jpg');">
-                    <div>
-                        <p class="posterHeader">
-                            Pizza
-                        </p>
-                    </div>
-                    <div>
-                        <div class="badge-wrapper mb-md-4 mb-sm-2">
-                            <svg class="badge-svg" viewBox="0 0 200 200">
-                                <defs>
-                                    <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
-                                </defs>
-                                <text fill="white" class="svgTxt">
-                                    <textPath href="#circlePath">
-                                        • SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
-                                    </textPath>
-                                </text>
-                            </svg>
-                            <div class="inner-circle-static">
-                                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1766550640php7b7eqx.png" class="img-fluid spoonImg" alt="Domain930 Xpress Pizza 879249 Dec 2025 Spoon">
-                            </div>
-                        </div>
-                        <p class="posterPara">
-                            Big Flavours, <br> Made Fast &amp; Fresh!
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="posterContainer mb-0" style="background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768400524php0Medb2.jpg');">
-                    <div>
-                        <p class="posterHeader">
-                            Nuggets
-                        </p>
-                    </div>
-                    <div>
-                        <div class="badge-wrapper mb-md-4 mb-sm-2">
-                            <svg class="badge-svg" viewBox="0 0 200 200">
-                                <defs>
-                                    <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
-                                </defs>
-                                <text fill="white" class="svgTxt">
-                                    <textPath href="#circlePath">
-                                        • SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
-                                    </textPath>
-                                </text>
-                            </svg>
-                            <div class="inner-circle-static">
-                                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1766550640php7b7eqx.png" class="img-fluid spoonImg" alt="Domain930 Xpress Pizza 879249 Dec 2025 Spoon">
-                            </div>
-                        </div>
-                        <p class="posterPara">
-                            Big Flavours, <br> Made Fast &amp; Fresh!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
- </section>
-
- <section class="serviceSection">
-    <div class="container">
-        <div class="row justify-content-center serviceBorder">
-            <div class="col-lg-4 col-md-6  col-sm-6">
-                <div class="serviceContainer">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396995phpM5aN13.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Cards Icon" class="img-fluid">  
-                    </div>
-                        <h5>
-                            Our Services
-                        </h5>
-                        <p class="paymentTxt">
-                            Craving something tasty? Domain930 Xpress Pizza 879249 Dec 2025 is your go-to spot for top-rated takeaway in . Whether you're ordering for one or feeding a crowd, our menu is packed with mouth-watering options. Order food online now for collection or delivery!
-                        </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6  col-sm-6">
-                <div class="serviceContainer two active">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396995phpM5aN13.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Cards Icon" class="img-fluid">  
-                    </div>
-                        <h5>
-                            Our Menu
-                        </h5>
-                        <p class="paymentTxt">
-                            We bring you the best food in , made from the freshest ingredients. Our menu is always evolving with new dishes and customer favourites. Check out our latest menu and order online today!
-                        </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6  col-sm-6">
-                <div class="serviceContainer">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1727784786php1lMh5f.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Receive food" class="img-fluid">  
-                    </div>
-                        <h5>
-                            Our Hygiene
-                        </h5>
-                        <p class="paymentTxt">
-                            At Domain930 Xpress Pizza 879249 Dec 2025, we maintain strict food safety standards to ensure your meal is freshly prepared in a clean environment. Our commitment to hygienic food takeaway means you can enjoy every bite with confidence.
-                        </p>
-                </div>
-            </div>
-        </div>
-    </div>
- </section>
-
- <section class="deliverySection">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768412326phpt6SSG3.png" class="img-fluid chickImg" alt="">
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="rightContent">
-                    <h2>
-                        Magic of delicious 
-                        <span> Fo <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768412847phpmrjuRr.png" class="" alt=""> d </span>
-                    </h2>
-                    <p>
-                        At Domain930 Xpress Pizza 879249 Dec 2025, , we make sure you never have to wait long for great food. Whether you're working late, relaxing at home, or hosting a last-minute gathering, our freshly prepared dishes are just a few clicks away. With a variety of meal options, generous portions, and exclusive deals, enjoying your favourite takeaway has never been easier. Simply place your order, track your delivery, and dig into restaurant-style meals without the hassle.
-                    </p>
-                    <a href="/order-now" class="orderBtn"> <span> Order Now </span> </a>
-                </div>
-            </div>
-        </div>
-        <p class="bottomTxt">
-            Fast Delivery
-        </p>
-    </div>
- </section>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<script>
-   window.addEventListener("load", function(){
-   pageTopmargin();
-   $(window).scrollTop($(window).scrollTop()+1);
-   });
-   pageTopmargin();
-   function pageTopmargin() {
-   var headerHeight = $('#header').height();
-   $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
-   }
-   $("#banner_content").appendTo($("#offer-section"));
-   var pageSection = $('[data-background]');
-   pageSection.each(function(indx){
-   if ($(this).attr("data-background")){
-   $(this).css("background-image", "url(" + $(this).data("background") + ")");
-   }
-   });
-</script>
-
- <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
- <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
-
-
-
-
- <script>
-  $.getScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js", function() {	
-      var swiper = new Swiper(".mySwiper", {
-          effect: "coverflow",
-          grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: "auto",
-          loop:true,
-          coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 0,
-            modifier: 0,
-            slideShadows: false,
-          },
-          pagination:false,
-          breakpoints: {
-              0: {
-                  slidesPerView: "1",
-              },
-              600: {
-                  slidesPerView: "auto",
-                  spaceBetween: 0,
-              },
-              992: {
-                  slidesPerView: "3",
-                  spaceBetween: 0,
-                  
-              },
-              1200: {
-                  slidesPerView: "5",
-                  spaceBetween: 0,
-              },
-          },
-          loop: true,
-          autoplay:false,
-       autoplayTimeout:3000,
-      });
-  });
-  
-</script>
-
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
- 
-
-<!-- 
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767729322phpwfak1m.jpg
-
--->
