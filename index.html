@@ -1,212 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Spirits & Dining</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rye&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            /* Simulating the dark slate texture with noise and gradient */
-            background-image: 
-                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"),
-                radial-gradient(circle at 50% 0%, #2a2a2a 0%, #111111 100%);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dessert</title>
+ 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Germania+One&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+ 
+
+
+
+
+
+<style type="text/css">
+
+
+/* 
+
+font-family: "Germania One", system-ui;
+font-family: "Outfit", sans-serif;
+
+*/  
+
+
+
+    body .page-wrapper { 
+    font-family: "Outfit", sans-serif; 
+    color: #6c6a6a; 
+    line-height: 24px; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+    background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768924766phpTzcjkz.png');
+    } 
+    
+   .page-wrapper p {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.5;
+   }
+
+   .page-wrapper p > a {
+   color: inherit;
+   }
+   .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+   line-height: 1.3;
+   font-family: "Germania One", system-ui;
+   }
+   .page-wrapper .row {
+   margin: 0 -15px!important;
+   }
+   .page-wrapper .bg-dark {
+   background-color: #fc673f!important;
+   }
+
+   .page-wrapper .bg-primary {
+   background-color: #241e5e!important;
+   }
+   .page-wrapper .bg-light {
+   background-color: #f1f1f1!important;
+   }
+   .page-wrapper section {
+   position: relative;
+   z-index: 1;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background: #000000cc;
+   }   
+   .page-wrapper .btn {
+   font-size: 14px;
+   border-radius: 0;
+   padding: 0 30px;
+   line-height: 50px;
+   }  
+
+   .page-wrapper .overlay{
+      content: "";
+    background: rgb(0 0 0 / 58%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   }
+
+   .page-wrapper h1 {
+    font-size: 80px;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 15px;
+   }
+   .page-wrapper h2 {
+    font-size: 78px;
+    color: #fff;
+   }
+   .page-wrapper h3 {
+    font-size: 72px;
+    color: #fff;
+    }
+   .page-wrapper h4 {
+    
+   }
+   .page-wrapper h5 {
+        font-size: 35px;
+    color: #fff;
+    font-weight: 500;
+   }
+   .page-wrapper h6 {
+    
+   }
+   .page-wrapper .headerSection {
+    background: #000000cc;
+    padding: 100px 0;
+   }
+   .page-wrapper .headerTopImg {
+    position: absolute;
+    top: 0;
+    filter: invert(18%) sepia(89%) saturate(2472%) hue-rotate(0deg) brightness(94%) contrast(105%);
+   }
+   .page-wrapper .orderBtn {
+    background: red;
+    padding: 9px 20px 12px;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+   }
+   .page-wrapper .aboutSection {
+    padding: 100px 0;
+    background: #000000cc;
+   }
+   .page-wrapper .aboutImg {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    position: relative;
+   }
+   .page-wrapper .aboutContent {
+    text-align: center;
+   }
+   .page-wrapper h3 span{ 
+    display: block;
+    font-size: 35px;
+   }
+   .page-wrapper .aboutImg .leftImg {
+    clip-path: polygon(55% 0, 100% 30%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 0);
+    width: 100%;
+   }
+   .page-wrapper .aboutImg:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 45%;
+    height: 30%;
+    background: #b82600;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+   }
+   .page-wrapper .aboutSection::after {
+    bottom: 0;
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 70px;
+    height: 80%;
+    background: #444444;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 0 200px 200px 0;
+   }
+   .page-wrapper .aboutSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    height: 80%;
+    background: #444444;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 200px 0 0 200px;
+   }
+   .page-wrapper .aboutBtmContent {
+    position: absolute;
+    bottom: -75px;
+    background: #b82601d6;
+    width: fit-content;
+    height: fit-content;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 20px 70px;
+    text-align: center;
+    border-radius: 35px;
+   }
+   .page-wrapper .cartImg {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 15px;
+   }
+   .page-wrapper .paymentParent {
+    background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769099155phpM0z2Zd.jpg');
+    background-size: cover;
+    border-radius: 50px;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+   }
+   .page-wrapper .paymentContainer {
+        background: #444444;
+    border: 15px solid #b60100;
+    padding: 10px;
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+   }
+   .page-wrapper .paymentImgContainer img {
+        filter: invert(1);
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 25px 0;
+   }
+   .page-wrapper .paymentContainer p{ 
+    font-size: 20px;
+    margin-bottom: 15px;
+   }
+   .page-wrapper .paymentSection {
+    padding: 100px 0;
+   }
+   .page-wrapper .paymentParent::before {
+content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4c4d51;
+    opacity: 0.6;
+    z-index: 0;
+}
+.page-wrapper .menuSection {
+    padding: 100px 0;
+}
+.page-wrapper .galleryContainer::before {
+content: '';
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 1%, 75% 0%, 100% 22%, 100% 100%, 25% 100%, 0 78%);
+    background: #b60100;
+    z-index: -1;
+}
+.page-wrapper .galleryContainer {
+        width: 90%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+.page-wrapper .galleryContainer img {
+            clip-path: polygon(0 1%, 75% 0%, 100% 22%, 100% 100%, 25% 100%, 0 78%);
+
+}
+.page-wrapper .galleryContainer.one { 
+    margin-top: -100px;
+}
+.page-wrapper .footerContainer {
+        background: #444444;
+    padding: 50px;
+    text-align: center;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+.page-wrapper .footerImg {
+        filter: invert(18%) sepia(89%) saturate(2472%) hue-rotate(0deg) brightness(94%) contrast(105%);
+}
+    /* RESPONSIVE VIEW */
+
+    @media(min-width:1200px){
+        .page-wrapper .container{
+            max-width: 1140px;
         }
-        .font-display {
-            font-family: 'Rye', serif;
+    }
+
+    @media(min-width:1500px){
+        .page-wrapper .container{
+            max-width: 1440px;
         }
-        /* Custom shape for the Hero button */
-        .btn-tag {
-            clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
-        }
-    </style>
-<script src="https://cdn.tailwindcss.com"></script>
+    }
+
+
+
+    @media (max-width:1500px)
+    {
+
+    }
+
+    @media (max-width:1199px)
+    {
+        
+    }
+
+    @media (max-width:991px)
+    {
+
+    }
+
+    @media (max-width:767px)
+    {
+
+    }
+
+    @media (max-width:575px)
+    {
+        
+    }
+    
+    @media (max-width:375px)
+    {
+        
+    }
+
+</style>
+
+
 </head>
-<body class="antialiased overflow-x-hidden relative min-h-screen">
 
-    <!-- Top Red Decoration -->
-    <div class="absolute top-0 left-0 w-full h-[600px] overflow-hidden -z-10 pointer-events-none">
-        <div class="absolute -top-[200px] -left-[200px] w-[600px] h-[600px] bg-[#b91c1c] rounded-full blur-3xl opacity-20"></div>
-        <svg class="absolute top-0 left-0 w-[500px] h-[300px] text-[#b91c1c]" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M0 0 L100 0 C 60 40 40 60 0 100 Z" fill="currentColor"/>
-        </svg>
-    </div>
 
-    <!-- Main Content Wrapper -->
-    <main class="max-w-7xl mx-auto px-6 pt-12 pb-24 space-y-32">
+<body>
 
-        <!-- Hero Section -->
-        <section class="grid lg:grid-cols-2 gap-12 items-center relative">
-            <div class="space-y-8 z-10">
-                <h1 class="font-display text-5xl md:text-7xl leading-[1.1] tracking-tight text-white drop-shadow-lg">
-                    Elevate Your Evenings with Fine Spirits
-                </h1>
-                <p class="text-xl text-gray-300 leading-relaxed max-w-lg">
-                    Our bar is stocked with premium spirits, world-class wines, and handcrafted cocktails, served in an inviting setting perfect for both intimate evenings and lively celebrations.
-                </p>
-                <button class="group flex items-center bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold text-lg pl-8 pr-10 py-3 transition-all duration-300 btn-tag relative shadow-[0_0_20px_rgba(185,28,28,0.5)]">
-                    <span class="mr-3">Order Now</span>
-                    <i data-lucide="shopping-cart" class="w-5 h-5"></i>
-                </button>
+    
+
+<div id="page-top-margin"></div>
+
+
+
+
+<div class="page-wrapper">
+
+<section class="headerSection">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768925403phpv3WcEk.png" class="img-fluid headerTopImg" alt="">
+  <div class="container">
+   <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <h1>
+                Elevate Your Evenings with Fine Spirits
+            </h1>
+            <p>
+                Our bar is stocked with premium spirits, world-class wines, and handcrafted cocktails, served in an inviting setting perfect for both intimate evenings and lively celebrations.
+            </p>
+            <a href="/order-now" class="orderBtn">
+                Order Now
+            </a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div>
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768924678phpkEipqD.png" class="img-fluid headerImg" alt="">
             </div>
-            
-            <div class="relative flex justify-center items-center">
-                <!-- Red Circle Background -->
-                <div class="absolute w-[400px] h-[400px] md:w-[500px] md:h-[500px] bg-[#b91c1c] rounded-full blur-sm"></div>
-                <!-- Hero Image -->
-                <div class="relative z-10 w-[350px] md:w-[450px] rounded-full overflow-hidden border-4 border-[#3a3a3a] shadow-2xl rotate-3 bg-black">
-                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Whiskey on barrel" class="w-full h-full object-cover opacity-90 scale-110">
-                </div>
-            </div>
-        </section>
+        </div>
+   </div>
+  </div>
+</section>
 
-        <!-- Feature Section: Sip & Relax -->
-        <section class="grid lg:grid-cols-2 gap-16 items-center">
-            <!-- Left Image with Overlay -->
-            <div class="relative group">
-                <div class="absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-[#b91c1c] rounded-tr-3xl z-0"></div>
-                <div class="relative overflow-hidden rounded-lg shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop" alt="Cocktail preparation" class="w-full h-[500px] object-cover filter brightness-75">
-                    
-                    <!-- Floating Card -->
-                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[80%] bg-gradient-to-r from-[#7f1d1d] to-[#b91c1c] bg-opacity-90 backdrop-blur-md p-6 rounded-2xl shadow-xl text-center border border-white/10">
-                        <div class="bg-white text-[#b91c1c] w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-                            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+<section class="aboutSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div>
+                    <div class="aboutImg">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1664031723phpYfKuAK.jpg" class="img-fluid leftImg" alt="">
+                        <div class="aboutBtmContent">
+                            <div class="cartImg">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1763539236phpWx4N4z.png" class="img-fluid" alt="">
+                            </div>
+                            <p class="mb-0">
+                                Sip Back &amp; Relax <br>
+                                with Every Pour
+                            </p>
                         </div>
-                        <h3 class="font-display text-2xl tracking-tight text-white">Sip Back & Relax with Every Pour</h3>
                     </div>
+                    
                 </div>
             </div>
-
-            <!-- Right Content -->
-            <div class="space-y-6">
-                <h2 class="font-display text-4xl md:text-5xl tracking-tight text-white">
-                    A Symphony of Flavours <br/> <span class="text-gray-300">in Every Sip</span>
-                </h2>
-                <p class="text-xl text-gray-400 leading-relaxed">
-                    We offer more than just drinks—we offer an experience. Our carefully curated selection of fine wines, craft beers, and expertly mixed cocktails is designed to complement every occasion.
-                </p>
-                <button class="mt-4 bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold text-lg px-8 py-3 rounded-full transition-colors shadow-[0_4px_14px_rgba(185,28,28,0.4)]">
-                    Order Now
-                </button>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section class="relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
-            <!-- Background Texture for this card -->
-            <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 filter grayscale">
-                <div class="absolute inset-0 bg-[#1a1a1a]/80"></div>
-            </div>
-
-            <div class="relative z-10 grid md:grid-cols-3 gap-8 p-12 md:p-20 items-stretch">
-                <!-- Step 1 -->
-                <div class="flex flex-col items-center text-center space-y-4 p-6">
-                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                         <i data-lucide="concierge-bell" class="w-10 h-10 text-gray-900 stroke-[1.5]"></i>
-                    </div>
-                    <h3 class="font-semibold text-2xl tracking-tight">Pick a Favourite</h3>
-                    <p class="text-gray-400 text-lg">Choose from a variety of tasty options.</p>
-                </div>
-
-                <!-- Step 2 (Highlighted) -->
-                <div class="flex flex-col items-center text-center space-y-4 p-6 border-4 border-[#b91c1c] bg-[#b91c1c]/10 rounded-3xl relative transform md:-translate-y-4">
-                    <div class="absolute -top-3 bg-[#b91c1c] text-xs font-bold px-3 py-1 rounded-full text-white uppercase tracking-wider">Most Popular</div>
-                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                        <i data-lucide="smartphone" class="w-10 h-10 text-[#b91c1c] stroke-[1.5]"></i>
-                    </div>
-                    <h3 class="font-semibold text-2xl tracking-tight">Secure Payment</h3>
-                    <p class="text-gray-400 text-lg">Pay securely in just a few taps.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="flex flex-col items-center text-center space-y-4 p-6">
-                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                        <i data-lucide="sparkles" class="w-10 h-10 text-gray-900 stroke-[1.5]"></i>
-                    </div>
-                    <h3 class="font-semibold text-2xl tracking-tight">Fresh & Ready</h3>
-                    <p class="text-gray-400 text-lg">Freshly made and good to go when you are.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Menu Section -->
-        <section class="grid lg:grid-cols-2 gap-16 items-center">
-            <!-- Text Content -->
-            <div class="space-y-8 order-2 lg:order-1">
-                <h2 class="font-display text-5xl md:text-6xl tracking-tight text-white">Our Menu</h2>
-                <div class="space-y-6 text-xl text-gray-400 leading-relaxed">
+            <div class="col-lg-5 col-md-6 col-sm-12 align-self-center">
+                <div class="aboutContent">
+                    <h3>
+                        <span> A Symphony of Flavours </span> 
+                        in Every Sip
+                    </h3>
                     <p>
-                        Hosting a gathering or enjoying a solo evening? <span class="text-white font-medium">{TAKEAWAY NAME}</span> brings bar-quality beverages straight to your doorstep.
+                        Why step out when the best drinks can come to you? At TEMP-1069-Kabana - 879533  GB, we offer a selection of premium wines, spirits, and beers, carefully chosen to bring you quality and taste. Whether you're celebrating, unwinding, or simply enjoying a meal, our takeaway service ensures you always have the perfect drink on hand.
                     </p>
-                    <p>
-                        Our expertly selected takeaway menu features everything from smooth whiskies to refreshing beers, ensuring you never compromise on quality, even at home.
-                    </p>
-                </div>
-                <button class="bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold text-lg px-10 py-3 rounded-full shadow-[0_4px_14px_rgba(185,28,28,0.4)] transition-all">
-                    Order Now
-                </button>
-            </div>
-
-            <!-- Image Grid -->
-            <div class="grid grid-cols-2 gap-4 order-1 lg:order-2">
-                <!-- Image 1 -->
-                <div class="relative group overflow-hidden rounded-tl-[3rem] rounded-br-[3rem] border border-white/10">
-                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
-                    <div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#b91c1c]"></div>
-                </div>
-                <!-- Image 2 -->
-                <div class="relative group overflow-hidden rounded-tr-[3rem] rounded-bl-[3rem] border border-white/10">
-                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
-                    <div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-[#b91c1c]"></div>
-                </div>
-                <!-- Image 3 (Vodka) -->
-                <div class="relative group overflow-hidden rounded-bl-[3rem] rounded-tr-[3rem] border border-white/10">
-                    <img src="https://images.unsplash.com/photo-1613243555988-441166d4d6fd?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
-                    <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded text-sm font-semibold text-white">Vodka</div>
-                    <div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-[#b91c1c]"></div>
-                </div>
-                <!-- Image 4 -->
-                <div class="relative group overflow-hidden rounded-br-[3rem] rounded-tl-[3rem] border border-white/10">
-                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
-                    <div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#b91c1c]"></div>
+                    <a href="/order-now" class="orderBtn">
+                        Order Now
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <!-- Bottom Banner -->
-        <section class="bg-[#2a2a2a] rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
-            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
-            
-            <div class="relative z-10 max-w-3xl mx-auto space-y-6">
-                <h2 class="font-display text-4xl md:text-6xl tracking-tight text-white drop-shadow-lg">
-                    Bold, Smooth, & Refreshing
-                </h2>
-                <p class="text-xl text-gray-400 leading-relaxed">
-                    Whether you're catching up with friends over a glass of wine, enjoying a classic cocktail, or exploring new flavours, our warm ambience and attentive service ensure an unforgettable time.
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Bottom Red Curve Decoration -->
-    <div class="absolute bottom-0 left-0 w-full h-32 md:h-48 overflow-hidden z-0 pointer-events-none">
-        <svg viewBox="0 0 1440 320" class="w-full h-full text-[#b91c1c] fill-current" preserveAspectRatio="none">
-            <path d="M0,160L80,149.3C160,139,320,117,480,128C640,139,800,181,960,186.7C1120,192,1280,160,1360,144L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-        </svg>
+        </div>
     </div>
+</section>
 
-    <script>
-        lucide.createIcons();
-    </script>
+<section class="paymentSection">
+    <div class="container paymentParent">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="paymentContainer">
+                    <div class="paymentImgContainer">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396996phpe55bYo.png" alt="TEMP-1069-Kabana - 879533  GB Search Icon" class="img-fluid">  
+                    </div>
+                    <h5>
+                        Order in Seconds
+                    </h5>
+                    <p class="">
+                        Choose your go-to meal from the menu
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4  col-sm-6">
+                <div class="paymentContainer two">
+                    <div class="paymentImgContainer">
+                        <img loading=lazy loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396995phpM5aN13.png" alt="TEMP-1069-Kabana - 879533  GB Cards Icon" class="img-fluid">  
+                    </div>
+                        <h5>
+                            Secure Checkout
+                        </h5>
+                        <p class="paymentTxt">
+                            Paying is effortless, so you can focus on the food.
+                        </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4  col-sm-6">
+                <div class="paymentContainer three">
+                    <div class="paymentImgContainer">
+                        <img loading=lazy loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1727784786php1lMh5f.png" alt="TEMP-1069-Kabana - 879533  GB Receive food" class="img-fluid">  
+                    </div>
+                        <h5>
+                            Served Fresh
+                        </h5>
+                        <p class="paymentTxt">
+                            Freshly made and good to go when you are.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <section class="menuSection">
+     <div class="container">
+        <div class="row">
+         
+            <div class="col-lg-5 col-md-6 col-sm-12 align-self-center">
+                <div class="aboutContent">
+                    <h3>
+                        <span> A Symphony of Flavours </span> 
+                        in Every Sip
+                    </h3>
+                    <p>
+                        Why step out when the best drinks can come to you? At TEMP-1069-Kabana - 879533  GB, we offer a selection of premium wines, spirits, and beers, carefully chosen to bring you quality and taste. Whether you're celebrating, unwinding, or simply enjoying a meal, our takeaway service ensures you always have the perfect drink on hand.
+                    </p>
+                    <a href="/order-now" class="orderBtn">
+                        Order Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                 <div class="galleryContainer one">
+                            <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid galleryImg" alt="">
+                        </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+ <div class="galleryContainer">
+                            <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid galleryImg" alt="">
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                 <div class="galleryContainer">
+                            <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid galleryImg" alt="">
+                        </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+ <div class="galleryContainer">
+                            <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid galleryImg" alt="">
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <section class="footerSection">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 footerContainer">
+                <div class="footerContent">
+                    <h2>
+                        Bold Smooth & Refreshning
+                    </h2>
+                    <p>
+                        Why step out when the best drinks can come to you? At TEMP-1069-Kabana - 879533  GB, we offer a selection of premium wines, spirits, and beers, carefully chosen to bring you quality and taste. Whether you're celebrating, unwinding, or simply enjoying a meal, our takeaway service ensures you always have the perfect drink on hand.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769098842phpoaQyAr.png" class="img-fluid footerImg" alt="">
+ </section>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+   window.addEventListener("load", function(){
+   pageTopmargin();
+   $(window).scrollTop($(window).scrollTop()+1);
+   });
+   pageTopmargin();
+   function pageTopmargin() {
+   var headerHeight = $('#header').height();
+   $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
+   }
+   $("#banner_content").appendTo($("#offer-section"));
+   var pageSection = $('[data-background]');
+   pageSection.each(function(indx){
+   if ($(this).attr("data-background")){
+   $(this).css("background-image", "url(" + $(this).data("background") + ")");
+   }
+   });
+</script>
+
+ <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
+ <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
+
+
+
+
+ <script>
+  $.getScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js", function() {	
+      var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          loop:true,
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 0,
+            modifier: 0,
+            slideShadows: false,
+          },
+          pagination:false,
+          breakpoints: {
+              0: {
+                  slidesPerView: "1",
+              },
+              600: {
+                  slidesPerView: "auto",
+                  spaceBetween: 0,
+              },
+              992: {
+                  slidesPerView: "3",
+                  spaceBetween: 0,
+                  
+              },
+              1200: {
+                  slidesPerView: "5",
+                  spaceBetween: 0,
+              },
+          },
+          loop: true,
+          autoplay:false,
+       autoplayTimeout:3000,
+      });
+  });
+  
+</script>
+
 </body>
 </html>
+ 
+
+<!-- 
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767729322phpwfak1m.jpg
+
+-->
