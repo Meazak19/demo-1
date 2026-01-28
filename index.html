@@ -24,8 +24,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
  
 
-
-
 <style type="text/css">
 
 
@@ -114,13 +112,20 @@
     text-transform: uppercase;
        }
        .page-wrapper h3 { 
-
+        font-size: 50px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
         }
        .page-wrapper h4 {
         
        }
        .page-wrapper h5 {
-        
+        font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #db5027;
+    margin-bottom: 0;
        }
        .page-wrapper h6 {
         
@@ -135,9 +140,9 @@
         text-align: center;
        }
        .page-wrapper .orderBtn {
-            font-size: 25px;
+        font-size: 20px;
     display: inline-block;
-    padding: 25px 50px;
+    padding: 15px 35px;
     background: transparent;
     border: 2px solid #fff;
     border-radius: 50px;
@@ -166,47 +171,67 @@
     height: 60px; 
     top: 25px;
     left: 8%;
+    animation: bounceTwo 1s cubic-bezier(.5, 0.05, 1, .5) infinite;
+  animation-direction: alternate;
       }
       .page-wrapper .ballTwo { 
     width: 180px;
     height: 180px; 
     bottom: 100px;
     left: 2%;
+    			    animation: bounce 1s ease-out infinite;
+  animation-direction: alternate;
       }
+      	@keyframes bounce { 
+  from  { transform: scale(1.0); }
+  to  { transform:scale(1.5)   }
+ }
       .page-wrapper .ballThree { 
     width: 180px;
     height: 180px; 
     top: 15px;
     right: 0;
     transform: scale(2.2);
+    filter: blur(3px);
+    animation: bounce 1s ease-out infinite;
+  animation-direction: alternate;
       }
       .page-wrapper .ballFour {
                 width: 130px;
     height: 130px;
-    bottom: 50px;
+    bottom: 100px;
     right: 5%;
+    animation: bounceTwo 1s cubic-bezier(.5, 0.05, 1, .5) infinite;
+  animation-direction: alternate;
+      } 
+      	@keyframes bounceTwo { 
+  from  { transform: translate3d(0, 0, 0)   ; }
+  to  { transform: translate3d(0, 122px, 0);   }
+ }
+      .page-wrapper .aboutImgParent {
+        display: flex;
+    gap: 60px;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+      } 
+      .page-wrapper .aboutImgInner.one { 
+        height: 100%;
+    object-fit: cover;
+    border-radius: 250px;
+      }
+      .page-wrapper .aboutImgInner.two {  
+        height: 100%;
+    object-fit: cover;
+    border-radius: 250px;
       }
       .page-wrapper .aboutImg {
-        display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    width: 100%;
-      }
-      .page-wrapper .abtImg.one {
-        width: 48%;
+        position: relative;
     height: 400px;
     max-width: 250px;
     object-fit: cover;
     border-radius: 250px;
-      }
-      .page-wrapper .abtImg.two { 
-            width: 48%;
-    height: 400px;
-    max-width: 250px;
-    object-fit: cover;
-    border-radius: 250px;
-    margin-top: 150px;
+    display: flex;
       }
       .page-wrapper .aboutSection {
             background: #fff1e8;
@@ -216,6 +241,264 @@
             font-weight: 400;
     color: #fa822a;
       }
+      .page-wrapper .rightImg {
+        position: absolute;
+    right: 5%;
+    bottom: 25%;
+    opacity: 0.5;
+    filter: invert(1);
+    width: 250px;
+      }
+      .page-wrapper .leftImg {
+        position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 7%;
+    filter: invert(1);
+    opacity: 0.5;
+      }
+      .page-wrapper .aboutImg::after {
+        border-radius: 250px;
+    content: '';
+    background-image: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(253 191 155) 25%, rgb(251 139 57 / 58%) 50%, rgb(228 79 32 / 59%) 75%, rgb(225 63 14 / 81%) 100%);
+    top: -15px;
+    left: -15px;
+    bottom: -10px;
+    right: -15px;
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: 430px;
+      }
+      .page-wrapper .aboutImg.two {
+        margin-top: 100px;
+      }
+      .page-wrapper .coffeeSection {
+        background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769515556phptfMo7P.jpg');
+        padding: 100px 0 80px;
+        text-align: center;
+      }
+      .page-wrapper .coffeeImg img {
+        width: 550px;
+      }
+      .page-wrapper .coffeeSection p {
+        color: #fff;
+    width: 60%;
+    margin: 35px auto;
+    font-size: 20px;
+      }
+      .page-wrapper .coffeeImg:after {
+        content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 95%;
+    margin: auto;
+    border: 1px solid #ffffff;
+    background: #ffffff29;
+    border-radius: 50px;
+    z-index: -1;
+      }
+      .page-wrapper .coffeeImg {
+        position: relative;
+        margin-top: 50px;
+      }
+      .page-wrapper .seedsImg {
+        position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+      }
+      .page-wrapper .burgerImg {
+        width: 500px;
+    height: 500px;
+    background: #da4f29;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+      }
+      .page-wrapper .burgerInnerImg {
+        transform: scale(1.3) translateX(-50px) translateY(-7px);
+    transform-origin: left;
+    clip-path: ellipse(90% 90% at 100% 52%);
+      }
+      .page-wrapper .paymentSection {
+        padding: 150px 0;
+        background: #fff1e8;
+      }
+      .page-wrapper .paymentContainer {
+        max-width: 320px;
+        text-align: center;
+      }
+      .page-wrapper .paymentImgContainer img {
+        filter: brightness(0) saturate(100%) invert(44%) sepia(85%) saturate(636%) hue-rotate(330deg) brightness(94%) contrast(93%);
+        margin-bottom: 20px;
+        width: 70px;
+      }
+      .page-wrapper .paymentContainer p {
+        font-size: 18px;
+    color: #ecad95;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 80%;
+    margin: auto;
+      }
+      .page-wrapper .paymentContainer.two {
+        margin-left: auto;
+        padding: 25px 0;
+      }
+
+    .page-wrapper .curved-text {
+        width: 1000px;
+    height: 500px;
+    overflow: visible;
+    position: absolute;
+    top: -35px;
+    left: 100px;
+    right: 0;
+    margin: auto;
+    transform: rotate(90deg) scale(0.7);
+    }
+    .page-wrapper .curved-text textPath {
+        font-weight: 600;
+    font-size: 70px;
+    fill: #f5aa99;
+    text-transform: uppercase;
+    }
+    .page-wrapper .halfCircle {
+        width: 530px;
+    aspect-ratio: 2 / 1;
+    border-radius: 0 0 400px 400px;
+    border: 5px solid #000000;
+    border-top: 0;
+    transform: rotate(-90deg) scale(1.3) translateX(15%);
+    position: absolute;
+    top: 45%;
+    right: 13%;
+    }
+    .page-wrapper .waveSection {
+        padding: 100px 0;
+        background: #fff1e8;
+    }
+
+    .page-wrapper .waveParent {
+        position: relative;
+    }
+    .page-wrapper .waveTxt {
+        position: absolute;
+    filter: invert(1);
+    z-index: 3;
+    top: -55px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: fit-content;
+    margin: auto;
+    }
+    .page-wrapper .waveImg {
+        filter: brightness(0) saturate(100%) invert(36%) sepia(73%) saturate(5434%) hue-rotate(359deg) brightness(93%) contrast(92%);
+    }
+
+    .page-wrapper .mask{
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;
+        width: 100%;
+        position: relative;
+    }
+    .page-wrapper .mask.one{
+        -webkit-mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769537042phpT0z1ue.png);
+        mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769537042phpT0z1ue.png);
+    }
+    .page-wrapper .mask.two{
+        -webkit-mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769537042php0pwCnw.png);
+        mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769537042php0pwCnw.png);
+        left: -50px; 
+    }
+    .page-wrapper .mask.three{
+        -webkit-mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769537669phpz5apSH.png);
+        mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769537669phpz5apSH.png);
+        left: -175px; 
+    }
+    .page-wrapper .mask.four{
+        -webkit-mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769537625phpzKl1QL.png);
+        mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769537625phpzKl1QL.png);
+        left: -225px; 
+    }
+    .page-wrapper .gallerySection {
+        padding: 100px 0;
+        background: #fff1e8;
+    }
+    .page-wrapper .galleryContainer {
+        display: flex;
+    position: relative;
+    left: 130px;
+    transform: scale(1.15);
+    transform-origin: center;
+    }
+    .page-wrapper .mask img{ 
+        height: 550px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    }
+    .page-wrapper .hoverContent {
+        position: absolute;
+    top: 0;
+    left: -50px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .page-wrapper .hoverContent p{ 
+        font-weight: 700;
+    letter-spacing: 0px;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 !important;
+    line-height: 0.9;
+    transform: rotate(180deg);
+    padding: 0 0 0 10px;
+    color: #ff5c00;
+    text-shadow: 2px 2px #ffffff;
+    }
+    .page-wrapper .mask.one .hoverContent{
+        left: -50px;
+    }
+    .page-wrapper .mask.two .hoverContent{
+        left: -75px;
+    }
+    .page-wrapper .mask.three .hoverContent{
+        left: 100px;
+    }
+    .page-wrapper .mask.four .hoverContent{
+        left: 50px;
+    }
+    .page-wrapper .galleryBtn {
+        letter-spacing: 0px;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 !important;
+    line-height: 0.9;
+    transform: rotate(180deg);
+    padding: 0 0 0 10px;
+    color: #ff5c00; 
+    -webkit-text-stroke: 2px #fff;
+    font-family: "Roboto", sans-serif;
+    }
         /* RESPONSIVE VIEW */
     
         @media(min-width:1200px){
@@ -234,17 +517,125 @@
     
         @media (max-width:1500px)
         {
-            
+            .page-wrapper h1 {
+                    font-size: 55px;
+                    margin-bottom: 20px;
+            }
+            .page-wrapper h2 {
+                font-size: 45px;
+            }
+            .page-wrapper h3 {
+                font-size: 42px;
+            }
+            .page-wrapper h5 {
+                font-size: 28px;
+            }
+            .page-wrapper .ballThree {
+                    width: 160px;
+    height: 160px;
+            }
+            .page-wrapper .ballTwo {
+    width: 150px;
+    height: 150px;
+    bottom: 80px; 
+            }
+            .page-wrapper .ballFour {
+    width: 100px;
+    height: 100px;
+            }
+            .page-wrapper .headerImg {
+    max-width: 800px;
+    margin-top: 20px;
+}
+.page-wrapper .rightImg {
+    width: 150px;
+}
+.page-wrapper .orderBtn {
+        font-size: 18px;
+    padding: 12px 30px;
+}
+.page-wrapper p {
+    font-size: 20px;
+}
+.page-wrapper .aboutImg {
+        height: 350px;
+}
+.page-wrapper .aboutImg::after {
+        height: 390px;
+}
         }
     
         @media (max-width:1199px)
         {
-           
+               .page-wrapper h1 {
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+        .page-wrapper h2 {
+        font-size: 38px;
+    }
+    .page-wrapper h3 {
+    font-size: 36px;
+    }
+    .page-wrapper .headerImg {
+        max-width: 700px;
+    }
+    .page-wrapper .headerSection {
+        padding: 75px 0;
+    }
+    .page-wrapper .ballOne {
+    width: 40px;
+    height: 40px; 
+    }
+        .page-wrapper .ballTwo {
+        width: 100px;
+        height: 100px;
+        }
+            .page-wrapper .ballThree {
+        width: 140px;
+        height: 140px;
+    }
+    .page-wrapper .ballFour {
+        width: 70px;
+        height: 70px;
+    }
         }
     
         @media (max-width:991px)
         {
-           
+               .page-wrapper h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+        .page-wrapper h2 {
+        font-size: 25px;
+        letter-spacing: -1px;
+    }
+        .page-wrapper h3 {
+        font-size: 24px;
+    }
+        .page-wrapper p {
+        font-size: 16px;
+    }
+        .page-wrapper .headerImg {
+        max-width: 625px;
+    }
+        .page-wrapper .ballOne {
+        width: 30px;
+        height: 30px;
+    }
+        .page-wrapper .ballTwo {
+        width: 80px;
+        height: 80px;
+    }
+        .page-wrapper .ballThree {
+        width: 120px;
+        height: 120px;
+    }
+        .page-wrapper .ballFour {
+        width: 50px;
+        height: 50px;
+    }
         }
     
         @media (max-width:767px)
@@ -254,7 +645,41 @@
     
         @media (max-width:575px)
         {
-           
+           .page-wrapper h1 {
+            font-size: 26px;
+           }
+               .page-wrapper .headerSection {
+        padding: 50px 0;
+    }
+        .page-wrapper .ballOne {
+        width: 20px;
+        height: 20px;
+    }
+        .page-wrapper .ballTwo {
+        width: 50px;
+        height: 60px;
+        bottom: 0;
+    }
+        .page-wrapper .ballThree {
+        width: 70px;
+        height: 70px;
+    }
+        .page-wrapper .ballFour {
+        width: 30px;
+        height: 30px;
+        bottom: 80px;
+    }
+    @keyframes bounceTwo { 
+  from  { transform: translate3d(0, 0, 0)   ; }
+  to  { transform: translate3d(0, 90px, 0);   }
+ }
+     .page-wrapper .headerSection {
+        padding: 75px 0;
+    }
+    .page-wrapper .orderBtn {
+        font-size: 16px;
+        padding: 7px 19px;
+    }
         }
         
         @media (max-width:375px)
@@ -262,7 +687,7 @@
             
         }
     
-    </style>
+</style>
 
 
 
@@ -278,10 +703,13 @@
 
 
 
-
 <div class="page-wrapper">
 
     <section class="headerSection"> 
+
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769512341phphFz74y.png" class="img-fluid leftImg" alt="">
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769512341phpdEeLmd.png" class="img-fluid rightImg" alt="">
+
         <div class="ballOne balls"></div>
         <div class="ballTwo balls"></div>
         <div class="ballThree balls"></div>
@@ -298,7 +726,7 @@
                         Order Now
                     </a>
                     <div>
-                    <img loading="lazy" src="./h1.png" class="img-fluid headerImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769512105phpNwuIGa.png" class="img-fluid headerImg" alt="">
                 </div>
                 </div>
 
@@ -324,7 +752,7 @@
                             From Classic <span> Favourites <br> to New </span> Morning Twists!
                         </h2>
                         <p>
-                            Start your day right at {TAKEAWAY NAME}, the ultimate breakfast spot in {TAKEAWAY TOWN}. Whether you're an early riser or a brunch enthusiast, our menu is packed with fresh, wholesome, and flavourful morning delights. From classic favourites to hearty specialities, every dish is made with care to fuel your day with goodness.
+                            Start your day right at TEMP-1069-Kabana - 879533  GB, the ultimate breakfast spot in . Whether you're an early riser or a brunch enthusiast, our menu is packed with fresh, wholesome, and flavourful morning delights. From classic favourites to hearty specialities, every dish is made with care to fuel your day with goodness.
                         </p>
 
                         <a href="/order-now" class="orderBtn two">
@@ -333,9 +761,154 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
-                    <div class="aboutImg">
-                        <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid abtImg one" alt="">
-                        <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid abtImg two" alt="">
+                    <div class="aboutImgParent">
+                        <div class="aboutImg">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid aboutImgInner one" alt="">
+                        </div>
+                        <div class="aboutImg two">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1728405268phpafHCjc.png" class="img-fluid aboutImgInner two" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="coffeeSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>
+                        A Perfect Start To Your Day
+                    </h3>
+                    <div class="coffeeImg">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769514968phpvue3TK.png" class="img-fluid" alt="">
+                    </div>
+                    <p>
+                        Start your day right at TEMP-1069-Kabana - 879533  GB, the ultimate breakfast spot in . Whether you're an early riser or a brunch enthusiast, our menu is packed with fresh, wholesome, and flavourful morning delights. From classic favourites to hearty specialities, every dish is made with care to fuel your day with goodness.
+                    </p>
+
+                    <a href="/order-now" class="orderBtn">
+                        Order Now
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769516263php52QcaA.png" class="img-fluid w-100 seedsImg" alt="">
+    </section>
+
+    <section class="paymentSection">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div class="burgerImg">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769516671phppY9Ftt.png" class="img-fluid burgerInnerImg" alt="">
+                    </div>
+                    <div class="halfCircle">
+
+                    </div>
+                    <svg class="curved-text curved-text-desktop">
+                        <path id="curve" d="M20,700 A225,250 0 0,1 1100,700" fill="transparent"></path>
+                        <text width="500">
+                            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+                                Fresh, Hot &amp; Ready for Takeaway
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="paymentContainer">
+                                <div class="paymentImgContainer">
+                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396996phpe55bYo.png" alt="TEMP-1069-Kabana - 879533  GB Search Icon" class="img-fluid">  
+                                </div>
+                                <h5>
+                                    Order in Seconds
+                                </h5>
+                                <p class="">
+                                    Choose your go-to meal from the menu
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-4  col-sm-6">
+                            <div class="paymentContainer two">
+                                <div class="paymentImgContainer">
+                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396995phpM5aN13.png" alt="TEMP-1069-Kabana - 879533  GB Cards Icon" class="img-fluid">  
+                                </div>
+                                    <h5>
+                                        Secure Checkout
+                                    </h5>
+                                    <p class="paymentTxt">
+                                        Paying is effortless, so you can focus on the food.
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-4  col-sm-6">
+                            <div class="paymentContainer three">
+                                <div class="paymentImgContainer">
+                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1727784786php1lMh5f.png" alt="TEMP-1069-Kabana - 879533  GB Receive food" class="img-fluid">  
+                                </div>
+                                    <h5>
+                                        Served Fresh
+                                    </h5>
+                                    <p class="paymentTxt">
+                                        Freshly made and good to go when you are.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="waveSection">
+        <div class="container-fluid px-0">
+            <div class="waveParent">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769525025phpXrfDIS.png" class="img-fluid waveImg" alt="">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769525025php9vAohr.png" class="img-fluid waveTxt" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="gallerySection">
+        <div class="container">
+            <div class="galleryContainer">
+                <div class="mask one">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1761290128php2a5yD3.png" alt="">
+                    <div class="hoverContent">
+                        <p>
+                            Hot Chocolate
+                        </p>
+                        <a href="/order-now" class="galleryBtn">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="mask two">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1761290128php2a5yD3.png" alt="">
+                    <div class="hoverContent">
+                        <p>
+                            Hot Chocolate
+                        </p>
+                    </div>
+                </div>
+                <div class="mask three">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1761290128php2a5yD3.png" alt="">
+                    <div class="hoverContent">
+                        <p>
+                            Hot Chocolate
+                        </p>
+                    </div>
+                </div>
+                <div class="mask four">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1761290128php2a5yD3.png" alt="">
+                    <div class="hoverContent">
+                        <p>
+                            Hot Chocolate
+                        </p>
                     </div>
                 </div>
             </div>
@@ -347,7 +920,7 @@
      
     
     
-    </div>
+</div>
 
 
 
