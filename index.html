@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Germania+One&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Coiny&amp;family=Poetsen+One&amp;display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,21 +31,29 @@
 <style type="text/css">
 
 
-    body .page-wrapper {
-        font-family: "Roboto", sans-serif;
+/* 
+
+font-family: "League Spartan", sans-serif;
+
+*/  
+
+    body .page-wrapper { 
+    font-family: "Poetsen One", sans-serif; 
     color: #6c6a6a; 
-    line-height: 24px;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    background: #eaf3db;
+    line-height: 24px; 
+    overflow: hidden; 
+    scroll-behavior: smooth; 
+    background: #260e31;
     } 
+    
    .page-wrapper p {
-margin-bottom: 25px;
-    font-size: 25px;
-    font-family: "Roboto", sans-serif;
-    color: #000000;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: "Poetsen One", sans-serif;
+    color: #fff;
     letter-spacing: 1px;
-    line-height: 1.3;
+    line-height: 1.6;
+    font-weight: 400;
    }
 
    .page-wrapper p > a {
@@ -53,19 +61,34 @@ margin-bottom: 25px;
    }
    .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
    line-height: 1.3;
-   font-family: "Oswald", sans-serif;
+   font-family: "Coiny", system-ui;
    }
    .page-wrapper .row {
    margin: 0 -15px!important;
-   } 
+   }
+   .page-wrapper .bg-dark {
+   background-color: #fc673f!important;
+   }
 
+   .page-wrapper .bg-primary {
+   background-color: #241e5e!important;
+   }
+   .page-wrapper .bg-light {
+   background-color: #f1f1f1!important;
+   }
    .page-wrapper section {
    position: relative;
    z-index: 1;
    background-size: cover;
    background-position: center center;
-   background-repeat: no-repeat;
-   }    
+   background-repeat: no-repeat; 
+   }   
+   .page-wrapper .btn {
+   font-size: 14px;
+   border-radius: 0;
+   padding: 0 30px;
+   line-height: 50px;
+   }  
 
    .page-wrapper .overlay{
       content: "";
@@ -79,145 +102,436 @@ margin-bottom: 25px;
    }
 
    .page-wrapper h1 {
-    font-size: 65px;
+    font-size: 120px;
     color: #fff;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 25px;
+   }
+   .page-wrapper h1 span{ 
+    display: block;
+    font-size: 65px;
+    -webkit-text-stroke: 2px #ffffff;
+    color: transparent;
    }
    .page-wrapper h2 {
-        font-size: 63px;
-    color: #000;
-    transform: scale(1.2);
-    margin-bottom: 30px;
-    transform-origin: left;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 70px;
    }
    .page-wrapper h3 {
-        font-size: 60px;
-    color: #000;
+    color: #fff;
+    font-size: 60px;
+    text-transform: uppercase;
     }
    .page-wrapper h4 {
     
    }
    .page-wrapper h5 {
-        font-size: 40px;
-    color: #000;
+    color: #dbabf4;
+    font-size: 21px;
+    margin-bottom: 0;
+    text-transform: uppercase;
    }
    .page-wrapper h6 {
     
    }
+ 
 
-   .page-wrapper .badge-wrapper {
-                position: relative;
-        width: 150px;
-        height: 150px;
-        border: 2px solid #fff;
-        margin-right: 5%;
-        margin-left: auto;
-        border-radius: 50%;
-        background: #fceee3;
-        padding: 5px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-            }
-    
-            .page-wrapper .badge-svg {
-                width: 100%;
-        height: 100%;
-        animation: rotateBadge 20s linear infinite;
-        padding: 5px;
-        background: #b94201;
-        border-radius: 50%;
-            }
-    
-            .page-wrapper .inner-circle-static {
-                position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 75px;
-        height: 75px;
-        padding: 15px;
-        background-color: #fceee3;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 5;
-            }
-    
-            @keyframes rotateBadge {
-                from { transform: rotate(0deg); }
-                to { transform: rotate(360deg); }
-            }
-            .page-wrapper .svgTxt {
-            font-size: 19px;
-        letter-spacing: 1px;
-        font-family: 'Roboto Condensed', sans-serif;
-            }
-            .page-wrapper .headerImg {
-                height: 80vh;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 25px 0 0 25px;
-            }
-            .page-wrapper .headerSection {
-                margin: 50px 25px;
-    background: #cbe19c;
-    border-radius: 50px;
-            }
-            .page-wrapper .headerContent {
-                padding-top: 50px;
-            }
-            .page-wrapper .headerPara {
-                font-size: 30px;
-    margin-bottom: 0;
-    color: #000;
-    font-weight: 600;
-            }
-
-            .page-wrapper .aboutSection {
-                    padding: 100px 0;
-            }
-            .page-wrapper .aboutImg {
-                width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-            }
-            .page-wrapper .menuContainer {
-                   display: grid;
-    grid-template-columns: 3fr 1fr;
-    justify-items: center;
+   .page-wrapper .headerSection {
+    padding: 100px 0;
+   }
+   .page-wrapper .headerContainer {
+    text-align: center;
+   }
+   .page-wrapper .orderBtn {
+    color: #fff;
+    font-size: 25px;
+    background: #fc9e03;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: flex;
     align-items: center;
-    width: 95%;
+    justify-content: center;
+    width: fit-content;
     margin: auto;
-    margin-bottom: 50px;
-            }
-            .page-wrapper .menuSection {
-                    border: 5px dashed #000;
-    padding: 50px 25px;
-    margin: 30px;
-    border-radius: 50px;
-            }
-            .page-wrapper .menuContainer.two:after {
-                   content: '';
+    line-height: 1.5;
+   }
+   .page-wrapper .orderBtn span { 
+    background: #000000;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+   }
+   .page-wrapper .orderBtn span img { 
+    width: 18px;
+    filter: invert(1);
+    padding-left: 4px;
+   }
+   .page-wrapper .aboutLeftContent {
+    text-align: center;
+    max-width: 575px;
+    margin-left: auto;
+   }
+   .page-wrapper .leftImageContainer {
+    border: 25px solid #feeee1;
+   }
+   .page-wrapper .leftImageContainer img{ 
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    margin-bottom: -50px;
+    margin-top: 25px;
+   }
+   .page-wrapper .leftImageContainer p{
+    background: #feeee1;
+    margin: 0;
+    padding: 60px 0 0;
+    text-align: center;
+    font-size: 75px;
+    text-transform: capitalize;
+    color: #2c143b;
+    font-family: "Coiny", system-ui;
+    line-height: 1;
+   }
+   .page-wrapper .cardRotate {
+    transform: rotate(-5deg);
+   }
+   .page-wrapper .aboutSection {
+    padding: 100px 0;
+   } 
+   .page-wrapper .aboutContent h2 {
+    text-transform: uppercase;
+    color: #e1adfe;
+    -webkit-text-stroke: 0px #ffffff;
+    transform: rotate(15deg);
+    margin-top: 0;
+    text-align: center;
+    padding-bottom: 25px;
+   }
+   .page-wrapper .aboutPara p {
+    font-size: 28px;
+    color: #000;
+    max-width: 600px;
+    margin: 0 210px 0 75px;
+   }
+   .page-wrapper .aboutPara {
+    margin: 80px 0 75px 0;
+    position: relative;
+   }
+   .page-wrapper .aboutContent {
+    max-width: 925px;
+    margin-left: auto;
+    text-align: center;
+   }
+   /* .page-wrapper .aboutPara::after {
+    content: '';
     position: absolute;
-    border: 2px solid #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    border-left: 0;
-    border-right: 0;
-            }
-            .page-wrapper .iceCreamImg {
-                    margin: 25px 0;
-    border-radius: 25px;
-            }
+    background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770043341phpz33ZP7.png');
+   } */
+
+   .page-wrapper .squareShapeImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    transform: scaleX(1.0) scaleY(0.9);
+   } 
+   .page-wrapper .aboutContent .orderBtn {
+    margin-left: 25px;
+   }
+
+   .page-wrapper .mask{
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    width: 485px;
+    height: 485px;
+    }
+    .page-wrapper .mask.one{
+        -webkit-mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png);
+        mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png); 
+    }
+    .page-wrapper .mask.two{
+        -webkit-mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpvc0XTH.png);
+        mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpvc0XTH.png); 
+    }
+    .page-wrapper .mask.three{
+        -webkit-mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png);
+        mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png); 
+    }
+    .page-wrapper .mask.four{
+        -webkit-mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpvc0XTH.png);
+        mask-image: url(https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpvc0XTH.png); 
+    }
+    .page-wrapper .gallerySection {
+        padding: 100px 0;
+    }
+    .page-wrapper .mask img{
+        width: 100%;
+    height: 100%;
+    }
+    .page-wrapper .galleryParent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .page-wrapper .galleryContainer.two {
+        margin-left: -175px;
+        margin-top: 50px;
+    }
+    .page-wrapper .galleryContainer.three {
+        margin-left: -180px; 
+    }
+    .page-wrapper .galleryContainer.four {
+        margin-left: -180px;
+        margin-top: 50px;
+    }
+    .page-wrapper .galleryContainer:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .page-wrapper .filterImg {
+        position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    filter: invert(1);
+    transform: scale(1.05);
+    }
+    .page-wrapper .galleryContainer {
+        position: relative;
+    }
+    .page-wrapper .galleryContainer.two .filterImg, .page-wrapper .galleryContainer.four .filterImg{ 
+        top: 20px;
+        height: 90%;
+    }
+    .page-wrapper .paymentContainer {
+        background: #2c133f;
+    padding: 30px 20px;
+    border-radius: 50px;
+    }
+    .page-wrapper .paymentInnerContainer {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+    .page-wrapper .paymentImgContainer img {
+        width: 75px;
+    height: 75px;
+    filter: invert(1);
+    margin-bottom: 20px;
+    object-fit: contain;
+    }
+    .page-wrapper .paymentTxt {
+    font-size: 16px;
+    margin-top: 5px;
+   }
+   .page-wrapper .paymentSection {
+    padding: 100px 0 175px;
+   }
+   .page-wrapper .paymentParent {
+    background: #e3acfe;
+    padding: 75px 0 75px 75px;
+    border-radius: 50px;
+    position: relative;
+    min-height: 710px;
+   }
+   .page-wrapper .iceCreamImg {
+    position: absolute;
+    top: 0;
+    width: 800px;
+    right: 0;
+    transform: scale(1.5);
+    transform-origin: right top;
+   }
+   .page-wrapper .footerBtmContent { 
+    perspective: 500px;
+   }
+   .page-wrapper .footerBtmContent:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 5px;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    background: #523366;
+    z-index: -1;
+    transform-origin: center;
+    border-radius: 50px;
+    width: 840px;
+    height: 600px;
+   }
+   .page-wrapper .footerBtmContent h3 { 
+    transform: scale(1.35);
+   }
+   .page-wrapper .footerBtmContent .spanOne { 
+    margin-left: 35%;
+    transform: perspective(250px) rotateX(0deg) rotateY(20deg) scaleY(1.4);
+    display: block;
+   }
+   .page-wrapper .footerBtmContent .spanTwo { 
+    display: block;
+    transform: perspective(400px) rotateY(-15deg) scaleX(1.25) scaleY(1.25) rotateY(-15deg);
+    font-size: 60px;
+    transform-origin: center;
+    margin: 5px 0;
+    margin-left: -122px;
+    -webkit-text-stroke: 2px #ffffff;
+    color: transparent;
+    text-align: center;
+   }
+   .page-wrapper .footerSection {
+    padding-top: 150px;
+   }
+   .page-wrapper .cakeImg {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(-2deg);
+   }
+   .page-wrapper .slantingDiv {
+    position: absolute;
+    top: -120px;
+    left: -118px;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    height: 79%;
+    margin: auto;
+    background: #e1adfe;
+    z-index: -1;
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-13deg);
+    transform: skewX(13deg);
+    border-radius: 30px;
+   }
+   .page-wrapper .footerImageContainer {
+    position: relative;
+   }
+   .page-wrapper .leafOne {
+        position: absolute;
+    opacity: 0.1;
+    top: 0;
+    filter: invert(1);
+   }
+   .page-wrapper .leafTwo {
+        position: absolute;
+    opacity: 0.1;
+    top: 0;
+    right: 0;
+    width: 50%;
+    filter: invert(1);
+   }
+   .page-wrapper .lineImg {
+        position: absolute;
+    bottom: -20px;
+    width: 350px;
+    filter: brightness(0) saturate(100%) invert(81%) sepia(14%) saturate(3409%) hue-rotate(203deg) brightness(101%) contrast(101%);
+   }
+   .page-wrapper .imgThree {
+            position: absolute;
+    filter: invert(1);
+    opacity: 0.1;
+    bottom: -40%;
+    width: 45%;
+   }
+   .page-wrapper .imgFour {
+        position: absolute;
+    filter: invert(1);
+    opacity: 0.1;
+    left: -100px;
+    top: 0;
+    width: 250px;
+   }
+   .page-wrapper .imgFive {
+        position: absolute;
+    right: 0;
+    top: -50%;
+    filter: invert(1);
+    opacity: 0.1;
+    width: 40%;
+   }
+   .page-wrapper .msgDiv {
+        background: #fff;
+    width: 280px;
+    height: 140px;
+    position: absolute;
+    top: -680px;
+    left: 70px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(15deg);
+    border-radius: 20px;
+    filter: drop-shadow(2px 2px 5px black);
+   }
+    .page-wrapper .msgDiv p{
+            font-size: 24px;
+    color: #523366;
+    text-transform: uppercase;
+    font-family: "Coiny", system-ui;
+    line-height: 1;
+    }
+     .page-wrapper .msgDiv p span{ 
+            font-size: 65px;
+     }
 
 
 
-/* RESPONSIVE VIEW */
+    /* RESPONSIVE VIEW */
 
-    @media (max-width:1200px)
+    @media(min-width:1200px){
+        .page-wrapper .container{
+            max-width: 1140px;
+        }
+    }
+
+    @media(min-width:1500px){
+        .page-wrapper .container{
+            max-width: 1440px;
+        }
+    }
+
+
+
+    @media (max-width:1500px)
+    {
+
+    }
+
+    @media (max-width:1199px)
     {
 
     }
@@ -236,6 +550,7 @@ margin-bottom: 25px;
     {
         
     }
+    
     @media (max-width:375px)
     {
 
@@ -255,190 +570,201 @@ margin-bottom: 25px;
 <div id="page-top-margin"></div>
 
 
-<div class="page-wrapper">
 
-<!-- Hero Section -->
-    <section class="headerSection">
-        <div class="container-fluid px-0">
-            <div class="row">
-                
-                <div class="col-lg-7 position-relative">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1760091508phpVudq9q.png" class="img-fluid headerImg">
-                </div>
-    
-                <div class="col-lg-5">
-                    <div class="headerContent">
-                        <div>
-                            <p class="headerPara">Freshly Baked &amp; Full of Flavour</p>
-                            <h1>
-                                HANDMADE <br> DESSERTS, <br> CRAFTED WITH LOVE!
-                            </h1>
+
+<div class="page-wrapper"> 
+
+<section class="headerSection">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940phpbJnVOv.png" class="img-fluid leafOne" alt="">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940phpxXrVtF.png" class="img-fluid leafTwo" alt="">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940phpljL2np.png" class="img-fluid lineImg" alt="">
+  <div class="container">
+   <div class="row align-items-center">
+        <div class="col-lg-7 col-md-6 col-sm-12">
+            <div class="headerContainer">
+                <h1>
+                    INDULGE IN 
+                    <span> SWEET PERFECTION </span>
+                </h1>
+                <p>
+                    Indulge in the sweetest treats at Domain545 - Loaded Burgers And Kebabs - 882534  GB June25, your go-to dessert haven in LEEDS. From classic favourites to innovative creations, our desserts are handcrafted with the finest ingredients to satisfy every craving. Whether you're celebrating a special moment or simply treating yourself, our cosy ambience and delightful menu make every visit a sweet escape.
+                </p>
+                <a href="/order-now" class="orderBtn">
+                    <span> <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770038566phpfJVD3R.png" alt=""> </span> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-12">
+            <div class="headerImg">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770035429phpNsti1w.png" class="img-fluid headerInnerImg" alt="">
+            </div>
+        </div>
+   </div>
+  </div>
+</section>
+
+<section class="aboutSection">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940php1YadWL.png" class="img-fluid imgThree" alt="">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="aboutLeftContent">
+                    <div class="cardRotate">
+                        <h2>
+                            ELEVATE YOUR SWEET TOOTH 
+                        </h2>
+                        <div class="leftImageContainer">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770041220phpr2TJHG.png" class="img-fluid" alt="">
+                            <p>
+                                Sundae
+                            </p>
                         </div>
-     
-                        <div class="badge-wrapper mb-md-4 mb-sm-2">
-                            <svg class="badge-svg" viewBox="0 0 200 200">
-                                <defs>
-                                    <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
-                                </defs>
-                                <text fill="white" class="svgTxt">
-                                    <textPath href="#circlePath">
-                                        • SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
-                                    </textPath>
-                                </text>
-                            </svg>
-                            <div class="inner-circle-static">
-                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1766550640php7b7eqx.png" class="img-fluid spoonImg" alt="">
-                            </div>
-                        </div> 
-    
                     </div>
                 </div>
-    
             </div>
-        </div>
-    </section>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <div class="aboutContent">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940phpVWi5fC.png" class="img-fluid imgFour" alt="">
 
-    <section class="aboutSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
                     <h2>
-                        Sweet Treats That Melt In Your Mouth!
+                        About Us
                     </h2>
-                    <p>
-                        Enjoy the finest desserts on the go! At {TAKEAWAY NAME} in {TAKEAWAY TOWN}, we make it easy to take home a taste of indulgence. From rich {dessert 1} to refreshing {dessert 2}.
-                    </p>
-                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1760091508phpVudq9q.png" class="img-fluid aboutImg">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="menuSection">
-                         <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-4 col-sm-6">
-                <div class="menuContainer">
-                   
-                    <div class="menuTxtContainer">
-                        <h5>
-                            Order in Seconds
-                        </h5>
-                        <p class="">
-                            Choose your go-to meal from the menu
+                    <div class="aboutPara">
+                        <p>
+                            Satisfy your sweet tooth from the comfort of your home with Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 in LEEDS. Our freshly made desserts are perfect for any occasion—whether it's a midweek treat, a family gathering, or a late-night craving. Order now and let us bring the sweetness to you!
                         </p>
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770043341phpz33ZP7.png" class="img-fluid squareShapeImg" alt="">
                     </div>
-
-                     <div class="menuImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396996phpe55bYo.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Search Icon" class="img-fluid">  
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-4  col-sm-6">
-                <div class="menuContainer two">
-                   
-                    <div class="menuTxtContainer">
-                        <h5>
-                            Secure Checkout
-                        </h5>
-                        <p class="paymentTxt">
-                            Paying is effortless, so you can focus on the food.
-                        </p>
-                    </div>
-
-                     <div class="menuImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396995phpM5aN13.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Cards Icon" class="img-fluid">  
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-4  col-sm-6">
-                <div class="menuContainer three mb-0">
-                    
-                     <div class="menuTxtContainer">
-                         <h5>
-                             Served Fresh
-                         </h5>
-                         <p class="paymentTxt">
-                             Freshly made and good to go when you are.
-                         </p>
-                     </div>
-
-                     <div class="menuImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1727784786php1lMh5f.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Receive food" class="img-fluid">  
-                    </div>
-
+                    <a href="/order-now" class="orderBtn">
+                        <span> <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770038566phpfJVD3R.png" alt=""> </span> Order Now
+                    </a>
                 </div>
             </div>
         </div>
-                    </div>
+    </div>
+</section>
+
+<section class="gallerySection">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940phpVWi5fC.png" class="img-fluid imgFive" alt="">
+
+    <div class="container">
+        <div class="galleryParent">
+            <div class="galleryContainer one">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png" class="img-fluid filterImg" alt="">
+                <div class="mask one">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769789145phpz7o8Na.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="galleryContainer two">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpvc0XTH.png" class="img-fluid filterImg" alt="">
+                <div class="mask two">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769789145phpz7o8Na.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="galleryContainer three">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png" class="img-fluid filterImg" alt="">
+                <div class="mask three">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769789145phpz7o8Na.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="galleryContainer four">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpvc0XTH.png" class="img-fluid filterImg" alt="">
+                <div class="mask four">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769789145phpz7o8Na.jpg" alt="">
                 </div>
             </div>
         </div>
-    </section>
+        
+    </div>
+</section>
 
-    <section class="elevateSection">
-        <div class="container">
-            <div class="textContent d-flex justify-content-between">
-                <div>
+<section class="paymentSection">
+    <div class="container px-0">
+        <div class="paymentParent">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="paymentContainer">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="paymentInnerContainer">
+                                    <div class="paymentImgContainer">
+                                        <img loading="lazy" src="https://assets.touch2success.com/static/0a240991920be7c739a1e2c8e3f37fb7/img/1653299274phpjim4JL.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Menu Icon" class="img-fluid">  
+                                    </div>
+                                        <h5>
+                                            Order in Seconds
+                                        </h5>
+                                        <p class="paymentTxt mb-0">
+                                            Choose your go-to meal from the menu
+                                        </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="paymentInnerContainer">
+                            <div class="paymentImgContainer">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/e6fd7949ac7e6c7c8651795d21f59be4/img/1718623847phpVyrhib.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Menu Icon" class="img-fluid">  
+                            </div>
+                                <h5>
+                                    Secure Checkout 
+                                </h5>
+                                <p class="paymentTxt"> 
+                                    Paying is effortless, so you can focus on the food. 
+                                </p>
+                        </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="paymentInnerContainer">
+                                    <div class="paymentImgContainer">
+                                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1727784786php1lMh5f.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Menu Icon" class="img-fluid">  
+                                    </div>
+                                    <h5> Served Fresh </h5>
+                                    <p class="paymentTxt">
+                                        Freshly made and good to go when you are. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770125607phpk72wfm.png" class="img-fluid iceCreamImg" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="footerSection">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="footerImageContainer">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770129633php14zm25.png" class="img-fluid mobileImg" alt="">
+                    <div class="slantingDiv"> </div>
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770147305phpJDfBjx.png" class="img-fluid cakeImg" alt="">
+                    <div class="msgDiv">
+                        <p class="mb-0">
+                            Crafted with 
+                            <span> Love! </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="footerBtmContent">
                     <h3>
-                        Elevate Your Sweet Tooth
+                        <span class="spanOne"> Sweet Treats </span>
+                        <span class="spanTwo"> that melt in </span>
+                        <span class="spanOne"> your mouth! </span>
                     </h3>
                 </div>
-                <div>
-                    <div class="btn">
-                        Order Now
-                    </div>
-                </div>
-            </div>
-            <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1754736365phpI1e4ma.png" class="img-fluid iceCreamImg" alt="">
-
-            <div class="row justify-content-center serviceBorder">
-            <div class="col-lg-4 col-md-6  col-sm-6">
-                <div class="serviceContainer">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396995phpM5aN13.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Cards Icon" class="img-fluid">  
-                    </div>
-                        <h5>
-                            Our Services
-                        </h5>
-                        <p class="paymentTxt">
-                            Craving something tasty? Domain930 Xpress Pizza 879249 Dec 2025 is your go-to spot for top-rated takeaway in . Whether you're ordering for one or feeding a crowd, our menu is packed with mouth-watering options. Order food online now for collection or delivery!
-                        </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6  col-sm-6">
-                <div class="serviceContainer two active">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1768396995phpM5aN13.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Cards Icon" class="img-fluid">  
-                    </div>
-                        <h5>
-                            Our Menu
-                        </h5>
-                        <p class="paymentTxt">
-                            We bring you the best food in , made from the freshest ingredients. Our menu is always evolving with new dishes and customer favourites. Check out our latest menu and order online today!
-                        </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6  col-sm-6">
-                <div class="serviceContainer">
-                    <div class="paymentImgContainer">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1727784786php1lMh5f.png" alt="Domain930 Xpress Pizza 879249 Dec 2025 Receive food" class="img-fluid">  
-                    </div>
-                        <h5>
-                            Our Hygiene
-                        </h5>
-                        <p class="paymentTxt">
-                            At Domain930 Xpress Pizza 879249 Dec 2025, we maintain strict food safety standards to ensure your meal is freshly prepared in a clean environment. Our commitment to hygienic food takeaway means you can enjoy every bite with confidence.
-                        </p>
-                </div>
             </div>
         </div>
-        </div>
-    </section>
-
-
+    </div>
+</section>
 
 
 </div>
-
-
 
 
 
