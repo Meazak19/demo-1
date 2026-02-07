@@ -228,6 +228,7 @@ font-family: "League Spartan", sans-serif;
     max-width: 925px;
     margin-left: auto;
     text-align: center;
+    position: relative;
    }
    /* .page-wrapper .aboutPara::after {
     content: '';
@@ -300,15 +301,7 @@ font-family: "League Spartan", sans-serif;
     .page-wrapper .galleryContainer.four {
         margin-left: -180px;
         margin-top: 50px;
-    }
-    .page-wrapper .galleryContainer:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
+    } 
     .page-wrapper .filterImg {
         position: absolute;
     top: 30px;
@@ -507,6 +500,60 @@ font-family: "League Spartan", sans-serif;
      .page-wrapper .msgDiv p span{ 
             font-size: 65px;
      }
+     .page-wrapper .envelopDesign {
+            position: absolute;
+    bottom: -45px;
+    left: 70px;
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+     }
+     .page-wrapper .orderTxt  {
+            line-height: 0.9;
+    font-family: "Coiny", system-ui;
+    position: absolute;
+    top: 1%;
+    font-size: 220px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    transform: scaleY(0.8);
+    font-weight: 500;
+    color: #d3a2f1;
+     }
+     .page-wrapper .orderTxt.two { 
+        top: 28%;
+     }
+     .page-wrapper .orderTxt.three { 
+        top: 52%;
+     }
+     .page-wrapper .orderTxt.four { 
+            top: 76%;
+     }
+     .page-wrapper .galleryTopTxt {
+        position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "Coiny", system-ui;
+     }
+     .page-wrapper .galleryBottomTxt {
+        position: absolute;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "Coiny", system-ui;
+     }
 
 
 
@@ -528,27 +575,414 @@ font-family: "League Spartan", sans-serif;
 
     @media (max-width:1500px)
     {
-
+        .page-wrapper h1 {
+            font-size: 100px;
+        }
+        .page-wrapper h2 {
+            font-size: 55px;
+        }
+        .page-wrapper h1 span {
+            font-size: 50px;
+        }
+        .page-wrapper p {
+            font-size: 19px;
+        }
+        .page-wrapper .headerInnerImg {
+            transform: scale(1.2);
+    transform-origin: right;
+        }
+        .page-wrapper .lineImg { 
+    bottom: 0px;
+    width: 300px;
+        }
+        .page-wrapper .aboutPara p {
+    font-size: 24px; 
+    max-width: 550px;
+    margin: 0 50px 0 70px;
+}
+.page-wrapper .squareShapeImg {
+        transform: scaleX(1.19) scaleY(1.1);
+    transform-origin: left;
+}
+.page-wrapper .imgThree {
+    bottom: -30%;
+    width: 40%;
+}
+.page-wrapper .imgFive {
+        top: -35%; 
+    width: 35%;
+}
+.page-wrapper .gallerySection {
+    padding: 75px 0;
+}
+.page-wrapper .galleryTopTxt {
+    font-size: 40px;
+        top: -40px;
+}
+.page-wrapper .galleryBottomTxt {
+        bottom: -60px; 
+    font-size: 40px;
+}
+.page-wrapper .mask {
+        width: 405px;
+    height: 405px;
+}
+.page-wrapper .filterImg {
+    top: 25px;
+}
+.page-wrapper .galleryContainer.two .filterImg, .page-wrapper .galleryContainer.four .filterImg {
+    top: 18px;
+    height: 89%;
+    left: -5px;
+}
     }
 
     @media (max-width:1199px)
     {
-
+        .page-wrapper h1 {
+                font-size: 85px; 
+    margin-bottom: 20px;
+        }
+            .page-wrapper h2 {
+        font-size: 42px;
+    }
+   
+        .page-wrapper h1 span { 
+    font-size: 45px;
+        }
+        .page-wrapper p {
+            font-size: 18px;
+        }
+        .page-wrapper .leafOne {
+            width: 30%;
+        }
+        .page-wrapper .leafTwo {
+            width: 40%;
+        }
+        .page-wrapper .lineImg {
+                bottom: -50px;
+    width: 250px;
+        }
+             .page-wrapper .aboutPara::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 110%;
+        height: 125%;
+        background: #fff;
+        z-index: -1;
+        border-radius: 50px 0 50px 50px;
+        transform: rotate(15deg) translate(-10px, 0px);
+        margin: auto;
+    }
+    .page-wrapper .aboutContent {
+        max-width: 650px;
+    }
+    .page-wrapper .aboutContent h2 {
+            padding-bottom: 40px;
+    }
+        .page-wrapper .aboutPara p {
+        font-size: 22px;
+        max-width: 100%;
+        margin: 20px;
+        position: relative;
+        transform: rotate(15deg);
+    }
+    .page-wrapper .aboutPara {
+    margin: 50px 15px 50px 0px;
+    position: relative;
+    max-width: 500px;
+    margin-left: auto;
+}
+.page-wrapper .leftImageContainer p {
+    font-size: 60px;
+}
+.page-wrapper .squareShapeImg {
+    opacity: 0;
+}
+        .page-wrapper .mask {
+        width: 357px;
+        height: 357px;
+    }
+            .page-wrapper .filterImg {
+        height: 315px;
+    }
+    .page-wrapper .galleryContainer.two {
+        margin-top: 100px;
+    }
+    .page-wrapper .galleryContainer.four { 
+    margin-top: 100px;
+}
+.page-wrapper .galleryContainer.two .filterImg, .page-wrapper .galleryContainer.four .filterImg {
+    left: 0;
+    height: 315px;
+}
+.page-wrapper .galleryParent {
+    grid-gap: 10px;
+}
+    .page-wrapper .galleryTopTxt {
+        font-size: 30px;
+        top: -30px;
+    }
+        .page-wrapper .galleryBottomTxt {
+        bottom: -40px;
+        font-size: 30px;
+    }
     }
 
     @media (max-width:991px)
     {
-
+            .page-wrapper h1 {
+        font-size: 65px; 
+    }
+        .page-wrapper h2 {
+        font-size: 38px;
+    }
+        .page-wrapper h1 span {
+        font-size: 34px;
+    }
+        .page-wrapper p {
+        font-size: 17px;
+    }
+    .page-wrapper .orderBtn {
+        font-size: 20px; 
+    padding: 5px 15px;
+    }
+        .page-wrapper .lineImg {
+        bottom: -10px;
+        width: 150px;
+    }
+    .page-wrapper .orderBtn span {
+            width: 25px;
+    height: 25px;
+    }
+    .page-wrapper .orderBtn span img {
+            width: 12px;
+    padding-left: 2px;
+    }
+    .page-wrapper .leftImageContainer {
+    border: 20px solid #feeee1;
+}
+.page-wrapper .leftImageContainer p {
+        font-size: 50px;
+    }
+        .page-wrapper .aboutContent h2 {
+        padding-bottom: 25px;
+    }
+        .page-wrapper .aboutPara {
+        margin: 50px 15px 50px 0px; 
+        max-width: 375px; 
+        margin-left: auto;
+    }
+        .page-wrapper .aboutPara p {
+        font-size: 16px; 
+        margin: 0px 10px 0px 40px; 
+        transform: rotate(15deg);
+    }
+    .page-wrapper .aboutPara::after {
+                border-radius: 25px 0 25px 40px;
+        transform: rotate(15deg) translate(10px, -10px);
+    }
+    .page-wrapper .aboutSection {
+    padding: 50px 0;
+}
+.page-wrapper .galleryParent {
+        grid-gap: 50px;
+        justify-items: center;
+    }
+        .page-wrapper .filterImg {
+        height: 215px;
+        top: 16px;
+    }
+        .page-wrapper .mask {
+        width: 245px;
+        height: 245px;
+    }
+        .page-wrapper .galleryContainer.two {
+        margin-top: 50px;
+        margin-left: -165px;
+    }
+        .page-wrapper .galleryContainer.two .filterImg, .page-wrapper .galleryContainer.four .filterImg {
+        left: 0;
+        height: 216px;
+        top: 14px;
+    }
+        .page-wrapper .galleryContainer.four {
+        margin-top: 50px;
+    }
+    
+.page-wrapper .galleryContainer.three {
+    margin-left: -175px;
+}
+    .page-wrapper .galleryTopTxt {
+        font-size: 25px;
+        top: -25px;
+    }
+        .page-wrapper .galleryBottomTxt {
+        bottom: -35px;
+        font-size: 25px;
+    }
     }
 
     @media (max-width:767px)
     {
+            .page-wrapper h2 {
+        font-size: 32px;
+    }
+        .page-wrapper .headerSection {
+    padding: 75px 0;
+}
+    .page-wrapper .headerInnerImg {
+        transform: scale(1.0);
+        margin-top: 50px; 
+    }
+    .page-wrapper .aboutLeftContent { 
+    max-width: 540px;
+    margin: auto;
+}
+.page-wrapper .leftImageContainer {
+            max-width: 450px;
+        margin: auto;
+}
+.page-wrapper .cardRotate {
+    transform: rotate(0deg);
+}
+.page-wrapper .aboutContent {
+        max-width: 540px;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .page-wrapper .aboutContent h2 {
+            transform: rotate(0deg);
+    }
+        .page-wrapper .aboutPara { 
+        max-width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+        .page-wrapper .aboutPara p { 
+        margin: 0px 10px 0px 10px;
+        transform: rotate(0deg);
+        font-size: 14px;
+    }
+        .page-wrapper .aboutPara::after {
+        border-radius: 20px;
+        transform: rotate(0deg) translate(0px, 0px);
+        width: 100%;
+    }
+    .page-wrapper .aboutContent .orderBtn {
+    margin: auto;
+}
+    .page-wrapper .leftImageContainer p {
+        font-size: 40px;
+    }
+.page-wrapper .galleryParent {
+            grid-gap: 50px;
+            grid-template-columns: 1fr 1fr;
+}
+.page-wrapper .galleryContainer.one {
+    transform: scale(1.3);
+    transform-origin: left;
+}
+    .page-wrapper .filterImg {
+        height: 200px;
+        top: 13px;
+    }
+        .page-wrapper .mask {
+        width: 225px;
+        height: 225px;
+    }
+        .page-wrapper .galleryContainer.two {
+        margin-top: 0px;
+        margin-left: 0;
+        transform: scale(1.3);
+    transform-origin: right;
+    }
+        .page-wrapper .galleryContainer.three {
+        margin-left: 0;
+        transform: scale(1.3);
+        transform-origin: left;
+        margin-top: 80px;
+    }
+        .page-wrapper .galleryContainer.four {
+        margin-top: 80px;
+        margin-left: 0;
+        transform: scale(1.3);
+        transform-origin: right;
+    }
+        .page-wrapper .galleryContainer.two .filterImg, .page-wrapper .galleryContainer.four .filterImg {
+        left: 0;
+        height: 198px;
+        top: 13px;
+    }
+        .page-wrapper .galleryTopTxt {
+        font-size: 20px;
+        top: -18px;
+    }
+        .page-wrapper .galleryBottomTxt {
+        bottom: -20px;
+        font-size: 20px;
+    }
 
     }
 
     @media (max-width:575px)
     {
-        
+            .page-wrapper h1 {
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+            .page-wrapper .headerSection {
+        padding: 50px 0;
+    }
+        .page-wrapper h1 span {
+        font-size: 24px;
+        -webkit-text-stroke: 1px #ffffff;
+    }
+        .page-wrapper p {
+        font-size: 14px;
+    }
+        .page-wrapper .orderBtn {
+        font-size: 18px;
+        padding: 4px 10px;
+        border-radius: 10px;
+    }
+        .page-wrapper .orderBtn span {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+        .page-wrapper .orderBtn span img {
+        width: 9px;
+        padding-left: 2px;
+    }
+    .page-wrapper .headerInnerImg {
+        margin-top: 35px;
+    }
+        .page-wrapper .lineImg {
+        bottom: 0px;
+        width: 100px;
+    }
+        .page-wrapper .aboutSection {
+        padding: 25px 0;
+    }
+        .page-wrapper .galleryParent {
+        grid-gap: 0px;
+        grid-template-columns: 1fr;
+    }
+        .page-wrapper .galleryContainer.one, .page-wrapper .galleryContainer.two, .page-wrapper .galleryContainer.three, .page-wrapper .galleryContainer.four {
+        transform: scale(1.0);
+        margin-top: 0;
+    }
+    .page-wrapper .galleryContainer.three {
+        margin-top: 75px;
+    }
+        .page-wrapper .gallerySection {
+        padding: 50px 0;
+    }
     }
     
     @media (max-width:375px)
@@ -580,21 +1014,21 @@ font-family: "League Spartan", sans-serif;
     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940phpljL2np.png" class="img-fluid lineImg" alt="">
   <div class="container">
    <div class="row align-items-center">
-        <div class="col-lg-7 col-md-6 col-sm-12">
+        <div class="col-lg-7 col-md-7 col-sm-12">
             <div class="headerContainer">
                 <h1>
                     INDULGE IN 
                     <span> SWEET PERFECTION </span>
                 </h1>
                 <p>
-                    Indulge in the sweetest treats at Domain545 - Loaded Burgers And Kebabs - 882534  GB June25, your go-to dessert haven in LEEDS. From classic favourites to innovative creations, our desserts are handcrafted with the finest ingredients to satisfy every craving. Whether you're celebrating a special moment or simply treating yourself, our cosy ambience and delightful menu make every visit a sweet escape.
+                    Indulge in the sweetest treats at Domain545 - Loaded Burgers And Kebabs - 882534  GB June25, your go-to dessert haven in LEEDS. From classic favourites to innovative creations, our desserts are handcrafted with the finest ingredients to satisfy every craving.
                 </p>
                 <a href="/order-now" class="orderBtn">
                     <span> <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770038566phpfJVD3R.png" alt=""> </span> Order Now
                 </a>
             </div>
         </div>
-        <div class="col-lg-5 col-md-6 col-sm-12">
+        <div class="col-lg-5 col-md-5 col-sm-12">
             <div class="headerImg">
                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770035429phpNsti1w.png" class="img-fluid headerInnerImg" alt="">
             </div>
@@ -607,7 +1041,7 @@ font-family: "League Spartan", sans-serif;
     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940php1YadWL.png" class="img-fluid imgThree" alt="">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-lg-5 col-md-6 col-sm-12">
+            <div class="col-lg-5 col-md-6 col-sm-6">
                 <div class="aboutLeftContent">
                     <div class="cardRotate">
                         <h2>
@@ -622,7 +1056,7 @@ font-family: "League Spartan", sans-serif;
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7 col-md-6 col-sm-12">
+            <div class="col-lg-7 col-md-6 col-sm-6">
                 <div class="aboutContent">
     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770232940phpVWi5fC.png" class="img-fluid imgFour" alt="">
 
@@ -650,6 +1084,9 @@ font-family: "League Spartan", sans-serif;
     <div class="container">
         <div class="galleryParent">
             <div class="galleryContainer one">
+                <p class="galleryTopTxt">
+                    Ice Cream
+                </p>
                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png" class="img-fluid filterImg" alt="">
                 <div class="mask one">
                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769789145phpz7o8Na.jpg" alt="">
@@ -657,6 +1094,9 @@ font-family: "League Spartan", sans-serif;
             </div>
     
             <div class="galleryContainer two">
+                <p class="galleryBottomTxt">
+                    Ice Cream
+                </p>
                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpvc0XTH.png" class="img-fluid filterImg" alt="">
                 <div class="mask two">
                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769789145phpz7o8Na.jpg" alt="">
@@ -664,6 +1104,9 @@ font-family: "League Spartan", sans-serif;
             </div>
     
             <div class="galleryContainer three">
+                <p class="galleryTopTxt">
+                    Ice Cream
+                </p>
                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png" class="img-fluid filterImg" alt="">
                 <div class="mask three">
                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769789145phpz7o8Na.jpg" alt="">
@@ -671,6 +1114,9 @@ font-family: "League Spartan", sans-serif;
             </div>
     
             <div class="galleryContainer four">
+                <p class="galleryBottomTxt">
+                    Ice Cream
+                </p>
                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpvc0XTH.png" class="img-fluid filterImg" alt="">
                 <div class="mask four">
                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769789145phpz7o8Na.jpg" alt="">
@@ -684,6 +1130,10 @@ font-family: "League Spartan", sans-serif;
 <section class="paymentSection">
     <div class="container px-0">
         <div class="paymentParent">
+            <p class="orderTxt one"> Order Now </p>
+            <p class="orderTxt two"> Order Now </p>
+            <p class="orderTxt three"> Order Now </p>
+            <p class="orderTxt four"> Order Now </p>
             <div class="row">
                 <div class="col-lg-7">
                     <div class="paymentContainer">
@@ -747,6 +1197,7 @@ font-family: "League Spartan", sans-serif;
                             Crafted with 
                             <span> Love! </span>
                         </p>
+                        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770053235phpxXnsip.png" class="img-fluid envelopDesign" alt="">
                     </div>
                 </div>
             </div>
