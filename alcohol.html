@@ -137,8 +137,8 @@
        .page-wrapper .headerTopImg {
         position: absolute;
         top: 0;
-        filter: invert(18%) sepia(89%) saturate(2472%) hue-rotate(0deg) brightness(94%) contrast(105%);
         width: 30%;
+            filter: brightness(0) saturate(100%) invert(11%) sepia(84%) saturate(4951%) hue-rotate(353deg) brightness(88%) contrast(114%);
        }
      
        .page-wrapper .aboutSection {
@@ -169,7 +169,7 @@
         right: -20px;
         width: 45%;
         height: 30%;
-        background: #b82600;
+        background: #b80001;
         clip-path: polygon(0 0, 100% 100%, 100% 0);
        }
        .page-wrapper .aboutSection::after {
@@ -203,7 +203,7 @@
        .page-wrapper .aboutBtmContent {
         position: absolute;
         bottom: -75px;
-        background: #b82601d6;
+        background: #700904a6;
         width: fit-content;
         height: fit-content;
         left: 0;
@@ -215,20 +215,26 @@
        }
        .page-wrapper .aboutBtmContent p{ 
         font-family: "Germania One", system-ui;
+            font-size: 35px;
+    line-height: 1.3;
        }
        .page-wrapper .cartImg {
-        width: 50px;
-        height: 50px;
-        background: #fff;
-        border-radius: 50%;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        margin: auto;
-        margin-bottom: 15px;
+           width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 15px;
+    justify-content: center;
        }
        .page-wrapper .sipCartImg {
         filter: brightness(0) saturate(100%) invert(23%) sepia(85%) saturate(1414%) hue-rotate(350deg) brightness(99%) contrast(122%);
+            width: 35px;
+    height: 35px;
+    object-fit: contain;
        }
        .page-wrapper .paymentParent {
         background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769099155phpM0z2Zd.jpg');
@@ -246,7 +252,7 @@
         margin: auto;
        }
        .page-wrapper .paymentContainer.two {
-        border: 15px solid #b60100;
+        border: 15px solid #ba0001;
        }
        .page-wrapper .paymentImgContainer img {
             filter: invert(1);
@@ -330,7 +336,7 @@
   animation: jello-horizontal 0.9s both; 
     outline: none;
     cursor: pointer;
-    background: #be3600;
+    background: #ba0001;
     padding: 9px 20px 7px 20px;
     color: #fff;
     font-size: 20px;
@@ -432,7 +438,7 @@
     position: absolute;
     top: 20%;
     right: 4%;
-    background: #bb2400;
+    background: #b80001;
     width: 33%;
     height: 36%;
     border-radius: 500px 0 0 500px;
@@ -521,6 +527,16 @@
         width: 33%;
         height: 38%;
         transform: rotate(0deg) scale(2.0);
+    }
+    .page-wrapper .aboutBtmContent { 
+                padding: 20px 40px;
+    }
+    .page-wrapper .cartImg {
+            width: 60px;
+    height: 60px;
+    }
+    .page-wrapper .aboutBtmContent p {
+        font-size: 32px;
     }
         }
     
@@ -628,6 +644,7 @@
     .page-wrapper .aboutBtmContent {
         padding: 10px 15px;
         border-radius: 15px;
+            bottom: -60px;
     }
     .page-wrapper .aboutSection::after, .page-wrapper .aboutSection::before {
         width: 25px;
@@ -676,6 +693,9 @@
         left: 22px;
         transform: scale(0.9);
 } 
+    .page-wrapper .aboutBtmContent p {
+        font-size: 25px;
+    }
         }
     
         @media (max-width:767px)
@@ -742,6 +762,9 @@
         .page-wrapper .footerContent {
             width: 100%;
         }  
+            .page-wrapper .aboutBtmContent p {
+        font-size: 20px;
+    }
         }
     
         @media (max-width:575px)
@@ -803,6 +826,14 @@
     .page-wrapper .headerSection::after {
             display: none;
         }  
+            .page-wrapper .cartImg {
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+    }
+        .page-wrapper .aboutBtmContent p {
+        font-size: 18px;
+    }
         }
         
         @media (max-width:375px)
