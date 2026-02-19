@@ -531,6 +531,10 @@ border-radius: 50%;
         .page-wrapper h2 {
             font-size: 47px;
         }
+        .page-wrapper h4 {
+    font-size: 35px;
+    letter-spacing: 1px;
+        }
          .page-wrapper .menuImgContainer img {
             width: 60px;
             height: 60px;
@@ -616,6 +620,15 @@ border-radius: 50%;
 }
 .page-wrapper .menuContainer {
         grid-template-columns: 1fr 6fr;
+}
+.page-wrapper h6 {
+        font-size: 20px; 
+    margin-left: 10px;
+}
+.page-wrapper .serviceInnerContainer {
+        padding: 15px;
+    border-radius: 0 20px 20px 0;
+    width: 200%;
 }
     }
 
@@ -708,6 +721,28 @@ border-radius: 50%;
         .page-wrapper .templeImg {
         width: 400px;
     }
+    .page-wrapper .serviceSection:after {
+        height: calc(100% - 125px);
+    background: #ff5a5a;
+    border-bottom-left-radius: 25px;
+    }
+    .page-wrapper .serviceRightImg { 
+    height: 450px; 
+    border-radius: 25px;
+}
+    .page-wrapper h6 {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+    .page-wrapper .serviceInnerContainer .menuContainer {
+        margin-bottom: 0;
+    }
+    .page-wrapper .serviceInnerContainer .menuImgContainer{ 
+        padding: 8px;
+    }
+    .page-wrapper .serviceSection {
+    padding: 75px 0;
+}
     }
 
     @media (max-width:991px)
@@ -762,7 +797,7 @@ border-radius: 50%;
         height: 50px;
     }
     .page-wrapper .menuContainer {
-        margin-bottom: 35px;
+        margin-bottom: 20px;
     }
      .page-wrapper .menuImgContainer img {
         width: 50px;
@@ -793,6 +828,7 @@ border-radius: 50%;
     }
         .page-wrapper .food-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     } 
         .page-wrapper .food-grid .left-oval {
         height: 150px;
@@ -802,7 +838,8 @@ border-radius: 50%;
         grid-row-start: 1;
     }
         .page-wrapper .food-grid .right-oval {
-        height: 100%;
+                height: 280px;
+        width: 100%;
         border-radius: 20px;
         order: 3;
         grid-column: 1 / -1;
@@ -831,6 +868,9 @@ border-radius: 50%;
         width: 50px;
         height: 50px;
         padding: 12px;
+    }
+        .page-wrapper .templeImg {
+        width: 350px;
     }
     }
 
@@ -887,6 +927,53 @@ border-radius: 50%;
     .page-wrapper h2 {
             margin-bottom: 10px;
         }
+        .page-wrapper .food-grid .left-oval {
+                    height: 200px;
+        width: 100%;
+        }
+        .page-wrapper .food-grid .right-oval {
+                    height: 300px;
+        width: 100%;
+        }
+        .page-wrapper .food-grid .left-circle {
+                    width: 100%;
+        height: 200px;
+        }
+        .page-wrapper .aboutSection .row {
+                flex-direction: column-reverse;
+        }
+        .page-wrapper .about-content {
+            margin-bottom: 40px;
+        }
+            .page-wrapper .about-heading-span {
+        font-size: 18px;
+    }
+        .page-wrapper h3 {
+        font-size: 22px;
+    }
+        .page-wrapper p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .page-wrapper .paymentInnerContainer {
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 40px;
+    justify-items: center;
+    }
+    .page-wrapper .menuContainer.three {
+            grid-column: 1 / -1;
+    max-width: 250px;
+    margin-top: 0;
+    }
+    .page-wrapper .aboutSection {
+        padding: 50px 0;
+        text-align: center;
+    }
+    .page-wrapper .headerContent {
+        text-align: center;
+    }
     }
 
     @media (max-width:575px)
@@ -931,14 +1018,10 @@ border-radius: 50%;
     bottom: 20px;
   }
   .page-wrapper .menuImgContainer img {
-        width: 50px;
-        height: 50px;
-    }
-     .page-wrapper .menuImgContainer {
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-    }
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    } 
         .page-wrapper .headerSection {
         padding: 50px 0 50px;
     }
@@ -984,7 +1067,7 @@ border-radius: 50%;
         min-height: 250px;
     }
         .page-wrapper .gallerySection {
-        padding: 125px 0 75px;
+        padding: 90px 0 50px;
     }
     .page-wrapper .galleryHeading {
         margin-bottom: 30px;
@@ -995,6 +1078,39 @@ border-radius: 50%;
     border-radius: 50%;
     width: 180px;
     height: 180px;
+    }
+    .page-wrapper p {
+        font-size: 15px;
+    } 
+        .page-wrapper .menuContainer {
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+    .page-wrapper .paymentInnerContainer {
+            max-width: 230px;
+            grid-template-columns: 1fr;
+    margin: auto;
+    margin-top: 30px;
+    }
+    .page-wrapper h5 {
+        font-size: 18px;
+    }
+        .page-wrapper .menuImgContainer {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+    .page-wrapper .food-grid .left-oval {
+        height: 100%;
+    }
+    .page-wrapper .food-grid .right-oval {
+        height: 100%;
+    }
+    .page-wrapper .food-grid .right-oval {
+        height: 100%;
+    }
+        .page-wrapper .about-content {
+        margin-bottom: 20px;
     }
     }
     
@@ -1165,7 +1281,7 @@ border-radius: 50%;
                                 </div>
 
                             </div>
-                            <div class="menuContainer">
+                            <div class="menuContainer three">
 
                                 <div class="menuImgContainer">
                                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769792619phpZLxZWE.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Search Icon" class="img-fluid">  
