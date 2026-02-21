@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dessert</title>
+ 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Germania+One&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css2?family=Coiny&amp;family=Poetsen+One&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--    font-family: "Titan One", sans-serif;     font-family: "Nunito", sans-serif;    -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Titan+One&amp;display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"> -->
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+ 
+
+
+<style type="text/css">
+
+      :root {
+    --teal-dark:   #1a7a6e;
+    --teal-mid:    #1e9b8a;
+    --teal-bright: #17b8a6;
+    --teal-card:   #1aada0;
+    --yellow:      #f5f264;
+    --white:       #ffffff;
+    --bg:          #f7f8f4;
+  }
+
+
+/* 
+
+font-family: "Titan One", sans-serif;
+font-family: "Nunito", sans-serif;
+
+*/  
+
+    body .page-wrapper { 
+    font-family: "Nunito", sans-serif; 
+    color: #6c6a6a; 
+    line-height: 24px; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+    background-color: #10959b;
+    } 
+    
+   .page-wrapper p {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-family: "Nunito", sans-serif;
+    color: #ffffe7;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-weight: 700;
+   }
+
+   .page-wrapper p > a {
+   color: inherit;
+   }
+   .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+   line-height: 1.3;
+   font-family: "Titan One", sans-serif;
+   }
+   .page-wrapper .row {
+   margin: 0 -15px!important;
+   }
+   .page-wrapper .bg-dark {
+   background-color: #fc673f!important;
+   }
+
+   .page-wrapper .bg-primary {
+   background-color: #241e5e!important;
+   }
+   .page-wrapper .bg-light {
+   background-color: #f1f1f1!important;
+   }
+   .page-wrapper section {
+   position: relative;
+   z-index: 1;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   }   
+   .page-wrapper .btn {
+   font-size: 14px;
+   border-radius: 0;
+   padding: 0 30px;
+   line-height: 50px;
+   }  
+
+   .page-wrapper .overlay{
+      content: "";
+    background: rgb(0 0 0 / 58%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   }
+
+   .page-wrapper h1 {
+    font-size: 65px;
+    color: #ffffe8;
+    margin-bottom: 20px;
+   }
+   .page-wrapper h2 {
+    font-size: 62px;
+    color: #ffffe8;
+    text-align: center;
+    font-weight: 100;
+   }
+   .page-wrapper h3 {
+    
+    }
+   .page-wrapper h4 {
+    
+   }
+   .page-wrapper h5 {
+    
+   }
+   .page-wrapper h6 {
+    
+   }
+   .page-wrapper .orderBtn {
+    background: #ffffe8;
+    padding: 10px 20px;
+    font-size: 22px;
+    color: #0d7077;
+    font-weight: 600;
+    display: inline-block;
+   }
+   .page-wrapper .headerImg img { 
+    transform: scale(1.5);
+    transform-origin: right top;
+   }
+   .page-wrapper .headerSection {
+    padding: 100px 0;
+    z-index: 2;
+   }
+   .page-wrapper .headerContent {
+    text-align: center;
+   }
+
+   .page-wrapper .rolling-text {  
+    text-transform: uppercase;
+    overflow-x: hidden;
+    background: #ffffff;
+    padding: 100px 0;
+    transform: rotate(-8deg) scale(1.1);
+    position: relative;
+    top: -100px;
+    filter: drop-shadow(2px -2px 8px #00000094);
+    }
+    .page-wrapper .text-position {
+        display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 100%;
+    background: #faf975;
+    }
+    .page-wrapper .news-message {
+      display: flex;
+      flex-shrink: 0;
+      height: 80px;
+      align-items: center;
+      /* animation: slide-left 60s linear infinite; */
+      gap: 20px;
+    border: 5px dashed #000;
+    border-left: 0;
+    border-right: 0;
+    }
+    .page-wrapper .news-message p {
+        font-size: 45px;
+    padding-left: 0.5em;
+    margin-bottom: 0px !important;
+    color: #106c7f;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: "Titan One", sans-serif;
+    text-transform: uppercase;
+    }
+    
+    @keyframes slide-left {
+      from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+      to {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-60%);
+      }
+    }
+    .page-wrapper .rollingTxtSection { 
+    margin: 100px 0; 
+    }
+    .page-wrapper .rollingTxtSection:after {
+        content: '';
+    background: #0c5559;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: -40px;
+    transform: rotate(-8deg) scale(1.5);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    z-index: -1;
+    }
+    .page-wrapper .rollingTxtSection:before {
+        content: '';
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    background: #0c5559;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: -145px;
+    transform: rotate(-5deg) scale(1.5);
+    }
+    .page-wrapper .sausageImg {
+        transform: scale(1.5);
+        transform-origin: left bottom;
+    }
+    .page-wrapper .sausageSection {
+        background-color: #fff;
+        padding-bottom: 50px;
+    }
+    .page-wrapper .waveImg {
+        position: absolute;
+    top: -100px;
+    z-index: -5;
+    height: 510px;
+    width: 100%;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(28%) saturate(2081%) hue-rotate(143deg) brightness(94%) contrast(87%) drop-shadow(0px 20px 0px #0e6f73);
+    object-fit: cover;
+    object-position: bottom;
+    transform: rotate(-5deg) scale(1.1);
+    }
+    .page-wrapper .sausageSection h2 span{
+        display: block;
+    transform-origin: center;
+    font-size: 160px;
+    line-height: 0.7;
+    font-weight: 100;
+    }
+    .page-wrapper .sausageSection h2{
+        transform: rotate(-10deg) translateX(-80px);
+    }
+
+    /* MENU SECTION */
+
+
+    
+  .scene {
+display: flex;
+    align-items: center;
+    gap: 0;
+    width: 80%;
+    margin: auto;
+  }
+
+  /* ── 1. ORBIT ── */
+  .orbit-wrap {
+    position: relative;
+    width: 500px;
+    height: 480px;
+    flex-shrink: 0;
+  }
+
+  .orbit-ring {
+    position: absolute;
+    inset: 0;
+    border: 5px dashed var(--teal-mid);
+    border-radius: 50%; 
+    animation: spin 20s linear infinite;
+  }
+
+  @keyframes spin   { to { transform: rotate(360deg);  } }
+  @keyframes unspin { to { transform: rotate(-360deg); } }
+
+  .center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    background: var(--teal-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(26, 122, 110, .35);
+    z-index: 2;
+  }
+  .center-circle h2 {
+font-weight: 100;
+    font-size: 50px;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  .orbit-item {
+    position: absolute;
+        width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--teal-dark);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(26,122,110,.3);
+    animation: unspin 20s linear infinite;
+    transition: background .22s, box-shadow .22s;
+    z-index: 3;
+  }
+  .orbit-item svg { width: 30px; height: 30px; fill: var(--white); }
+  .orbit-item:hover { background: var(--teal-mid); }
+  .orbit-item.active { background: var(--teal-bright); box-shadow: 0 6px 22px rgba(23,184,166,.55); }
+
+  .orbit-item[data-index="0"] {     top: -44px;
+    left: 65%;
+    margin-left: -34px; }
+  .orbit-item[data-index="1"] { top: 50%;      right: -34px; margin-top: -34px; }
+  .orbit-item[data-index="2"] { bottom: -34px;
+    left: 65%;
+    margin-left: -34px; }
+  .orbit-item[data-index="3"] { top: 50%;      left: -34px;  margin-top: -34px; }
+
+  /* ── 2. CONNECTOR with active bubble ── */
+  .connector {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    height: 2px;
+  }
+
+  /* dashed line behind bubble */
+  .connector::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    border-top: 5px dashed var(--teal-mid);
+    opacity: 0.55;
+    transform: translateY(-50%);
+  }
+
+  .active-bubble {
+    z-index: 2;
+    border: 5px solid #1a7a6e;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: var(--teal-bright);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    animation: popIn .35s cubic-bezier(.34, 1.56, .64, 1);
+    top: 40%;
+    position: absolute;
+    left: 100%;
+    margin-left: -54px;
+    box-shadow: 0 6px 22px rgba(23, 184, 166, .55);
+  }
+  .active-bubble svg { width: 44px; height: 44px; fill: var(--white); }
+
+  @keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+
+  /* ── 3. INFO CARD ── */
+  .info-card {
+    background: var(--teal-card);
+    border-radius: 20px;
+    padding: 36px 36px 32px;
+    width: 500px;
+    flex-shrink: 0;
+    box-shadow: 0 12px 40px rgba(26,122,110,.25);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn .35s ease;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  .info-card::after {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 110px; height: 110px;
+    background: rgba(255,255,255,.07);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .info-card h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: var(--yellow);
+    line-height: 1.15;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .info-card p {
+    font-size: 20px;
+    color: var(--white);
+    line-height: 1.7;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .step-dots {
+    display: flex;
+    gap: 9px;
+    margin-top: 24px;
+  }
+  .dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.35);
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+  }
+  .dot.active { background: var(--yellow); transform: scale(1.35); }
+
+
+.page-wrapper .menuSection {
+        background: #fff;
+    padding: 50px 0 100px;
+}
+
+/* SWIPER */
+
+ /* ── Swiper shell ── */
+    .swiper-shell {
+      width: 100%;
+      max-width: 1280px;
+      padding: 20px 0 56px;
+    }
+
+    /* Enable CSS 3-D on the swiper */
+    .swiper {
+      overflow: visible !important;
+      perspective: 900px;
+      transform-style: preserve-3d;
+    }
+
+    .swiper-wrapper {
+      align-items: center;
+      transform-style: preserve-3d;
+    }
+
+    /* ── Slide base ── */
+    .swiper-slide {
+      width: 200px !important;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #111;
+      cursor: pointer;
+      transform-origin: center center;
+      transform-style: preserve-3d;
+      transition:
+        transform   0.55s cubic-bezier(.34,1.3,.64,1),
+        box-shadow  0.55s ease,
+        opacity     0.4s ease;
+    }
+
+    /* ── Fan positions — matching reference exactly ── */
+
+    /* CENTER — upright, biggest */
+    .swiper-slide-active {
+      transform: scale(1.0) rotateY(0deg) !important;
+      box-shadow: 0 32px 72px rgba(26,159,143,.28);
+      z-index: 10;
+    }
+
+    /* INNER neighbours — lean ~20° toward centre */
+    .swiper-slide-prev {
+      transform: scale(0.90) rotateY(22deg) translateX(14px) !important;
+      box-shadow: 0 18px 40px rgba(0,0,0,.16);
+      z-index: 8;
+    }
+    .swiper-slide-next {
+      transform: scale(0.90) rotateY(-22deg) translateX(-14px) !important;
+      box-shadow: 0 18px 40px rgba(0,0,0,.16);
+      z-index: 8;
+    }
+
+    /* OUTER cards — lean ~38° toward centre, smallest */
+    /* Swiper doesn't add a class for ±2, so we target via sibling selectors on the loop clones
+       and use a generic "everything else" rule  */
+    .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) {
+      opacity: 0.90;
+      z-index: 5;
+    }
+
+    /* We'll use JS to add data-pos attributes each slide change for precise outer control */
+    .swiper-slide[data-pos="-2"] {
+      transform: scale(0.78) rotateY(40deg) translateX(26px) !important;
+      box-shadow: 0 10px 24px rgba(0,0,0,.14);
+    }
+    .swiper-slide[data-pos="2"] {
+      transform: scale(0.78) rotateY(-40deg) translateX(-26px) !important;
+      box-shadow: 0 10px 24px rgba(0,0,0,.14);
+    }
+    /* beyond ±2 — hidden off-screen */
+    .swiper-slide[data-pos="-3"],
+    .swiper-slide[data-pos="3"],
+    .swiper-slide[data-pos="-4"],
+    .swiper-slide[data-pos="4"] {
+      transform: scale(0.65) rotateY(55deg) translateX(30px) !important;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .swiper-slide[data-pos="3"],
+    .swiper-slide[data-pos="4"] {
+      transform: scale(0.65) rotateY(-55deg) translateX(-30px) !important;
+    }
+
+    /* ── Card inner ── */
+    .card { display: flex; flex-direction: column; }
+
+    .card-img {
+      width: 100%;
+      height: 370px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Footer: hidden by default, revealed only on active */
+    .card-footer {
+      background: var(--teal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+      overflow: hidden;
+      max-height: 0;
+      padding: 0 16px;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.35s ease, padding 0.35s ease;
+    }
+
+    .swiper-slide-active .card-footer {
+      max-height: 130px;
+      opacity: 1;
+      padding: 18px 16px 24px;
+    }
+
+    .cart-icon-wrap {
+      width: 54px; height: 54px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,.15);
+      flex-shrink: 0;
+    }
+    .cart-icon-wrap svg {
+      width: 26px; height: 26px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card-label {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--white);
+      letter-spacing: 0.4px;
+    }
+
+    /* ── Pagination ── */
+    .swiper-pagination { bottom: 6px !important; }
+    .swiper-pagination-bullet {
+      width: 9px; height: 9px;
+      background: #b2ddd9; opacity: 1;
+      transition: background .3s, transform .3s;
+    }
+    .swiper-pagination-bullet-active {
+      background: var(--teal);
+      transform: scale(1.4);
+    }
+
+    /* ── Nav arrows ── */
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: var(--teal) !important;
+      background: var(--white);
+      width: 46px !important; height: 46px !important;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(0,0,0,.12);
+      top: 43% !important;
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after { font-size: 15px !important; font-weight: 900; }
+
+/* SWIPER */
+    /* RESPONSIVE VIEW */
+
+    @media(min-width:1200px){
+        .page-wrapper .container{
+            max-width: 1140px;
+        }
+    }
+
+    @media(min-width:1500px){
+        .page-wrapper .container{
+            max-width: 1440px;
+        }
+    }
+
+
+
+    @media (max-width:1500px)
+    {
+
+    }
+
+    @media (max-width:1199px)
+    {
+
+    }
+
+    @media (max-width:991px)
+    {
+
+    }
+
+    @media (max-width:767px)
+    {
+          .scene { flex-direction: column; gap: 20px; }
+    .connector { width: 2px; height: 100px; min-width: unset; flex: unset; }
+    .connector::before { top: 0; bottom: 0; left: 50%; right: auto; border-top: none; border-left: 2.5px dashed var(--teal-mid); transform: translateX(-50%); }
+    .info-card { width: 100%; max-width: 340px; }
+    }
+
+    @media (max-width:575px)
+    {
+        
+    }
+    
+    @media (max-width:375px)
+    {
+
+    }
+
+</style>
+
+
+</head>
+
+
+<body>
+
+    
+
+<div id="page-top-margin"></div>
+
+
+<div class="page-wrapper">
+
+<section class="headerSection">
+  <div class="container">
+   <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="headerImg">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771340438phprbfWht.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="headerContent">
+                <h1>
+                    Crispy, Juicy &amp; <br> Irresistibly Fresh!
+                </h1>
+                <p>
+                    Whether it's a quick bite of fish and chips or a full seafood feast, order now and enjoy restaurant-quality food at home.
+                </p>
+                <a href="/order-now" class="orderBtn">
+                    Order Now
+                </a>
+            </div>
+        </div>
+   </div>
+  </div>
+</section> 
+
+<section class="rollingTxtSection">
+    <div class="rolling-text">
+        <div class="text-position">
+           <div class="news-message">
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+           </div>
+        </div>
+     </div>
+</section>
+
+<section class="sausageSection">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771588285phpkR739R.png" class="img-fluid waveImg" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="leftContent">
+                    <h2>
+                        Catch of the <span> Day </span>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="rightContent">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771586355phpTAq7yt.png" class="img-fluid sausageImg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="menuSection">
+    <div class="container">
+        <div class="scene">
+
+  <!-- 1. Orbit -->
+  <div class="orbit-wrap">
+    <div class="orbit-ring"></div>
+    <div class="center-circle"><h2>How It<br>Works?</h2></div>
+
+    <div class="orbit-item active" data-index="0">
+      <svg viewBox="0 0 24 24"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/><rect x="16" y="15" width="6" height="6" rx="1"/></svg>
+    </div>
+    <div data-index="1" class="active-bubble" id="activeBubble">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 14H4V10h16v8zm0-11H4V6h16v1z"/><path d="M9 14l2 2 4-4-1.4-1.4L11 13.2l-.6-.6z"/></svg>
+    </div>
+    <div class="orbit-item" data-index="2">
+      <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99zM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+    </div>
+    <!-- <div class="orbit-item" data-index="3">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div> -->
+  </div>
+
+  <!-- 2. Connector: dashed line + active icon bubble -->
+  <div class="connector">
+    <!-- <div class="active-bubble" id="activeBubble"></div> -->
+  </div>
+
+  <!-- 3. Info card -->
+  <div class="info-card" id="infoCard">
+    <h3 id="cardTitle">Browse the Menu</h3>
+    <p id="cardDesc">Explore a curated selection of dishes crafted by top local restaurants. Filter by cuisine, dietary needs, or cravings — finding your perfect meal has never been easier.</p>
+  
+  </div>
+
+</div>
+    </div>
+</section>
+
+<section class="gallerySection">
+    <div class="container">
+        <div class="swiper-shell">
+  <div class="swiper menuSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 – Shawarma -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Shawarma"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Shawarma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 – Falafel -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Falafel"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Falafel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 – Burger -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Burger"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Burger</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 – Wrap -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Wrap"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Wrap</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 – Sausages -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Sausages"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Sausages</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Sausages"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Sausages</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Sausages"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Sausages</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Sausages"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Sausages</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.swiper-wrapper -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+    </div>
+</section>
+
+
+</div>
+
+
+
+<script>
+   window.addEventListener("load", function(){
+   pageTopmargin();
+   $(window).scrollTop($(window).scrollTop()+1);
+   });
+   pageTopmargin();
+   function pageTopmargin() {
+   var headerHeight = $('#header').height();
+   $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
+   }
+   $("#banner_content").appendTo($("#offer-section"));
+   var pageSection = $('[data-background]');
+   pageSection.each(function(indx){
+   if ($(this).attr("data-background")){
+   $(this).css("background-image", "url(" + $(this).data("background") + ")");
+   }
+   });
+</script>
+
+<script>
+  const steps = [
+    {
+      title: 'Browse the Menu',
+      desc:  'Explore a curated selection of dishes crafted by top local restaurants. Filter by cuisine, dietary needs, or cravings — finding your perfect meal has never been easier.',
+      icon:  `<svg viewBox="0 0 24 24"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/><rect x="16" y="15" width="6" height="6" rx="1"/></svg>`
+    },
+    {
+      title: 'Secure Payment',
+      desc:  'Paying is effortless, so you can focus on the food. Your transaction is protected end-to-end with bank-grade encryption and multiple payment options.',
+      icon:  `<svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 14H4V10h16v8zm0-11H4V6h16v1z"/><path d="M9 14l2 2 4-4-1.4-1.4L11 13.2l-.6-.6z"/></svg>`
+    },
+    {
+      title: 'Fast Delivery',
+      desc:  'Track your order in real time as our delivery partners bring your meal straight to your door — hot, fresh, and right on time.',
+      icon:  `<svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99zM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 11l1.5-4.5h11L19 11H5z"/></svg>`
+    },
+    {
+      title: 'Rate & Enjoy',
+      desc:  'Loved your meal? Share your experience! Your reviews help others discover great food and keep our restaurant partners at their best.',
+      icon:  `<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`
+    }
+  ];
+
+  const orbitItems   = document.querySelectorAll('.orbit-item');
+  const dots         = document.querySelectorAll('.dot');
+  const activeBubble = document.getElementById('activeBubble');
+  const infoCard     = document.getElementById('infoCard');
+  const cardTitle    = document.getElementById('cardTitle');
+  const cardDesc     = document.getElementById('cardDesc');
+
+  activeBubble.innerHTML = steps[0].icon;
+
+  function activate(index) {
+    orbitItems.forEach(el => el.classList.toggle('active', +el.dataset.index === index));
+    dots.forEach(el       => el.classList.toggle('active', +el.dataset.index === index));
+
+    activeBubble.style.animation = 'none';
+    activeBubble.offsetHeight;
+    activeBubble.style.animation = '';
+    activeBubble.innerHTML = steps[index].icon;
+
+    infoCard.style.animation = 'none';
+    infoCard.offsetHeight;
+    infoCard.style.animation = '';
+    cardTitle.textContent = steps[index].title;
+    cardDesc.textContent  = steps[index].desc;
+  }
+
+  orbitItems.forEach(el => el.addEventListener('click', () => activate(+el.dataset.index)));
+  dots.forEach(el       => el.addEventListener('click', () => activate(+el.dataset.index)));
+</script>
+
+ <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
+ <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
+
+
+
+
+ <script>
+  $.getScript("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", function() {	
+      const swiper = new Swiper('.menuSwiper', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 5,
+    spaceBetween: -40,
+    initialSlide: 2,
+    grabCursor: true,
+    speed: 500,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0:   { slidesPerView: 3, spaceBetween: -30 },
+      640: { slidesPerView: 4, spaceBetween: -35 },
+      900: { slidesPerView: 5, spaceBetween: -40 },
+    },
+    on: {
+      init:        updatePositions,
+      slideChange: updatePositions,
+    },
+  }
+
+);
+  
+  });
+
+  function updatePositions() {
+    const slides = this.slides;
+    const activeIndex = this.activeIndex;
+    slides.forEach((slide, i) => {
+      const pos = i - activeIndex;
+      slide.setAttribute('data-pos', pos);
+    });
+}
+  
+</script>
+
+</body>
+</html>
+
+
+<!-- 
+ 
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074627phpvNL1CZ.png
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phptDaKDi.png
+
+
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phptOgTg0.jpg - DISH
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpBhllUH.jpg - TEMPLE
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg - DISH
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phpTs70xp.jpg - DISH
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615php8zUVmL.jpg - DISH
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phppSPUb7.jpg - DISH
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phpY0gW0s.png - FISH BACK
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpIsbhsE.jpg - DISH
+
+
+
+
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771070816php8lMEi6.png - FooterImg DONE
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074627phpxIObmf.jpg - DONE
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771065182phpzhczVQ.png - Done
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771065182php8s8uFt.png - DONE
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpSCFA5l.png - DONE
+
+ -->
