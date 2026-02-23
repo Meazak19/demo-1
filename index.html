@@ -16,42 +16,62 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!--    font-family: "Titan One", sans-serif;     font-family: "Nunito", sans-serif;    -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Titan+One&amp;display=swap" rel="stylesheet">
 
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"> -->
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
  
 
 
 <style type="text/css">
 
+      :root {
+    --teal-dark:   #1a7a6e;
+    --teal-mid:    #1e9b8a;
+    --teal-bright: #17b8a6;
+    --teal-card:   #1aada0;
+    --yellow:      #f5f264;
+    --white:       #ffffff;
+    --bg:          #f7f8f4;
+  }
+
 
 /* 
 
-font-family: "Fraunces", serif;
+font-family: "Titan One", sans-serif;
+font-family: "Nunito", sans-serif;
 
 */  
 
     body .page-wrapper { 
-    font-family: "Urbanist", sans-serif; 
+    font-family: "Nunito", sans-serif; 
     color: #6c6a6a; 
     line-height: 24px; 
     overflow-x: hidden; 
     scroll-behavior: smooth; 
+    background-color: #10959b;
     } 
     
    .page-wrapper p {
     margin-bottom: 25px;
-    font-size: 24px;
-    font-family: "Fraunces", serif;
-    color: #655d5e;
+    font-size: 22px;
+    font-family: "Nunito", sans-serif;
+    color: #ffffe7;
     letter-spacing: 1px;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 700;
    }
 
    .page-wrapper p > a {
@@ -59,7 +79,7 @@ font-family: "Fraunces", serif;
    }
    .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
    line-height: 1.3;
-   font-family: "Fraunces", serif;
+   font-family: "Titan One", sans-serif;
    }
    .page-wrapper .row {
    margin: 0 -15px!important;
@@ -100,424 +120,532 @@ font-family: "Fraunces", serif;
    }
 
    .page-wrapper h1 {
-    font-size: 80px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: 50px;
+    font-size: 65px;
+    color: #ffffe8;
+    margin-bottom: 20px;
    }
    .page-wrapper h2 {
-font-size: 62px;
-    font-weight: 400;
-    color: #f9595b;
-    line-height: 1.1;
-    margin-bottom: 25px;
+    font-size: 62px;
+    color: #ffffe8;
+    text-align: center;
+    font-weight: 100;
    }
    .page-wrapper h3 {
-        font-size: 58px;
-    color: #f9595b;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    font-weight: 600;
+    
     }
    .page-wrapper h4 {
-    font-size: 54px;
-    color: #f9595b;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    font-weight: 400;
+    
    }
    .page-wrapper h5 {
-        font-size: 38px;
-    color: #ff5a5a;
-    font-weight: 600;
+    
    }
    .page-wrapper h6 {
-        font-size: 30px;
-    color: #000000;
-    font-weight: 600;
-    margin-left: 15px;
-   }
-
-   .page-wrapper .headerSection {
-        padding: 150px 0 100px;
-    background: #f85856;
-    z-index: 2;
+    
    }
    .page-wrapper .orderBtn {
-    font-size: 23px;
-    color: #f85856;
-    background: #fff;
-    padding: 15px 25px;
-    border-radius: 25px;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-family: "Fraunces", serif;
+    background: #ffffe8;
+    padding: 10px 20px;
+    font-size: 22px;
+    color: #0d7077;
+    font-weight: 600;
     display: inline-block;
    }
-   .page-wrapper .orderBtn.two {
-    color: #fff;
-    background: #f85856;
-   }
-   .page-wrapper h1 span {
-    font-size: 160px;
-    line-height: 1;
-   }
-
-   /* GRID */
-
-
-.page-wrapper .gallery {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-/* Common Card */
-.page-wrapper .card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 18px;
-}
-
-.page-wrapper .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-height: 325px;
-}
-.page-wrapper .headerImgBack {
-        position: absolute;
-    top: 50px;
-    right: 50px;
-    bottom: 0;
-    filter: invert(1);
-    z-index: -1;
-    width: 340px;
-    height: 350px;
-    display: flex;
+   .page-wrapper .headerImg img { 
     transform: scale(1.5);
-}
-.page-wrapper .headerImgContainer {
-        position: relative;
-    max-width: 650px;
-}
-.page-wrapper .headerImg {
-          transform: scale(1.4);
-    transform-origin: left top;
-    max-width: 600px;
-    top: 100px;
-    position: relative;
-    width: 85%;
-    margin-left: auto;
-    display: flex;
-}
-
-/* Top right large image */
-.page-wrapper .img2 {
-grid-column: span 2;
-}
-
-/* Circle card */
-.page-wrapper .circle-card {
-border-radius: 50%;
-}
-
-.page-wrapper .circle-card img {
-border-radius: 50%;
-}
-
-.page-wrapper .circle-card .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 90, 90, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-}
-
-.page-wrapper .circle-card button {
-    margin-top: 10px;
-    padding: 8px 18px;
-    border: none;
-    border-radius: 20px;
-    background: #fff;
-    color: #ff5a5a;
-    cursor: pointer;
-}
-
-/* Text card */
-.page-wrapper .text-card {
-    background: #ff5a5a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-}
-
-.page-wrapper .text-card p { 
-    font-family: "Fraunces", serif;
-    font-size: 55px;
-    line-height: 1.1;
-    letter-spacing: 0px;
-    color: #fff;
-    font-weight: 200;
-    margin-bottom: 0;
-}
-.page-wrapper .gallerySection {
-    padding: 175px 0 100px;
-    background-color: #fff;
-}
-.page-wrapper .text-card p span{  
-    display: inline-block;
-    transform: scale(2.1);
-    margin-bottom: 20px;
-}
-
-   /* GRID */
-
-
-  .page-wrapper  .food-grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  grid-template-rows: auto auto;
-  gap: 30px;
-  position: relative;
-  justify-items: center;
-}
-
-/* Common */
-.page-wrapper .food-grid .item {
-  position: relative;
-  overflow: hidden;
-}
-
-.page-wrapper .food-grid .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Shapes */
-.page-wrapper .food-grid .left-oval {
-    border-radius: 150px;
-    height: 400px;
-    width: 275px;
-}
-
-.page-wrapper .food-grid .right-oval {
-  grid-row: span 2;
-  border-radius: 200px;
-  height: 700px;
-}
-
-.page-wrapper .food-grid .left-circle {
-    width: 275px;
-    height: 275px;
-    border-radius: 50%;
-}
-
-/* Stamp */
-.page-wrapper .food-grid .stamp {
-      position: absolute;
-    bottom: 0px;
-    left: 45%;
-    width: 170px;
-    height: 170px;
-}
-.page-wrapper .fishImg {
-       position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-    display: flex;
-    bottom: 0;
-    margin: auto;
-    border-radius: 50%;
-    width: 150px !important;
-    height: 150px;
-}
-
-.page-wrapper .food-grid .stamp img {
-  width: 100%;
-}
-.page-wrapper .aboutSection {
+    transform-origin: right top;
+   }
+   .page-wrapper .headerSection {
     padding: 100px 0;
-    background-color: #fff3f3;
-}
-.page-wrapper .headerTopImg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    filter: invert(1);
-    width: 200px;
-}
-.page-wrapper .headerBackImg {
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 390px;
-    z-index: -1;
-    opacity: 0.3;
-    transform: scale(1.2);
-    transform-origin: bottom;
-}
-.page-wrapper .about-heading-span {
-    font-size: 45px;
-    text-transform: capitalize;
-    font-family: "Fraunces", serif;
-    color: #ff5a5a;
-    font-weight: 400;
-    margin-bottom: 30px;
-    display: inline-block;
-}
- .page-wrapper .menuContainer {
-                      display: grid;
-    grid-template-columns: 1fr 5fr;
-    align-items: center;
-    margin-top: 20px;
-    gap: 0px;
-            }
-             .page-wrapper .menuContainer.two:after {
-                   content: '';
-    position: absolute;
-    border: 2px solid #000;
-    width: 100%;
-    height: 100%;
+    z-index: 2;
+   }
+   .page-wrapper .headerContent {
+    text-align: center;
+   }
+
+   .page-wrapper .rolling-text {  
+    text-transform: uppercase;
+    overflow-x: hidden;
+    background: #ffffff;
+    padding: 100px 0;
+    transform: rotate(-8deg) scale(1.1);
+    position: relative;
+    top: -100px;
+    filter: drop-shadow(2px -2px 8px #00000094);
+    }
+    .page-wrapper .text-position {
+        display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 100%;
+    background: #faf975;
+    }
+    .page-wrapper .news-message {
+      display: flex;
+      flex-shrink: 0;
+      height: 80px;
+      align-items: center;
+      /* animation: slide-left 60s linear infinite; */
+      gap: 20px;
+    border: 5px dashed #000;
     border-left: 0;
     border-right: 0;
-            }
-                 .page-wrapper .menuImgContainer {
-    background: #ff5a5a;
-    width: 80px;
-    height: 80px;
+    }
+    .page-wrapper .news-message p {
+        font-size: 45px;
+    padding-left: 0.5em;
+    margin-bottom: 0px !important;
+    color: #106c7f;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: "Titan One", sans-serif;
+    text-transform: uppercase;
+    }
+    
+    @keyframes slide-left {
+      from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+      to {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-60%);
+      }
+    }
+    .page-wrapper .rollingTxtSection { 
+    margin: 100px 0; 
+    }
+    .page-wrapper .rollingTxtSection:after {
+        content: '';
+    background: #0c5559;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: -40px;
+    transform: rotate(-8deg) scale(1.5);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    z-index: -1;
+    }
+    .page-wrapper .rollingTxtSection:before {
+        content: '';
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    background: #0c5559;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: -145px;
+    transform: rotate(-5deg) scale(1.5);
+    }
+    .page-wrapper .sausageImg {
+        transform: scale(1.5);
+        transform-origin: left bottom;
+    }
+    .page-wrapper .sausageSection {
+        background-color: #fff;
+        padding-bottom: 50px;
+    }
+    .page-wrapper .waveImg {
+        position: absolute;
+    top: -100px;
+    z-index: -5;
+    height: 510px;
+    width: 100%;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(28%) saturate(2081%) hue-rotate(143deg) brightness(94%) contrast(87%) drop-shadow(0px 20px 0px #0e6f73);
+    object-fit: cover;
+    object-position: bottom;
+    transform: rotate(-5deg) scale(1.1);
+    }
+    .page-wrapper .sausageSection h2 span{
+        display: block;
+    transform-origin: center;
+    font-size: 160px;
+    line-height: 0.7;
+    font-weight: 100;
+    }
+    .page-wrapper .sausageSection h2{
+        transform: rotate(-10deg) translateX(-80px);
+    }
+
+    /* MENU SECTION */
+
+
+    
+  .scene {
+display: flex;
+    align-items: center;
+    gap: 0;
+    width: 80%;
+    margin: auto;
+  }
+
+  /* ── 1. ORBIT ── */
+  .orbit-wrap {
+    position: relative;
+    width: 500px;
+    height: 480px;
+    flex-shrink: 0;
+  }
+
+  .orbit-ring {
+    position: absolute;
+    inset: 0;
+    border: 5px dashed var(--teal-mid);
+    border-radius: 50%; 
+    animation: spin 20s linear infinite;
+  }
+
+  @keyframes spin   { to { transform: rotate(360deg);  } }
+  @keyframes unspin { to { transform: rotate(-360deg); } }
+
+  .center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    background: var(--teal-dark);
     border-radius: 50%;
-    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.page-wrapper .menuImgContainer img {
-                   width: 55px;
-    height: 55px;
-    object-fit: contain;
-    filter: invert(1);
-            }
-            .page-wrapper .templeImg {
-                    position: absolute;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-            }
-            .page-wrapper .serviceSection {
-                padding: 100px 0;
-            }
-            .page-wrapper .serviceRightImg {
-                    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 50px;
-            }
-            .page-wrapper .serviceRightImg {
-                    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 50px;
-            }
-            .page-wrapper .serviceInnerContainer {
-                    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 0;
-    background: #fff3f3;
-    align-items: center;
-    height: 100%;
-    padding: 20px 50px 20px 25px;
-    border-radius: 0 20px 20px 0;
-    width: 220%;
-    margin-right: auto;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(26, 122, 110, .35);
     z-index: 2;
-    position: relative;
-    gap: 25px;
-            }
-            .page-wrapper .serviceSection:after {
-                    content: '';
+  }
+  .center-circle h2 {
+font-weight: 100;
+    font-size: 50px;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  .orbit-item {
     position: absolute;
-    top: 100px;
-    right: 0;
-    width: 50%;
-    z-index: -1;
-    height: calc(100% - 100px);
-    background: #ff5a5a;
-    border-bottom-left-radius: 50px;
-            }
-            .page-wrapper .footerBg::after {
-                     content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: #ff5a5a;
-    border-top-right-radius: 600px;
-    z-index: -1;
-            }
-            .page-wrapper .footerImg {
-                  transform: scale(1.5);
-    transform-origin: bottom left;
-    height: 750px;
-    width: fit-content;
-    object-fit: contain;
-    margin-left: auto;
+        width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--teal-dark);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(26,122,110,.3);
+    animation: unspin 20s linear infinite;
+    transition: background .22s, box-shadow .22s;
+    z-index: 3;
+  }
+  .orbit-item svg { width: 30px; height: 30px; fill: var(--white); }
+  .orbit-item:hover { background: var(--teal-mid); }
+  .orbit-item.active { background: var(--teal-bright); box-shadow: 0 6px 22px rgba(23,184,166,.55); }
+
+  .orbit-item[data-index="0"] {     top: -44px;
+    left: 65%;
+    margin-left: -34px; }
+  .orbit-item[data-index="1"] { top: 50%;      right: -34px; margin-top: -34px; }
+  .orbit-item[data-index="2"] { bottom: -34px;
+    left: 65%;
+    margin-left: -34px; }
+  .orbit-item[data-index="3"] { top: 50%;      left: -34px;  margin-top: -34px; }
+
+  /* ── 2. CONNECTOR with active bubble ── */
+  .connector {
+    flex: 1;
     position: relative;
     display: flex;
-    margin-top: 150px;
-    right: 150px;
-            }
-            .page-wrapper .footerBg {
-                position: relative;
-            }
-            .page-wrapper .footerSection {
-                    padding: 100px 0 50px;
-            }
-            .page-wrapper .footerBtmContent h2 {
-                       color: #fff;
-    font-size: 125px;
-    line-height: 0.9;
-    transform: scale(0.7);
-            }
-             .page-wrapper .footerBtmContent h2 .txtTwo{
-                    display: block;
-    font-size: 180px;
-    font-weight: 500;
-             }
-             .page-wrapper .footerBtmContent h2 .txtThree{
-                   display: block;
-    font-size: 225px;
-    font-weight: 700;
-             }
-             .page-wrapper .footerBtmContent h2 .txtFour{
-                   display: block;
-    font-size: 190px;
-    font-weight: 700;
-             }
-             .page-wrapper .footerBgImg {
-                position: absolute; 
-    width: 550px;
-    height: 800px;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    height: 2px;
+  }
+
+  /* dashed line behind bubble */
+  .connector::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    border-top: 5px dashed var(--teal-mid);
+    opacity: 0.55;
+    transform: translateY(-50%);
+  }
+
+  .active-bubble {
+    z-index: 2;
+    border: 5px solid #1a7a6e;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: var(--teal-bright);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    animation: popIn .35s cubic-bezier(.34, 1.56, .64, 1);
+    top: 40%;
+    position: absolute;
+    left: 100%;
+    margin-left: -54px;
+    box-shadow: 0 6px 22px rgba(23, 184, 166, .55);
+  }
+  .active-bubble svg { width: 44px; height: 44px; fill: var(--white); }
+
+  @keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+
+  /* ── 3. INFO CARD ── */
+  .info-card {
+    background: var(--teal-card);
+    border-radius: 20px;
+    padding: 36px 36px 32px;
+    width: 500px;
+    flex-shrink: 0;
+    box-shadow: 0 12px 40px rgba(26,122,110,.25);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn .35s ease;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  .info-card::after {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 110px; height: 110px;
+    background: rgba(255,255,255,.07);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .info-card h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: var(--yellow);
+    line-height: 1.15;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .info-card p {
+    font-size: 20px;
+    color: var(--white);
+    line-height: 1.7;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .step-dots {
+    display: flex;
+    gap: 9px;
+    margin-top: 24px;
+  }
+  .dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.35);
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+  }
+  .dot.active { background: var(--yellow); transform: scale(1.35); }
+
+
+.page-wrapper .menuSection {
+        background: #fff;
+    padding: 50px 0 100px;
+}
+
+/* SWIPER */
+
+ /* ── Swiper shell ── */
+    .swiper-shell {
+       width: 100%;
+    padding: 150px 0 0;
+    height: 750px;
+    }
+
+    /* Enable CSS 3-D on the swiper */
+    .swiper {
+      overflow: visible !important;
+      perspective: 900px;
+      transform-style: preserve-3d;
+    }
+ 
+
+    /* ── Slide base ── */
+    .swiper-slide {
+      /* width: 200px !important; */
+      border-radius: 22px;
+      overflow: hidden;
+      background: #111;
+      cursor: pointer;
+      transform-origin: center center;
+      transform-style: preserve-3d;
+      transition:
+        transform   0.55s cubic-bezier(.34,1.3,.64,1),
+        box-shadow  0.55s ease,
+        opacity     0.4s ease;
+    }
+
+    /* ── Fan positions — matching reference exactly ── */
+
+    /* CENTER — upright, biggest */
+    .swiper-slide-active {
+      transform: scale(1.0) rotateY(0deg) !important;
+      box-shadow: 0 32px 72px rgba(26,159,143,.28);
+      z-index: 10;
+    }
+
+    /* INNER neighbours — lean ~20° toward centre */
+    .swiper-slide-prev {
+      transform: scale(0.90) rotateY(22deg) translateX(14px) !important;
+      box-shadow: 0 18px 40px rgba(0,0,0,.16);
+      z-index: 8;
+    }
+    .swiper-slide-next {
+      transform: scale(0.90) rotateY(-22deg) translateX(-14px) !important;
+      box-shadow: 0 18px 40px rgba(0,0,0,.16);
+      z-index: 8;
+    }
+
+    /* OUTER cards — lean ~38° toward centre, smallest */
+    /* Swiper doesn't add a class for ±2, so we target via sibling selectors on the loop clones
+       and use a generic "everything else" rule  */
+    /* .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) {
+      opacity: 0.90;
+      z-index: 5;
+    } */
+
+    /* We'll use JS to add data-pos attributes each slide change for precise outer control */
+    /* .swiper-slide[data-pos="-2"] {
+      transform: scale(0.78) rotateY(40deg) translateX(26px) !important;
+      box-shadow: 0 10px 24px rgba(0,0,0,.14);
+    }
+    .swiper-slide[data-pos="2"] {
+      transform: scale(0.78) rotateY(-40deg) translateX(-26px) !important;
+      box-shadow: 0 10px 24px rgba(0,0,0,.14);
+    } */
+    /* beyond ±2 — hidden off-screen */
+    /* .swiper-slide[data-pos="-3"],
+    .swiper-slide[data-pos="3"],
+    .swiper-slide[data-pos="-4"],
+    .swiper-slide[data-pos="4"] {
+      transform: scale(0.65) rotateY(55deg) translateX(30px) !important;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .swiper-slide[data-pos="3"],
+    .swiper-slide[data-pos="4"] {
+      transform: scale(0.65) rotateY(-55deg) translateX(-30px) !important;
+    } */
+
+    /* ── Card inner ── */
+    .card { display: flex; flex-direction: column; }
+
+    .card-img {
+      width: 100%;
+      height: 370px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Footer: hidden by default, revealed only on active */
+    .card-footer {
+      background: var(--teal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+      overflow: hidden;
+      max-height: 0;
+      padding: 0 16px;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.35s ease, padding 0.35s ease;
+    }
+
+    .swiper-slide-active .card-footer {
+      max-height: 130px;
+      opacity: 1;
+      padding: 18px 16px 24px;
+    }
+
+    .cart-icon-wrap {
+      width: 54px; height: 54px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,.15);
+      flex-shrink: 0;
+    }
+    .cart-icon-wrap svg {
+      width: 26px; height: 26px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card-label {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--white);
+      letter-spacing: 0.4px;
+    }
+    .page-wrapper .gallerySection {
+      background-color: #fff;
+    }
+
+    .page-wrapper .footerContainer {
+    background: #0e959b;
+    padding: 50px;
+    text-align: center;
+    border-radius: 0;
+    margin-bottom: 50px;
+    }
+    .page-wrapper .footerSection {
+      padding: 100px 0;
+      background-color: #fff;
+    }
+    .page-wrapper .footerContainer::after {
+    content: '';
+    position: absolute;
     top: 0;
-    right: 20%;
-    opacity: 0.1;
-    object-fit: cover;
-             }
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #0b7176;
+    transform: rotate(-4deg);
+    z-index: -1;
+    }
+    .page-wrapper .footerImgParent {
+          position: absolute;
+    background: #fff;
+    overflow: hidden;
+    }
+    .page-wrapper .footerImg {
+          position: absolute;
+    transform: scaleX(1.05) rotate(3deg);
+    filter: invert(1);
+    z-index: 0;
+    transform-origin: left top;
+    bottom: 0;
+    height: 110%;
+    top: -22px;
+    }
+
+
+    
+  
+/* SWIPER */
     /* RESPONSIVE VIEW */
 
     @media(min-width:1200px){
@@ -534,876 +662,32 @@ border-radius: 50%;
 
 
 
-    @media (max-width:1499px)
+    @media (max-width:1500px)
     {
-        .page-wrapper h1 {
-            font-size: 60px; 
-    margin-bottom: 25px;
-        }
-        .page-wrapper h2 {
-            font-size: 47px;
-        }
-        .page-wrapper h4 {
-    font-size: 35px;
-    letter-spacing: 1px;
-        }
-         .page-wrapper .menuImgContainer img {
-            width: 60px;
-            height: 60px;
-        }
-        .page-wrapper h1 span {
-            font-size: 130px;
-        }
-        .page-wrapper .headerSection {
-                padding: 100px 0 50px;
-        }
-        .page-wrapper .headerTopImg {
-                width: 150px;
-        }
-        .page-wrapper .headerBackImg {
-            width: 300px;
-        }
-        .page-wrapper .headerImg {
-    transform: scale(1.4); 
-    max-width: 500px;
-    top: 50px; 
-    width: 85%;
-    margin-left: auto;
-    display: flex;
-}
-.page-wrapper .headerImgContainer {
-        max-width: 500px;
-    margin-left: auto;
-}
-.page-wrapper .headerImgBack {
-    position: absolute;
-    top: 50px;
-    right: 85px;
-    bottom: 0;
-    filter: invert(1);
-    z-index: -1;
-    width: 240px;
-    height: 270px;
-    display: flex;
-    transform: scale(1.5);
-}
-.page-wrapper .card img {
-    max-height: 275px;
-}
-.page-wrapper .gallerySection {
-    padding: 85px 0 75px;
-}
-.page-wrapper .text-card p {
-    font-size: 40px;
-}
-.page-wrapper .aboutSection {
-        padding: 75px 0;
-}
-.page-wrapper .templeImg {
-    width: 500px;
-}
-.page-wrapper .food-grid .left-oval { 
-    height: 300px;
-    width: 195px;
-}
-.page-wrapper .food-grid .right-oval { 
-    height: 520px;
-}
-.page-wrapper .food-grid .left-circle {
-    width: 195px;
-    height: 195px; 
-}
-.page-wrapper .about-heading-span {
-        font-size: 25px; 
-    margin-bottom: 10px;
-}
-.page-wrapper h3 {
-    font-size: 37px;  
-}
-.page-wrapper p {
-    font-size: 18px;
-}
-.page-wrapper h5 {
-    font-size: 25px;
-}
-.page-wrapper .menuImgContainer {
-        width: 60px;
-    height: 60px;
-}
-.page-wrapper .menuContainer {
-        grid-template-columns: 1fr 6fr;
-}
-.page-wrapper h6 {
-        font-size: 20px; 
-    margin-left: 10px;
-}
-.page-wrapper .serviceInnerContainer {
-        padding: 15px;
-    border-radius: 0 20px 20px 0;
-    width: 200%;
-}
-.page-wrapper .footerBgImg {
-    width: 550px;
-    height: 600px;
-    bottom: 0;
-    top: unset;
-}
-.page-wrapper .footerBtmContent h2 {
-    font-size: 95px;
-}
-.page-wrapper .footerBtmContent h2 .txtTwo { 
-    font-size: 140px; 
-}
-.page-wrapper .footerBtmContent h2 .txtThree { 
-    font-size: 180px; 
-}
-.page-wrapper .footerBtmContent h2 .txtFour { 
-    font-size: 146px; 
-}
-.page-wrapper .footerImg {
-    margin-top: 150px;
-    right: 150px;
-        height: 480px;
-}
-.page-wrapper .footerSection {
-    padding: 20px 0 20px;
-}
-.page-wrapper .food-grid .stamp {
-        width: 150px;
-    height: 150px;
-}
-.page-wrapper .fishImg {
-        width: 130px !important;
-    height: 130px;
-}
+
     }
 
     @media (max-width:1199px)
     {
-            .page-wrapper h1 {
-        font-size: 50px;
-        margin-bottom: 20px;
-    }
-        .page-wrapper h2 {
-        font-size: 38px;
-    } 
-        .page-wrapper h1 span {
-        font-size: 110px;
-    }
-        .page-wrapper .menuContainer {
-    margin-bottom: 35px;
-} 
-    .page-wrapper .menuContainer.two:after {
-        border-width: 1px;
-    }
-  .page-wrapper .menuImgContainer { 
-    width: 80px;
-    height: 80px; 
-}
-    .page-wrapper .menuImgContainer img {
-        width: 50px;
-        height: 50px;
-    }
-    .page-wrapper .headerBackImg {
-        width: 250px;
-    }
-    .page-wrapper .headerImg {
-        max-width: 400px;
-        top: 50px;
-        width: 88%;
-    }
-    .page-wrapper .headerImgBack {
-        top: 30px;
-        right: 75px;   
-        width: 210px;
-    }
-        .page-wrapper .headerTopImg {
-        width: 120px;
-    }
-        .page-wrapper .card img {
-        max-height: 250px;
-    }
-        .page-wrapper .text-card p {
-        font-size: 35px;
-    }
-        .page-wrapper .about-heading-span {
-        font-size: 22px;
-        margin-bottom: 5px;
-    }
-        .page-wrapper h3 {
-        font-size: 32px;
-        margin-bottom: 15px;
-    }
-        .page-wrapper p {
-        font-size: 16px;
-    }
-        .page-wrapper .menuContainer {
-        margin-bottom: 15px;
-            margin-top: 15px;
-    }
-        .page-wrapper .menuImgContainer {
-        width: 50px;
-        height: 50px;
-    }
-        .page-wrapper h5 {
-        font-size: 22px;
-        margin-left: 5px;
-        margin-bottom: 0;
-    }
-        .page-wrapper .templeImg {
-        width: 450px;
-    }
-        .page-wrapper .food-grid .left-oval {
-        height: 200px;
-        width: 200px;
-    }
-        .page-wrapper .food-grid .right-oval {
-        height: 430px;
-    }
-        .page-wrapper .food-grid .left-circle {
-        width: 200px;
-        height: 200px;
-    }
-        .page-wrapper .templeImg {
-        width: 400px;
-    }
-    .page-wrapper .serviceSection:after {
-        height: calc(100% - 125px);
-    background: #ff5a5a;
-    border-bottom-left-radius: 25px;
-    }
-    .page-wrapper .serviceRightImg { 
-    height: 450px; 
-    border-radius: 25px;
-}
-    .page-wrapper h6 {
-        font-size: 16px;
-        margin-left: 8px;
-    }
-    .page-wrapper .serviceInnerContainer .menuContainer {
-        margin-bottom: 0;
-    }
-    .page-wrapper .serviceInnerContainer .menuImgContainer{ 
-        padding: 8px;
-    }
-    .page-wrapper .serviceSection {
-    padding: 75px 0;
-}
-.page-wrapper .footerBg::after {
-        top: 25px;
-            border-top-right-radius: 500px;
-}
-    .page-wrapper .footerImg {
-        margin-top: 150px;
-        right: 70px;
-        height: 540px;
-    }
-        .page-wrapper .footerBgImg {
-        width: 490px;
-        height: 550px; 
-    }
-        .page-wrapper .footerBtmContent h2 {
-        font-size: 75px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtTwo {
-        font-size: 115px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtThree {
-        font-size: 145px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtFour {
-        font-size: 121px;
-    }
-        .page-wrapper .fishImg {
-        width: 105px !important;
-        height: 105px;
-    }
-        .page-wrapper .food-grid .stamp {
-        width: 125px;
-        height: 125px;
-    }
+
     }
 
     @media (max-width:991px)
     {
-            .page-wrapper h1 {
-        font-size: 38px; 
-        letter-spacing: -1px;
-    }
-        .page-wrapper h2 {
-        font-size: 27px;
-    }
-    .page-wrapper h4 {
-        font-size: 32px;
-    }
-    .page-wrapper .gallerySection h2 {
-        transform: scale(1.2);
-        transform-origin: left;
-    }
-        .page-wrapper h1 span {
-        font-size: 80px;
-    }
-    .page-wrapper .orderBtn {
-        font-size: 16px; 
-    padding: 13px 20px;
-    }
-        .page-wrapper .text-card p {
-        font-size: 25px;
-        line-height: 0.8;
-    }
-       .page-wrapper .gallery {
-            padding: 0px 0px 0px 20px;
-                gap: 15px;
-    }
 
-   .page-wrapper .img2 {
-        grid-column: span 2;
-    }
-
-   .page-wrapper .food-grid {
-    grid-template-columns: 1fr;
-  }
-
- .page-wrapper .right-oval {
-    grid-row: auto;
-    height: 380px;
-    border-radius: 40px;
-  }
-
- .page-wrapper .left-circle {
-    width: 200px;
-    height: 200px;
-  }
-   .page-wrapper .menuImgContainer img {
-        width: 50px;
-        height: 50px;
-    }
-    .page-wrapper .menuContainer {
-        margin-bottom: 20px;
-    }
-     .page-wrapper .menuImgContainer img {
-        width: 50px;
-        height: 50px;
-    }
-    .page-wrapper .menuImgContainer { 
-    width: 60px;
-    height: 60px; 
-    padding: 12px;
-}
-    .page-wrapper .headerBackImg {
-        width: 200px;
-    }
-        .page-wrapper .headerBackImg {
-        width: 200px;
-    }
-        .page-wrapper .headerImgBack {
-        top: 10px;
-        right: 60px;
-        width: 140px;
-        height: 180px;
-    }
-        .page-wrapper .headerTopImg {
-        width: 100px;
-    }
-        .page-wrapper .card img {
-        max-height: 200px;
-    }
-        .page-wrapper .food-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    } 
-        .page-wrapper .food-grid .left-oval {
-        height: 150px;
-        width: 150px;
-        border-radius: 20px;
-        order: 1;
-        grid-row-start: 1;
-    }
-        .page-wrapper .food-grid .right-oval {
-                height: 280px;
-        width: 100%;
-        border-radius: 20px;
-        order: 3;
-        grid-column: 1 / -1;
-    }
-        .page-wrapper .food-grid .left-circle {
-        width: 150px;
-        height: 150px;
-        border-radius: 20px;
-        order: 2;
-    }
-    .page-wrapper .about-heading-span {
-                font-size: 20px; 
-    }
-        .page-wrapper h3 {
-        font-size: 22px; 
-    }
-        .page-wrapper p {
-        font-size: 14px;
-    }
-        .page-wrapper h5 {
-        font-size: 20px;
-        margin-left: 10px;
-        margin-bottom: 0;
-    }
-        .page-wrapper .menuImgContainer {
-        width: 50px;
-        height: 50px;
-        padding: 12px;
-    }
-        .page-wrapper .templeImg {
-        width: 350px;
-    }
-    .page-wrapper .serviceRightImg {
-                height: 300px;
-    }
-    .page-wrapper .serviceSection:after {
-        top: 50px;
-        width: 40%;
-                height: calc(100% - 60px);
-    }
-        .page-wrapper .serviceSection {
-        padding: 50px 0;
-    }
-        .page-wrapper .serviceInnerContainer { 
-        width: 180%;
-            gap: 15px;
-    }
-    .page-wrapper .menuImgContainer {
-        width: 45px; 
-        height: 45px; 
-    }
-    .page-wrapper h6 {
-                font-size: 14px;
-    }
-        .page-wrapper .footerBg::after {
-        top: 25px;
-        border-top-right-radius: 350px;
-    }
-        .page-wrapper .footerBtmContent h2 {
-        font-size: 50px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtFour {
-        font-size: 87px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtTwo {
-        font-size: 76px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtThree {
-        font-size: 107px;
-    }
-    .page-wrapper .footerImg {
-        margin-top: 150px;
-        right: 10px;
-        height: 420px;
-    }
-        .page-wrapper .footerBgImg {
-        width: 440px;
-        height: 500px;
-    }
-        .page-wrapper .fishImg {
-        width: 80px !important;
-        height: 80px;
-    }
-        .page-wrapper .food-grid .stamp {
-        width: 100px;
-        height: 100px;
-        z-index: 1;
-        top: 20%;
-        left: 35%;
-    }
     }
 
     @media (max-width:767px)
     {
-            .page-wrapper h1 {
-        font-size: 29px;
-        letter-spacing: -1px;
-    }
-    .page-wrapper h4 {
-        font-size: 20px;
-    }
-         .page-wrapper .menuImgContainer img {
-        width: 70px;
-        height: 70px;
-    }
-     .page-wrapper .menuTxtContainer p {
-        text-align: left;
-    }
-        .page-wrapper .headerSection {
-        padding: 75px 0 50px;
-    }
-    .page-wrapper .headerTopImg {
-        width: 75px;
-    }
-        .page-wrapper h1 span {
-        font-size: 55px;
-    }
-        .page-wrapper .headerImgBack {
-        top: 0px;
-        right: 40px;
-        width: 100px;
-        height: 120px;
-    }
-    .page-wrapper .headerBackImg {
-        width: 170px;
-        bottom: -20px;
-    }
-        .page-wrapper .headerImg { 
-        top: 65px;
-        width: 95%;
-    }
-    .page-wrapper .galleryHeading {
-        margin-bottom: 50px;
-    text-align: center;
-    }
-     .page-wrapper .gallerySection h2 {
-        transform: unset;
-    }
-    .page-wrapper .gallerySection h2 .br2 {
-        display: none;
-    }
-        .page-wrapper .orderBtn {
-        font-size: 16px;
-        padding: 6px 15px;
-    }
-    .page-wrapper h2 {
-            margin-bottom: 10px;
-        }
-        .page-wrapper .food-grid .left-oval {
-                    height: 200px;
-        width: 100%;
-        }
-        .page-wrapper .food-grid .right-oval {
-                    height: 300px;
-        width: 100%;
-        }
-        .page-wrapper .food-grid .left-circle {
-                    width: 100%;
-        height: 200px;
-        }
-        .page-wrapper .aboutSection .row {
-                flex-direction: column-reverse;
-        }
-        .page-wrapper .about-content {
-            margin-bottom: 40px;
-        }
-            .page-wrapper .about-heading-span {
-        font-size: 18px;
-    }
-        .page-wrapper h3 {
-        font-size: 22px;
-    }
-        .page-wrapper p {
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-    .page-wrapper .paymentInnerContainer {
-        display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 40px;
-    justify-items: center;
-    }
-    .page-wrapper .menuContainer.three {
-            grid-column: 1 / -1;
-    max-width: 250px;
-    margin-top: 0;
-    }
-    .page-wrapper .aboutSection {
-        padding: 50px 0;
-        text-align: center;
-    }
-    .page-wrapper .headerContent {
-        text-align: center;
-    }
-        .page-wrapper .serviceSection:after {
-        top: unset;
-        width: 60%;
-        height: 50%;
-        bottom: 0;
-    }
-        .page-wrapper .serviceRightImg {
-        height: 325px;
-        margin-top: 50px;
-    }
-    .page-wrapper .serviceSection  h4 {
-        font-size: 20px;
-        letter-spacing: 0;
-        transform: scale(1.3);
-        transform-origin: center;
-        text-align: center;
-    }
-      .page-wrapper .serviceInnerContainer {
-        width: 100%;
-        column-gap: 50px;
-        border-radius: 20px;
-            grid-template-columns: 1fr 1fr;
-    }
-    .page-wrapper .serviceInnerContainer .menuContainer.three {
-            grid-column: 1 / -1;
-    max-width: 250px;
-    margin: auto;
-    } 
-      .page-wrapper h6 {
-        font-size: 16px;
-        transform: scale(1.3);
-        transform-origin: left;
-                margin-left: 20px;
-    }
-        .page-wrapper .footerBgImg {
-        width: 50%;
-        height: 95%;
-    }
-    .page-wrapper .footerBtmContent h2 {
-        font-size: 38px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtTwo {
-        font-size: 54px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtThree {
-        font-size: 72px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtTwo {
-        font-size: 54px;
-    }
-        .page-wrapper .footerBtmContent h2 .txtFour {
-        font-size: 60px;
-    }
-        .page-wrapper .footerImg {
-        margin-top: 70px;
-        right: -15px;
-        height: 100%;
-    }
-    .page-wrapper .footerBg::after {
-        border-radius: 50px;
-    }
-        .page-wrapper .food-grid .stamp {
-        width: 120px;
-        height: 120px; 
-        top: 30%;
-        left: 38%;
-    }
-        .page-wrapper .fishImg {
-        width: 100px !important;
-        height: 100px;
-    }
+          .scene { flex-direction: column; gap: 20px; }
+    .connector { width: 2px; height: 100px; min-width: unset; flex: unset; }
+    .connector::before { top: 0; bottom: 0; left: 50%; right: auto; border-top: none; border-left: 2.5px dashed var(--teal-mid); transform: translateX(-50%); }
+    .info-card { width: 100%; max-width: 340px; }
     }
 
     @media (max-width:575px)
     {
-        .page-wrapper h1 {
-            margin-bottom: 15px;
-        }
-            .page-wrapper h2 {
-        font-size: 25px;
-    }
-      
         
-      .page-wrapper .gallery {
-        grid-template-columns: 1fr;
-        padding: 0;
-    }
-
-   .page-wrapper .img2 {
-        grid-column: span 1;
-    }
-
-   .page-wrapper .circle-card {
-        border-radius: 18px;
-    }
-
-   .page-wrapper .circle-card img {
-        border-radius: 18px;
-    }
-  .page-wrapper  .left-oval,
- .page-wrapper .right-oval {
-    height: 260px;
-    border-radius: 24px;
-  }
-
- .page-wrapper .left-circle {
-    width: 100%;
-    height: 240px;
-    border-radius: 24px;
-  }
-
- .page-wrapper .stamp {
-    left: 20px;
-    bottom: 20px;
-  }
-  .page-wrapper .menuImgContainer img {
-        width: 40px;
-        height: 40px;
-        padding: 0px;
-    } 
-        .page-wrapper .headerSection {
-        padding: 50px 0 50px;
-    }
-        .page-wrapper .orderBtn {
-        font-size: 18px;
-        padding: 8px 15px;
-    }
-        .page-wrapper .headerTopImg {
-        width: 65px;
-    }
-    .page-wrapper .headerSection {
-        text-align: center;
-    }
-        .page-wrapper h1 span {
-        font-size: 45px;
-        display: block;
-    }
-    .page-wrapper .headerImgContainer {
-        margin: auto;
-    }
-    .page-wrapper .headerImgBack {
-        opacity: 0;
-    }
-        .page-wrapper .headerImg {
-        top: 50px;
-        width: 80%;
-        margin: auto;
-        transform-origin: center top;
-        transform: scale(1.2);
-        margin-left: auto;
-        margin-right: auto;
-    }
-        .page-wrapper .headerBackImg {
-        width: 140px;
-        bottom: 0px;
-    }
-    .page-wrapper .card {
-            max-width: 350px;
-    margin: auto;
-    }
-        .page-wrapper .card img {
-        max-height: 200px;
-        min-height: 250px;
-    }
-        .page-wrapper .gallerySection {
-        padding: 90px 0 50px;
-    }
-    .page-wrapper .galleryHeading {
-        margin-bottom: 30px;
-    }
-    .page-wrapper .card.text-card {
-            order: -1;
-    padding: 40px;
-    border-radius: 50%;
-    width: 180px;
-    height: 180px;
-    }
-    .page-wrapper p {
-        font-size: 15px;
-    } 
-        .page-wrapper .menuContainer {
-        margin-bottom: 15px;
-        margin-top: 0;
-    }
-    .page-wrapper .paymentInnerContainer {
-            max-width: 230px;
-            grid-template-columns: 1fr;
-    margin: auto;
-    margin-top: 30px;
-    }
-    .page-wrapper h5 {
-        font-size: 18px;
-    }
-        .page-wrapper .menuImgContainer {
-        width: 40px;
-        height: 40px;
-        padding: 8px;
-    }
-    .page-wrapper .food-grid .left-oval, .page-wrapper .food-grid .left-circle {
-        height: 100%;
-    }
-    .page-wrapper .food-grid .right-oval {
-        height: 100%;
-    }
-    .page-wrapper .food-grid .right-oval {
-        height: 100%;
-    }
-        .page-wrapper .about-content {
-        margin-bottom: 20px;
-    }
-    .page-wrapper .serviceSection h4 {
-        font-size: 20px;
-        transform: unset;
-    }
-    .page-wrapper .serviceInnerContainer {
-                grid-template-columns: 1fr;
-                max-width: 220px;
-        margin: auto;
-    }
-    .page-wrapper h6 {
-        font-size: 12px;
-    }
-        .page-wrapper .serviceSection {
-        padding: 30px 0;
-    }
-    .page-wrapper .serviceSection:after {
-        border-radius: 15px;
-                height: 30%;
-    }
-        .page-wrapper .serviceRightImg {
-        height: 250px;
-        max-width: 500px;
-        margin: auto;
-        margin-top: 30px;
-        display: flex;
-        border-radius: 15px;
-    }
-          .page-wrapper .footerImg {
-        margin-top: 0;
-        right: -15px;
-        height: 100%;
-        transform: unset;
-        width: 60%;
-    }
-        .page-wrapper .footerBg::after {
-               border-radius: 25px;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 93%;
-        margin: auto;
-    }
-        
-        .page-wrapper .footerBtmContent h2 {
-        font-size: 32px;
-        text-align: center;
-    }
-    .page-wrapper .footerBtmContent h2 .txtTwo, .page-wrapper .footerBtmContent h2 .txtThree, .page-wrapper .footerBtmContent h2 .txtFour {
-        font-size: 30px;
-        display: inline-block;
-                font-weight: 500;
-    }
-        .page-wrapper .footerBgImg {
-        width: 70%;
-        object-fit: contain;
-        height: 65%;
-        left: 0px;
-    }
-    .page-wrapper .footerBtmContent {
-        padding-top: 25px;
-    }
-        .page-wrapper .food-grid .stamp {
-        width: 90px;
-        height: 90px;
-        top: 22%;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-        .page-wrapper .fishImg {
-        width: 70px !important;
-        height: 70px;
-        top: 0;
-    }
-      
     }
     
     @media (max-width:375px)
@@ -1412,8 +696,6 @@ border-radius: 50%;
     }
 
 </style>
-
-
 
 
 </head>
@@ -1428,252 +710,216 @@ border-radius: 50%;
 
 <div class="page-wrapper">
 
-
-    <div class="page-wrapper">
-
 <section class="headerSection">
-    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771065182phpzhczVQ.png" class="img-fluid headerTopImg" alt="">
-  <div class="container px-0">
+  <div class="container">
    <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="headerImg">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771340438phprbfWht.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="headerContent">
                 <h1>
-                    Savour the True <span>
-                        Taste of Japan!
-                    </span>
+                    Crispy, Juicy &amp; <br> Irresistibly Fresh!
                 </h1>
+                <p>
+                    Whether it's a quick bite of fish and chips or a full seafood feast, order now and enjoy restaurant-quality food at home.
+                </p>
                 <a href="/order-now" class="orderBtn">
                     Order Now
                 </a>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
-    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpSCFA5l.png" class="img-fluid headerBackImg" alt="">
-
-            <div class="headerImgContainer">
-                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771065182php8s8uFt.png" class="img-fluid headerImgBack" alt="">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1770985390php9hl7nD.png" class="img-fluid headerImg" alt="">
-            </div>
-        </div>
    </div>
   </div>
+</section> 
+
+<section class="rollingTxtSection">
+    <div class="rolling-text">
+        <div class="text-position">
+           <div class="news-message">
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+                <p> Fresh, Succulent &amp; Packed with Ocean Flavours. </p>
+           </div>
+        </div>
+     </div>
 </section>
 
-    <!-- GALLERY GRID SECTION -->
-    <section class="gallerySection">
-        <div class="container">
-            <div class="row align-items-center">
-                
-                <!-- Left Text Column -->
-                <div class="col-lg-3 col-md-3">
-                    <div class="galleryHeading">
-                        <h2 class="gallery-title font-serif">
-                            The Perfect Blend of <br>
-                            Tradition &amp; <br class="br2">
-                            Innovation!
-                        </h2>
-                        <div>
-                            <a href="/order-now" class="orderBtn two">
-                                Order Now
-                            </a>
-                        </div>
-                    </div>
+<section class="sausageSection">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771588285phpkR739R.png" class="img-fluid waveImg" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="leftContent">
+                    <h2>
+                        Catch of the <span> Day </span>
+                    </h2>
                 </div>
-
-                <!-- Right Grid Images -->
-                <div class="col-lg-9 col-md-9">
-
-                    <div class="gallery">
-                        <div class="card img1">
-                            <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615php8zUVmL.jpg" class="img-fluid" alt="">
-                        </div>
-                    
-                        <div class="card img2">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1759905159phpf6TOSy.png" class="img-fluid" alt="">
-                        </div>
-                    
-                        <div class="card img3">
-                            <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phppSPUb7.jpg" class="img-fluid" alt="">
-                        </div>
-                    
-                        <div class="card circle-card">
-                            <div class="overlay">
-                                <h3>Uramaki</h3>
-                                <button>Order Now</button>
-                            </div>
-                            <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phpTs70xp.jpg" class="img-fluid" alt="">
-                        </div>
-                    
-                        <div class="card text-card">
-                            <p><span> OUR </span><br>GALLERY</p>
-                        </div>
-                    </div>
-
- 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="rightContent">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771586355phpTAq7yt.png" class="img-fluid sausageImg" alt="">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="aboutSection">
-        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phptDaKDi.png" class="img-fluid templeImg" alt="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="food-grid">
- 
+<section class="menuSection">
+    <div class="container">
+        <div class="scene">
 
-                        <div class="item left-oval">
-                          <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpIsbhsE.jpg" class="img-fluid" alt="">
-                        </div>
-                      
-                        <div class="item right-oval">
-                          <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phptOgTg0.jpg" class="img-fluid" alt="">
-                          
-                        </div>
-                      
-                        <div class="item left-circle">
-                          <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" class="img-fluid" alt="">
-                        </div>
+  <!-- 1. Orbit -->
+  <div class="orbit-wrap">
+    <div class="orbit-ring"></div>
+    <div class="center-circle"><h2>How It<br>Works?</h2></div>
 
-                        <div class="stamp">
-                            <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phpY0gW0s.png" class="img-fluid" alt="">
-                            <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074627phpvNL1CZ.png" class="img-fluid fishImg" alt="">
-                          </div>
-                      
-                      </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="about-content">
-                        <span class="about-heading-span">about us</span>
-                        <h3 class="about-heading">
-                            Fresh, High-Quality Ingredients in Every Dish!
-                        </h3>
-                        <p class="para about-para">
-                            Welcome to {TAKEAWAY NAME}, your destination for authentic Japanese cuisine in {TAKEAWAY TOWN}. Our carefully curated menu brings together the finest ingredients and traditional flavours.
-                        </p>
-                        
-                        <div class="paymentInnerContainer">
-                            <div class="menuContainer">
-                                
-                                <div class="menuImgContainer">
-                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769792619phpZLxZWE.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Search Icon" class="img-fluid">  
-                                </div>
+    <div class="orbit-item active" data-index="0">
+      <svg viewBox="0 0 24 24"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/><rect x="16" y="15" width="6" height="6" rx="1"/></svg>
+    </div>
+    <div data-index="1" class="active-bubble" id="activeBubble">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 14H4V10h16v8zm0-11H4V6h16v1z"/><path d="M9 14l2 2 4-4-1.4-1.4L11 13.2l-.6-.6z"/></svg>
+    </div>
+    <div class="orbit-item" data-index="2">
+      <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99zM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+    </div>
+    <!-- <div class="orbit-item" data-index="3">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div> -->
+  </div>
 
-                                <div class="menuTxtContainer">
-                                    <h5> Order in Seconds </h5>
-                                </div>
+  <!-- 2. Connector: dashed line + active icon bubble -->
+  <div class="connector">
+    <!-- <div class="active-bubble" id="activeBubble"></div> -->
+  </div>
 
-                            </div>
-                            <div class="menuContainer">
-
-                                <div class="menuImgContainer">
-                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769792619phpZLxZWE.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Search Icon" class="img-fluid">  
-                                </div>
-
-                                <div class="menuTxtContainer">
-                                    <h5> Order in Seconds </h5>
-                                </div>
-
-                            </div>
-                            <div class="menuContainer three">
-
-                                <div class="menuImgContainer">
-                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769792619phpZLxZWE.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Search Icon" class="img-fluid">  
-                                </div>
-
-                                <div class="menuTxtContainer">
-                                    <h5> Order in Seconds </h5>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section class="serviceSection">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-4 col-md-5 col-sm-12">
-                     <h4 class="gallery-title font-serif">
-                           Experience the Elegance of Japanese Dining!
-                        </h4>
-
-                        <div class="serviceInnerContainer">
-                            <div class="menuContainer mt-0">
-                                
-                                <div class="menuImgContainer">
-                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769792619phpZLxZWE.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Search Icon" class="img-fluid">  
-                                </div>
-
-                                <div class="menuTxtContainer">
-                                    <h6> Our Services </h6>
-                                </div>
-
-                            </div>
-                            <div class="menuContainer mt-0">
-
-                                <div class="menuImgContainer">
-                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769792619phpZLxZWE.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Search Icon" class="img-fluid">  
-                                </div>
-
-                                <div class="menuTxtContainer">
-                                    <h6> Our Services </h6>
-                                </div>
-
-                            </div>
-                            <div class="menuContainer mt-0 three">
-
-                                <div class="menuImgContainer">
-                                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1769792619phpZLxZWE.png" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Search Icon" class="img-fluid">  
-                                </div>
-
-                                <div class="menuTxtContainer">
-                                    <h6> Our Services </h6>
-                                </div>
-
-                            </div>
-                </div>
-                </div>
-                <div class="col-lg-8 col-md-7 col-sm-12">
-                    <div>
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074627phpxIObmf.jpg" class="img-fluid serviceRightImg" alt="">
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-    </section>
-
-    <section class="footerSection">
-        <div class="container footerBg">
-            <img src="./bg.png" class="img-fluid footerBgImg" alt="">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="footerBtmContent">
-                        <h2>
-                            Order Now & 
-                            <span class="txtTwo"> Enjoy the </span> 
-                            <span class="txtThree"> Best of </span> 
-                            <span class="txtTwo"> Japanese </span> 
-                            <span class="txtFour"> Cuisine! </span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771070816php8lMEi6.png" class="img-fluid footerImg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
+  <!-- 3. Info card -->
+  <div class="info-card" id="infoCard">
+    <h3 id="cardTitle">Browse the Menu</h3>
+    <p id="cardDesc">Explore a curated selection of dishes crafted by top local restaurants. Filter by cuisine, dietary needs, or cravings — finding your perfect meal has never been easier.</p>
+  
+  </div>
 
 </div>
+    </div>
+</section>
+
+<section class="gallerySection">
+    <div class="container">
+        <div class="swiper-shell">
+ <div class="swiper menuSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 – Shawarma -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1561651823-34feb02250e4?w=700&q=85" alt="Shawarma"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Shawarma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 – Falafel -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1529566652340-2c41a1eb6d93?w=700&q=85" alt="Falafel"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Falafel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 – Burger -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=85" alt="Burger"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Burger</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 – Wrap -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=700&q=85" alt="Wrap"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Wrap</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 – Sausages -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=85" alt="Sausages"/>
+          <div class="card-footer">
+            <div class="cart-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <span class="card-label">Sausages</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.swiper-wrapper -->
+    <!-- <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+  </div>
+</div>
+    </div>
+</section>
+
+   <section class="footerSection">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10 footerContainer">
+                    <div class="footerContent">
+                        <h2>
+                            Bold Smooth &amp; Refreshning
+                        </h2>
+                        <p class="mb-0">
+                            Take the stress out of finding the right drinks—TEMP-1069-Kabana - 879533  GB has you covered. Our takeaway service offers a premium selection of wines, spirits, and beers, ensuring you always have the finest options at your fingertips. Order now and enjoy expertly crafted drinks without leaving your home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerImgParent">
+          <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199phpVzSiCi.png" class="img-fluid footerImg" alt="">
+          <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199phpVzSiCi.png" class="img-fluid footerImgTwo" alt="">
+        </div>
+     </section>
 
 
 </div>
@@ -1699,6 +945,59 @@ border-radius: 50%;
    });
 </script>
 
+<script>
+  const steps = [
+    {
+      title: 'Browse the Menu',
+      desc:  'Explore a curated selection of dishes crafted by top local restaurants. Filter by cuisine, dietary needs, or cravings — finding your perfect meal has never been easier.',
+      icon:  `<svg viewBox="0 0 24 24"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/><rect x="16" y="15" width="6" height="6" rx="1"/></svg>`
+    },
+    {
+      title: 'Secure Payment',
+      desc:  'Paying is effortless, so you can focus on the food. Your transaction is protected end-to-end with bank-grade encryption and multiple payment options.',
+      icon:  `<svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 14H4V10h16v8zm0-11H4V6h16v1z"/><path d="M9 14l2 2 4-4-1.4-1.4L11 13.2l-.6-.6z"/></svg>`
+    },
+    {
+      title: 'Fast Delivery',
+      desc:  'Track your order in real time as our delivery partners bring your meal straight to your door — hot, fresh, and right on time.',
+      icon:  `<svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99zM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 11l1.5-4.5h11L19 11H5z"/></svg>`
+    },
+    {
+      title: 'Rate & Enjoy',
+      desc:  'Loved your meal? Share your experience! Your reviews help others discover great food and keep our restaurant partners at their best.',
+      icon:  `<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`
+    }
+  ];
+
+  const orbitItems   = document.querySelectorAll('.orbit-item');
+  const dots         = document.querySelectorAll('.dot');
+  const activeBubble = document.getElementById('activeBubble');
+  const infoCard     = document.getElementById('infoCard');
+  const cardTitle    = document.getElementById('cardTitle');
+  const cardDesc     = document.getElementById('cardDesc');
+
+  activeBubble.innerHTML = steps[0].icon;
+
+  function activate(index) {
+    orbitItems.forEach(el => el.classList.toggle('active', +el.dataset.index === index));
+    dots.forEach(el       => el.classList.toggle('active', +el.dataset.index === index));
+
+    activeBubble.style.animation = 'none';
+    activeBubble.offsetHeight;
+    activeBubble.style.animation = '';
+    activeBubble.innerHTML = steps[index].icon;
+
+    infoCard.style.animation = 'none';
+    infoCard.offsetHeight;
+    infoCard.style.animation = '';
+    cardTitle.textContent = steps[index].title;
+    cardDesc.textContent  = steps[index].desc;
+  }
+
+  orbitItems.forEach(el => el.addEventListener('click', () => activate(+el.dataset.index)));
+  dots.forEach(el       => el.addEventListener('click', () => activate(+el.dataset.index)));
+</script>
+
  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
@@ -1706,9 +1005,10 @@ border-radius: 50%;
 
 
 
+
  <script>
   $.getScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js", function() {	
-      var swiper = new Swiper(".mySwiper", {
+       const swiper = new Swiper('.menuSwiper', {
           effect: "coverflow",
           grabCursor: true,
           centeredSlides: true,
@@ -1736,7 +1036,7 @@ border-radius: 50%;
                   
               },
               1200: {
-                  slidesPerView: "5",
+                  slidesPerView: "6",
                   spaceBetween: 0,
               },
           },
@@ -1751,31 +1051,4 @@ border-radius: 50%;
 </body>
 </html>
 
-
-<!-- 
  
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074627phpvNL1CZ.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phptDaKDi.png
-
-
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phptOgTg0.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpBhllUH.jpg - TEMPLE
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phpTs70xp.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615php8zUVmL.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phppSPUb7.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phpY0gW0s.png - FISH BACK
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpIsbhsE.jpg - DISH
-
-
-
-
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771070816php8lMEi6.png - FooterImg DONE
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074627phpxIObmf.jpg - DONE
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771065182phpzhczVQ.png - Done
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771065182php8s8uFt.png - DONE
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpSCFA5l.png - DONE
-
- -->
