@@ -50,6 +50,13 @@
 
 /* 
 
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="474" viewBox="0 0 1920 474">
+<g>
+<path d="M 1281.50 346.35 C1313.04,348.19 1360.65,345.51 1396.00,339.92 C1525.44,319.45 1647.86,258.94 1768.00,156.06 C1814.83,115.96 1870.38,59.32 1915.41,5.75 L 1920.00 0.29 L 1920.00 474.00 L 0.00 474.00 L 0.00 0.00 L 0.06 146.50 L 2.78 148.47 C4.28,149.55 14.50,158.39 25.50,168.12 C59.51,198.19 82.06,216.27 103.66,230.76 C153.22,264.02 201.76,283.51 253.50,290.93 C318.72,300.29 383.16,291.92 485.00,260.85 C587.04,229.73 616.30,222.18 656.56,216.57 C681.55,213.08 699.44,212.00 731.69,212.01 C825.05,212.04 897.32,227.79 1013.00,273.31 C1084.48,301.43 1091.70,304.18 1116.50,312.64 C1175.90,332.89 1225.89,343.11 1281.50,346.35 Z" fill="rgb(14,148,155)"/>
+<path d="M 1281.50 346.35 C1225.89,343.11 1175.90,332.89 1116.50,312.64 C1091.70,304.18 1084.48,301.43 1013.00,273.31 C897.32,227.79 825.05,212.04 731.69,212.01 C699.44,212.00 681.55,213.08 656.56,216.57 C616.30,222.18 587.04,229.73 485.00,260.85 C383.16,291.92 318.72,300.29 253.50,290.93 C201.76,283.51 153.22,264.02 103.66,230.76 C82.06,216.27 59.51,198.19 25.50,168.12 C14.50,158.39 4.28,149.55 2.78,148.47 L 0.06 146.50 L 0.03 73.25 L 0.00 0.00 L 960.12 -0.00 L 1920.24 -0.00 L 1915.41 5.75 C1870.38,59.32 1814.83,115.96 1768.00,156.06 C1647.86,258.94 1525.44,319.45 1396.00,339.92 C1360.65,345.51 1313.04,348.19 1281.50,346.35 Z" fill="rgb(254,254,254)"/>
+</g>
+</svg>
+
 font-family: "Titan One", sans-serif;
 font-family: "Nunito", sans-serif;
 
@@ -464,9 +471,9 @@ font-weight: 100;
 
  /* ── Swiper shell ── */
     .swiper-shell {
-      width: 100%;
-      max-width: 1280px;
-      padding: 20px 0 56px;
+       width: 100%;
+    padding: 150px 0 0;
+    height: 750px;
     }
 
     /* Enable CSS 3-D on the swiper */
@@ -475,15 +482,11 @@ font-weight: 100;
       perspective: 900px;
       transform-style: preserve-3d;
     }
-
-    .swiper-wrapper {
-      align-items: center;
-      transform-style: preserve-3d;
-    }
+ 
 
     /* ── Slide base ── */
     .swiper-slide {
-      width: 200px !important;
+      /* width: 200px !important; */
       border-radius: 22px;
       overflow: hidden;
       background: #111;
@@ -520,22 +523,22 @@ font-weight: 100;
     /* OUTER cards — lean ~38° toward centre, smallest */
     /* Swiper doesn't add a class for ±2, so we target via sibling selectors on the loop clones
        and use a generic "everything else" rule  */
-    .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) {
+    /* .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) {
       opacity: 0.90;
       z-index: 5;
-    }
+    } */
 
     /* We'll use JS to add data-pos attributes each slide change for precise outer control */
-    .swiper-slide[data-pos="-2"] {
+    /* .swiper-slide[data-pos="-2"] {
       transform: scale(0.78) rotateY(40deg) translateX(26px) !important;
       box-shadow: 0 10px 24px rgba(0,0,0,.14);
     }
     .swiper-slide[data-pos="2"] {
       transform: scale(0.78) rotateY(-40deg) translateX(-26px) !important;
       box-shadow: 0 10px 24px rgba(0,0,0,.14);
-    }
+    } */
     /* beyond ±2 — hidden off-screen */
-    .swiper-slide[data-pos="-3"],
+    /* .swiper-slide[data-pos="-3"],
     .swiper-slide[data-pos="3"],
     .swiper-slide[data-pos="-4"],
     .swiper-slide[data-pos="4"] {
@@ -546,7 +549,7 @@ font-weight: 100;
     .swiper-slide[data-pos="3"],
     .swiper-slide[data-pos="4"] {
       transform: scale(0.65) rotateY(-55deg) translateX(-30px) !important;
-    }
+    } */
 
     /* ── Card inner ── */
     .card { display: flex; flex-direction: column; }
@@ -602,33 +605,71 @@ font-weight: 100;
       color: var(--white);
       letter-spacing: 0.4px;
     }
-
-    /* ── Pagination ── */
-    .swiper-pagination { bottom: 6px !important; }
-    .swiper-pagination-bullet {
-      width: 9px; height: 9px;
-      background: #b2ddd9; opacity: 1;
-      transition: background .3s, transform .3s;
-    }
-    .swiper-pagination-bullet-active {
-      background: var(--teal);
-      transform: scale(1.4);
+    .page-wrapper .gallerySection {
+      background-color: #fff;
     }
 
-    /* ── Nav arrows ── */
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: var(--teal) !important;
-      background: var(--white);
-      width: 46px !important; height: 46px !important;
-      border-radius: 50%;
-      box-shadow: 0 4px 16px rgba(0,0,0,.12);
-      top: 43% !important;
+    .page-wrapper .footerContainer {
+    background: #0e959b;
+    padding: 50px;
+    text-align: center;
+    border-radius: 0;
+    margin-bottom: 50px;
     }
-    .swiper-button-prev::after,
-    .swiper-button-next::after { font-size: 15px !important; font-weight: 900; }
+    .page-wrapper .footerSection {
+      padding: 100px 0 0;
+      background-color: #fff;
+    }
+    .page-wrapper .footerContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #0b7176;
+    transform: rotate(-4deg);
+    z-index: -1;
+    }
+    .page-wrapper .footerImgParent {
+             background: #fff;
+    overflow: hidden;
+    position: relative;
+    }
+    .page-wrapper .footerImg {
+          position: absolute;
+    transform: scaleX(1.05) rotate(3deg);
+    filter: invert(1);
+    z-index: 0;
+    transform-origin: left top;
+    bottom: 0;
+    height: 110%;
+    top: -22px;
+    }
+    .page-wrapper .svgOne {
+      width: 105%;
+    height: 100%;
+    }
+    .page-wrapper .svgTwo {
+          width: 105%;
+    height: 114%;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    fill: red !important;
+    left: -5px;
+    transform: rotate(3deg) scale(1.0);
+    }
+ 
 
+
+    
+  
 /* SWIPER */
+
+
     /* RESPONSIVE VIEW */
 
     @media(min-width:1200px){
@@ -644,40 +685,516 @@ font-weight: 100;
     }
 
 
+ @media (max-width:1500px) {
+    .scene {
+      width: 90%;
+    }
+    .orbit-wrap {
+      width: 420px;
+      height: 400px;
+    }
+    .center-circle {
+      width: 240px;
+      height: 240px;
+    }
+    .center-circle h2 {
+      font-size: 42px;
+    }
+    .info-card {
+      width: 420px;
+    }
+    .info-card h3 {
+      font-size: 50px;
+    }
+  }
 
-    @media (max-width:1500px)
-    {
 
+  /* ─────────────────────────────────────────
+     1199px — Tablet landscape
+  ───────────────────────────────────────── */
+  @media (max-width:1199px) {
+
+    /* Header */
+    .page-wrapper h1 {
+      font-size: 50px;
+    }
+    .page-wrapper .headerSection {
+      padding: 70px 0;
+    }
+    .page-wrapper .headerImg img {
+      transform: scale(1.2);
     }
 
-    @media (max-width:1199px)
-    {
-
+    /* Ticker */
+    .page-wrapper .news-message p {
+      font-size: 34px;
+    }
+    .page-wrapper .news-message {
+      height: 65px;
     }
 
-    @media (max-width:991px)
-    {
-
+    /* Sausage / catch section */
+    .page-wrapper .sausageSection h2 span {
+      font-size: 120px;
+    }
+    .page-wrapper h2 {
+      font-size: 50px;
     }
 
-    @media (max-width:767px)
-    {
-          .scene { flex-direction: column; gap: 20px; }
-    .connector { width: 2px; height: 100px; min-width: unset; flex: unset; }
-    .connector::before { top: 0; bottom: 0; left: 50%; right: auto; border-top: none; border-left: 2.5px dashed var(--teal-mid); transform: translateX(-50%); }
-    .info-card { width: 100%; max-width: 340px; }
+    /* Menu orbit scene */
+    .scene {
+      width: 95%;
+      gap: 0;
+    }
+    .orbit-wrap {
+      width: 360px;
+      height: 350px;
+    }
+    .center-circle {
+      width: 200px;
+      height: 200px;
+    }
+    .center-circle h2 {
+      font-size: 34px;
+    }
+    .orbit-item {
+      width: 80px;
+      height: 80px;
+    }
+    .orbit-item[data-index="0"] { top: -34px; margin-left: -28px; }
+    .orbit-item[data-index="1"] { right: -28px; margin-top: -28px; }
+    .orbit-item[data-index="2"] { bottom: -28px; margin-left: -28px; }
+    .orbit-item[data-index="3"] { left: -28px; margin-top: -28px; }
+    .connector { min-width: 80px; }
+    .active-bubble {
+      width: 90px;
+      height: 90px;
+      margin-left: -44px;
+    }
+    .active-bubble svg { width: 36px; height: 36px; }
+    .info-card {
+      width: 340px;
+      padding: 28px 24px;
+    }
+    .info-card h3 {
+      font-size: 42px;
+    }
+    .info-card p {
+      font-size: 16px;
     }
 
-    @media (max-width:575px)
-    {
-        
+    /* Swiper */
+    .swiper-shell {
+      height: 650px;
     }
-    
-    @media (max-width:375px)
-    {
+    .card-img {
+      height: 300px;
+    }
+  }
 
+
+  /* ─────────────────────────────────────────
+     991px — Tablet portrait
+  ───────────────────────────────────────── */
+  @media (max-width:991px) {
+
+    /* Header – stack columns */
+    .page-wrapper h1 {
+      font-size: 42px;
+    }
+    .page-wrapper p {
+      font-size: 18px;
+    }
+    .page-wrapper .headerSection {
+      padding: 60px 0;
+    }
+    .page-wrapper .headerImg img {
+      transform: scale(1);
+      transform-origin: center center;
+    }
+    .page-wrapper .headerContent {
+      margin-top: 30px;
     }
 
+    /* Ticker */
+    .page-wrapper .news-message p {
+      font-size: 26px;
+    }
+    .page-wrapper .news-message {
+      height: 55px;
+    }
+    .page-wrapper .rolling-text {
+      padding: 70px 0;
+    }
+
+    /* Sausage section */
+    .page-wrapper .sausageSection h2 {
+      transform: rotate(-10deg) translateX(-40px);
+    }
+    .page-wrapper .sausageSection h2 span {
+      font-size: 90px;
+    }
+    .page-wrapper h2 {
+      font-size: 42px;
+    }
+    .page-wrapper .sausageImg {
+      transform: scale(1.2);
+    }
+    .page-wrapper .waveImg {
+      height: 380px;
+      top: -70px;
+    }
+
+    /* Menu orbit scene — stack vertically */
+    .scene {
+      flex-direction: column;
+      width: 100%;
+      gap: 30px;
+      align-items: center;
+    }
+    .orbit-wrap {
+      width: 340px;
+      height: 340px;
+    }
+    .center-circle {
+      width: 190px;
+      height: 190px;
+    }
+    .center-circle h2 {
+      font-size: 30px;
+    }
+    .orbit-item {
+      width: 72px;
+      height: 72px;
+    }
+    .orbit-item[data-index="0"] { top: -30px; margin-left: -24px; }
+    .orbit-item[data-index="1"] { right: -24px; margin-top: -24px; }
+    .orbit-item[data-index="2"] { bottom: -30px; margin-left: -24px; }
+    .orbit-item[data-index="3"] { left: -24px; margin-top: -24px; }
+
+    /* Vertical connector */
+    .connector {
+      flex: unset;
+      min-width: unset;
+      width: 2px;
+      height: 80px;
+    }
+    .connector::before {
+      top: 0; bottom: 0; left: 50%; right: auto;
+      border-top: none;
+      border-left: 5px dashed var(--teal-mid);
+      transform: translateX(-50%);
+    }
+    .active-bubble {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -44px;
+      margin-top: -44px;
+      width: 88px;
+      height: 88px;
+    }
+    .active-bubble svg { width: 34px; height: 34px; }
+    .info-card {
+      width: 100%;
+      max-width: 420px;
+      padding: 28px 24px;
+    }
+    .info-card h3 {
+      font-size: 38px;
+    }
+    .info-card p {
+      font-size: 15px;
+    }
+
+    /* Swiper */
+    .swiper-shell {
+      height: 580px;
+      padding: 100px 0 0;
+    }
+    .card-img {
+      height: 270px;
+    }
+
+    /* Footer */
+    .page-wrapper .footerSection {
+      padding: 60px 0;
+    }
+    .page-wrapper .footerContainer {
+      padding: 40px 30px;
+    }
+  }
+
+
+  /* ─────────────────────────────────────────
+     767px — Mobile landscape / small tablet
+  ───────────────────────────────────────── */
+  @media (max-width:767px) {
+
+    /* Header */
+    .page-wrapper h1 {
+      font-size: 36px;
+    }
+    .page-wrapper p {
+      font-size: 16px;
+    }
+    .page-wrapper .headerSection {
+      padding: 50px 0 40px;
+    }
+    .page-wrapper .headerImg {
+      text-align: center;
+    }
+    .page-wrapper .headerImg img {
+      transform: scale(1);
+      transform-origin: center top;
+      max-height: 260px;
+      width: auto;
+    }
+    .page-wrapper .orderBtn {
+      font-size: 18px;
+      padding: 8px 18px;
+    }
+
+    /* Ticker */
+    .page-wrapper .news-message p {
+      font-size: 20px;
+      gap: 16px;
+    }
+    .page-wrapper .news-message {
+      height: 50px;
+    }
+    .page-wrapper .rolling-text {
+      padding: 50px 0;
+      top: -60px;
+    }
+    .page-wrapper .rollingTxtSection {
+      margin: 60px 0;
+    }
+
+    /* Sausage / catch section */
+    .page-wrapper .sausageSection h2 {
+      transform: rotate(-6deg) translateX(-20px);
+      text-align: left;
+    }
+    .page-wrapper .sausageSection h2 span {
+      font-size: 68px;
+    }
+    .page-wrapper h2 {
+      font-size: 34px;
+    }
+    .page-wrapper .sausageImg {
+      transform: scale(1);
+      transform-origin: center bottom;
+    }
+    .page-wrapper .waveImg {
+      height: 280px;
+      top: -50px;
+    }
+
+    /* Menu orbit scene */
+    .scene {
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+    .orbit-wrap {
+      width: 300px;
+      height: 300px;
+    }
+    .center-circle {
+      width: 166px;
+      height: 166px;
+    }
+    .center-circle h2 {
+      font-size: 26px;
+    }
+    .orbit-item {
+      width: 64px;
+      height: 64px;
+    }
+    .orbit-item svg { width: 22px; height: 22px; }
+    .orbit-item[data-index="0"] { top: -26px; left: 65%; margin-left: -22px; }
+    .orbit-item[data-index="1"] { right: -22px; margin-top: -22px; }
+    .orbit-item[data-index="2"] { bottom: -26px; left: 65%; margin-left: -22px; }
+    .orbit-item[data-index="3"] { left: -22px; margin-top: -22px; }
+
+    .connector {
+      width: 2px;
+      height: 80px;
+      min-width: unset;
+      flex: unset;
+    }
+    .connector::before {
+      top: 0; bottom: 0; left: 50%; right: auto;
+      border-top: none;
+      border-left: 5px dashed var(--teal-mid);
+      transform: translateX(-50%);
+    }
+    .active-bubble {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      margin-left: -40px;
+      margin-top: -40px;
+    }
+    .active-bubble svg { width: 30px; height: 30px; }
+    .info-card {
+      width: 100%;
+      max-width: 100%;
+      padding: 24px 20px;
+    }
+    .info-card h3 {
+      font-size: 32px;
+    }
+    .info-card p {
+      font-size: 14px;
+    }
+
+    /* Swiper */
+    .swiper-shell {
+      height: 500px;
+      padding: 70px 0 0;
+    }
+    .card-img {
+      height: 240px;
+    }
+
+    /* Footer */
+    .page-wrapper .footerSection {
+      padding: 50px 0;
+    }
+    .page-wrapper .footerContainer {
+      padding: 30px 20px;
+      margin-bottom: 30px;
+    }
+    .page-wrapper .footerContainer h2 {
+      font-size: 30px;
+    }
+    .page-wrapper .footerContainer p {
+      font-size: 14px;
+    }
+  }
+
+
+  /* ─────────────────────────────────────────
+     575px — Mobile portrait
+  ───────────────────────────────────────── */
+  @media (max-width:575px) {
+
+    /* Header */
+    .page-wrapper h1 {
+      font-size: 30px;
+    }
+    .page-wrapper .headerSection {
+      padding: 40px 0 30px;
+    }
+    .page-wrapper .headerImg img {
+      max-height: 200px;
+    }
+    .page-wrapper .orderBtn {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+
+    /* Ticker */
+    .page-wrapper .news-message p {
+      font-size: 16px;
+      gap: 12px;
+    }
+    .page-wrapper .news-message {
+      height: 44px;
+    }
+    .page-wrapper .rolling-text {
+      padding: 40px 0;
+      top: -40px;
+    }
+    .page-wrapper .rollingTxtSection {
+      margin: 40px 0;
+    }
+
+    /* Sausage / catch section */
+    .page-wrapper .sausageSection h2 {
+      transform: rotate(-4deg) translateX(-10px);
+    }
+    .page-wrapper .sausageSection h2 span {
+      font-size: 52px;
+    }
+    .page-wrapper h2 {
+      font-size: 28px;
+    }
+    .page-wrapper .waveImg {
+      height: 220px;
+      top: -30px;
+    }
+
+    /* Menu orbit scene */
+    .orbit-wrap {
+      width: 260px;
+      height: 260px;
+    }
+    .center-circle {
+      width: 145px;
+      height: 145px;
+    }
+    .center-circle h2 {
+      font-size: 22px;
+    }
+    .orbit-item {
+      width: 56px;
+      height: 56px;
+    }
+    .orbit-item svg { width: 18px; height: 18px; }
+    .orbit-item[data-index="0"] { top: -22px; left: 65%; margin-left: -18px; }
+    .orbit-item[data-index="1"] { right: -18px; margin-top: -18px; }
+    .orbit-item[data-index="2"] { bottom: -22px; left: 65%; margin-left: -18px; }
+    .orbit-item[data-index="3"] { left: -18px; margin-top: -18px; }
+
+    .active-bubble {
+      width: 70px;
+      height: 70px;
+      margin-left: -35px;
+      margin-top: -35px;
+    }
+    .active-bubble svg { width: 26px; height: 26px; }
+    .info-card h3 {
+      font-size: 26px;
+    }
+    .info-card p {
+      font-size: 13px;
+    }
+
+    /* Swiper */
+    .swiper-shell {
+      height: 430px;
+      padding: 50px 0 0;
+    }
+    .card-img {
+      height: 210px;
+    }
+
+    /* Footer */
+    .page-wrapper .footerSection {
+      padding: 40px 0;
+    }
+    .page-wrapper .footerContainer {
+      padding: 24px 16px;
+      margin-bottom: 20px;
+    }
+    .page-wrapper .footerContainer h2 {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width:375px) {
+    .page-wrapper h1 { font-size: 26px; }
+    .page-wrapper .sausageSection h2 span { font-size: 44px; }
+    .orbit-wrap { width: 230px; height: 230px; }
+    .center-circle { width: 128px; height: 128px; }
+    .center-circle h2 { font-size: 18px; }
+    .info-card h3 { font-size: 22px; }
+  }
 </style>
 
 
@@ -800,14 +1317,14 @@ font-weight: 100;
 <section class="gallerySection">
     <div class="container">
         <div class="swiper-shell">
-  <div class="swiper menuSwiper">
+ <div class="swiper menuSwiper">
     <div class="swiper-wrapper">
 
       <!-- Slide 1 – Shawarma -->
       <div class="swiper-slide">
         <div class="card">
           <img class="card-img"
-            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Shawarma"/>
+            src="https://images.unsplash.com/photo-1561651823-34feb02250e4?w=700&q=85" alt="Shawarma"/>
           <div class="card-footer">
             <div class="cart-icon-wrap">
               <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
@@ -821,7 +1338,7 @@ font-weight: 100;
       <div class="swiper-slide">
         <div class="card">
           <img class="card-img"
-            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Falafel"/>
+            src="https://images.unsplash.com/photo-1529566652340-2c41a1eb6d93?w=700&q=85" alt="Falafel"/>
           <div class="card-footer">
             <div class="cart-icon-wrap">
               <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
@@ -835,7 +1352,7 @@ font-weight: 100;
       <div class="swiper-slide">
         <div class="card">
           <img class="card-img"
-            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Burger"/>
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=85" alt="Burger"/>
           <div class="card-footer">
             <div class="cart-icon-wrap">
               <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
@@ -849,7 +1366,7 @@ font-weight: 100;
       <div class="swiper-slide">
         <div class="card">
           <img class="card-img"
-            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Wrap"/>
+            src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=700&q=85" alt="Wrap"/>
           <div class="card-footer">
             <div class="cart-icon-wrap">
               <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
@@ -863,43 +1380,7 @@ font-weight: 100;
       <div class="swiper-slide">
         <div class="card">
           <img class="card-img"
-            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Sausages"/>
-          <div class="card-footer">
-            <div class="cart-icon-wrap">
-              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            </div>
-            <span class="card-label">Sausages</span>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card">
-          <img class="card-img"
-            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Sausages"/>
-          <div class="card-footer">
-            <div class="cart-icon-wrap">
-              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            </div>
-            <span class="card-label">Sausages</span>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card">
-          <img class="card-img"
-            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Sausages"/>
-          <div class="card-footer">
-            <div class="cart-icon-wrap">
-              <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            </div>
-            <span class="card-label">Sausages</span>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card">
-          <img class="card-img"
-            src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg" alt="Sausages"/>
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=85" alt="Sausages"/>
           <div class="card-footer">
             <div class="cart-icon-wrap">
               <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
@@ -909,14 +1390,48 @@ font-weight: 100;
         </div>
       </div>
 
-    </div><!-- /.swiper-wrapper -->
-    <div class="swiper-pagination"></div>
+    </div>
+    <!-- /.swiper-wrapper -->
+    <!-- <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-next"></div> -->
   </div>
 </div>
     </div>
 </section>
+
+   <section class="footerSection">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10 footerContainer">
+                    <div class="footerContent">
+                        <h2>
+                            Bold Smooth &amp; Refreshning
+                        </h2>
+                        <p class="mb-0">
+                            Take the stress out of finding the right drinks—TEMP-1069-Kabana - 879533  GB has you covered. Our takeaway service offers a premium selection of wines, spirits, and beers, ensuring you always have the finest options at your fingertips. Order now and enjoy expertly crafted drinks without leaving your home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerImgParent">
+         <svg class="svgOne" xmlns="http://www.w3.org/2000/svg" width="1920" height="474" viewBox="0 0 1920 474">
+<g>
+<path d="M 1281.50 346.35 C1313.04,348.19 1360.65,345.51 1396.00,339.92 C1525.44,319.45 1647.86,258.94 1768.00,156.06 C1814.83,115.96 1870.38,59.32 1915.41,5.75 L 1920.00 0.29 L 1920.00 474.00 L 0.00 474.00 L 0.00 0.00 L 0.06 146.50 L 2.78 148.47 C4.28,149.55 14.50,158.39 25.50,168.12 C59.51,198.19 82.06,216.27 103.66,230.76 C153.22,264.02 201.76,283.51 253.50,290.93 C318.72,300.29 383.16,291.92 485.00,260.85 C587.04,229.73 616.30,222.18 656.56,216.57 C681.55,213.08 699.44,212.00 731.69,212.01 C825.05,212.04 897.32,227.79 1013.00,273.31 C1084.48,301.43 1091.70,304.18 1116.50,312.64 C1175.90,332.89 1225.89,343.11 1281.50,346.35 Z" fill="rgb(14,148,155)"/>
+<path d="M 1281.50 346.35 C1225.89,343.11 1175.90,332.89 1116.50,312.64 C1091.70,304.18 1084.48,301.43 1013.00,273.31 C897.32,227.79 825.05,212.04 731.69,212.01 C699.44,212.00 681.55,213.08 656.56,216.57 C616.30,222.18 587.04,229.73 485.00,260.85 C383.16,291.92 318.72,300.29 253.50,290.93 C201.76,283.51 153.22,264.02 103.66,230.76 C82.06,216.27 59.51,198.19 25.50,168.12 C14.50,158.39 4.28,149.55 2.78,148.47 L 0.06 146.50 L 0.03 73.25 L 0.00 0.00 L 960.12 -0.00 L 1920.24 -0.00 L 1915.41 5.75 C1870.38,59.32 1814.83,115.96 1768.00,156.06 C1647.86,258.94 1525.44,319.45 1396.00,339.92 C1360.65,345.51 1313.04,348.19 1281.50,346.35 Z" fill="rgb(254,254,254)"/>
+</g>
+</svg>
+
+<svg class="svgTwo" xmlns="http://www.w3.org/2000/svg" width="1920" height="474" viewBox="0 0 1920 474">
+<g>
+<path d="M 1281.50 346.35 C1313.04,348.19 1360.65,345.51 1396.00,339.92 C1525.44,319.45 1647.86,258.94 1768.00,156.06 C1814.83,115.96 1870.38,59.32 1915.41,5.75 L 1920.00 0.29 L 1920.00 474.00 L 0.00 474.00 L 0.00 0.00 L 0.06 146.50 L 2.78 148.47 C4.28,149.55 14.50,158.39 25.50,168.12 C59.51,198.19 82.06,216.27 103.66,230.76 C153.22,264.02 201.76,283.51 253.50,290.93 C318.72,300.29 383.16,291.92 485.00,260.85 C587.04,229.73 616.30,222.18 656.56,216.57 C681.55,213.08 699.44,212.00 731.69,212.01 C825.05,212.04 897.32,227.79 1013.00,273.31 C1084.48,301.43 1091.70,304.18 1116.50,312.64 C1175.90,332.89 1225.89,343.11 1281.50,346.35 Z" fill="red"/>
+<path d="M 1281.50 346.35 C1225.89,343.11 1175.90,332.89 1116.50,312.64 C1091.70,304.18 1084.48,301.43 1013.00,273.31 C897.32,227.79 825.05,212.04 731.69,212.01 C699.44,212.00 681.55,213.08 656.56,216.57 C616.30,222.18 587.04,229.73 485.00,260.85 C383.16,291.92 318.72,300.29 253.50,290.93 C201.76,283.51 153.22,264.02 103.66,230.76 C82.06,216.27 59.51,198.19 25.50,168.12 C14.50,158.39 4.28,149.55 2.78,148.47 L 0.06 146.50 L 0.03 73.25 L 0.00 0.00 L 960.12 -0.00 L 1920.24 -0.00 L 1915.41 5.75 C1870.38,59.32 1814.83,115.96 1768.00,156.06 C1647.86,258.94 1525.44,319.45 1396.00,339.92 C1360.65,345.51 1313.04,348.19 1281.50,346.35 Z" fill="transparent"/>
+</g>
+</svg>
+
+        </div>
+     </section>
 
 
 </div>
@@ -1002,78 +1517,51 @@ font-weight: 100;
 
 
 
+
  <script>
-  $.getScript("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", function() {	
-      const swiper = new Swiper('.menuSwiper', {
-    loop: true,
-    centeredSlides: true,
-    slidesPerView: 5,
-    spaceBetween: -40,
-    initialSlide: 2,
-    grabCursor: true,
-    speed: 500,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      0:   { slidesPerView: 3, spaceBetween: -30 },
-      640: { slidesPerView: 4, spaceBetween: -35 },
-      900: { slidesPerView: 5, spaceBetween: -40 },
-    },
-    on: {
-      init:        updatePositions,
-      slideChange: updatePositions,
-    },
-  }
-
-);
-  
+  $.getScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js", function() {	
+       const swiper = new Swiper('.menuSwiper', {
+          effect: "coverflow",
+  centeredSlides: true,
+  initialSlide: 5,
+  slidesPerView: "auto",
+  grabCursor: true,
+  spaceBetween: 40,
+  coverflowEffect: {
+    rotate: 25,
+    stretch: 0,
+    depth: 50,
+    modifier: 1,
+    slideShadows: false,
+          },
+          pagination:false,
+          breakpoints: {
+              0: {
+                  slidesPerView: "1",
+              },
+              600: {
+                  slidesPerView: "auto",
+                  spaceBetween: 0,
+              },
+              992: {
+                  slidesPerView: "3",
+                  spaceBetween: 0,
+                  
+              },
+              1200: {
+                  slidesPerView: "6",
+                  spaceBetween: 0,
+              },
+          },
+          loop: true,
+          autoplay:false,
+       autoplayTimeout:3000,
+      });
   });
-
-  function updatePositions() {
-    const slides = this.slides;
-    const activeIndex = this.activeIndex;
-    slides.forEach((slide, i) => {
-      const pos = i - activeIndex;
-      slide.setAttribute('data-pos', pos);
-    });
-}
   
 </script>
 
 </body>
 </html>
 
-
-<!-- 
  
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074627phpvNL1CZ.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phptDaKDi.png
-
-
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phptOgTg0.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpBhllUH.jpg - TEMPLE
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpaGC9I3.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phpTs70xp.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615php8zUVmL.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phppSPUb7.jpg - DISH
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074615phpY0gW0s.png - FISH BACK
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpIsbhsE.jpg - DISH
-
-
-
-
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771070816php8lMEi6.png - FooterImg DONE
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074627phpxIObmf.jpg - DONE
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771065182phpzhczVQ.png - Done
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771065182php8s8uFt.png - DONE
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771074616phpSCFA5l.png - DONE
-
- -->
