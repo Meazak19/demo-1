@@ -297,7 +297,7 @@ display: flex;
   .orbit-ring {
     position: absolute;
     inset: 0;
-    border: 5px dashed var(--teal-mid);
+    border: 5px dashed #1c9692;
     border-radius: 50%; 
     animation: spin 20s linear infinite;
   }
@@ -312,7 +312,7 @@ display: flex;
     transform: translate(-50%, -50%);
     width: 280px;
     height: 280px;
-    background: var(--teal-dark);
+        background: #0b7175;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -323,28 +323,33 @@ display: flex;
   }
   .center-circle h2 {
 font-weight: 100;
-    font-size: 50px;
+    font-size: 48px;
     color: #fff;
     line-height: 1;
     letter-spacing: 1px;
   }
 
   .orbit-item {
-    position: absolute;
-        width: 100px;
-    height: 100px;
+        position: absolute;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    background: var(--teal-dark);
-    display: flex; align-items: center; justify-content: center;
+    background: #0b7175;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(26,122,110,.3);
-    animation: unspin 20s linear infinite;
+    box-shadow: 0 4px 14px rgba(26, 122, 110, .3);
+    /* animation: unspin 20s linear infinite; */
     transition: background .22s, box-shadow .22s;
     z-index: 3;
   }
-  .orbit-item svg { width: 30px; height: 30px; fill: var(--white); }
+  .orbit-item img {     width: 50px;
+    height: 50px;
+    filter: invert(1); }
   .orbit-item:hover { background: var(--teal-mid); }
-  .orbit-item.active { background: var(--teal-bright); box-shadow: 0 6px 22px rgba(23,184,166,.55); }
+  .orbit-item.active {     background: #0b7175;
+    box-shadow: 0 6px 22px rgba(23, 184, 166, .55); }
 
   .orbit-item[data-index="0"] {     top: -44px;
     left: 65%;
@@ -377,24 +382,26 @@ font-weight: 100;
   }
 
   .active-bubble {
-    z-index: 2;
+        z-index: 2;
     border: 5px solid #1a7a6e;
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    background: var(--teal-bright);
+    background: #0e959c;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     animation: popIn .35s cubic-bezier(.34, 1.56, .64, 1);
-    top: 40%;
+    top: 37%;
     position: absolute;
-    left: 100%;
+    left: 95%;
     margin-left: -54px;
     box-shadow: 0 6px 22px rgba(23, 184, 166, .55);
   }
-  .active-bubble svg { width: 44px; height: 44px; fill: var(--white); }
+  .active-bubble img {     width: 74px;
+    height: 75px;
+    filter: invert(1); }
 
   @keyframes popIn {
     from { transform: scale(0.5); opacity: 0; }
@@ -403,12 +410,12 @@ font-weight: 100;
 
   /* ── 3. INFO CARD ── */
   .info-card {
-    background: var(--teal-card);
+    background: #0e959c;
     border-radius: 20px;
     padding: 36px 36px 32px;
     width: 500px;
     flex-shrink: 0;
-    box-shadow: 0 12px 40px rgba(26,122,110,.25);
+    box-shadow: 0 12px 40px rgba(26, 122, 110, .25);
     position: relative;
     overflow: hidden;
     animation: slideIn .35s ease;
@@ -430,21 +437,20 @@ font-weight: 100;
   }
 
   .info-card h3 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
+        font-weight: 500;
     font-size: 60px;
-    color: var(--yellow);
-    line-height: 1.15;
-    margin-bottom: 14px;
+    color: #f7fd73;
+    line-height: 1;
+    margin-bottom: 25px;
     text-align: center;
   }
 
   .info-card p {
-    font-size: 20px;
-    color: var(--white);
-    line-height: 1.7;
-    font-weight: 600;
+    font-size: 23px;
+    color: #fff;
+    line-height: 1.5;
     text-align: center;
+    letter-spacing: 2px;
   }
 
   .step-dots {
@@ -491,6 +497,7 @@ font-weight: 100;
       overflow: hidden;
       background: #111;
       cursor: pointer;
+      top: -50px;
       transform-origin: center center;
       transform-style: preserve-3d;
       transition:
@@ -503,9 +510,10 @@ font-weight: 100;
 
     /* CENTER — upright, biggest */
     .swiper-slide-active {
-      transform: scale(1.0) rotateY(0deg) !important;
+      transform: scale(1.15) rotateY(0deg) !important;
       box-shadow: 0 32px 72px rgba(26,159,143,.28);
       z-index: 10;
+      top: 70px;
     }
 
     /* INNER neighbours — lean ~20° toward centre */
@@ -513,11 +521,16 @@ font-weight: 100;
       transform: scale(0.90) rotateY(22deg) translateX(14px) !important;
       box-shadow: 0 18px 40px rgba(0,0,0,.16);
       z-index: 8;
+      top: -50px;
     }
+     .swiper-slide-prev img, .swiper-slide-next img{ 
+      height: 500px;
+     }
     .swiper-slide-next {
       transform: scale(0.90) rotateY(-22deg) translateX(-14px) !important;
       box-shadow: 0 18px 40px rgba(0,0,0,.16);
       z-index: 8;
+      top: -50px;
     }
 
     /* OUTER cards — lean ~38° toward centre, smallest */
@@ -556,11 +569,15 @@ font-weight: 100;
 
     .card-img {
       width: 100%;
-      height: 370px;
+      height: 420px;
       object-fit: cover;
       display: block;
     }
-
+    .swiper-slide-active img {
+      height: 375px;
+    clip-path: ellipse(115% 90% at 50% 0%);
+    z-index: 1;
+    }
     /* Footer: hidden by default, revealed only on active */
     .card-footer {
       background: var(--teal);
@@ -572,22 +589,29 @@ font-weight: 100;
       max-height: 0;
       padding: 0 16px;
       opacity: 0;
-      transition: max-height 0.4s ease, opacity 0.35s ease, padding 0.35s ease;
-    }
-
+      transition: opacity 0.35s ease, padding 0.35s ease;
+    } 
     .swiper-slide-active .card-footer {
-      max-height: 130px;
-      opacity: 1;
-      padding: 18px 16px 24px;
+                 max-height: 150px;
+    margin-top: -100px;
+    opacity: 1;
+    padding: 18px 16px 49px;
+    position: relative;
     }
 
     .cart-icon-wrap {
-      width: 54px; height: 54px;
-      background: var(--white);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 14px rgba(0,0,0,.15);
-      flex-shrink: 0;
+          width: 54px;
+    height: 54px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .15);
+    flex-shrink: 0;
+    position: relative;
+    top: 21px;
+    z-index: 1;
     }
     .cart-icon-wrap svg {
       width: 26px; height: 26px;
@@ -599,11 +623,12 @@ font-weight: 100;
     }
 
     .card-label {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 1.15rem;
-      color: var(--white);
-      letter-spacing: 0.4px;
+top: 20px;
+    position: relative;
+    font-size: 30px;
+    color: var(--white);
+    letter-spacing: 0.4px;
+    font-family: "Titan One", sans-serif;
     }
     .page-wrapper .gallerySection {
       background-color: #fff;
@@ -686,6 +711,14 @@ font-weight: 100;
 
 
  @media (max-width:1500px) {
+
+  .page-wrapper h1 {
+        font-size: 50px;
+  }
+  .page-wrapper p {
+        font-size: 20px;
+  }
+
     .scene {
       width: 90%;
     }
@@ -706,6 +739,15 @@ font-weight: 100;
     .info-card h3 {
       font-size: 50px;
     }
+    .page-wrapper .rolling-text {
+          padding: 75px 0;
+    }
+    .page-wrapper .news-message {
+          height: 70px;
+    }
+    .page-wrapper .news-message p {
+          font-size: 38px;
+    }
   }
 
 
@@ -716,14 +758,14 @@ font-weight: 100;
 
     /* Header */
     .page-wrapper h1 {
-      font-size: 50px;
+      font-size: 45px;
+    }
+        .page-wrapper p {
+        font-size: 18px;
     }
     .page-wrapper .headerSection {
       padding: 70px 0;
-    }
-    .page-wrapper .headerImg img {
-      transform: scale(1.2);
-    }
+    } 
 
     /* Ticker */
     .page-wrapper .news-message p {
@@ -790,6 +832,25 @@ font-weight: 100;
     .card-img {
       height: 300px;
     }
+    .page-wrapper .rollingTxtSection:before {
+          height: 90px; 
+    top: -130px;
+    }
+        .page-wrapper .rolling-text {
+        padding: 65px 0;
+    }
+        .page-wrapper .news-message p {
+        font-size: 24px;
+    }
+        .page-wrapper .news-message {
+        height: 55px;
+    }
+    .page-wrapper .rollingTxtSection:after { 
+    width: 100%;
+    height: 110px; 
+    bottom: 10px;
+    transform: rotate(-12deg) scale(1.5); 
+    }
   }
 
 
@@ -800,31 +861,24 @@ font-weight: 100;
 
     /* Header – stack columns */
     .page-wrapper h1 {
-      font-size: 42px;
+      font-size: 32px;
     }
     .page-wrapper p {
-      font-size: 18px;
+      font-size: 14px;
     }
     .page-wrapper .headerSection {
       padding: 60px 0;
-    }
-    .page-wrapper .headerImg img {
-      transform: scale(1);
-      transform-origin: center center;
-    }
-    .page-wrapper .headerContent {
-      margin-top: 30px;
-    }
+    }  
 
     /* Ticker */
     .page-wrapper .news-message p {
-      font-size: 26px;
+      font-size: 20px;
     }
     .page-wrapper .news-message {
-      height: 55px;
+      height: 50px;
     }
     .page-wrapper .rolling-text {
-      padding: 70px 0;
+      padding: 50px 0;
     }
 
     /* Sausage section */
@@ -844,7 +898,9 @@ font-weight: 100;
       height: 380px;
       top: -70px;
     }
-
+.page-wrapper .rollingTxtSection:after {
+  height: 100px;
+}
     /* Menu orbit scene — stack vertically */
     .scene {
       flex-direction: column;
@@ -933,23 +989,18 @@ font-weight: 100;
 
     /* Header */
     .page-wrapper h1 {
-      font-size: 36px;
+      font-size: 24px;
     }
     .page-wrapper p {
-      font-size: 16px;
+              font-size: 14px;
+        letter-spacing: 0;
     }
     .page-wrapper .headerSection {
       padding: 50px 0 40px;
     }
     .page-wrapper .headerImg {
       text-align: center;
-    }
-    .page-wrapper .headerImg img {
-      transform: scale(1);
-      transform-origin: center top;
-      max-height: 260px;
-      width: auto;
-    }
+    } 
     .page-wrapper .orderBtn {
       font-size: 18px;
       padding: 8px 18px;
@@ -969,6 +1020,10 @@ font-weight: 100;
     }
     .page-wrapper .rollingTxtSection {
       margin: 60px 0;
+    }
+
+    .page-wrapper .rollingTxtSection:before {
+      top: -70px;
     }
 
     /* Sausage / catch section */
@@ -1091,11 +1146,19 @@ font-weight: 100;
       padding: 40px 0 30px;
     }
     .page-wrapper .headerImg img {
-      max-height: 200px;
+                   max-width: 420px;
+        margin: auto;
+        margin-top: 25px;
+        transform: unset;
+        transform-origin: unset;
+        width: 100%;
     }
     .page-wrapper .orderBtn {
       font-size: 16px;
       padding: 8px 16px;
+    }
+    .page-wrapper .headerSection .row {
+      flex-direction: column-reverse;
     }
 
     /* Ticker */
@@ -1213,12 +1276,12 @@ font-weight: 100;
 <section class="headerSection">
   <div class="container">
    <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="headerImg">
                 <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771340438phprbfWht.png" class="img-fluid" alt="">
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="headerContent">
                 <h1>
                     Crispy, Juicy &amp; <br> Irresistibly Fresh!
@@ -1285,28 +1348,25 @@ font-weight: 100;
     <div class="center-circle"><h2>How It<br>Works?</h2></div>
 
     <div class="orbit-item active" data-index="0">
-      <svg viewBox="0 0 24 24"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/><rect x="16" y="15" width="6" height="6" rx="1"/></svg>
+      <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199phpHRnZFl.png" class="img-fluid paymentImg" alt="">
     </div>
-    <div data-index="1" class="active-bubble" id="activeBubble">
-      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 14H4V10h16v8zm0-11H4V6h16v1z"/><path d="M9 14l2 2 4-4-1.4-1.4L11 13.2l-.6-.6z"/></svg>
+    <div data-index="1" class="active-bubble orbit-item active" id="activeBubble">
+           <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199php9oeGJo.png" class="img-fluid paymentImg" alt="">
+
     </div>
     <div class="orbit-item" data-index="2">
-      <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99zM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 11l1.5-4.5h11L19 11H5z"/></svg>
-    </div>
-    <!-- <div class="orbit-item" data-index="3">
-      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-    </div> -->
-  </div>
+                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199phpbFznNr.png" class="img-fluid paymentImg" alt="">
 
-  <!-- 2. Connector: dashed line + active icon bubble -->
-  <div class="connector">
-    <!-- <div class="active-bubble" id="activeBubble"></div> -->
+    </div> 
+  </div>
+ 
+  <div class="connector"> 
   </div>
 
   <!-- 3. Info card -->
   <div class="info-card" id="infoCard">
-    <h3 id="cardTitle">Browse the Menu</h3>
-    <p id="cardDesc">Explore a curated selection of dishes crafted by top local restaurants. Filter by cuisine, dietary needs, or cravings — finding your perfect meal has never been easier.</p>
+    <h3 id="cardTitle">Secure <span> Payment </span></h3>
+    <p id="cardDesc"> Paying is effortless, you can focus on food.  </p>
   
   </div>
 
@@ -1460,24 +1520,28 @@ font-weight: 100;
 <script>
   const steps = [
     {
-      title: 'Browse the Menu',
-      desc:  'Explore a curated selection of dishes crafted by top local restaurants. Filter by cuisine, dietary needs, or cravings — finding your perfect meal has never been easier.',
-      icon:  `<svg viewBox="0 0 24 24"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/><rect x="16" y="15" width="6" height="6" rx="1"/></svg>`
+      title: 'Order in Seconds',
+      desc:  'Choose your go-to meal from the menu',
+      icon:  `<img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199php9oeGJo.png" class="img-fluid paymentImg" alt="">
+`
     },
     {
       title: 'Secure Payment',
-      desc:  'Paying is effortless, so you can focus on the food. Your transaction is protected end-to-end with bank-grade encryption and multiple payment options.',
-      icon:  `<svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 14H4V10h16v8zm0-11H4V6h16v1z"/><path d="M9 14l2 2 4-4-1.4-1.4L11 13.2l-.6-.6z"/></svg>`
+      desc:  'Paying is effortless, you can focus on food.',
+      icon:  `<img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199php9oeGJo.png" class="img-fluid paymentImg" alt="">
+`
     },
     {
-      title: 'Fast Delivery',
-      desc:  'Track your order in real time as our delivery partners bring your meal straight to your door — hot, fresh, and right on time.',
-      icon:  `<svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99zM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 11l1.5-4.5h11L19 11H5z"/></svg>`
+      title: 'Served Fresh',
+      desc:  'Freshly made and good to go when you are.',
+      icon:  `<img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199phpbFznNr.png" class="img-fluid paymentImg" alt="">
+`
     },
     {
       title: 'Rate & Enjoy',
-      desc:  'Loved your meal? Share your experience! Your reviews help others discover great food and keep our restaurant partners at their best.',
-      icon:  `<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`
+      desc:  'Freshly made and good to go when you are.',
+      icon:  `<img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199php9oeGJo.png" class="img-fluid paymentImg" alt="">
+`
     }
   ];
 
@@ -1526,7 +1590,8 @@ font-weight: 100;
   initialSlide: 5,
   slidesPerView: "auto",
   grabCursor: true,
-  spaceBetween: 40,
+  spaceBetween: 100,
+   speed: 1400, 
   coverflowEffect: {
     rotate: 25,
     stretch: 0,
@@ -1549,12 +1614,12 @@ font-weight: 100;
                   
               },
               1200: {
-                  slidesPerView: "6",
-                  spaceBetween: 0,
+                  slidesPerView: "5.5",
+                  spaceBetween: 30,
               },
           },
           loop: true,
-          autoplay:false,
+          autoplay:true,
        autoplayTimeout:3000,
       });
   });
