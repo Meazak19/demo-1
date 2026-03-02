@@ -715,10 +715,21 @@ top: 20px;
   .page-wrapper h1 {
         font-size: 50px;
   }
+  .page-wrapper h2 {
+    font-size: 48px;
+  }
+  .page-wrapper .sausageSection h2 span {
+    font-size: 130px;
+  }
   .page-wrapper p {
         font-size: 20px;
   }
-
+.page-wrapper .sausageImg {
+  width: 550px;
+}
+.page-wrapper .waveImg {
+  height: 440px;
+}
     .scene {
       width: 90%;
     }
@@ -777,10 +788,23 @@ top: 20px;
 
     /* Sausage / catch section */
     .page-wrapper .sausageSection h2 span {
-      font-size: 120px;
+      font-size: 90px;
     }
     .page-wrapper h2 {
-      font-size: 50px;
+      font-size: 42px;
+    }
+
+    .leftContent {
+      text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    }
+        .page-wrapper .waveImg {
+        height: 350px;
+    }
+    .page-wrapper .sausageImg {
+        width: 400px;
+        margin-top: -50px;
     }
 
     /* Menu orbit scene */
@@ -886,18 +910,22 @@ top: 20px;
       transform: rotate(-10deg) translateX(-40px);
     }
     .page-wrapper .sausageSection h2 span {
-      font-size: 90px;
+      font-size: 70px;
     }
     .page-wrapper h2 {
-      font-size: 42px;
+      font-size: 30px;
     }
     .page-wrapper .sausageImg {
       transform: scale(1.2);
     }
     .page-wrapper .waveImg {
-      height: 380px;
-      top: -70px;
+      height: 280px; 
+          transform: rotate(-6deg) scale(1.1);
+          filter: brightness(0) saturate(100%) invert(44%) sepia(28%) saturate(2081%) hue-rotate(143deg) brightness(94%) contrast(87%) drop-shadow(0px 10px 0px #0e6f73);
     }
+    .page-wrapper .rollingTxtSection {
+    margin: 100px 0 50px;
+}
 .page-wrapper .rollingTxtSection:after {
   height: 100px;
 }
@@ -991,6 +1019,9 @@ top: 20px;
     .page-wrapper h1 {
       font-size: 24px;
     }
+        .page-wrapper h2 {
+        font-size: 22px;
+    }
     .page-wrapper p {
               font-size: 14px;
         letter-spacing: 0;
@@ -1007,6 +1038,11 @@ top: 20px;
     }
 
     /* Ticker */
+
+    .page-wrapper .rollingTxtSection:after {
+              height: 212px;
+        clip-path: polygon(100% 32%, 100% 100%, 0 60%);
+    }
     .page-wrapper .news-message p {
       font-size: 20px;
       gap: 16px;
@@ -1028,22 +1064,18 @@ top: 20px;
 
     /* Sausage / catch section */
     .page-wrapper .sausageSection h2 {
-      transform: rotate(-6deg) translateX(-20px);
-      text-align: left;
+      transform: rotate(-6deg) translateX(-20px); 
     }
-    .page-wrapper .sausageSection h2 span {
-      font-size: 68px;
-    }
-    .page-wrapper h2 {
-      font-size: 34px;
+        .page-wrapper .sausageSection h2 span {
+        font-size: 48px;
     }
     .page-wrapper .sausageImg {
-      transform: scale(1);
-      transform-origin: center bottom;
+      transform: scale(1.5); 
     }
     .page-wrapper .waveImg {
-      height: 280px;
-      top: -50px;
+        height: 200px;
+        top: -50px;
+        transform: rotate(-3deg) scale(1.1);
     }
 
     /* Menu orbit scene */
@@ -1162,6 +1194,17 @@ top: 20px;
     }
 
     /* Ticker */
+
+        .page-wrapper .rollingTxtSection:before {
+        top: -45px;
+        clip-path: polygon(0 0, 100% 0%, 100% 0%, 0 50%);
+    }
+        .page-wrapper .rollingTxtSection:after {
+        height: 100%;
+        bottom: 22px;
+        clip-path: polygon(100% 39%, 100% 100%, 0 80%);
+            transform: rotate(-8deg) scale(1.5);
+    }
     .page-wrapper .news-message p {
       font-size: 16px;
       gap: 12px;
@@ -1175,21 +1218,35 @@ top: 20px;
     }
     .page-wrapper .rollingTxtSection {
       margin: 40px 0;
+      margin-top: 0;
     }
 
     /* Sausage / catch section */
-    .page-wrapper .sausageSection h2 {
-      transform: rotate(-4deg) translateX(-10px);
+       .page-wrapper .sausageSection h2 {
+        transform: unset;
     }
     .page-wrapper .sausageSection h2 span {
-      font-size: 52px;
+      font-size: 44px;
     }
     .page-wrapper h2 {
       font-size: 28px;
     }
-    .page-wrapper .waveImg {
-      height: 220px;
-      top: -30px;
+        .page-wrapper .waveImg {
+        height: 270px;
+        top: 0px;
+    }
+
+        .page-wrapper .sausageImg {
+        transform: scale(1);
+        width: 100%;
+        max-width: 420px;
+        margin: auto;
+        margin-top: 15px;
+        transform-origin: center;
+        display: flex;
+    }
+    .leftContent { 
+        justify-content: center;
     }
 
     /* Menu orbit scene */
@@ -1322,14 +1379,14 @@ top: 20px;
     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771588285phpkR739R.png" class="img-fluid waveImg" alt="">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="leftContent">
                     <h2>
                         Catch of the <span> Day </span>
                     </h2>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="rightContent">
                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771586355phpTAq7yt.png" class="img-fluid sausageImg" alt="">
                 </div>
