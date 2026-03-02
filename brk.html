@@ -580,7 +580,7 @@ font-weight: 100;
     }
     /* Footer: hidden by default, revealed only on active */
     .card-footer {
-      background: var(--teal);
+      background: #0b7175;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -635,11 +635,12 @@ top: 20px;
     }
 
     .page-wrapper .footerContainer {
-    background: #0e959b;
-    padding: 50px;
+    background: #0b7175;
+    padding: 100px 50px;
     text-align: center;
     border-radius: 0;
     margin-bottom: 50px;
+    z-index: 1;
     }
     .page-wrapper .footerSection {
       padding: 100px 0 0;
@@ -654,7 +655,7 @@ top: 20px;
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: #0b7176;
+    background: #0e959c;
     transform: rotate(-4deg);
     z-index: -1;
     }
@@ -662,6 +663,7 @@ top: 20px;
              background: #fff;
     overflow: hidden;
     position: relative;
+    margin-top: -75px;
     }
     .page-wrapper .footerImg {
           position: absolute;
@@ -682,13 +684,23 @@ top: 20px;
     height: 114%;
     position: absolute;
     top: 10px;
-    z-index: 1;
-    fill: red !important;
+    z-index: 1; 
     left: -5px;
     transform: rotate(3deg) scale(1.0);
+        filter: drop-shadow(0px 5px 25px black);
     }
  
-
+    .page-wrapper .footerContent h2 span {
+      display: block;
+    font-size: 40px;
+    }
+    .page-wrapper .footerContent {
+          width: 80%;
+    margin: auto;
+    }
+    .page-wrapper .footerContent p {
+      margin-top: 50px;
+    }
 
     
   
@@ -759,6 +771,16 @@ top: 20px;
     .page-wrapper .news-message p {
           font-size: 38px;
     }
+    
+    .page-wrapper .footerContent {
+    width: 100%; 
+}
+.page-wrapper .footerContent p {
+    margin-top: 35px;
+}
+.page-wrapper .footerContainer {
+      padding: 75px 50px;
+}
   }
 
 
@@ -874,6 +896,13 @@ top: 20px;
     height: 110px; 
     bottom: 10px;
     transform: rotate(-12deg) scale(1.5); 
+    }
+    .page-wrapper .footerContent h2 span {
+      font-size: 25px;
+    }
+        .page-wrapper .footerContent p {
+        margin-top: 25px;
+        font-size: 14px;
     }
   }
 
@@ -1002,10 +1031,17 @@ top: 20px;
 
     /* Footer */
     .page-wrapper .footerSection {
-      padding: 60px 0;
+      padding: 60px 0 0;
     }
-    .page-wrapper .footerContainer {
-      padding: 40px 30px;
+       .page-wrapper .footerContainer {
+        padding: 50px 30px;
+        width: 80%;
+    }
+        .page-wrapper .footerContent h2 span {
+        font-size: 20px;
+    }
+        .page-wrapper .footerContent p {
+        margin-top: 20px; 
     }
   }
 
@@ -1150,17 +1186,24 @@ top: 20px;
 
     /* Footer */
     .page-wrapper .footerSection {
-      padding: 50px 0;
+      padding: 75px 0 0;
     }
-    .page-wrapper .footerContainer {
-      padding: 30px 20px;
-      margin-bottom: 30px;
+       .page-wrapper .footerContainer {
+        padding: 50px 15px;
+        margin-bottom: 40px;
+        width: 90%;
     }
     .page-wrapper .footerContainer h2 {
       font-size: 30px;
     }
     .page-wrapper .footerContainer p {
       font-size: 14px;
+    }
+    .page-wrapper .footerImgParent {
+      margin-top: -50px;
+    }
+    .page-wrapper .svgTwo {
+          filter: drop-shadow(0px 5px 10px black);
     }
   }
 
@@ -1295,15 +1338,21 @@ top: 20px;
     }
 
     /* Footer */
-    .page-wrapper .footerSection {
-      padding: 40px 0;
+      .page-wrapper .footerSection {
+        padding: 50px 0 0;
     }
     .page-wrapper .footerContainer {
-      padding: 24px 16px;
+      padding: 25px;
       margin-bottom: 20px;
     }
     .page-wrapper .footerContainer h2 {
       font-size: 24px;
+    }
+        .page-wrapper .footerImgParent {
+        margin-top: -10px;
+    }
+        .page-wrapper .footerContent h2 span {
+        font-size: 16px;
     }
   }
 
@@ -1520,13 +1569,13 @@ top: 20px;
    <section class="footerSection">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-10 footerContainer">
+                <div class="col-xl-9 col-lg-10 footerContainer">
                     <div class="footerContent">
                         <h2>
-                            Bold Smooth &amp; Refreshning
+                            Premium Quality, <span> Mouth - Watering Taste!</span>
                         </h2>
                         <p class="mb-0">
-                            Take the stress out of finding the right drinks—TEMP-1069-Kabana - 879533  GB has you covered. Our takeaway service offers a premium selection of wines, spirits, and beers, ensuring you always have the finest options at your fingertips. Order now and enjoy expertly crafted drinks without leaving your home.
+                            Whether it's a solo treat,a family feast, or a last-minute dinner, we've got you covered with speedy service and bold flavours. Enjoy {Dish Name 1}, {Dish Name 2}, and more - freshly made, expertly packed, and ready for pickup or fast delivery straight to your door.
                         </p>
                     </div>
                 </div>
@@ -1542,7 +1591,7 @@ top: 20px;
 
 <svg class="svgTwo" xmlns="http://www.w3.org/2000/svg" width="1920" height="474" viewBox="0 0 1920 474">
 <g>
-<path d="M 1281.50 346.35 C1313.04,348.19 1360.65,345.51 1396.00,339.92 C1525.44,319.45 1647.86,258.94 1768.00,156.06 C1814.83,115.96 1870.38,59.32 1915.41,5.75 L 1920.00 0.29 L 1920.00 474.00 L 0.00 474.00 L 0.00 0.00 L 0.06 146.50 L 2.78 148.47 C4.28,149.55 14.50,158.39 25.50,168.12 C59.51,198.19 82.06,216.27 103.66,230.76 C153.22,264.02 201.76,283.51 253.50,290.93 C318.72,300.29 383.16,291.92 485.00,260.85 C587.04,229.73 616.30,222.18 656.56,216.57 C681.55,213.08 699.44,212.00 731.69,212.01 C825.05,212.04 897.32,227.79 1013.00,273.31 C1084.48,301.43 1091.70,304.18 1116.50,312.64 C1175.90,332.89 1225.89,343.11 1281.50,346.35 Z" fill="red"/>
+<path d="M 1281.50 346.35 C1313.04,348.19 1360.65,345.51 1396.00,339.92 C1525.44,319.45 1647.86,258.94 1768.00,156.06 C1814.83,115.96 1870.38,59.32 1915.41,5.75 L 1920.00 0.29 L 1920.00 474.00 L 0.00 474.00 L 0.00 0.00 L 0.06 146.50 L 2.78 148.47 C4.28,149.55 14.50,158.39 25.50,168.12 C59.51,198.19 82.06,216.27 103.66,230.76 C153.22,264.02 201.76,283.51 253.50,290.93 C318.72,300.29 383.16,291.92 485.00,260.85 C587.04,229.73 616.30,222.18 656.56,216.57 C681.55,213.08 699.44,212.00 731.69,212.01 C825.05,212.04 897.32,227.79 1013.00,273.31 C1084.48,301.43 1091.70,304.18 1116.50,312.64 C1175.90,332.89 1225.89,343.11 1281.50,346.35 Z" fill="#0b7175"/>
 <path d="M 1281.50 346.35 C1225.89,343.11 1175.90,332.89 1116.50,312.64 C1091.70,304.18 1084.48,301.43 1013.00,273.31 C897.32,227.79 825.05,212.04 731.69,212.01 C699.44,212.00 681.55,213.08 656.56,216.57 C616.30,222.18 587.04,229.73 485.00,260.85 C383.16,291.92 318.72,300.29 253.50,290.93 C201.76,283.51 153.22,264.02 103.66,230.76 C82.06,216.27 59.51,198.19 25.50,168.12 C14.50,158.39 4.28,149.55 2.78,148.47 L 0.06 146.50 L 0.03 73.25 L 0.00 0.00 L 960.12 -0.00 L 1920.24 -0.00 L 1915.41 5.75 C1870.38,59.32 1814.83,115.96 1768.00,156.06 C1647.86,258.94 1525.44,319.45 1396.00,339.92 C1360.65,345.51 1313.04,348.19 1281.50,346.35 Z" fill="transparent"/>
 </g>
 </svg>
