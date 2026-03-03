@@ -876,7 +876,81 @@ font-family: "Permanent Marker", cursive; - Menu Heading
 
 <section class="tabsSection">
   <!-- tabs style -->
-
+<style>
+  .navContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+  .navContainer img{
+    width: 40% !important;
+  }
+  .navContainer p{
+    color: red;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+  .nav-carousel {
+    background-color: #000; 
+    display: flex !important;
+    align-items: center;
+    padding: 15px 10%;
+}
+/* .nav-carousel .owl-stage-outer {
+  width: 80%;
+  margin: auto;
+} */
+ .page-wrapper .owl-nav {
+  margin-top: 0;
+ }
+  .nav-carousel .owl-prev {
+        position: absolute;
+    display: flex !important;
+    width: 70px;
+    height: 70px;
+    background: #000000;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    left: 25px;
+    border-radius: 50% !important;
+    margin: auto !important;
+    justify-content: center;
+    border: 3px solid #e6a822 !important;
+    align-items: center;
+  }
+  .nav-carousel .owl-prev span{ 
+        font-size: 50px;
+    color: #fff;
+    font-weight: 900;
+    padding-bottom: 15px;
+  }
+  .nav-carousel .owl-next {
+        position: absolute;
+    display: flex !important;
+    width: 70px;
+    height: 70px;
+    background: #000000;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    right: 25px;
+    border-radius: 50% !important;
+    margin: auto !important;
+    justify-content: center;
+    border: 3px solid #e6a822 !important;
+    align-items: center;
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        background-color: #e6a822;
+    border-color: #e6a822;
+    border-radius: 15px;
+  }
+</style>
 
     <div class="container-fluid px-0">
         <!-- Nav tabs -->
@@ -897,7 +971,14 @@ font-family: "Permanent Marker", cursive; - Menu Heading
   </div>
 
   <div class="item nav-item">
-    <a class="nav-link" data-toggle="tab" href="#menu3">Menu 3</a>
+    <a class="nav-link" data-toggle="tab" href="#menu3">
+      <div class="navContainer">
+        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1771616199phpHRnZFl.png" alt="">
+        <p>
+          Signature Stacks
+        </p>
+      </div>
+    </a>
   </div>
 
   <div class="item nav-item">
@@ -911,6 +992,30 @@ font-family: "Permanent Marker", cursive; - Menu Heading
   </div>
   <div class="item nav-item">
     <a class="nav-link" data-toggle="tab" href="#menu7">Menu 4</a>
+  </div>
+  <div class="item nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu8">Menu 4</a>
+  </div>
+  <div class="item nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu9">Menu 4</a>
+  </div>
+  <div class="item nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu10">Menu 4</a>
+  </div>
+  <div class="item nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu11">Menu 4</a>
+  </div>
+  <div class="item nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu12">Menu 4</a>
+  </div>
+  <div class="item nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu13">Menu 4</a>
+  </div>
+  <div class="item nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu14">Menu 4</a>
+  </div>
+  <div class="item nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu15">Menu 4</a>
   </div>
 
 </div>
@@ -1156,11 +1261,12 @@ font-family: "Permanent Marker", cursive; - Menu Heading
     dots: false,
     mouseDrag: true,
     touchDrag: true,
+     autoplay: false,
     slideBy: 3,        // 👈 move 3 items per arrow click
     responsive: {
       0:   { items: 2 },
       600: { items: 3 },
-      1000:{ items: 5 }
+      1000:{ items: 6 }
     }
   });
 
