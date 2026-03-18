@@ -1,925 +1,1055 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dessert</title>
- 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Germania+One&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-   <link href="https://fonts.googleapis.com/css2?family=Coiny&amp;family=Poetsen+One&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Agbalumo&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-
-
-<!-- font-family: "Inter", sans-serif; font-family: "Poppins", sans-serif; -->
-
-<link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&amp;family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
- 
-
 <style type="text/css">
 
 
-/* 
+  /* 
+  
+  font-family: "Inter", sans-serif;
+  
+  font-family: "Poppins", sans-serif;
 
-font-family: "BBH Hegarty", sans-serif;
+  font-family: "Agbalumo", system-ui; 
+  
+  */  
+  
+      body .page-wrapper { 
+      font-family: "Poppins", sans-serif; 
+      color: #6c6a6a; 
+      line-height: 24px; 
+      overflow-x: hidden; 
+      scroll-behavior: smooth; 
+      background: #f7a72d;
+      overflow: hidden; 
+      background: radial-gradient(circle, rgb(253 243 231) 0%, rgb(247 167 45) 70%);
+      } 
+      
+     .page-wrapper p {
+      margin-bottom: 25px;
+      font-size: 22px;
+      font-family: "Poppins", sans-serif;
+      color: #000;
+      letter-spacing: 2px;
+      line-height: 1.5;
+      font-weight: 500;
+     }
+  
+     .page-wrapper p > a {
+     color: inherit;
+     }
+     .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+     line-height: 1.3;
+     font-family: "Inter", sans-serif;
+     }
+     .page-wrapper .row {
+     margin: 0 -15px!important;
+     }
+     .page-wrapper .bg-dark {
+     background-color: #fc673f!important;
+     }
+  
+     .page-wrapper .bg-primary {
+     background-color: #241e5e!important;
+     }
+     .page-wrapper .bg-light {
+     background-color: #f1f1f1!important;
+     }
+     .page-wrapper section {
+     position: relative;
+     z-index: 1;
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     }   
+     .page-wrapper .btn {
+     font-size: 14px;
+     border-radius: 0;
+     padding: 0 30px;
+     line-height: 50px;
+     }  
+  
+     .page-wrapper .overlay{
+        content: "";
+      background: rgb(0 0 0 / 58%);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+     }
+  
+     .page-wrapper h1 {
+      font-size: 75px;
+      text-transform: uppercase;
+      color: #971b1e;
+      font-weight: 700;
+     }
+     .page-wrapper h2 {
+      font-size: 60px;
+      text-transform: capitalize;
+      font-weight: 700;
+      color: #97021f;
+     }
+     .page-wrapper h3 {
+              color: #fff;
+      font-size: 50px;
+      font-weight: 700;
+      }
+     .page-wrapper h4 {
+      
+     }
+     .page-wrapper h5 {
+      
+     }
+     .page-wrapper h6 {
+      
+     }
+  
+         /* ── THUMBNAILS ── */
+      page-wrapper .thumbnails {
+          display: flex;
+      gap: 30px;
+      margin-top: 100px;
+      align-items: flex-end;
+      opacity: 0;
+      animation: fadeUp .7s .55s cubic-bezier(.22, 1, .36, 1) forwards;
+      }
+  
+     .page-wrapper  .thumb {
+          width: 225px;
+          height: 225px;
+        border-radius: 20px; 
+        border: 3px solid rgba(255, 255, 255, 0);
+        cursor: pointer;
+        transition: transform .25s, border-color .25s, box-shadow .25s;
+        position: relative; 
+      }
+     .page-wrapper  .thumb img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .35s;
+        border-radius: 20px; 
+      }
+     .page-wrapper  .thumb:hover { transform: translateY(-6px) scale(1.05); border-color: #fff; box-shadow: 0 12px 28px rgba(0,0,0,.35); }
+     .page-wrapper  .thumb:hover img { transform: scale(1.08); }
+     .page-wrapper  .thumb.active {
+        border-color: #fff;
+        transform: translateY(-10px) scale(1.08);
+        /* box-shadow: 0 14px 32px rgba(0,0,0,.4); */
+      }
+  
+     .page-wrapper  .cart-badge {
+        display: none;
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,.38);
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+      }
+     .page-wrapper  .thumb.active .cart-badge {     display: flex;
+          transform: scale(1.08); }
+     .page-wrapper  .cart-badge svg { width: 36px; height: 36px; filter: drop-shadow(0 2px 4px rgba(0,0,0,.5)); }
+     .page-wrapper  .thumb.active img{
+          transform: scale(1.08);
+      }
+  
+      /* ── ARROW ── */
+    .page-wrapper   .thumb-arrow {
+          position: absolute;
+      width: 0;
+      height: 0;
+      top: -60px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 25px solid rgba(255, 255, 255, .85);
+      transition: left .35s cubic-bezier(.22, 1, .36, 1);
+      z-index: 3;
+      animation: fadeUp .5s .8s forwards;
+      opacity: 0 !important; 
+      }
+  
+     .page-wrapper  .thumb.active .thumb-arrow{ 
+          opacity: 1 !important;
+      transition: left .35s cubic-bezier(.22, 1, .36, 1); 
+  
+      }
+  
+      @keyframes slideIn {
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(18px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes heroReveal {
+        from { opacity: 0; clip-path: inset(0 100% 0 0); }
+        to   { opacity: 1; clip-path: inset(0 0% 0 0); }
+      }
+  
+      /* ── RIGHT HERO ── */
+     .page-wrapper  .hero-img {  
+        overflow: hidden;
+        border-radius: 50px 0 0 50px;
+        opacity: 0;
+        animation: heroReveal .9s .2s cubic-bezier(.22,1,.36,1) forwards;
+      }
+     .page-wrapper  .hero-img img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        transition: transform 8s ease, opacity .3s;
+      }
+      .hero-img:hover img { transform: scale(1.04); }
+      
+      .page-wrapper .hero-img img {
+          width: 100%;
+      height: 750px;
+      object-fit: cover;
+      }
+      .page-wrapper .headerContent {
+          padding-left: 80px;
+      }
+     .page-wrapper  .hero-img img {
+          width: 100%;
+      height: 750px;
+      object-fit: cover;
+      }
+      .page-wrapper h1 span{ 
+          color: #fff;
+      } 
 
-font-family: "Lato", sans-serif;
+      /* HOVER */
 
-*/  
+      .page-wrapper .orderBtn {
+  position: relative; 
+  cursor: pointer; 
+  transition: all 0.2s ease;
+  color: #ffffff;
+      background: #e52e0e;
+          border: 2px solid #f36a16;
+      display: inline-block;
+      padding: 15px 35px;
+      font-size: 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-transform: uppercase;
+}
 
-    body .page-wrapper { 
-    font-family: "Lato", sans-serif; 
-    color: #6c6a6a; 
-    line-height: 24px; 
-    overflow-x: hidden; 
-    scroll-behavior: smooth; 
-    background: #fe5500;
-    } 
-    
-   .page-wrapper p {
-    margin-bottom: 25px;
-    font-size: 20px;
-    font-family: "Lato", sans-serif;
-    color: #fff;
-    letter-spacing: 2px;
-    line-height: 1.9em;
-   }
+.page-wrapper .orderBtn:active {
+  transform: scale(0.95);
+}
 
-   .page-wrapper p > a {
-   color: inherit;
-   }
-   .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
-   line-height: 1.3;
-   font-family: "BBH Hegarty", sans-serif;
-   }
-   .page-wrapper .row {
-   margin: 0 -15px!important;
-   }
-   .page-wrapper .bg-dark {
-   background-color: #fc673f!important;
-   }
+.page-wrapper .orderBtn:before,
+.page-wrapper .orderBtn:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat; 
+}
 
-   .page-wrapper .bg-primary {
-   background-color: #241e5e!important;
-   }
-   .page-wrapper .bg-light {
-   background-color: #f1f1f1!important;
-   }
-   .page-wrapper section {
-   position: relative;
-   z-index: 1;
-   background-size: cover;
-   background-position: center center;
-   background-repeat: no-repeat;
-   }   
-   .page-wrapper .btn {
-   font-size: 14px;
-   border-radius: 0;
-   padding: 0 30px;
-   line-height: 50px;
-   }  
+.page-wrapper .orderBtn:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #ff7f50 20%, transparent 30%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff7f50 15%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: orangeTopBubbles 0.6s ease; 
+}
+.page-wrapper .orderBtn.two:hover:before { 
+    background-image: radial-gradient(circle, #000000 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #ffffff 20%, transparent 30%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ffffff 15%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%);
+}
 
-   .page-wrapper .overlay{
-      content: "";
-    background: rgb(0 0 0 / 58%);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-   }
+@keyframes orangeTopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
 
-   .page-wrapper h1 {
-    font-size: 180px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 100;
-    margin-bottom: 0;
-    line-height: 1;
-    text-align: center;
-   }
-   .page-wrapper h2 {
-    text-align: center;
-    font-size: 90px;
-    color: #fff;
-    text-transform: capitalize;
-   }    
-   .page-wrapper h3 {
-    font-size: 50px;
-    color: #fff;
-    }
-   .page-wrapper h4 {
-    
-   }
-   .page-wrapper h5 {
-        font-family: "Lato", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 0;
-   }
-   .page-wrapper h6 {
-    
-   }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
 
-   .page-wrapper .headerSection {
-    padding: 50px 0;
-   }
-   .page-wrapper .burgerImg {
-    max-width: 800px;
-    margin: auto;
-    display: flex;
-    transform: scale(1.3);
-    transform-origin: bottom;
-   }
-   .page-wrapper .strokeText {
-    -webkit-text-stroke: 4px #ffffff;
-    color: transparent;
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.page-wrapper .orderBtn:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff7f50 15%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: orangeBottomBubbles 0.6s ease; 
+}
+.page-wrapper .orderBtn.two:hover::after { 
+    background-image: radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ffffff 15%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%);
+}
+
+@keyframes orangeBottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+      /* HOVER */
+      .page-wrapper .headerSection {
+          padding: 100px 0 0;
+      }
+      .page-wrapper .aboutImg {
+          background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1772646786phpv5Y5bO.png');
+          background-size: cover;
+          min-height: 45vh;
+              height: calc(100% + 50px);
+              margin-top: -50px;
+          border-radius: 0 250px 250px 0;
+              z-index: -2;
+      position: relative;
+      background-position: center;
+      }
+      .page-wrapper .aboutSection {
+          padding: 150px 0 100px;
+      }
+      .page-wrapper .aboutContent {
+          padding-right: 100px;
+      }
+      .page-wrapper .aboutContent h2 span{ 
+        color: #db7c26;
+      }
+      .page-wrapper .aboutContent h2:after {
+        content: '';
+        position: absolute;
+        background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773057347php8fYuEy.png');
+        background-size: cover;
+        width: 100%;
+        height: 150px;
+        background-repeat: no-repeat;
+        top: 0px;
+        left: 0%;
+        z-index: -1;
+        transform: scale(1.5);
+      }
+      .page-wrapper .aboutContent h2 {
+        position: relative;
+        left: -50px;
+        margin-bottom: 50px;
+      }
+      .page-wrapper .serviseContainer {
+              background: #bc2824;
+                  background: linear-gradient(0deg, rgb(133 8 26) 0%, rgb(188 40 36) 100%);
+      padding: 50px 20px;
+      border-radius: 40px;
+      text-align: center;
+      height: 420px;
+      }
+      .page-wrapper .serviseContainer p{ 
+          color: #fff;
+      }
+      .page-wrapper .innerContent {
+          max-width: 500px;
+      }
+      .page-wrapper .aboutContent.two {
+              padding-left: 100px;
+      padding-right: 0;
+      }
+      .page-wrapper .aboutContent.two h2 {
+              left: 100px; 
+      }
+      .page-wrapper .aboutContent.two h2:after {
+              transform: scale(1.5) rotateY(180deg);
+              left: -10%;
+      }
+      .page-wrapper .aboutImg.two {
+          border-radius: 250px 0 0 250px;
+      }
+     .page-wrapper .footerSection {
+    padding: 180px 0 100px;
+}
+      .page-wrapper .footerContent {
+              padding: 150px 100px 25px;
+      background: #f60730;
+      border-radius: 50px;
+      text-align: center;
+      position: relative;
+      }
+      .page-wrapper .footerContent h2 {
+              font-size: 100px;
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      font-family: "Poppins", sans-serif;
+      }
+      .page-wrapper .footerContent h2.strokeTxt { 
+          -webkit-text-stroke: 2px #ffffff;
+          color: transparent;
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          font-family: "Poppins", sans-serif;
+      }
+      .page-wrapper .footerHead {
+          position: relative;
+      }
+      .page-wrapper .footerImgLeft {
+        position: absolute;
+    width: 450px;
+    transform: scale(1.5);
+    bottom: -50px;
+    left: 0px;
+    transform-origin: bottom right;
+    filter: drop-shadow(0px 10px 10px #0000006e);
+      }
+      .page-wrapper .footerImgRight {
+        position: absolute;
+    right: 0;
+    width: 450px;
+    transform: scale(1.5);
+    bottom: 25px;
+    transform-origin: bottom left;
+      }
+      .page-wrapper .footerContent .orderBtn { 
+          color: #e52e0e;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+      }
+      .page-wrapper .paraSpacing {
+        max-width: 75%;
+        margin-right: auto;
+      }
+      .page-wrapper .paraSpacing.two { 
+        margin-left: auto;
+        margin-right: unset;
+      }
+      .page-wrapper .tastySection {
+        padding: 50px 0 100px;
+      }
+      .page-wrapper .hotChocolateImg {
+position: absolute;
+    width: 26%;
+    right: 0;
+    transform: scale(1.4);
+    transform-origin: center;
+    top: 16%;
     z-index: 1;
+      }
+      .page-wrapper .footerTopImg {
+        position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 550px;
+    transform: scale(1.4);
+    top: -100px;
+    transform-origin: bottom;
+    z-index: 1;
+    filter: drop-shadow(0px 10px 10px #0000006e);
+      }
+      .page-wrapper .sandwich {
+        font-family: "Inter", sans-serif;
     position: absolute;
     top: 0;
-    width: 100%;
     left: 0;
-   }
-
-   .page-wrapper .rolling-text {
-    background-color: #ffffff;
-    color: #fe5500;
-    font-family: helvetica; 
-    overflow-x: hidden;
+    right: 0;
+    font-size: 240px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1;
+    color: #fb859b;
+      }
+      .page-wrapper .sandwich.two {
+    top: 32%;
+    opacity: 0.5;
 }
-.page-wrapper .rolling-text.one { 
+      .page-wrapper .sandwich.three {
+        top: 63%;
+    opacity: 0.3;
+}
+  .page-wrapper .vectorBg {
+        position: absolute;
+    top: 20%;
+    right: 3%;
+    width: 300px;
+    z-index: 2;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.page-wrapper .vectorBgTxt { 
     position: absolute;
-    bottom: 100px;
-    transform: rotate(3deg) scale(1.1);
-    transform-origin: center;
-    z-index: -1;
-}
-.page-wrapper .rolling-text.two { 
-    position: absolute;
-    bottom: 395px;
-    transform: rotate(-3deg) scale(1.1);
-    transform-origin: center;
-}
-@keyframes slide-left {
-  from {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-60%);
-  }
-}
-.page-wrapper .text-position {
-  display: flex;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  min-width: 100%;
-}
-.page-wrapper .news-message {
-    display: flex;
-    flex-shrink: 0;
-    height: 50px;
-    align-items: center;
-    /* animation: slide-left 30s linear infinite; */
-    gap: 20px;
-}
-.page-wrapper .news-message p {
-    font-size: 26px;
-    padding-left: 0.5em;
-    margin-bottom: 0px !important;
-    color: #fe5500;
-    font-weight: 100;
-    font-family: "BBH Hegarty", sans-serif;
-    text-transform: capitalize;
-}
-
-@keyframes slide-left {
-  from {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-60%);
-  }
-}
-
-.page-wrapper .aboutContent {
-    width: 80%;
-    margin: auto;
+    top: 33%;
+    right: -1%;
+    width: 400px;
+    z-index: 2;
     text-align: center;
-    border: 2px solid #fff;
-    padding: 50px;
-    border-radius: 150px;
-    position: relative;
+    font-family: "Agbalumo", system-ui;
+    font-size: 25px;
+    color: #b82623;
+}
+  
+  
+      /* RESPONSIVE VIEW */
+  
+      @media(min-width:1200px){
+          .page-wrapper .container{
+              max-width: 1140px;
+          }
+      }
+  
+      @media(min-width:1500px){
+          .page-wrapper .container{
+              max-width: 1440px;
+          }
+        
+      }
+  
+  
+  
+      @media (max-width:1500px)
+      {
+        .page-wrapper h1 {
+          font-size: 60px;
+        }
+        .page-wrapper h2 {
+          font-size: 45px;
+        }
+        .page-wrapper .headerSection {
+    padding: 75px 0 0;
+}
+.page-wrapper .hero-img img {
+            height: 650px;
+          }
+          .page-wrapper .orderBtn {
+            padding: 10px 25px;
+            font-size: 20px;
+          }
+          .page-wrapper .aboutContent.two h2 {
+    left: 40px;
+}
+.page-wrapper .aboutContent h2:after {
+  width: 110%;
+  height: 110px;
+}
+.page-wrapper .paraSpacing {
+  max-width: 95%;
+}
+.page-wrapper p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.page-wrapper .tastySection {
+    padding: 50px 0 50px;
+}
+ .page-wrapper .innerContent {
+      max-width: 55%;
+    }
+    .page-wrapper .hotChocolateImg {
+              width: 30%;
+        right: 0;
+        transform: scale(1.4);
+        transform-origin: center;
+        top: 12%;
+        z-index: 1;
+    }
+        .page-wrapper .aboutContent.two h2 {
+        left: 75px;
+    }
+    .page-wrapper .aboutContent.two {
+        padding-left: 50px;
+    } 
+    .page-wrapper .sandwich {
+        font-size: 180px;
+    }
+    .page-wrapper .footerTopImg {
+            width: 500px;
+    }
+    .page-wrapper .footerImgLeft, .page-wrapper .footerImgRight {
+        width: 400px;
+    }
+    .page-wrapper .vectorBg {
+            top: 10%;
+    right: 2%;
+    width: 270px;
+    }
+    .page-wrapper .vectorBgTxt {
+        top: 23%;
+    right: -4%;
+    width: 400px;
+    }
+      }
+  
+      @media (max-width:1200px)
+      {
+        .page-wrapper h1 {
+        font-size: 45px;
+    }
+        .page-wrapper h2 {
+        font-size: 38px;
+    }
+    .page-wrapper h3 {
+      font-size: 35px;
+    }
+    .page-wrapper .thumb {
+      width: 160px;
+      height: 160px;
+    }
+    .page-wrapper .hero-img img {
+        height: 550px;
+    }
+    .page-wrapper .thumbnails {
+      margin-top: 85px;
+    }
+    .page-wrapper .headerSection {
+        padding: 50px 0 0;
+    }
+    .page-wrapper .thumb-arrow {
+      top: -35px;
+      border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid rgba(255, 255, 255, .85);
+    }
+    .page-wrapper .aboutContent {
+    padding-right: 0px;
+}
+.page-wrapper .aboutImg {
+  border-radius: 0 150px 150px 0;
+}
+.page-wrapper p {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .page-wrapper .aboutContent h2:after {
+      height: 95px;
+    }
+    .page-wrapper .aboutImg {
+      border-radius: 0 150px 150px 0;
+    }
+    
+        .page-wrapper h3 {
+        font-size: 28px;
+    }
+    .page-wrapper .serviseContainer p { 
+    font-size: 15px;
+}
+    .page-wrapper .serviseContainer {
+        height: 320px;
+    }
+    .page-wrapper .aboutSection {
+    padding: 150px 0 50px;
+}
+.page-wrapper .aboutImg.two {
+    border-radius: 150px 0 0 150px;
+}
+.page-wrapper .footerSection {
+    padding: 125px 0 100px;
+}
+.page-wrapper .footerContent{
+        padding: 130px 100px 25px;
+}
+    .page-wrapper .sandwich {
+        font-size: 150px;
+    }
+   .page-wrapper .sandwich.two { 
+    opacity: 0.3;
+    transform: scaleY(1.5);
+}
+.page-wrapper .sandwich.three { 
+    opacity: 0.1;
+}
+    .page-wrapper .footerTopImg {
+        width: 400px;
+        top: -50px;
+    }
+    .page-wrapper .footerContent h2 {
+        font-size: 75px;
+    }
+        .page-wrapper .footerImgLeft, .page-wrapper .footerImgRight {
+        width: 350px;
+    }
+    .page-wrapper .footerImgRight {
+        bottom: -50px
+    }
+      }
+  
+      @media (max-width:991px)
+      {
+        .page-wrapper h1 {
+        font-size: 42px;
+    }
+    .page-wrapper h2 {
+        font-size: 32px;
+    }
+        .page-wrapper .headerContent {
+    padding-left: 20px;
+}
+.page-wrapper .hero-img {
+  border-radius: 25px 0 0 25px;
 }
 .page-wrapper .orderBtn {
-    background: #fff;
-    padding: 10px 20px;
-    color: #fe5500;
-    font-size: 18px;
-    font-weight: 100;
-    border-radius: 25px;
-    font-family: "BBH Hegarty", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+        padding: 10px 25px;
+        font-size: 17px;
+    }
+    .page-wrapper .thumb, .page-wrapper .thumb img, .page-wrapper .cart-badge {
+      border-radius: 15px;
+    }
+    .page-wrapper .aboutContent h2:after {
+        height: 80px;
+        background-position: left;
+        border-top-left-radius: 15px;
+    }
+    .page-wrapper .aboutContent h2 {
+      margin-bottom: 30px;
+    }
+    .page-wrapper p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .page-wrapper .aboutSection {
+    padding: 120px 0 50px;
 }
-.page-wrapper .aboutContent .orderBtn{ 
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    right: 0;
-    width: fit-content;
+.page-wrapper .hotChocolateImg {
+      position: relative;
+    top: unset;
+    transform: unset;
     margin: auto;
+    width: 95%;
+    max-width: 380px;
 }
-.page-wrapper .aboutSection {
-    padding: 50px 0;
+.page-wrapper .tastySection h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
-.page-wrapper .tasteSection {
-    padding: 100px 0;
+    .page-wrapper .serviseContainer {
+                height: 235px;
+        padding: 30px 15px;
+    }
+        .page-wrapper .serviseContainer p {
+        font-size: 14px;
+    }
+        .page-wrapper .innerContent {
+        max-width: 100%;
+    }
+        .page-wrapper .tastySection {
+        padding: 25px 0 0px;
+    }
+    .page-wrapper .aboutContent.two h2:after {
+    transform: scale(1.5) rotateY(180deg);
+    left: -15%;
 }
-.page-wrapper .tasteSection h2{ 
-    transform: scale(1.2);
-    transform-origin: left;
-}
-.page-wrapper .tasteSection h2 .spanTwo {
-    font-size: 70px;
-    background: #ffffff;
-    padding: 25px;
-    display: inline-block;
-    left: 15%;
-    position: relative;
-    color: #fe5500;
-    top: -25px;
-}
-.page-wrapper .tasteSection h2 .spanTwo::before { 
-    content: '';
-    position: absolute;
-    bottom: -140px;
-    left: 0;
-    clip-path: polygon(0 0, 100% 0%, 50% 100%);
-    width: 100%;
-    height: 100%;
-    background: #000;
-}
-.page-wrapper .tasteSection h2 .spanOne::after { 
-    content: '';
-    position: absolute;
-    bottom: -167px;
-    left: 0;
-    clip-path: polygon(0 0, 100% 0%, 50% 100%);
-    width: 100%;
-    height: 100%;
-    background: #000;
-}
-.page-wrapper .tasteSection h2 .spanOne {
-    background: #0fb3aa;
-    padding: 25px;
-    display: inline-block;
-    transform: rotate(-7deg);
-}
-.page-wrapper .pizzaImg {
-    top: -20%;
-    position: relative;
-    width: 800px;
+    .page-wrapper .aboutContent.two {
+        padding-left: 5px;
+    }
+        .page-wrapper .footerSection {
+        padding: 100px 0 100px;
+    }
+        .page-wrapper .footerContent {
+        padding: 85px 100px 25px;
+    }
+        .page-wrapper .sandwich {
+        font-size: 115px;
+    }
+        .page-wrapper .footerTopImg {
+        width: 300px;
+        top: -60px;
+    }
+        .page-wrapper .footerContent h2 {
+        font-size: 55px;
+    }
+        .page-wrapper .footerImgLeft, .page-wrapper .footerImgRight {
+        width: 250px;
+    }
+        .page-wrapper .footerImgRight {
+        bottom: -50px;
+    }
+    .page-wrapper .vectorBg {
+                top: 10%;
+        right: 0;
+        width: 250px;
+        transform: rotate(15deg);
+    }
+    .page-wrapper .hotChocolateImgParent {
+            position: relative;
+    margin: auto;
+    }
+    .page-wrapper .vectorBgTxt {
+        right: -22%;
+    }
+      }
+  
+      @media (max-width:767px)
+      {
+        .page-wrapper h1 {
+        font-size: 35px;
+    }
+    .page-wrapper h2 {
+        font-size: 24px;
+    }
+        .page-wrapper .hero-img img {
+        height: 420px;
+    }
+    .page-wrapper .thumbnails {
+        margin-top: 70px;
+    }
+    .page-wrapper .thumbnails {
+      gap: 15px;
+    }
+    .page-wrapper .thumb-arrow {
+        top: -30px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid rgba(255, 255, 255, .85);
+    }
+    .page-wrapper .headerContent {
+        padding-left: 20px;
+    }
+    .page-wrapper .thumb {
+        width: 140px;
+        height: 140px;
+    }
+    .page-wrapper .thumb, .page-wrapper .thumb img, .page-wrapper .cart-badge {
+        border-radius: 10px;
+    }
+    .page-wrapper p {
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+    .page-wrapper .aboutContent h2 {
+        margin-bottom: 25px;
+    }
+    .page-wrapper .aboutContent h2:after {
+      height: 60px;
+    }
+    .page-wrapper .aboutImg {
+        border-radius: 0 100px 100px 0;
+    }
+        .page-wrapper .serviseContainer {
+        height: 270px;
+        border-radius: 25px;
+        padding: 30px 15px;
+    }
+        .page-wrapper .aboutImg.two {
+        border-radius: 100px 0 0 100px;
+    }
+        .page-wrapper .footerSection {
+        padding: 80px 0 60px;
+    }
+            .page-wrapper .footerContent {
+        padding: 65px 100px 25px;
+    }
+        .page-wrapper .sandwich {
+        font-size: 85px;
+    }
+        .page-wrapper .footerTopImg {
+        width: 250px;
+        top: -65px;
+    }
+        .page-wrapper .footerContent h2 {
+        font-size: 37px;
+    }
+    .page-wrapper .footerImgLeft, .page-wrapper .footerImgRight {
+        width: 180px;
+    }
+      }
+  
+      @media (max-width:575px)
+      {
+        .page-wrapper h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .page-wrapper h2 {
+        font-size: 20px;
+    }
+    .page-wrapper p {
+      font-size: 15px;
+    }
+        .page-wrapper .headerContent {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+    .page-wrapper .orderBtn {
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+    .page-wrapper .thumbnails {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .page-wrapper .hero-img img {
+        height: 300px;
+        max-width: 550px;
+        width: 95%;
+        margin: auto;
+        display: flex;
+        border-radius: 20px;
+    }
+    .page-wrapper .cart-badge svg {
+      width: 26px;
+    height: 26px;
+    }
+    .page-wrapper .aboutSection.one .row {
+      flex-direction: column-reverse;
+    }
+    .page-wrapper .aboutContent {
+      text-align: center;
+    }
+    .page-wrapper .aboutContent h2 {
+      left: 0;
+    }
+    .page-wrapper .aboutSection {
+        padding: 75px 0 30px;
+    }
+    .page-wrapper .aboutContent h2:after {
+        height: 50px;
+        width: 70%;
+        max-width: 250px;
+        transform: scale(1.4);
+        margin: auto;
+        left: 0;
+        display: flex;
+        right: 0;
+        border-radius: 15px;
+    }
+    .page-wrapper .aboutImg {
+        border-radius: 25px;
+        min-height: unset;
+        height: 300px;
+        max-width: 550px;
+        width: 95%;
+        margin: auto;
+        margin-top: 40px;
+    }
+    .page-wrapper .paraSpacing {
+        max-width: 95%;
+        margin-left: auto;
+        margin-top: 35px;
+    }
+        .page-wrapper .serviseContainer {
+        height: 100%;
+        padding: 25px 20px;
+        border-radius: 25px;
+    }
+        .page-wrapper h3 {
+        font-size: 22px;
+    }
+    .page-wrapper .serviseContainer p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .page-wrapper .hotChocolateImg {
+        margin-top: 45px;
+    }
+        .page-wrapper .aboutContent.two h2:after {
+        transform: scale(1.4) rotateY(180deg);
+        left: 0;
+    }
+    .page-wrapper .paraSpacing.two {
     margin-left: auto;
-    display: flex;
+    margin-right: auto;
 }
-.page-wrapper .hygieneContent {
-    background: #0fb3aa;
-    padding: 50px;
-    border-radius: 200px;
-    text-align: center;
-    max-width: 600px;
-    margin-left: auto;
-    top: -50%;
-    left: 100px;
-    position: relative;
-    transform: scale(1.1);
-    transform-origin: left;
-    filter: drop-shadow(5px 10px 0px #993400);
-    color: #993400;
-}
-.page-wrapper .hygieneContent.two{ 
-    left: 0;
-    background: #fff;
-    top: -15%;
-}
-.page-wrapper .hygieneImg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #fe5500;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-.page-wrapper .hygieneImg img{ 
-    filter: invert(1);
-}
-.hygieneContent.two p {
-    color: #000000;
-}
-.hygieneContent.two h3 {
-    color: #fe5500;
-}
-.page-wrapper .hygieneContent.two .hygieneImg{
-    left: unset;
-    right: 0;
-    background: #0fb3aa;
-    border: 5px solid #fff;
-}
-.page-wrapper .nuggetsSection {
-    max-width: 500px;
-    margin-top: -200px;
-    transform: scale(1.2);
-    transform-origin: left;
-}
-.page-wrapper .nuggetsTxt {
-    background: #000;
-    text-align: center;
-    font-family: "BBH Hegarty", sans-serif;
-    font-size: 55px;
-    letter-spacing: 4px;
-    width: fit-content;
-    margin-left: auto;
-    display: flex;
-    transform: rotate(-10deg) skew(-15deg, 5deg);
-}
-.page-wrapper .nuggetsTxt span{ 
-    background: #000; 
-    padding: 0px 25px; 
-}
-.page-wrapper .nuggetsTxt:after { 
-    content: '';
-    position: absolute;
-    top: -249%;
-    left: -129px;
-    background: #fff;
-    width: 470px;
-    height: 250%;
-    clip-path: polygon(0% 48%, 60% 50%, 100% 100%, 27% 100%);
-    z-index: 0;
-    transform: scaleY(1.5) skewX(30deg);
-    transform-origin: bottom;
-}
-.page-wrapper .nuggetsTxt::before { 
-    content: '';
-    position: absolute;
-    top: -149%;
-    left: -129px;
-    background: #bb3f02;
-    width: 470px;
-    height: 250%;
-    clip-path: polygon(0% 48%, 60% 50%, 100% 100%, 27% 100%);
-    transform: scaleY(1.5) skewX(30deg);
-    transform-origin: bottom;
-    z-index: -2;
-}
-.page-wrapper .nuggetsImg {
-    z-index: 1;
-    position: relative;
-}
-.page-wrapper .gallerySection {
-    margin-top: -200px;
-}
-
-/* GRID */
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(7, 115px);
-    gap: 20px;
-    justify-content: center;
-}
-
-
-.div1 { grid-column: 1; grid-row: 3 / 5; }
-.div2 { grid-column: 1; grid-row: 5 / 8; }
-.div3 { grid-column: 2; grid-row: 2 / 4; }
-.div4 { grid-column: 2; grid-row: 4 / 8; }
-.div5 { grid-column: 3; grid-row: 1 / 5; }
-.div6 { grid-column: 3; grid-row: 5 / 8; }
-
-.galleryContainer { width: 100%; height: 100%; }
-.galleryContainer img { width: 100%; height: 100%; object-fit: cover; border-radius: 25px; }
-        
-
-           .page-wrapper .paymentContainer {
-    background: #fe5500;
-    border: 10px solid #fff;
-    padding: 35px 50px;
-}
-        .page-wrapper .paymentInnerContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 30px 30px;
-    background: #02b3a9;
-    border-radius: 20px;
-        }
-      .page-wrapper .paymentImgContainer img {
-    width: 70px;
-    height: 70px;
-    filter: invert(1);
-    margin-bottom: 10px;
-    object-fit: contain;
-}
-        .page-wrapper .paymentTxt {
-          font-size: 16px;
-    margin-top: 5px;
-    color: #000;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 0;
-       }
-       .page-wrapper .paymentSection {
-            padding: 100px 0 100px;
-       }
-       .page-wrapper .paymentParent {
-        background: #e3acfe;
-        padding: 75px 0 75px 75px;
-        border-radius: 50px;
-        position: relative;
-        min-height: 710px;
-       }
-       .page-wrapper .paymentPara {
-            background: #fff;
-    padding: 25px 75px 50px;
-    margin-top: 15px;
-       }
-       .page-wrapper .paymentPara p{ 
-        color: #000;
-    font-size: 18px;
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 0;
-       }
-       .page-wrapper .paymentInnerContainer .spanOne {
-position: absolute;
-    top: 15%;
-    left: -30px;
-    width: 60px;
-    height: 10px;
-    background: #fe5500;
-    border-radius: 20px;
-       }
-       .page-wrapper .paymentInnerContainer .spanTwo { 
-            position: absolute;
-    top: 45%;
-    left: -30px;
-    width: 60px;
-    height: 10px;
-    background: #fe5500;
-    border-radius: 20px;
-       }
-       .page-wrapper .paymentInnerContainer .spanThree { 
-            position: absolute;
-    bottom: 15%;
-    left: -30px;
-    width: 60px;
-    height: 10px;
-    background: #fe5500;
-    border-radius: 20px;
-       }
-       .page-wrapper .paymentInnerContainer .spanFour { 
-             position: absolute;
-    top: 15%;
-    right: -30px;
-    width: 60px;
-    height: 10px;
-    background: #fe5500;
-    border-radius: 20px;
-    z-index: 1;
-       }
-
-       .page-wrapper .paymentInnerContainer .spanFive {  
-   position: absolute;
-    top: 45%;
-    right: -30px;
-    width: 60px;
-    height: 10px;
-    background: #fe5500;
-    border-radius: 20px;
-    z-index: 1;
-       }
-       .page-wrapper .paymentInnerContainer .spanSix {  
-    position: absolute;
-    bottom: 15%;
-    right: -30px;
-    width: 60px;
-    height: 10px;
-    background: #fe5500;
-    border-radius: 20px;
-    z-index: 1;
-       }
-       .page-wrapper .paymentInnerContainer.two {
-        background-color: #fff;
-       }
-       .page-wrapper .paymentInnerContainer.two img {
-        filter: unset;
-       }
-       .page-wrapper .paymentInnerContainer.two h5 {
-            color: #fe5500;
-       }
-
-/* GRID */
-    /* RESPONSIVE VIEW */
-
-    @media(min-width:1200px){
-        .page-wrapper .container{
-            max-width: 1140px;
-        }
+    .page-wrapper .aboutImg.two {
+        border-radius: 25px;
     }
-
-    @media(min-width:1500px){
-        .page-wrapper .container{
-            max-width: 1440px;
-        }
+        .page-wrapper .aboutContent.two h2 {
+        left: 0;
     }
-
-
-
-    @media (max-width:1500px)
-    {
-
+        .page-wrapper .footerSection {
+        padding: 60px 0 60px;
     }
-
-    @media (max-width:1199px)
-    {
-
+    .page-wrapper .footerContent {
+        padding: 75px 10px 75px;
+        max-width: 290px;
+        margin: auto;
+        border-radius: 25px;
     }
-
-    @media (max-width:991px)
-    {
-
+        .page-wrapper .sandwich {
+        font-size: 50px;
+        top: 10%;
     }
-
-    @media (max-width:767px)
-    {
-
+    .page-wrapper .sandwich.two {
+            top: 38%;
+    opacity: 0.2;
     }
-
-    @media (max-width:575px)
-    {
-        
+    .page-wrapper .sandwich.three {
+        opacity: 0.1;
     }
-    
-    @media (max-width:375px)
-    {
-
+        .page-wrapper .footerTopImg {
+        width: 180px;
+        top: -15px;
     }
-
-</style>
-
-
-</head>
-
-
-<body>
-
-    
-
-<div id="page-top-margin"></div>
-
-
-<div class="page-wrapper">
-
-
-<section class="headerSection">
-  <div class="container">
-   <div class="row">
-        <div class="col-lg-12 col-md-6 col-sm-12">
-            <div class="headerContent">
-                <div class="headingDiv">
-                    <h1>
-                        Fast Fresh 
-                        Affordable 
-                        <span class="strokeText">
-                            Fast Fresh 
-                            Affordable 
-                        </span>
-                    </h1>
-                </div>
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773065868phpkVag2W.png" class="img-fluid burgerImg" alt="">
-            </div>
-        </div> 
-   </div>
-  </div>
+        .page-wrapper .footerImgLeft, .page-wrapper .footerImgRight {
+        max-width: 200px;
+        width: 45%;
+    }
+        .page-wrapper .vectorBgTxt {
+        top: 33%;
+        right: -25%;
+        width: 400px;
+        line-height: 1;
+        font-size: 20px;
+    }
+        .page-wrapper .vectorBg {
+        top: 20%;
+        right: 20px;
+        width: 200px;
+        transform: rotate(15deg);
+    }
+      }
+      
+      @media (max-width:375px)
+      {
+          
+      }
   
-  <div class="container-fluid rotatingParent px-0">
-    <div class="rolling-text one">
-        <div class="text-position">
-           <div class="news-message">
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-           </div>
-           <div class="news-message">
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-           </div>
-        </div>
-     </div>
-    <div class="rolling-text two">
-        <div class="text-position">
-           <div class="news-message">
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-           </div>
-           <div class="news-message">
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-              <p>A blend of Spice, Aroma &amp; Tradition.</p>
-           </div>
-        </div>
-     </div>
-  </div>
-</section>
-
-<section class="aboutSection">
-    <div class="container">
-        <div class="aboutContent">
-            <p class="mb-0">
-                Experience the heart of Italian dining at TEMP-1069-Kabana - 879533  GB in . Our restaurant blends traditional recipes with a modern touch, creating a cosy atmosphere where good food meets great company. Whether you're enjoying a freshly made {dish 1} or a comforting {dish 2}, each bite is a celebration of Italy's rich culinary heritage.
-            </p>
-            <a href="/order-now" class="orderBtn">
-                Order Now
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="tasteSection">
-    <div class="container-fluid px-0">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="tasteSection">
-                    <h2>
-                        <span class="spanOne"> Order now </span> 
-                        <span class="spanTwo"> skip the wait </span>
-                    </h2>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 px-0">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773238003phpWhxjdy.png" class="img-fluid pizzaImg" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="hygieneContent">
-                    <h3>
-                        Our Hygiene
-                    </h3>
-                    <p class="mb-0">
-                        We take food hygiene seriously! From fresh ingredient sourcing to careful meal preparation, TEMP-1069-Kabana - 879533  GB follows top-rated hygiene standards. Order now from a takeaway you can trust!
-                    </p>
-                    <div class="hygieneImg">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773240094phpx3PZ4N.png" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="hygieneContent two">
-                    <h3>
-                        Our Hygiene
-                    </h3>
-                    <p class="mb-0">
-                        We take food hygiene seriously! From fresh ingredient sourcing to careful meal preparation, TEMP-1069-Kabana - 879533  GB follows top-rated hygiene standards. Order now from a takeaway you can trust!
-                    </p>
-                    <div class="hygieneImg">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773240094phpx3PZ4N.png" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="nuggetsSection">
-        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773253682php2SVJ0Y.png" class="img-fluid nuggetsImg" alt="">
-        <p class="nuggetsTxt">
-            <span> Nuggets </span>
-        </p>
-    </div>
-</section>
-
-<section class="gallerySection">
-    <div class="container">
-
-<div class="parent">
-    <div class="div1">
-        <div class="galleryContainer">
-            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1729196283phpEDTUJf.png" class="img-fluid" alt="">
-        </div>
-    </div>
-    <div class="div2">
-        <div class="galleryContainer">
-            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1729196283phpEDTUJf.png" class="img-fluid" alt="">
-        </div>
-    </div>
-    <div class="div3">
-        <div class="galleryContainer">
-            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1729196283phpEDTUJf.png" class="img-fluid" alt="">
-        </div>
-    </div>
-    <div class="div4">
-        <div class="galleryContainer">
-            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1729196283phpEDTUJf.png" class="img-fluid" alt="">
-        </div>
-    </div>
-    <div class="div5">
-        <div class="galleryContainer">
-            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1729196283phpEDTUJf.png" class="img-fluid" alt="">
-        </div>
-    </div>
-    <div class="div6">
-        <div class="galleryContainer">
-            <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1729196283phpEDTUJf.png" class="img-fluid" alt="">
-        </div>
-    </div>
-</div>
-    
-    </div>
-</section>
-
-<section class="paymentSection">
-    <div class="container">
-         <div class="row">
-                    <div class="col-lg-8">
-                        <div class="paymentContainer">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="paymentInnerContainer">
-                                        <div class="paymentImgContainer">
-                                            <img loading="lazy" src="https://assets.touch2success.com/static/0a240991920be7c739a1e2c8e3f37fb7/img/1653299274phpjim4JL.png" alt="{TAKEAWAY NAME} Pick Icon" class="img-fluid">  
-                                        </div>
-                                            <h5>
-                                                Order in Seconds
-                                            </h5>
-                                            <p class="paymentTxt mb-0">
-                                                Choose your go-to meal from the menu
-                                            </p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="paymentInnerContainer two">
-                                <div class="paymentImgContainer">
-                                    <img loading="lazy" src="https://assets.touch2success.com/static/e6fd7949ac7e6c7c8651795d21f59be4/img/1718623847phpVyrhib.png" alt="{TAKEAWAY NAME} Payment" class="img-fluid">  
-                                </div>
-                                    <h5>
-                                        Secure Checkout 
-                                    </h5>
-                                    <p class="paymentTxt"> 
-                                        Paying is effortless, you can focus on food. 
-                                    </p>
-                                    <span class="spanOne"></span>
-                                    <span class="spanTwo"></span>
-                                    <span class="spanThree"></span>
-                                    <span class="spanFour"></span>
-                                    <span class="spanFive"></span>
-                                    <span class="spanSix"></span>
-                            </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="paymentInnerContainer">
-                                        <div class="paymentImgContainer">
-                                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1727784786php1lMh5f.png" alt="{TAKEAWAY NAME} Truck" class="img-fluid">  
-                                        </div>
-                                        <h5> Served Fresh </h5>
-                                        <p class="paymentTxt">
-                                            Freshly made and good to go when you are. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="paymentPara">
-                            <p>
-                                At {TAKEAWAY NAME}, we take pride in serving delicious food with fast takeaway service in [TAKEAWAY TOWN). No matter the occasion or dietary need, we've got something for you. Find your new favourite meal today!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    </div>
-</section>
-
-
-
-
-</div>
-
-
-<script>
-   window.addEventListener("load", function(){
-   pageTopmargin();
-   $(window).scrollTop($(window).scrollTop()+1);
-   });
-   pageTopmargin();
-   function pageTopmargin() {
-   var headerHeight = $('#header').height();
-   $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
-   }
-   $("#banner_content").appendTo($("#offer-section"));
-   var pageSection = $('[data-background]');
-   pageSection.each(function(indx){
-   if ($(this).attr("data-background")){
-   $(this).css("background-image", "url(" + $(this).data("background") + ")");
-   }
-   });
-</script>
-
- <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
- <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
-
-<script>
-    const heroSrcs = [
-      'https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1772799909php6FwGXs.jpg',
-      'https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1772799910php47rExf.jpg',
-      'https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1772799910phpX10iTi.jpg',
-    ];
-  
-    const thumbs    = document.querySelectorAll('.thumb');
-    const heroImgEl = document.getElementById('heroImgEl'); 
-    const banner    = document.querySelector('.banner');
-    let activeIndex = 1;
-  
-    // function moveArrow(idx) {
-    //   const t  = Array.from(thumbs)[idx];
-    //   const br = banner.getBoundingClientRect();
-    //   const tr = t.getBoundingClientRect();
-    //   arrow.style.left = (tr.left + tr.width / 2 - br.left - 14) + 'px';
-    // }
-  
-    function activate(idx) {
-      thumbs[activeIndex].classList.remove('active');
-      activeIndex = idx;
-      thumbs[activeIndex].classList.add('active');
-      heroImgEl.style.opacity = '0';
-      setTimeout(() => {
-        heroImgEl.src = heroSrcs[idx];
-        heroImgEl.style.opacity = '1';
-      }, 300);
-    //   moveArrow(idx);
-    }
-    
-    thumbs.forEach((t, i) => t.addEventListener('click', () => activate(i)));
-    // window.addEventListener('load',   () => moveArrow(activeIndex));
-    // window.addEventListener('resize', () => moveArrow(activeIndex));
-  
-    
-  </script>
-
- 
-
-
-
-</body>
-</html>
-
-<!-- https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773055498phprLpmDP.jpg -->
-
+  </style>
