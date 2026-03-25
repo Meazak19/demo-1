@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
 
 
-<!-- font-family: "Inter", sans-serif; font-family: "Poppins", sans-serif; -->
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&amp;family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&amp;family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet">
 
@@ -34,33 +34,34 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
  
 
+
 <style type="text/css">
 
 
     /* 
     
-    font-family: "BBH Hegarty", sans-serif;
-    
-    font-family: "Lato", sans-serif;
+    font-family: "Urbanist", sans-serif;
+    font-family: "Boldonse", system-ui;
+
     
     */  
     
         body .page-wrapper { 
-        font-family: "Lato", sans-serif; 
+        font-family: "Urbanist", sans-serif;
         color: #6c6a6a; 
         line-height: 24px; 
         overflow: hidden; 
-        scroll-behavior: smooth; 
-        background: #fe5500;
+        scroll-behavior: smooth;  
         } 
         
        .page-wrapper p {
         margin-bottom: 25px;
-        font-size: 20px;
-        font-family: "Lato", sans-serif;
+        font-size: 24px;
+        font-family: "Urbanist", sans-serif;
         color: #fff;
-        letter-spacing: 2px;
-        line-height: 1.9em;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        font-weight: 500;
        }
     
        .page-wrapper p > a {
@@ -68,7 +69,7 @@
        }
        .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
        line-height: 1.3;
-       font-family: "BBH Hegarty", sans-serif;
+       font-family: "Boldonse", system-ui;
        }
        .page-wrapper .row {
        margin: 0 -15px!important;
@@ -106,1672 +107,403 @@
         top: 0;
         left: 0;
         z-index: -1;
-       }
-    
-       .page-wrapper h1 {
-        font-size: 180px;
-        text-transform: uppercase;
-        color: #fff;
-        font-weight: 100;
-        margin-bottom: 0;
-        line-height: 1;
-        text-align: center;
-       }
+       } 
        .page-wrapper h2 {
-        text-align: center;
-        font-size: 90px;
-        color: #fff;
-        text-transform: capitalize;
+        font-size: 65px;
+    color: #fff;
+    font-weight: 500;
        }    
        .page-wrapper h3 {
-        font-size: 50px;
-        color: #fff;
+            color: #000;
+    font-family: "Urbanist", sans-serif;
+    font-size: 40px;
         } 
        .page-wrapper h5 {
-            font-family: "Lato", sans-serif;
-        font-size: 24px;
-        font-weight: 700;
-        color: #fff;
-        margin-bottom: 0;
+           
+       }
+       .page-wrapper .headerContent h2 {
+    filter: drop-shadow(0px 20px 15px #00000059);
+
        } 
     
-       .page-wrapper .headerSection {
-        padding: 50px 0;
-       }
-       .page-wrapper .burgerImg {
-       max-width: 800px;
-    margin: auto;
-    display: flex;
-    transform: scale(1.3);
-    transform-origin: bottom;
-    filter: drop-shadow(0px 20px 8px #0000007d);
-    color: #0000007d;
-       }
-       .page-wrapper .strokeText {
-        -webkit-text-stroke: 4px #ffffff;
-        color: transparent;
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        left: 0;
-       }
+       
+    .headerSection {
+      padding: 50px 0;
+          background: #22C1C3;
+    background: linear-gradient(0deg, rgb(252 217 53) 50%, rgb(252 134 92) 50%);
+
+    }
     
-       .page-wrapper .rolling-text {
-        background-color: #ffffff;
-        color: #fe5500;
-        font-family: helvetica; 
-        overflow-x: hidden;
-    }
-    .page-wrapper .rolling-text.one { 
-       position: absolute;
-    bottom: 40px;
-    transform: rotate(4deg) scale(1.1);
-    transform-origin: center;
-    z-index: -1;
-    }
-    .page-wrapper .rolling-text.two { 
-        position: absolute;
-    bottom: 450px;
-    transform: rotate(-4deg) scale(1.1);
-    transform-origin: center;
-    }
-    .page-wrapper .rolling-text.two .news-message{
-        animation: slide-right 30s linear infinite;
-    }
-    @keyframes slide-right {
-      from {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-60%);
-      }
-      to {
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
-      }
-    }
-    .page-wrapper .text-position {
+
+    /* ── Two-tone background ── */
+    .banner-bg {
+      position: relative;
+      width: 100%;
+      padding: 0;
       display: flex;
-      flex-wrap: nowrap;
-      white-space: nowrap;
-      min-width: 100%;
+      flex-direction: column;
     }
-    .page-wrapper .news-message {
-        display: flex;
-        flex-shrink: 0;
-        height: 50px;
-        align-items: center;
-        animation: slide-left 30s linear infinite;
-        gap: 20px;
+
+    /* ── Inner layout ── */
+    .banner-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 32px 60px 0 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .page-wrapper .news-message p {
-        font-size: 26px;
-        padding-left: 0.5em;
-        margin-bottom: 0px !important;
-        color: #fe5500;
-        font-weight: 100;
-        font-family: "BBH Hegarty", sans-serif;
-        text-transform: capitalize;
+
+    /* ── Subtitle line ── */
+    .subtitle-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 25px;
     }
-    
-    @keyframes slide-left {
-      from {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-      }
-      to {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-60%);
-      }
+
+    .subtitle-line {
+      width: 60px;
+      height: 2px;
+      background: #fff;
+      display: inline-block;
+      border-radius: 2px;
     }
-    
-    .page-wrapper .aboutContent {
-        width: 80%;
-        margin: auto;
-        text-align: center;
-        border: 2px solid #fff;
-        padding: 50px;
-        border-radius: 150px;
-        position: relative;
-    } 
 
-    /* HOVER */ 
-.page-wrapper .orderBtn  {
-  --btn-color: #fe5500; 
-  display: inline-block;  
-  margin: 20px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border: 2px solid var(--btn-color);
-  transition: color 0.5s;
-  z-index: 1;  
-  color: var(--btn-color);
-    background: #fff;
-    padding: 10px 20px; 
-    font-size: 18px;
-    font-weight: 100;
-    border-radius: 25px;
-    font-family: "BBH Hegarty", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.page-wrapper .orderBtn:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: #0fb3aa;
-  height: 200px;
-  width: 250px;
-  border-radius: 50%;
-}
-
-.page-wrapper .orderBtn:hover {
-  color: #fff;
-}
-
-.page-wrapper .orderBtn:before {
-  top: 100%;
-  left: 100%;
-  transition: all 0.7s;
-}
-
-.page-wrapper .orderBtn:hover:before {
-  top: -30px;
-  left: -30px;
-}
-
-.page-wrapper .orderBtn:active:before {
-  background: #3a0ca3;
-  transition: background 0s;
-}
-
-
-    /* HOVER */
-    .page-wrapper .aboutContent .orderBtn{ 
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        right: 0;
-        width: fit-content;
-        margin: auto;
+  .page-wrapper  p.subtitle-text { 
+      font-size: 30px;
+      font-weight: 700; 
     }
-    .page-wrapper .aboutSection {
-        padding: 50px 0;
-        z-index: 2;
+
+    /* ── Ghost / watermark heading ── */
+    .heading-block {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 0; 
     }
-    .page-wrapper .tasteSection {
-        padding: 100px 0;
-    }
-    .page-wrapper .tasteSection h2{ 
-        transform: scale(1.2); 
-    } 
-    .page-wrapper .tasteSection h2 .spanTwo {
-            font-size: 60px;
-    background: #ffffff;
-    padding: 25px;
-    display: inline-block;
-    left: 10%;
-    position: relative;
-    color: #fe5500;
-    top: -15px;
-    }
-    .page-wrapper .tasteSection h2 .spanTwo::before { 
-      content: '';
-    position: absolute;
-    bottom: -128px;
+
+  .page-wrapper .ghost-heading {
+    font-family: "Boldonse", system-ui;
+    top: 105px;
     left: 0;
-    clip-path: polygon(0 0, 100% 0%, 50% 100%);
-    width: 100%;
-    height: 100%;
-    background: #000;
-    }
-    .page-wrapper .tasteSection h2 .spanOne::after { 
-        content: '';
-        position: absolute;
-        bottom: -167px;
-        left: 0;
-        clip-path: polygon(0 0, 100% 0%, 50% 100%);
-        width: 100%;
-        height: 100%;
-        background: #000;
-    }
-    .page-wrapper .tasteSection h2 .spanOne {
-        background: #0fb3aa;
-        padding: 25px;
-        display: inline-block;
-        transform: rotate(-7deg);
-    }
-    .page-wrapper .pizzaImg {
-        top: -20%;
-        position: relative;
-        width: 800px;
-        margin-left: auto;
-        display: flex;
-    }
-    .page-wrapper .hygieneContent {
-        background: #0fb3aa;
-        padding: 50px;
-        border-radius: 200px;
-        text-align: center;
-        max-width: 600px;
-        margin-left: auto;
-        top: -180px;
-        left: 50px;
-        position: relative;
-        transform: scale(1.1); 
-        filter: drop-shadow(5px 10px 0px #993400);
-        color: #993400;
-    }
-    /* .page-wrapper .hygieneContent::before {
-  content: "";
-  position: absolute;
-  top: -60px;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: 
-    radial-gradient(circle at 25% 100%, #1bb3a9 80px, transparent 81px),
-    radial-gradient(circle at 75% 100%, #1bb3a9 80px, transparent 81px);
-  background-repeat: no-repeat;
-} */
-    .page-wrapper .hygieneContent.two{ 
-        left: -40px;
-    background: #fff;
-    top: -10%;
-    transform-origin: right;
-    }
-    .page-wrapper .hygieneImg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #fe5500;
-        border-radius: 50%;
-        border: 5px solid #fff;
-        width: 100px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-    }
-    .page-wrapper .hygieneImg img{ 
-        filter: invert(1);
-    }
-    .page-wrapper .hygieneContent.two p {
-        color: #000000;
-    }
-   .page-wrapper  .hygieneContent.two h3 {
-        color: #fe5500;
-    }
-    .page-wrapper .hygieneContent.two .hygieneImg{
-        left: unset;
-        right: 0;
-        background: #0fb3aa;
-        border: 5px solid #fff;
-    }
-    .page-wrapper .nuggetsSection {
-          max-width: 520px;
-    margin-top: -100px;
-    transform: scale(1.2);
-    transform-origin: left;
-    }
-    .page-wrapper .nuggetsTxt {
-      background: #000;
-    text-align: center;
-    font-family: "BBH Hegarty", sans-serif;
-    font-size: 45px;
-    letter-spacing: 4px;
-    width: fit-content;
-    margin-left: auto;
-    display: flex;
-    transform: rotate(-15deg) skew(-13deg, 5deg);
-    }
-    .page-wrapper .nuggetsTxt span{ 
-            background: #000;
-    padding: 0px 25px;
-    min-width: 350px;
-    max-width: 350px;
-    }
-    .page-wrapper .nuggetsTxt:after { 
-        content: '';
+    right: 0;
     position: absolute;
-    top: -249%;
-    left: -130px;
-    background: #fff;
-    width: 480px;
-    height: 250%;
-    clip-path: polygon(0% 48%, 60% 50%, 100% 100%, 27% 100%);
-    z-index: 0;
-    transform: scaleY(1.5) skewX(30deg);
-    transform-origin: bottom;
-    }
-    .page-wrapper .nuggetsTxt::before { 
-          content: '';
-    position: absolute;
-    top: -149%;
-    left: -129px;
-    background: #bb3f02;
-    width: 100%;
-    height: 250%;
-    clip-path: polygon(0% 48%, 60% 50%, 100% 100%, 27% 100%);
-    transform: scaleY(1.5) skewX(30deg);
-    transform-origin: bottom;
-    z-index: -2;
-    }
-    .page-wrapper .nuggetsImg {
-        z-index: 1;
-        position: relative;
-    }
-    .page-wrapper .gallerySection {
-        margin-top: -200px;
-    }
-    
-    /* GRID */
-    
-    .page-wrapper .parent {
-        display: grid;
-        grid-template-columns: repeat(3, 350px);
-        grid-template-rows: repeat(7, 115px);
-        gap: 20px;
-        justify-content: center;
-    }
-    
-    
-   .page-wrapper  .div1 { grid-column: 1; grid-row: 3 / 5; }
-   .page-wrapper  .div2 { grid-column: 1; grid-row: 5 / 8; }
-   .page-wrapper  .div3 { grid-column: 2; grid-row: 2 / 4;     display: flex;
-    align-items: flex-end;
-    max-width: 240px;
-    margin-left: auto;
-    left: -20px;
-    position: relative;
-    bottom: 10px; }
-   .page-wrapper  .div4 { grid-column: 2; grid-row: 4 / 8; }
-   .page-wrapper  .div5 { grid-column: 3; grid-row: 1 / 5; }
-   .page-wrapper  .div6 { grid-column: 3; grid-row: 5 / 8; }
-   .page-wrapper   .div3 p {
-            margin-bottom: 0;
-    background: #fff;
-    color: #fe5500;
-    display: inline-block;
-    font-size: 55px;
+    font-size: 100px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0;
     line-height: 1;
-    text-transform: uppercase;
     text-align: center;
-    font-weight: 500;
-    padding: 25px;
-    border-radius: 20px;
-    filter: drop-shadow(10px 10px 0px black);
-    font-family: "BBH Hegarty", sans-serif;
-     }
-   .page-wrapper  .galleryContainer { width: 100%; height: 100%; position: relative; }
-   .page-wrapper  .galleryContainer img { width: 100%; height: 100%; object-fit: cover; border-radius: 25px; }
-            .page-wrapper .galleryContainer p {
-position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    background: #fe5500;
-    margin: 10px;
-    font-size: 20px;
-    padding: 12px;
-    text-transform: uppercase;
-    font-family: "BBH Hegarty", sans-serif;
-    transform: scale(0);
-transition: all 0.2s linear;
-            }
-            .page-wrapper .galleryContainer:hover p {
-    transform: scale(1);
-transition: all 0.2s linear;
-            }
-    
-               .page-wrapper .paymentContainer {
-        background: #fe5500;
-        border: 10px solid #fff;
-        padding: 35px 50px;
+    z-index: 3;
+    opacity: 0.2;
     }
-            .page-wrapper .paymentInnerContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        padding: 30px 30px;
-        background: #02b3a9;
-        border-radius: 20px;
-            }
-          .page-wrapper .paymentImgContainer img {
-        width: 70px;
-        height: 70px;
-        filter: invert(1);
-        margin-bottom: 10px;
-        object-fit: contain;
-    }
-            .page-wrapper .paymentTxt {
-              font-size: 16px;
-        margin-top: 5px;
-        color: #000;
-        font-weight: 700;
-        letter-spacing: 1px;
-        margin-bottom: 0;
-           }
-           .page-wrapper .paymentSection {
-                padding: 100px 0 100px;
-           }
-           .page-wrapper .paymentParent {
-            background: #e3acfe;
-            padding: 75px 0 75px 75px;
-            border-radius: 50px;
-            position: relative;
-            min-height: 710px;
-           }
-           .page-wrapper .paymentPara {
-                background: #fff;
-        padding: 25px 75px 50px;
-        margin-top: 15px;
-        position: relative;
-           }
-           .page-wrapper .paymentPara::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: auto;
-    height: 15px;
-    z-index: 10;
-    background: radial-gradient(circle at 15px 0px, #ff5500 10px, #ffffff 11px) repeat-x;
-    background-size: 30px 30px;
-    transform: rotate(180deg);
-    background-position: top;
-}
-.page-wrapper .circleImgOne {
-        position: absolute;
-    top: 5%;
-    right: -8%;
-    width: 70%;
-    transform: rotate(-10deg);
-    color: #ff7c3b;
-    filter: brightness(0) saturate(100%) invert(55%) sepia(54%) saturate(1338%) hue-rotate(334deg) brightness(103%) contrast(101%);
-    opacity: 0.8;
-}
-.page-wrapper .circleImgTwo {
-    position: absolute;
-    top: 200px;
-    right: 0;
-    width: 100%;
-    opacity: 0.8;
-    color: #c46b27;
-    filter: brightness(0) saturate(100%) invert(69%) sepia(44%) saturate(5636%) hue-rotate(346deg) brightness(82%) contrast(85%);
-}
-.page-wrapper .kebabImg {
-   filter: drop-shadow(5px 5px 5px #0000008a); 
-}
-           .page-wrapper .paymentPara p{ 
-            color: #000;
-        font-size: 18px;
-        text-align: center;
-        font-weight: 600;
-        letter-spacing: 1px;
-        margin-bottom: 0;
-           }
-           .page-wrapper .paymentInnerContainer .spanOne {
-    position: absolute;
-        top: 15%;
-        left: -30px;
-        width: 60px;
-        height: 10px;
-        background: #fe5500;
-        border-radius: 20px;
-           }
-           .page-wrapper .paymentInnerContainer .spanTwo { 
-                position: absolute;
-        top: 45%;
-        left: -30px;
-        width: 60px;
-        height: 10px;
-        background: #fe5500;
-        border-radius: 20px;
-           }
-           .page-wrapper .paymentInnerContainer .spanThree { 
-                position: absolute;
-        bottom: 15%;
-        left: -30px;
-        width: 60px;
-        height: 10px;
-        background: #fe5500;
-        border-radius: 20px;
-           }
-           .page-wrapper .paymentInnerContainer .spanFour { 
-                 position: absolute;
-        top: 15%;
-        right: -30px;
-        width: 60px;
-        height: 10px;
-        background: #fe5500;
-        border-radius: 20px;
-        z-index: 1;
-           }
-    
-           .page-wrapper .paymentInnerContainer .spanFive {  
-       position: absolute;
-        top: 45%;
-        right: -30px;
-        width: 60px;
-        height: 10px;
-        background: #fe5500;
-        border-radius: 20px;
-        z-index: 1;
-           }
-           .page-wrapper .paymentInnerContainer .spanSix {  
-        position: absolute;
-        bottom: 15%;
-        right: -30px;
-        width: 60px;
-        height: 10px;
-        background: #fe5500;
-        border-radius: 20px;
-        z-index: 1;
-           }
-           .page-wrapper .paymentInnerContainer.two {
-            background-color: #fff;
-           }
-           .page-wrapper .paymentInnerContainer.two img {
-            filter: unset;
-           }
-           .page-wrapper .paymentInnerContainer.two h5 {
-                color: #fe5500;
-           }
 
-           .page-wrapper .footerContent h2 {
-            font-size: 55px;
+    .page-wrapper h1 {
+      position: relative;
+    font-size: 100px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0;
+    line-height: 1;
+    text-align: center;
+    z-index: 5;
+    filter: drop-shadow(0px 20px 6px #00000059);
+    }
+
+    /* ── Pizza image + CTA container ── */
+    .pizza-container {
+    z-index: 4;
+    margin-top: -80px;
+}
+
+    .pizza-img {
+      width: 100%;
+      display: block;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.18));
+      margin-top: -30px;
+    }
+ 
+ 
+ 
+
+    /* ── ORDER NOW button ── */
+    .order-btn-wrap {
+      position: relative;
+      z-index: 10;
+      top: 50px;
+    }
+
+    .order-btn {
+      background: #fff;
+    color: #000;
+    font-size: 20px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    font-weight: 100;
-    text-shadow: 4px 5px #000000;
+    padding: 10px 28px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 75%);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    white-space: nowrap;
+    }
+
+    .order-btn:hover {
+      background: #F47B50;
+      color: #fff;
+      text-decoration: none;
+      transform: scale(1.05);
+    }
+    .page-wrapper .headerContent p {
+      color: #000;
     letter-spacing: 1px;
-    transform: rotate(-8deg);
-           }
-           .page-wrapper .footerContent h2 .spanOne{ 
-            position: relative;
-    display: block;
+    font-weight: 500;
+    margin-top: 50px;
+    }
+    .page-wrapper .headerContent {
+      margin-top: 100px;
+      text-align: center;
+    }
+    .page-wrapper .headerBtmContent {
+     background: #fff;
+    padding: 25px 75px;
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    right: 0;
     width: fit-content;
     margin: auto;
-           }
-            .page-wrapper .footerContent h2 .spanOne::after {
-    content: '';
-    position: absolute;
-    top: -20px;
-    right: -30px;
-    border-top: 8px solid #ffffff;
-    border-right: 8px solid #ffffff;
-    width: 70px;
-    height: 100%;
-    filter: drop-shadow(10px 10px 0px black);
-}
-           .page-wrapper .footerContent h2 .spanTwo::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: -30px;
-    border-bottom: 8px solid #ffffff;
-    border-left: 8px solid #ffffff;
-    width: 70px;
-    height: 100%;
-    filter: drop-shadow(10px 10px 0px black);
-}
-         .page-wrapper .footerContent h2 .spanTwo {
-    display: inline-block;
+    filter: drop-shadow(2px 4px 10px #00000080);
+    }
+    .page-wrapper .serviceSection {
+          margin: 150px 0 100px;
+    background: #833AB4;
+    background: linear-gradient(90deg, rgb(155 221 249) 0%, rgb(152 215 242) 50%, rgb(233 97 65) 50%);
+    padding: 100px 0;
+    }
+    .page-wrapper .burgerImgParent {
+          position: relative;
+    width: 90%;
+    }
+
+      .heading-row {
+      display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 24px;
     position: relative;
-}
-           .page-wrapper .footerPara {
-            background: #fff;
-    border-radius: 25px;
-    padding: 30px;
-    margin-top: 100px;
-        filter: drop-shadow(5px 10px 0px #000);
-           }
-           .page-wrapper .footerPara p{ 
-            color: #000;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    margin-bottom: 0;
-    text-align: center;
-           }
-           .page-wrapper .footerPara span{ 
-            width: 90%;
-    height: 5px;
-    background: #fe5500;
-    display: block;
-    margin: auto;
-    margin-bottom: 20px;
-           }
-           .page-wrapper .footerSection {
-            margin-bottom: 150px;
-           }
-           .page-wrapper .pinImgOne {
-                position: absolute;
-    top: -22px;
-    left: 25px;
-           }
-           .page-wrapper .pinImgTwo {
-                position: absolute;
-    top: -22px;
-    right: 25px;
-           }
-           .page-wrapper .footerLeft {
-                max-width: 500px;
+    } 
+    .heading-row.two { 
+      gap: 0;
+    }
+    .heading-row.two .heading-line{ 
+      top: 0;
+    }
+    .heading-line {
+         flex: 1;
+    height: 6px;
+    background: white;
+    transform: scaleX(3.5);
+    transform-origin: left;
+    top: 3px;
     position: relative;
-    transform: scale(1.8);
-    padding: 50px;
-    transform-origin: top;
-    padding-left: 0;
-           }
-           .page-wrapper .footerVector {
-                position: absolute;
-    bottom: 0;
     z-index: -1;
+    }
+    .page-wrapper .right-panel {
+      padding-left: 50px;
+    }
+  .page-wrapper .burgerVectorImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: scale(1.1);
+    filter: invert(1);
+}
+.page-wrapper .serviceSection:after {
+ content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: #833AB4;
+    background: linear-gradient(90deg, rgb(152 216 243) 0%, rgb(152 216 243) 90%, rgb(255 255 255) 90%, rgb(255 255 255) 100%);
+}
+.page-wrapper .burgerImg {
+  position: relative;
+  z-index: 1;
+}
+.page-wrapper .paymentSection {
+    background: #fdcb2e;
+    margin: 150px 0 30px;
+    padding: 0 0 75px;
+}
+.page-wrapper .paymentContainer {
+      background: #fff;
+    text-align: center;
+    filter: drop-shadow(5px 10px 5px #00000045);
+    max-width: 350px;
+    margin: auto;
+    padding: 30px;
+    margin-top: -75px;
+}
+.page-wrapper .paymentImg {
+      width: 95px;
+    height: 95px;
+    object-fit: contain;
+}
+.page-wrapper .paymentContainer h2 {
+      color: #e96141;
+    font-size: 35px;
+    font-weight: 100;
+    margin: 25px 0;
+}
+.page-wrapper .paymentContainer p { 
+    color: #000;
+    font-size: 20px;
+}
+.page-wrapper .leftChickenImg {
+      position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 15%;
     transform: scale(1.2);
-    transform-origin: right;
-           }
-    
-    /* GRID */
-        /* RESPONSIVE VIEW */
-    
-        @media(min-width:1200px){
+    transform-origin: right top;
+}
+.page-wrapper .rightChickenImg {
+      position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 15%;
+    transform: scale(1.2);
+    transform-origin: left top;
+}
+.page-wrapper .priceSection h2 {
+      color: #d9d9d9;
+    text-align: center;
+}
+.page-wrapper .priceSection h2 .line{ 
+  width: 60%;
+    height: 5px;
+    background: #a5a5a5;
+    display: block;
+    left: 0;
+    position: relative;
+    right: 0;
+    margin: 25px auto;
+}
+.page-wrapper .priceSection span { 
+      display: block;
+    color: #000;
+    font-family: "Urbanist", sans-serif;
+    font-size: 40px;
+}
+.page-wrapper .ourPriceRow  {
+      margin: 100px 0 !important;
+    padding: 75px 0 75px 50px;
+    border: 5px solid #dd462f;
+}
+.page-wrapper .ourPriceRow h3 { 
+  font-size: 50px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Boldonse", system-ui;
+    padding-bottom: 30px;
+}
+.page-wrapper .ourPriceRow p { 
+      color: #000;
+    margin-bottom: 0 !important;
+}
+.page-wrapper .wrapsImg {
+      transform: scale(1.8);
+}
+.page-wrapper .ourPriceRow::before {
+     content: '';
+    position: absolute;
+    top: -1%;
+    left: -101%;
+    width: 100%;
+    height: 102%;
+    border: 5px solid #dd462f;
+}
+.page-wrapper .ourPriceRow::after {
+  content: '';
+    position: absolute;
+    top: -1%;
+    right: -101%;
+    width: 100%;
+    height: 102%;
+    border: 5px solid #dd462f;
+    z-index: -1;
+}
+    /* ════════════════════════════════
+       RESPONSIVE BREAKPOINTS
+    ════════════════════════════════ */
+
+     @media(min-width:1200px){
             .page-wrapper .container{
                 max-width: 1140px;
             }
         }
-    
-        @media(min-width:1500px){
+
+
+     @media(min-width:1500px){
             .page-wrapper .container{
                 max-width: 1440px;
             }
         }
-    
-    
-    
-        /* =============================================
-       RESPONSIVE ADDITIONS
-    ============================================= */
 
-    @media (max-width:1499px) {
-        /* no changes needed above 1199 */
-        .page-wrapper h1 {
-            font-size: 140px;
-        }
-        .page-wrapper h2 {
-            font-size: 65px;
-        }
+
+    
+    
        
-        .page-wrapper .burgerImg {
-            max-width: 550px;
-        }
-        .page-wrapper .rolling-text.two {
-            bottom: 295px;
-        }
-        .page-wrapper .news-message {
-            height: 35px;
-        }
-        .page-wrapper .news-message p {
-                font-size: 18px;
-    letter-spacing: 1px;
-        }
-        .page-wrapper .rolling-text.one {
-                bottom: 28px;
-        }
-        .page-wrapper .aboutContent {
-            width: 95%;
-        }
-        .page-wrapper .tasteSection h2 .spanOne {
-                padding: 20px;
-        }
-        .page-wrapper .tasteSection h2 .spanOne::after {
-                bottom: -125px;
-        }
-        .page-wrapper .tasteSection h2 .spanTwo {
-                font-size: 40px;
-                padding: 20px;
-        }
-        .page-wrapper .tasteSection h2 .spanTwo::before {
-                bottom: -92px;
-        }
-        .page-wrapper .tasteSection h2 {
-    transform: scale(1.35);
-}
-.page-wrapper .pizzaImg {
-        width: 650px;
-    transform: scale(1.4);
-        transform-origin: left bottom;
-}
-.page-wrapper .hygieneContent {
-        top: -35%;
-    left: 25px;
-        max-width: 95%;
-        border-radius: 100px;
-}
-.page-wrapper .hygieneImg {
-        top: -30px;
-    left: -30px;
-}
-.page-wrapper .hygieneContent.two {
-    left: 0;
-    background: #fff;
-    top: -10%;
-    transform-origin: right;
-} 
-.page-wrapper h3 {
-    font-size: 45px;
-}
-.page-wrapper .hygieneContent p{
-    font-size: 16px;
-}
-.page-wrapper .nuggetsSection {
-    margin-top: -50px;
-}
-.page-wrapper .paymentContainer {
-        padding: 25px 20px;
-}
-.page-wrapper .paymentInnerContainer {
-        padding: 20px 20px;
-}
-.page-wrapper .paymentImgContainer img {
-        width: 50px;
-    height: 50px;
-}
-.page-wrapper h5 {
-    font-size: 28px;
-    font-weight: 800;
-}
-.page-wrapper .paymentTxt {
-        font-size: 18px;
-        line-height: 1.5;
-}
-.page-wrapper .paymentInnerContainer .spanOne, .page-wrapper .paymentInnerContainer .spanTwo, .page-wrapper .paymentInnerContainer .spanThree {
-        left: -25px;
-    width: 50px;
-    height: 5px;
-}
-.page-wrapper .paymentInnerContainer .spanFour, .page-wrapper .paymentInnerContainer .spanFive, .page-wrapper .paymentInnerContainer .spanSix {
-    right: -25px;
-    width: 50px;
-    height: 5px;
-}
-.page-wrapper .paymentPara {
-    padding: 25px 35px 30px; 
-}
-.page-wrapper .footerLeft {
-        transform-origin: top right;
-    left: 40px;
-        max-width: 650px; 
-    transform: scale(1.4);
-}
-.page-wrapper .footerSection {
-    margin-bottom: 75px;
-}
-.page-wrapper .circleImgOne {
-    transform: rotate(-30deg);
-    top: -30px;
-    right: -8%;
-}
-.page-wrapper .paymentPara::after {
-        background: radial-gradient(circle at 13px -3px, #ff5500 10px, #ffffff 11px) repeat-x;
-    background-size: 25px 25px;
-}
 
+    @media (max-width: 1499px) {
+      h1   { font-size: 96px; }
+      .ghost-heading  { font-size: 128px; } 
+      .banner-inner { padding: 28px 50px 0 50px; }
     }
 
-    @media (max-width:1199px) {
-        .page-wrapper h1 {
-            font-size: 110px;
-        }
-        .page-wrapper h2 {
-            font-size: 52px;
-        }
-            .page-wrapper .tasteSection h2 .spanTwo {
-        font-size: 35px;
-        padding: 15px;
-    }
-        .page-wrapper .tasteSection h2 .spanOne {
-        padding: 15px;
-    }
-        .page-wrapper .tasteSection h2 .spanOne::after {
-        bottom: -97px;
-    }
-        .page-wrapper .tasteSection h2 .spanTwo::before {
-        bottom: -75px;
-    }
-        .page-wrapper .burgerImg {
-            max-width: 500px;
-            transform: scale(1.2);
-        }
-            .page-wrapper .rolling-text.two {
-        bottom: 260px;
-    } 
-    .page-wrapper .rolling-text.one {
-        bottom: 15px;
-    }
-    .page-wrapper .div3 p {
-        font-size: 45px;
-    }
-    .page-wrapper .div3 {
-        max-width: 220px;
-    }
-        .page-wrapper .paymentPara::after {
-        background: radial-gradient(circle at 18px 0px, #ff5500 7px, #ffffff 8px) repeat-x;
-        background-size: 25px 25px;
-    }
-        .page-wrapper .news-message p {
-        font-size: 16px; 
-    }
-        .page-wrapper .aboutContent {
-        width: 100%;
-    }
-    .page-wrapper p {
-        font-size: 16px;
-    }
-        .page-wrapper .pizzaImg {
-            width: 600px;
-        }
-        .page-wrapper .hygieneContent {
-            max-width: 500px;
-            padding: 40px;
-            border-radius: 150px;
-        }
-        .page-wrapper .nuggetsSection {
-                   max-width: 500px;
-        transform: scale(0.9);
-        margin-top: -50px;
-        }
-      .page-wrapper   .parent {
-                    grid-template-columns: repeat(3, 250px);
-        grid-template-rows: repeat(7, 85px);
-        }
-        .page-wrapper .paymentParent {
-            min-height: auto;
-        }
-             .page-wrapper h3 {
-        font-size: 40px;
-    }
-        .page-wrapper .hygieneContent p {
-        font-size: 16px;
-        line-height: 1.3;
-    }
-    .page-wrapper .hygieneImg {
-            padding: 10px;
-                width: 80px;
-    height: 80px;
-    }
-    .page-wrapper .pizzaImg {
-    top: -10%;
-}
-.page-wrapper .hygieneContent {
-    border-radius: 100px;
-            max-width: 400px;
-        padding: 25px;
-        left: 0;
-} 
-.page-wrapper .hygieneContent.two {
-            left: -40px; 
-}
-    .page-wrapper .hygieneImg {
-        top: -20px;
-        left: -20px;
-    }
-    .page-wrapper .hygieneContent.two .hygieneImg {
-        right: -20px;
-    }
-    .page-wrapper .tasteSection {
-    padding: 35px 0;
-}
-.page-wrapper .orderTxt {
-        display: flex;
-    align-items: center;
-}
-    .page-wrapper .paymentContainer {
-        padding: 15px 10px;
-        border-width: 5px;
-    }
-        .page-wrapper .paymentInnerContainer {
-        padding: 15px;
-        border-radius: 10px;
-    }
-        .page-wrapper .paymentImgContainer img {
-        width: 45px;
-        height: 45px;
-    }
-    .page-wrapper h5 {
-        font-size: 18px;
-    }
-        .page-wrapper .paymentTxt {
-        font-size: 14px;
-        line-height: 1.5;
-        letter-spacing: 0;
-    }
-        .page-wrapper .paymentInnerContainer .spanOne, .page-wrapper .paymentInnerContainer .spanTwo, .page-wrapper .paymentInnerContainer .spanThree {
-        left: -20px;
-        width: 40px;
-        height: 15px;
-    }
-        .page-wrapper .paymentInnerContainer .spanFour, .page-wrapper .paymentInnerContainer .spanFive, .page-wrapper .paymentInnerContainer .spanSix {
-        right: -20px;
-        width: 40px;
-        height: 15px;
-    }
-    .page-wrapper .paymentPara p {
-        font-size: 15px;
-    }
-    .page-wrapper .paymentPara {
-        padding: 35px 15px 35px;
-    }
-    .page-wrapper .footerContent h2 {
-        font-size: 40px;
-    }
-    .page-wrapper .footerPara { 
-    border-radius: 15px;
-    padding: 15px;
-    margin-top: 70px;
-}
-.page-wrapper .footerContent h2 .spanOne::after {
-        border-width: 6px;
-        filter: drop-shadow(8px 8px 0px black);
-}
-.page-wrapper .footerContent h2 .spanTwo::after {
-    border-width: 6px;
-    filter: drop-shadow(8px 8px 0px black);
-}
-.page-wrapper .galleryContainer p {
-        font-size: 17px;
-    padding: 6px;
-}
+    @media (max-width: 1199px) {
+      h1   { font-size: 82px; letter-spacing: -1px; }
+      .ghost-heading  { font-size: 108px; } 
+      .subtitle-text  { font-size: 16px; }
+      .banner-inner   { padding: 26px 40px 0 40px; } 
     }
 
-    @media (max-width:991px) {
-        .page-wrapper h1 {
-            font-size: 80px;
-        }
-        .page-wrapper .strokeText {
-            -webkit-text-stroke: 2px #ffffff;
-        }
-        .page-wrapper h2 {
-            font-size: 55px;
-        }
-        .page-wrapper h3 {
-            font-size: 36px;
-        }
-        .page-wrapper p {
-                    font-size: 16px;
-        line-height: 1.5;
-        }
-        .page-wrapper .orderBtn {
-                padding: 8px 16px; 
-    font-size: 15px;
-        }
-
-        /* Header */
-        .page-wrapper .burgerImg {
-            max-width: 450px;
-            transform: scale(1.1);
-        } 
-        .page-wrapper .rolling-text.two {
-            bottom: 233px;
-        }
-            .page-wrapper .news-message p {
-        font-size: 15px;
-        letter-spacing: 0;
-    }
-        .page-wrapper .news-message {
-        height: 30px;
+    @media (max-width: 991px) {
+      h1   { font-size: 66px; letter-spacing: -1px; }
+      .ghost-heading  { font-size: 88px; } 
+      .subtitle-text  { font-size: 15px; }
+      .subtitle-line  { width: 44px; }
+      .banner-inner   { padding: 22px 30px 0 30px; }  
     }
 
-        /* About */
-        .page-wrapper .aboutContent {
-                   padding: 40px 50px 50px;
-        border-radius: 150px;
-        }
-    .page-wrapper .circleImgOne {
-        transform: rotate(-35deg);
-        top: 40px;
-        right: -8%;
-    }
-        .page-wrapper .div3 p {
-        font-size: 35px;
-    }
-        .page-wrapper .div3 {
-        max-width: 180px;
-    }
-        .page-wrapper .paymentPara::after {
-        background: radial-gradient(circle at 12px 0px, #ff5500 7px, #ffffff 8px) repeat-x;
-        background-size: 20px 20px;
-        width: 99%;
-    }
-        /* Taste Section */
-        .page-wrapper .tasteSection h2 {
-            transform: scale(1);
-        }
-           .page-wrapper .tasteSection h2 .spanTwo {
-        font-size: 35px;
-        left: 15%;
-    }
-        .page-wrapper .pizzaImg {
-            width: 100%;
-            top: 0;
-            margin-left: 0;
-        }
-            .page-wrapper .tasteSection h2 .spanOne::after {
-        bottom: -101px;
-    }
-        .page-wrapper .tasteSection h2 .spanTwo::before {
-        bottom: -75px;
-    }
-        .page-wrapper .hygieneContent {
-                  max-width: 100%;
-        padding: 25px 25px;
-        border-radius: 50px;
-        top: 0;
-        left: 0;
-        transform: none;
-        margin-bottom: 30px;
-        margin-left: 0;
-        }
-        .page-wrapper .hygieneContent.two {
-            top: 0;
-            left: 0;
-        }
-            .page-wrapper .hygieneImg {
-             top: -15px;
-        left: -15px;
-        width: 60px;
-        height: 60px;
-        border-width: 3px;
-    }
-        .page-wrapper .hygieneContent.two .hygieneImg {
-        right: -25px;
-        border-width: 3px;
-    }
-    .page-wrapper .tasteSection {
-        margin-top: -80px;
-    }
-    .page-wrapper .orderTxt {
-                align-items: flex-end;
+    @media (max-width: 767px) {
+      h1   { font-size: 52px; letter-spacing: -1px; }
+      .ghost-heading  { font-size: 68px; } 
+      .subtitle-text  { font-size: 13px; }
+      .subtitle-line  { width: 36px; }
+      .banner-inner   { padding: 18px 20px 0 20px; }  
+      .order-btn  { font-size: 11px; padding: 8px 20px; } 
     }
 
-        /* Nuggets */ 
-         
-        
-        .page-wrapper .nuggetsImg { 
-    max-width: 450px;
-}
-.page-wrapper .nuggetsSection {
-    margin-top: 0;
-}
-
-        /* Gallery */
-        .page-wrapper .gallerySection {
-            margin-top: 40px;
-        }
-           .page-wrapper  .parent {
-        grid-template-columns: repeat(3, 215px);
-        grid-template-rows: repeat(7, 70px);
-        margin-top: -200px;
-    }
-        
-
-        /* Payment */
-        .page-wrapper .paymentSection {
-            padding: 60px 0;
-        }
-        .page-wrapper .paymentParent {
-            padding: 40px 20px 40px 40px;
-            border-radius: 30px;
-            min-height: auto;
-        }
-        .page-wrapper .paymentContainer {
-            padding: 25px 20px;
-        }
-        .page-wrapper .paymentInnerContainer {
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 15px;
-        }
-        .page-wrapper .paymentInnerContainer .spanOne,
-        .page-wrapper .paymentInnerContainer .spanTwo,
-        .page-wrapper .paymentInnerContainer .spanThree,
-        .page-wrapper .paymentInnerContainer .spanFour,
-        .page-wrapper .paymentInnerContainer .spanFive,
-        .page-wrapper .paymentInnerContainer .spanSix {
-            display: none;
-        } 
-
-        /* Footer */
-        .page-wrapper .footerSection {
-            margin-bottom: 60px;
-        }
-        .page-wrapper .footerContent h2 {
-            font-size: 34px;
-            transform: rotate(-5deg);
-        }
-        .page-wrapper .footerPara {
-            margin-top: 45px;
-        }
-        .page-wrapper .vanImg {
-               position: absolute;
-    top: -200px;
-    left: -20px;
-    right: 0;
-    margin: auto;
-    display: flex;
-    max-width: 250px; 
-        }
-        .page-wrapper .footerPara p {
-                font-size: 14px;
-    letter-spacing: 1px;
-        }
-        .page-wrapper .paymentPara {
-           width: 50%;
-        margin-top: 0;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        }
-        .page-wrapper .pinImgOne {
-        position: absolute;
-        top: 40px;
-        left: -9px;
-        transform: rotate(90deg);
-        width: 10px;
-        height: 22px;
-        object-fit: contain;
-        object-position: center;
-    }
-    .page-wrapper .pinImgTwo {
-        position: absolute;
-        top: unset;
-        right: unset;
-        bottom: 50px;
-        left: -9px;
-        transform: rotate(90deg);
-        width: 10px;
-        height: 22px;
-        object-fit: contain;
-        object-position: center;
-    }
-        .page-wrapper .paymentContainer {
-            width: 100%;
-        }
-        .page-wrapper .paymentSection .respCol {
-                display: flex;
-    width: 100%;
-    gap: 10px;
-        }
-       
-    .page-wrapper .footerLeft {
-                width: 380px;
-    }
-    .page-wrapper .footerVector {
-            transform: scale(1.2);
-    }
-    .page-wrapper .footerContent h2 .spanOne::after {
-        border-width: 4px;
-        filter: drop-shadow(6px 6px 0px black);
-        top: -10px;
-        right: -20px;
-    }
-    .page-wrapper .footerContent h2 .spanTwo::after {
-        border-width: 4px;
-        filter: drop-shadow(6px 6px 0px black);
-        bottom: -10px;
-        left: -20px;
-    }
-    .page-wrapper .galleryContainer p {
-        font-size: 14px;
-    }
-    }
-
-    @media (max-width:767px) {
-             .page-wrapper .vanImg { 
-        top: -230px;
-        left: 0;
-        right: 0;
-        margin: unset; 
-        margin-left: auto;
-    }
-        .page-wrapper h1 {
-            font-size: 62px;
-            -webkit-text-stroke: 2px #ffffff;
-        }
-        .page-wrapper .strokeText {
-            display: none;
-        }
-        .page-wrapper h2 {
-            font-size: 35px;
-        }
-        .page-wrapper h3 {
-            font-size: 28px;
-        }
-        .page-wrapper h5 {
-            font-size: 18px;
-        }
-        .page-wrapper p {
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-
-        /* Header */
-        .page-wrapper .headerSection {
-            padding: 30px 0;
-        }
-        .page-wrapper .burgerImg {
-                    max-width: 80%;
-        transform: scale(1.05);
-        transform-origin: top;
-        margin-top: 30px;
-        }
-        .page-wrapper .rolling-text.one {
-            bottom: -30px;
-        }
-        .page-wrapper .rolling-text.two {
-                    bottom: 217px;
-        }
-        .page-wrapper .news-message p {
-            font-size: 16px;
-        }
-        .page-wrapper .news-message {
-        height: 25px;
-    }
-        .page-wrapper .paymentPara::after {
-        background: radial-gradient(circle at 10px -3px, #ff5500 9px, #ffffff 10px) repeat-x;
-        background-size: 25px 25px; 
-    }
-    .page-wrapper .div3 {
-        max-width: 120px;
-    }
-        /* About */
-        .page-wrapper .aboutSection {
-            padding: 40px 0;
-        }
-        .page-wrapper .aboutContent { 
-                    padding: 25px 25px 40px;
-        border-radius: 25px;
-        }
-
-        /* Taste */
-        .page-wrapper .tasteSection {
-            padding: 60px 0 0;
-        }
-        .page-wrapper .tasteSection h2 {
-            transform: none;
-            text-align: center;
-            padding: 0 15px;
-        }
-        .page-wrapper .tasteSection h2 .spanTwo {
-        font-size: 23px;
-        padding: 15px;
-        left: 60px;
-        top: -15px;
-    }
-        .page-wrapper .tasteSection h2 .spanOne {
-            padding: 15px;
-        }
-        .page-wrapper .tasteSection h2 .spanOne::after {
-        bottom: -30px;
-        height: 30px;
-    }
-    .page-wrapper .tasteSection h2 .spanTwo::before {
-        bottom: -30px;
-        height: 30px;
-    }
-        .page-wrapper .pizzaImg {
-                    width: 250px;
-        margin-top: 20px;
-        transform: scale(1.5);
-        }
-           .page-wrapper .hygieneContent {
-        padding: 25px 20px;
-        border-radius: 15px;
-    }
-            .page-wrapper .hygieneImg {
-        left: -20px;
-        border-width: 2px;
-                width: 50px;
-        height: 50px;
-        padding: 7px;
-    }
-    .page-wrapper .hygieneContent.two .hygieneImg {
-                right: -15px;
-        border-width: 2px;
-    }
-        .page-wrapper .hygieneContent p {
-        font-size: 15px;
-        line-height: 1.3;
-    }
-        /* Nuggets */
-        .page-wrapper .nuggetsTxt {
-            font-size: 32px;
-            letter-spacing: 2px;
-        }
-        .page-wrapper .nuggetsSection {
-            transform: scale(0.6);
-        }
-
-        /* Gallery */
-       .page-wrapper  .parent {
-            grid-template-columns: repeat(3, 165px);
-            gap: 10px;
-        } 
-
-        /* Payment */
-        .page-wrapper .paymentSection {
-            padding: 50px 0;
-        }
-     .page-wrapper    .div3 p { 
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-        }
-        .page-wrapper .paymentContainer {
-            border-width: 6px;
-            padding: 20px 15px;
-        }
-        .page-wrapper .paymentInnerContainer {
-            padding: 15px;
-            margin-bottom: 10px;
-        }
-        .page-wrapper .paymentImgContainer img {
-            width: 50px;
-            height: 50px;
-        }
-        .page-wrapper .paymentPara {
-            padding: 15px 20px 25px; 
-        }
-        .page-wrapper .paymentPara p {
-            font-size: 14px;
-        }
-
-        /* Footer */
-        .page-wrapper .footerContent h2 {
-            font-size: 30px;
-            transform: rotate(0deg);
-            text-align: center;
-        }
-        .page-wrapper .footerPara { 
-            padding: 20px;
-        }
-        .page-wrapper .footerPara p {
-            font-size: 14px;
-        }
-        .page-wrapper .footerSection {
-            margin-bottom: 40px;
-        }
-            .page-wrapper .paymentContainer {
-        width: 50%;
-    }
-    .page-wrapper .paymentSection .respCol {
-        align-items: flex-start;
-    }
-   .page-wrapper  .footerSection .row {
-        flex-direction: column-reverse;
-    }
-        .page-wrapper .footerLeft {
-        width: 100%;
-        transform-origin: center;
-        margin: auto;
-        transform: unset;
-        left: 0;
-        padding: 50px;
-        max-width: unset;
-        margin-top: 40px;
-    }
-    .page-wrapper .footerVector {
-        left: 0;
-                transform: scale(0.9);
-    }
-        .page-wrapper .footerContent h2 .spanOne::after {
-        border-width: 3px;
-        filter: drop-shadow(5px 5px 0px black);
-        top: -8px;
-        right: -18px;
-        width: 50px;
-    }
-        .page-wrapper .footerContent h2 .spanTwo::after {
-        border-width: 3px;
-        filter: drop-shadow(5px 5px 0px black);
-        bottom: -8px;
-        left: -18px;
-        width: 50px;
-    }
-        .page-wrapper .galleryContainer p {
-        font-size: 11px;
-    }
-    }
-
-    @media (max-width:575px) {
-        .page-wrapper .galleryContainer p {
-        font-size: 16px;
-        font-weight: 100;
-        padding: 8px;
-    }
-        .page-wrapper .burgerImg {
-        max-width: 350px;
-        width: 95%;
-        transform: unset;
-        margin-top: 20px;
-    }
-    .page-wrapper .headerSection {
-        padding: 50px 0;
-    }
-        .page-wrapper h1 {
-            font-size: 36px;
-            -webkit-text-stroke: unset;
-        }
-        .page-wrapper .strokeText {
-            font-size: 46px;
-            display: none;
-        }
-        .page-wrapper h2 {
-            font-size: 34px;
-        }
-        .page-wrapper h3 {
-            font-size: 24px;
-        }
-
-        /* Header */
-              .page-wrapper .rolling-text.one {
-        bottom: 0;
-        transform: rotate(0deg) scale(1.1);
-        position: relative;
-        margin-top: 50px;
-    }
-         .page-wrapper .rolling-text.two {
-        bottom: 382px;
-        transform: rotate(-10deg) scale(1.1);
-        display: none;
-    }
-        .page-wrapper .news-message p {
-            font-size: 14px;
-        }
-
-        /* About */
-       .page-wrapper .aboutContent {
-        border-radius: 20px;
-        padding: 20px 15px 40px;
-    }
-            .page-wrapper .aboutSection {
-        padding: 0px 0 80px;
-    }
-
-        /* Taste */
-        .page-wrapper .tasteSection h2 .spanTwo {
-            font-size: 20px;
-            padding: 10px 15px;
-
-        }
-        .page-wrapper .tasteSection h2 .spanOne {
-            padding: 10px 15px;
-            transform: rotate(0);
-                display: block;
-    width: fit-content;
-    margin: auto;
-        }
-        .page-wrapper .pizzaImg {
-                width: 430px;
-        transform: scale(1.4);
-        transform-origin: top left;
-        top: -45px;
-        margin-bottom: 100px;
-        /* margin-bottom: 30%; */
-    }
-        .page-wrapper .hygieneContent {
-            border-radius: 25px;
-        padding: 20px 20px;
-            filter: drop-shadow(0px 5px 0px #993400);
-        }
-            .page-wrapper .tasteSection .tasteSection {
-        padding: 0px 0;
-        margin-top: 0;
-        position: absolute;
-    top: 0;
-    transform: rotate(-10deg) translate(-5px, 45px);
-    }
-    .page-wrapper .hygieneContent.two .hygieneImg {
-        right: -10px;
-    }
-        .page-wrapper .nuggetsImg {
-        max-width: 450px;
-        left: -125px;
-    }
-        .page-wrapper .nuggetsSection {
-               transform: scale(0.4);
-        max-width: 100px;
-        transform-origin: center left;
-        left: 10%;
-        position: relative;
-    }
-    .page-wrapper .tasteSection h2 {
-        text-align: center;
-    }
-    .page-wrapper .tasteSection h2 .spanTwo {
-                left: unset;
-        top: 15px;
-    }
-    .page-wrapper .hygieneImg {
-        left: -10px;
-    }
-    .page-wrapper .tasteSection h2 .spanOne::after {
-        bottom: -40px;
-        height: 40px;
-        opacity: 0.5;
-    }
-        .page-wrapper .tasteSection h2 .spanTwo::before {
-        bottom: -20px;
-        opacity: 0.5;
-        height: 20px;
-    }
-
-        /* Nuggets */
-        .page-wrapper .nuggetsTxt {
-            font-size: 40px;
-            transform: rotate(-5deg) skew(-8deg, 2deg);
-        }
-
-        /* Gallery — single column on very small screens */
-     .page-wrapper       .parent {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        margin-top: -140px;
-    }
-      .page-wrapper   .div1,.page-wrapper  .div2,.page-wrapper  .div3,.page-wrapper  .div4, .page-wrapper .div5, .page-wrapper .div6 {
-            grid-column: 1;
-            grid-row: auto;
-        }
-       .page-wrapper  .div3 {
-                grid-row: -2 / -1;
-                left: 0;
-                bottom: 35px;
-        }
-       .page-wrapper  .galleryContainer img {
-            border-radius: 15px;
-        }
-           .page-wrapper  .div3 p {
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 15px;
-        filter: drop-shadow(4px 8px 0px black);
-    }
-      .page-wrapper   .galleryContainer {         height: 100%;
-        max-width: 350px;
-        margin: auto; }
-        .page-wrapper .hygieneContent.two {
-            margin-bottom: 0;
-        }
-
-        /* Payment */
-        .page-wrapper .paymentContainer {
-            border-width: 4px;
-            padding: 15px 10px;
-                    width: 100%;
-        max-width: 350px;
-        margin: auto;
-        }
-        .page-wrapper .paymentPara p {
-            font-size: 13px;
-        }
-        .page-wrapper .paymentInnerContainer {
-            border-radius: 12px;
-        }
-
-        /* Footer */
-            .page-wrapper .footerContent h2 {
-        font-size: 25px;
-        text-shadow: 1px 3px #000000;
-    }
-
-        .page-wrapper .paymentSection .respCol {
-           flex-direction: column;
-        } 
-    .page-wrapper .paymentPara {
-        width: 100%;
-            max-width: 350px;
-    margin: auto;
-    }
-    .page-wrapper .vanImg {
-        position: relative;
-    top: 20px;
-    margin: auto;
-    }
-    .page-wrapper .pinImgOne {
-            transform: rotate(0);
-    top: -15px;
-    left: 15px;
-    }
-    .page-wrapper .pinImgTwo {
-            top: -15px;
-    transform: rotate(0deg);
-    right: 15px;
-    left: unset;
-    }
-    .page-wrapper .footerLeft {
-        padding: 5px;
-    }
-    .page-wrapper .circleImgTwo {
-        display: none;
-    }
-        .page-wrapper .paymentPara::after {
-        background: radial-gradient(circle at 10px 0px, #ff5500 7px, #ffffff 8px) repeat-x;
-        background-size: 18px;
-        width: 100%;
-    }
-           
-    }
-        
-    @media (max-width:375px) {
-       
+    @media (max-width: 575px) {
+      h1  { font-size: 38px; letter-spacing: -0.5px; } 
+      .ghost-heading  { font-size: 50px; } 
+      .subtitle-text  { font-size: 12px; } 
+      .subtitle-line  { width: 28px; } 
+      .banner-inner   { padding: 16px 12px 0 12px; }  
+      .order-btn  { font-size: 10px; padding: 7px 16px; letter-spacing: 1.5px; } 
     }
     
-    </style>
+</style>
 
 </head>
 
@@ -1782,308 +514,154 @@ transition: all 0.2s linear;
 
 <div id="page-top-margin"></div>
 
-
-<div class="page-wrapper">
-
-
-    <section class="headerSection pb-sm-5 pb-0">
-      <div class="container">
-       <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="headerContent">
-                    <div class="headingDiv">
-                        <h1>
-                            Fast Fresh 
-                            Affordable 
-                            <span class="strokeText">
-                                Fast Fresh 
-                                Affordable 
-                            </span>
-                        </h1>
-                    </div>
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773429599phpDN20UP.png" class="img-fluid burgerImg" alt="{TAKEAWAY TOWN} Burger">
-                </div>
-            </div> 
-       </div>
-      </div>
+<div class="page-wrapper">    
+    
+    <section class="headerSection">
+        <div class="container">
       
-      <div class="container-fluid rotatingParent px-0">
-        <div class="rolling-text one">
-            <div class="text-position">
-               <div class="news-message">
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-               </div>
-               <div class="news-message">
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-               </div>
-            </div>
-         </div>
-        <div class="rolling-text two">
-            <div class="text-position">
-               <div class="news-message">
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-               </div>
-               <div class="news-message">
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-                  <p>A blend of Spice, Aroma &amp; Tradition.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-    </section>
-    
-    <section class="aboutSection pt-0">
-        <div class="container">
-            <div class="py-4 py-md-5">
-                <div id="offer-section"> 
+        
+            <!-- Content -->
+            <div class="banner-inner">
+        
+              <!-- Subtitle -->
+              <div class="subtitle-row">
+                <span class="subtitle-line"></span>
+                <p class="subtitle-text mb-0">Crafted with Passion, Served with Love</p>
+                <span class="subtitle-line"></span>
+              </div>
+        
+              <!-- Heading block with ghost text -->
+              <div class="heading-block"> 
+                <h1>Order Now Save Big</h1>
+                <p class="ghost-heading">Order Now Save Big</p>
+                <div class="order-btn-wrap">
+                  <a href="#" class="order-btn">Order Now</a>
                 </div>
-            </div>
-            <div class="aboutContent">
-                <p class="mb-0">
-                    Experience the heart of Italian dining at TEMP-1069-Kabana - 879533  GB in . Our restaurant blends traditional recipes with a modern touch, creating a cosy atmosphere where good food meets great company. Whether you're enjoying a freshly made {dish 1} or a comforting {dish 2}, each bite is a celebration of Italy's rich culinary heritage.
+              </div>
+        
+              <!-- Pizza image -->
+              <div class="pizza-container">  
+                
+        
+                <!-- Pizza photo (inline SVG placeholder that mimics the pizza image) -->
+                <img loading="lazy" class="pizza-img" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774363467phpBqf6Kb.png" alt="Delicious Italian Pizza">
+              </div>
+              <div class="headerContent">
+                <h2>
+                  The Taste You Love, Ready to Go
+                </h2>
+                <p>
+                  Craving something delicious but don’t have time to cook? We’ve got you covered! TEMP-1069-Kabana - 879533  GB in  is your go-to spot for quick, fresh, and flavour-packed meals.
+                    Whether you're picking up on your way home or enjoying the convenience of delivery, we make sure every bite is as satisfying as dining in. With a variety of options to choose from, including Pizzas and Burgers, a great meal is just an order away.
                 </p>
-                <a href="/order-now" class="orderBtn">
-                    Order Now
-                </a>
+                <div class="headerBtmContent">
+                  <h3>
+                    No Delays, Just Great Food!
+                  </h3>
+              </div>
+              </div>
+
+              
             </div>
-        </div>
-    </section>
-    
-    <section class="tasteSection">
-        <div class="container-fluid px-0">
-            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909php6RwkPu.png" class="img-fluid circleImgOne" alt="">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 orderTxt">
-                    <div class="tasteSection">
-                        <h2>
-                            <span class="spanOne"> Order now </span> 
-                            <span class="spanTwo"> skip the wait </span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 px-0">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773238003phpWhxjdy.png" class="img-fluid pizzaImg" alt="{TAKEAWAY TOWN} Pizza">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="hygieneContent">
-                        <h3>
-                            Our Hygiene
-                        </h3>
-                        <p class="mb-0">
-                            We take food hygiene seriously! From fresh ingredient sourcing to careful meal preparation, TEMP-1069-Kabana - 879533  GB follows top-rated hygiene standards. Order now from a takeaway you can trust!
-                        </p>
-                        <div class="hygieneImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773240094phpx3PZ4N.png" class="img-fluid" alt="{TAKEAWAY TOWN} Hygiene">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="hygieneContent two">
-                        <h3>
-                            Our Hygiene
-                        </h3>
-                        <p class="mb-0">
-                            We take food hygiene seriously! From fresh ingredient sourcing to careful meal preparation, TEMP-1069-Kabana - 879533  GB follows top-rated hygiene standards. Order now from a takeaway you can trust!
-                        </p>
-                        <div class="hygieneImg">
-                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773240094phpx3PZ4N.png" class="img-fluid" alt="{TAKEAWAY TOWN} Hygiene">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="nuggetsSection">
-            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773253682php2SVJ0Y.png" class="img-fluid nuggetsImg" alt="{TAKEAWAY TOWN} Nuggets">
-            <p class="nuggetsTxt">
-                <span> Nuggets </span>
-            </p>
-        </div>
-    </section>
-    
-    <section class="gallerySection">
-        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpLVmzCe.png" class="img-fluid circleImgTwo" alt="">
-        <div class="container">
-    
-    <div class="parent">
-        <div class="div1">
-            <div class="galleryContainer">
-                <a href="/order-now">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1729196283phpEDTUJf.png" class="img-fluid" alt="{TAKEAWAY TOWN} Burger">
-                    <p class="hoverContent">
-                        Burger 
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="div2">
-            <div class="galleryContainer">
-                <a href="/order-now">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1742836110phpViedhZ.png" class="img-fluid" alt="{TAKEAWAY TOWN} Garlic Bread">
-                     <p class="hoverContent">
-                        Garlic Bread  
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="div3">
-            <p>
-                our menu
-            </p>
-        </div>
-        <div class="div4">
-            <div class="galleryContainer">
-                <a href="/order-now">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1725094660phpbSi085.png" class="img-fluid" alt="{TAKEAWAY TOWN} Wings">
-                     <p class="hoverContent">
-                        Wings 
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="div5">
-            <div class="galleryContainer">
-                <a href="/order-now">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1773176794phpKMKL5y.jpg" class="img-fluid" alt="{TAKEAWAY TOWN} Drinks">
-                     <p class="hoverContent">
-                        Drinks 
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="div6">
-            <div class="galleryContainer">
-                <a href="/order-now">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1761729659php0w6N07.png" class="img-fluid" alt="{TAKEAWAY TOWN} Onion Rings">
-                     <p class="hoverContent">
-                        Onion Rings 
-                    </p>
-                </a>
-            </div>
-        </div>
-    </div>
+
+
         
         </div>
     </section>
-    
-    <section class="paymentSection">
-        <div class="container">
-             <div class="row align-items-center">
-                        <div class="col-lg-8 col-md-12 respCol">
-                            <div class="paymentContainer">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
-                                        <div class="paymentInnerContainer">
-                                            <div class="paymentImgContainer">
-                                                <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpklyFd9.png" alt="{TAKEAWAY TOWN} Pick Icon" class="img-fluid">  
-                                            </div>
-                                                <h5>
-                                                    Order in Seconds
-                                                </h5>
-                                                <p class="paymentTxt mb-0">
-                                                    Choose your go-to meal from the menu
-                                                </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
-                                        <div class="paymentInnerContainer two">
-                                    <div class="paymentImgContainer">
-                                        <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpdi4oqp.png" alt="{TAKEAWAY TOWN} Payment Icon" class="img-fluid">  
-                                    </div>
-                                        <h5>
-                                            Secure Checkout 
-                                        </h5>
-                                        <p class="paymentTxt"> 
-                                            Paying is effortless, you can focus on food. 
-                                        </p>
-                                        <span class="spanOne"></span>
-                                        <span class="spanTwo"></span>
-                                        <span class="spanThree"></span>
-                                        <span class="spanFour"></span>
-                                        <span class="spanFive"></span>
-                                        <span class="spanSix"></span>
-                                </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
-                                        <div class="paymentInnerContainer mb-0">
-                                            <div class="paymentImgContainer">
-                                                <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpUT6t1j.png" alt="{TAKEAWAY TOWN} Enjoy Icon" class="img-fluid">  
-                                            </div>
-                                            <h5> Served Fresh </h5>
-                                            <p class="paymentTxt">
-                                                Freshly made and good to go when you are. 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="paymentPara">
-                                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773415103phpqali0h.png" class="img-fluid pinImgOne" alt="{TAKEAWAY TOWN} Pin">
-                                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773415103phpqali0h.png" class="img-fluid pinImgTwo" alt="{TAKEAWAY TOWN} Pin">
-                                <p>
-                                    At Domain545 - Loaded Burgers And Kebabs - 882534  GB June25, we take pride in serving delicious food with fast takeaway service in {TAKEAWAY TOWN}. No matter the occasion or dietary need, we've got something for you. Find your new favourite meal today!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div>
-                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773415103phpAV2zFU.png" class="img-fluid vanImg" alt="{TAKEAWAY TOWN} Truck">
-                            </div>
-                        </div>
-                    </div>
+
+    <section class="serviceSection">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="burgerImgParent">
+              <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863679php0fsvp5.png" class="img-fluid burgerImg" alt="">
+              <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863679phpuPlrMn.png" class="img-fluid burgerVectorImg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+             <div class="right-panel">
+      <div class="heading-row">
+        <h2>Our Service</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <p>
+        At  {TAKEAWAY NAME}, we take pride in serving delicious food
+        with fast takeaway service in {TAKEAWAY TOWN}. No matter the occasion or
+        dietary need, we've got something for you. Find your new favourite meal today!
+      </p>
+<div class="heading-row two">
+  <a href="#" class="order-btn">Order Now</a>
+        <div class="heading-line"></div>
+
+</div>
+
+    </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="footerSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="footerLeft">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpZEEgeA.png" class="img-fluid footerVector" alt="{TAKEAWAY TOWN} Vector">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773415634php04NWpy.png" class="img-fluid kebabImg" alt="{TAKEAWAY TOWN} Kebab">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="footerContent">
-                        <h2>
-                            <span class="spanOne"> Order now </span>   <span class="spanTwo"> and save big! </span>
-                        </h2>
-                        <div class="footerPara">
-                            <span></span>
-                            <p>
-                                Enjoy the best of Italian cuisine without leaving your home! (TAKEAWAY NAME) in {TAKEAWAYTOWN} offers a delicious selection of freshly made dishes, perfect for takeaway. Whether you'reafter a comforting {dish 1} or a classic {dish 2}, we ensure every bite is packed with flavour.Simply place your order and let us bring Italy to you.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <section class="paymentSection">
+      <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863679phpsjZVyV.png" class="img-fluid leftChickenImg" alt="">
+      <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863679phpeyhFvj.png" class="img-fluid rightChickenImg" alt="">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="paymentContainer">
+              <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863711phpCZ2YKB.png" class="img-fluid paymentImg" alt="">
+              <h2>Pick a Dish</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, incidunt?
+              </p>
             </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="paymentContainer">
+              <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863711phpCZ2YKB.png" class="img-fluid paymentImg" alt="">
+              <h2>Pick a Dish</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, incidunt?
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="paymentContainer">
+              <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863711phpCZ2YKB.png" class="img-fluid paymentImg" alt="">
+              <h2>Pick a Dish</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, incidunt?
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    
-    
-    
+
+    <section class="priceSection">
+      <div class="container">
+        <h2>
+          Home-Cooked Flavours
+          <span class="line"></span>
+          <span> Delivered with Love </span>
+        </h2>
+        <div class="ourPriceRow row">
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <h3>
+              Our Price
+            </h3>
+            <p>
+              Enjoy affordable takeaway in (TAKEAWAY TOWN} without compromising on quality! At {TAKEAWAY NAME), we serve up delicious, budget-friendly meals so you can enjoy great food at great prices
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="wrapsImg">
+              <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863679phpQ3WPmt.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
     </div>
 
@@ -2110,68 +688,12 @@ transition: all 0.2s linear;
  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
-
-<script>
-    const heroSrcs = [
-      'https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1772799909php6FwGXs.jpg',
-      'https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1772799910php47rExf.jpg',
-      'https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1772799910phpX10iTi.jpg',
-    ];
-  
-    const thumbs    = document.querySelectorAll('.thumb');
-    const heroImgEl = document.getElementById('heroImgEl'); 
-    const banner    = document.querySelector('.banner');
-    let activeIndex = 1;
-  
-    // function moveArrow(idx) {
-    //   const t  = Array.from(thumbs)[idx];
-    //   const br = banner.getBoundingClientRect();
-    //   const tr = t.getBoundingClientRect();
-    //   arrow.style.left = (tr.left + tr.width / 2 - br.left - 14) + 'px';
-    // }
-  
-    function activate(idx) {
-      thumbs[activeIndex].classList.remove('active');
-      activeIndex = idx;
-      thumbs[activeIndex].classList.add('active');
-      heroImgEl.style.opacity = '0';
-      setTimeout(() => {
-        heroImgEl.src = heroSrcs[idx];
-        heroImgEl.style.opacity = '1';
-      }, 300);
-    //   moveArrow(idx);
-    }
-    
-    thumbs.forEach((t, i) => t.addEventListener('click', () => activate(i)));
-    // window.addEventListener('load',   () => moveArrow(activeIndex));
-    // window.addEventListener('resize', () => moveArrow(activeIndex));
-  
-    
-  </script>
+ 
 
  
 
 
 
 </body>
-</html>
-
-
-<!-- 
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773055498phprLpmDP.jpg -- Temp 
-
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpZEEgeA.png - footer vector
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909php6RwkPu.png - circle shape 
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpdi4oqp.png - pay 
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpUT6t1j.png - receive
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpLVmzCe.png - circle shape
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430909phpklyFd9.png - pick
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773430908phpJS3LO3.png - hygiene
-    https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773415103phpGz0VkB.png - circle dots
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773415103phpqali0h.png - Pins
-
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773431566phpAa90qh.jpg - 03  
-
--->
+</html> 
 
