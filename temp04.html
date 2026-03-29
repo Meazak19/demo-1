@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dessert</title>
+ 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+<!-- Bs 4 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<!-- Owl-Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
+
+<!-- Animate Css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.1.1/animate.min.css"> 
+ 
+
+<style type="text/css">
+
+  /* 
+    
+    font-family: "Urbanist", sans-serif; 
+
+    
+    */  
+    
+    body .page-wrapper { 
+        font-family: "Urbanist", sans-serif;
+        color: #6c6a6a; 
+        line-height: 24px; 
+        overflow: hidden; 
+        scroll-behavior: smooth; 
+        --dark-green : #0b3428;
+        --light-green : #0d3b2e;
+        --yellow : #ffb900;
+        --white: #fff;
+        --black: #000; 
+        } 
+        
+       .page-wrapper p {
+            margin-bottom: 25px;
+    font-size: 20px;
+    font-family: "Urbanist", sans-serif;
+    color: var(--light-green);
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-weight: 500;
+       }
+    
+       .page-wrapper p > a {
+       color: inherit;
+       }
+       .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+       line-height: 1.3;
+       font-family: "Urbanist", sans-serif;
+       }
+       .page-wrapper .row {
+       margin: 0 -15px!important;
+       }
+       
+       .page-wrapper section {
+       position: relative;
+       z-index: 1;
+       background-size: cover;
+       background-position: center center;
+       background-repeat: no-repeat;
+       }   
+       
+    
+       .page-wrapper .overlay{
+          content: "";
+        background: rgb(0 0 0 / 58%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+       } 
+       .page-wrapper h1 {
+                    font-size: 100px;
+    color: var(--white);
+    transform: skew(-28deg, 8deg) scaleY(1.5);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    font-weight: 800;
+    filter: drop-shadow(30px 20px 5px #00000069);
+       }    
+       .page-wrapper h2 {
+            color: #000; 
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+        } 
+     
+    
+    
+  
+ 
+ .page-wrapper h1 .spanOne { 
+  font-size: 40px;
+ }
+ .page-wrapper h1 .spanTwo { 
+  font-size: 63px;
+ }
+ .page-wrapper h1 .spanThree {
+  text-align: right;
+  color: var(--yellow);
+ }
+
+    /* ── ORDER NOW button ── */
+    .orderBtn-wrap {
+      position: relative;
+      z-index: 10;
+      top: 50px;
+    }
+
+    .orderBtn {
+      background: var(--white);
+    color: var(--black);
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 28px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 75%);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    white-space: nowrap;
+    }
+
+    .orderBtn:hover {
+      background: #F47B50;
+      color: #fff;
+      text-decoration: none;
+      transform: scale(1.05);
+    } 
+
+    .page-wrapper .headerSection {
+          background: var(--dark-green  );
+    padding: 150px 0;
+    }
+  .page-wrapper .headerImg {
+        transform: scale(1.3);
+    transform-origin: left;
+  }
+  .page-wrapper .aboutHeading {
+    display: flex;
+    align-items: center;
+  }
+  .page-wrapper .aboutHeading h2::after{ 
+    content: '';
+    position: absolute;
+        bottom: 0;
+    left: 0;
+    width: 140%;
+    height: 2px;
+    background-color: var(--dark-green);
+  }
+  .page-wrapper .aboutSection {
+    padding: 100px 0;
+  }
+  .page-wrapper .aboutSection::after {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    background: var(--light-green);
+    width: 23%;
+    height: 45%;
+    z-index: -1;
+    opacity: 0.2;
+}
+.page-wrapper .aboutSection::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--yellow);
+    width: 35%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+  .page-wrapper .fa-quote-right {
+    font-size: 200px;
+    transform: rotateY(-180deg);
+    color: var(--dark-green);
+  }
+  .page-wrapper .aboutContent {
+    max-width: 80%;
+  }
+  .page-wrapper .abtImg  {
+    width: 100%;
+    height: 300px;
+    border-radius: 50px;
+    filter: drop-shadow(2px 4px 6px #0000007a);
+  }
+ .page-wrapper .aboutImgContainer.two {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.page-wrapper .aboutImgContainer.two .abtImg, .page-wrapper .aboutImgContainer.three .abtImg{ 
+width: 80%;
+    height: 250px;
+}
+.page-wrapper .aboutImgContainer.three {
+   margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: -35px;
+        height: 100%;
+        justify-content: flex-end;
+}
+.page-wrapper .bannerSection { 
+  background-size: cover; 
+    margin: 100px 25px; 
+    background-image: url(https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1755603726php5KU6Rt.png);
+}
+.page-wrapper .bannerSection::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000cc;
+    z-index: -1;
+}
+.page-wrapper .bannerSection h2 {
+  color: #fff;
+    font-size: 55px;
+    text-align: center;
+    font-weight: 200;
+}
+.page-wrapper .bannerSection h2 strong{ 
+  font-weight: 700;
+}
+.page-wrapper .bannerSection h2 span{ 
+      display: block;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 80px;
+    font-weight: 900;
+}
+.page-wrapper .bannerSection .leftSideImg img {
+      transform: scale(1.7);
+    width: 400px;
+    transform-origin: left;
+}
+
+
+   .page-wrapper .badge-wrapper {
+       width: 100%;
+    height: 100%;
+    border-radius: 50%;
+            }
+            
+    
+            .page-wrapper .badge-svg {
+                width: 100%;
+        height: 100%;
+        animation: rotateBadge 20s linear infinite;
+        padding: 5px; 
+        border-radius: 50%;
+            }
+    
+            .page-wrapper .inner-circle-static {
+                position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+            }
+            .page-wrapper .inner-circle-static img{ 
+              border-radius: 50%;
+            }
+            .page-wrapper .menuImgContainer {
+    background: #50534c;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+    
+            @keyframes rotateBadge {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            .page-wrapper .svgTxt {
+            font-size: 16px;
+        letter-spacing: 0.8px;
+        font-family: 'Roboto Condensed', sans-serif;
+            }
+            .page-wrapper .aboutSection h2, .page-wrapper .hygieneSection h2 {
+              opacity: 0.2;
+            }
+            .page-wrapper .hygieneSection {
+              padding: 50px 0;
+            }
+            .page-wrapper .hygieneContent {
+                  padding: 50px 25px 65px;
+    position: relative;
+    border-left: 2px solid #000;
+            }
+            .page-wrapper .hygieneContent::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, #000 30%, #ff000000 30%) 100% 1;
+    border-bottom: 2px solid;
+    z-index: -1;
+}
+.page-wrapper .hygieneRightContent {
+      width: 85%;
+    margin: auto;
+    position: relative;
+}
+    /* ════════════════════════════════
+       RESPONSIVE BREAKPOINTS
+    ════════════════════════════════ */
+
+     @media(min-width:1200px){
+            .page-wrapper .container{
+                max-width: 1140px;
+            }
+        }
+
+
+     @media(min-width:1500px){
+            .page-wrapper .container{
+                max-width: 1440px;
+            }
+        }
+
+    @media (max-width: 1499px) {
+    
+    }
+
+    @media (max-width: 1199px) {  
+          
+    }
+
+    @media (max-width: 991px) {   
+          
+    }
+        
+    @media (max-width: 767px) { 
+        
+    }
+
+    @media (max-width: 575px) {   
+          
+    }
+</style>
+
+</head>
+
+
+<body>
+
+    
+
+<div id="page-top-margin"></div>
+
+
+<div class="page-wrapper">    
+    
+  <section class="headerSection">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="headerImgContainer">
+              <img src="./img1.png" alt="" class="headerImg">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="headerContent">
+              <h1> 
+                  <span class="spanOne">SPICY, SAVOURY & SWEET</span>
+                  <span class="spanTwo">THE TRUE TASTE OF</span>
+                  <span class="spanThree">THAI!</span> 
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="aboutSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="aboutContainer">
+            <div class="aboutHeading">
+              <i class="fa-solid fa-quote-right"></i>
+              <h2>
+                About Us
+              </h2>
+              </div>
+              <div class="aboutContent">
+                <p>
+                  Enjoy {Dish Name 1} and {Dish Name 2} with Quick & Easy Takeaway Service Why wait when you can enjoy your favourite meals in just a few clicks? At {TAKEAWAY NAME}, located in the heart of (TAKEAWAY TOWN}, we take pride in serving freshly made, high-quality food, packed securely and ready to go when you are. Whether you're picking up from our store or opting for fast delivery straight to your doorstep, our takeaway service ensures you get the same restaurant-quality taste-hot, fresh, and bursting with flavour.
+                </p>
+                <a href="/order-now" class="orderBtn">Order Now</a>
+              </div>
+            
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="aboutImages">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="aboutImgContainer">
+                  <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png" class="abtImg img-fluid" alt="">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="aboutImgContainer two">
+                  <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png" class="abtImg two img-fluid" alt="">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="aboutImgContainer three">
+                  <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png" class="abtImg two img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bannerSection">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="leftSideImg">
+            <img src="./img2.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h2>
+            TAKEAWAY <strong> PERFECTION </strong> <span> ONE CLICK AWAY </span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hygieneSection">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-6 3col-sm-12">
+          <div class="hygieneContent">
+            <h2>
+              Our Hygiene 
+            </h2>
+            <p>
+              Looking for a safe and hygienic takeaway in (TAKEAWAY TOWN}? At (TAKEAWAY NAME}, we ensure the highest cleanliness levels at every stage. Enjoy fresh, safe, and delicious food with every order!
+            </p>
+                  <a href="/order-now" class="orderBtn">Order Now</a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 3col-sm-12">
+          <div class="hygieneRightContent">
+            <div class="badge-wrapper mb-md-4 mb-sm-2">
+                                  <svg class="badge-svg" viewBox="0 0 200 200">
+                                      <defs>
+                                          <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+                                      </defs>
+                                      <text fill="black" class="svgTxt">
+                                          <textPath href="#circlePath">
+                                              • SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
+                                          </textPath>
+                                      </text>
+                                  </svg>
+                                  <div class="inner-circle-static">
+                                          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863712phpEMUXmR.jpg" class="img-fluid spoonImg" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Waffle">
+                                  </div>
+                              </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+ 
+ 
+
+  <!-- slider section -->
+  <!-- <section class="slider-section">
+    <div class="heading-row">
+      <div class="heading-line-two"></div>
+
+      <h2>Our Menu</h2>
+      <div class="heading-line-three"></div>
+    </div>
+    <div class="container sliderContainer">
+      <div class="owl-carousel owl-theme">
+          
+          
+          
+          
+          
+        
+            <div class="item">
+              <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png') no-repeat center / cover;">
+                  
+                      <h4 class="dish-name">desserts</h4>
+                      <p class="order-btn">
+                        Order Now
+                      </p>
+                   
+              </div>
+          </div>
+   
+            <div class="item">
+              <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/ce693c91e9581e28fb869f8560b9b7aa/img/1702492189phpuF4btI.jpg') no-repeat center / cover;">
+                  <a href="/order-now">
+                      <h4 class="dish-name">wraps</h4>
+                  </a>
+              </div>
+          </div> 
+          
+          <div class="item">
+              <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1726398756phpcN5B3C.png') no-repeat center / cover;">
+                  <a href="/order-now">
+                      <h4 class="dish-name">Drinks</h4>
+                  </a>
+              </div>
+          </div>
+          <div class="item">
+              <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1703244026phpfskvcl.jpg') no-repeat center / cover;">
+                  <a href="/order-now">
+                      <h4 class="dish-name">garlic bread</h4>
+                  </a>
+              </div>
+          </div>
+          <div class="item">
+              <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/ce693c91e9581e28fb869f8560b9b7aa/img/1702467747php8fPafs.jpg') no-repeat center / cover;">
+                  <a href="/order-now">
+                      <h4 class="dish-name">chicken wings</h4>
+                  </a>
+              </div>
+          </div>
+          <div class="item">
+              <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png') no-repeat center / cover;">
+                  <a href="/order-now">
+                      <h4 class="dish-name">desserts</h4>
+                  </a>
+              </div>
+          </div> 
+          <div class="item">
+              <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/ce693c91e9581e28fb869f8560b9b7aa/img/1702492189phpuF4btI.jpg') no-repeat center / cover;">
+                  <a href="/order-now">
+                      <h4 class="dish-name">wraps</h4>
+                  </a>
+              </div>
+          </div>      
+          
+          
+          
+      </div>
+    </div>
+</section> -->
+  
+  </div>
+
+
+<script>
+   window.addEventListener("load", function(){
+   pageTopmargin();
+   $(window).scrollTop($(window).scrollTop()+1);
+   });
+   pageTopmargin();
+   function pageTopmargin() {
+   var headerHeight = $('#header').height();
+   $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
+   }
+   $("#banner_content").appendTo($("#offer-section"));
+   var pageSection = $('[data-background]');
+   pageSection.each(function(indx){
+   if ($(this).attr("data-background")){
+   $(this).css("background-image", "url(" + $(this).data("background") + ")");
+   }
+   });
+</script>
+
+ <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
+ <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
+  
+ <script>
+  $.getScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js", function () {
+
+  var $owl = $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 4,
+    nav: true,
+    dots: false,
+    autoplay: false,
+    autoplayTimeout: 4000,
+    smartSpeed: 2000,
+    responsive: {
+      0:   { items: 1 },
+      576: { items: 2 },
+      768: { items: 3 },
+      992: { items: 4 }
+    }
+  });
+
+  function setActiveCard() {
+    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
+    var $visibleItems = $('.owl-carousel .owl-item.active');
+    $visibleItems.eq(1).find('.slider-wrapper').addClass('active');
+  }
+
+  $owl.on('initialized.owl.carousel translated.owl.carousel', function () {
+    setActiveCard();
+  });
+
+  setActiveCard();
+
+  // On hover: remove active from 2nd card
+  // On mouse leave: restore active to 2nd card
+  $(document).on('mouseenter', '.owl-item .slider-wrapper', function () {
+    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
+  });
+
+  $(document).on('mouseleave', '.owl-item .slider-wrapper', function () {
+    setActiveCard();
+  });
+
+});
+</script>
+
+
+</body>
+</html> 
+
