@@ -326,25 +326,94 @@ width: 80%;
             .page-wrapper .hygieneContent {
                   padding: 50px 25px 65px;
     position: relative;
-    border-left: 2px solid #000;
+   border-left: 3px solid #0b3428;
             }
             .page-wrapper .hygieneContent::after {
-    content: '';
+        content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-top: 2px solid;
-    border-image: linear-gradient(to right, #000 30%, #ff000000 30%) 100% 1;
-    border-bottom: 2px solid;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #0b3428 30%, #ff000000 30%) 100% 1;
+    border-bottom: 3px solid;
     z-index: -1;
+    filter: drop-shadow(0px 4px 4px black);
 }
 .page-wrapper .hygieneRightContent {
       width: 85%;
     margin: auto;
     position: relative;
 }
+.page-wrapper .hygieneRightContent::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background-color: red;
+    z-index: -1;
+}
+
+
+    /* slider section */
+    .page-wrapper .slider-wrapper {
+               width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: center;
+    }
+  
+    .page-wrapper .slider-wrapper::before {
+          content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(11 52 40);
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s;
+    }
+    .page-wrapper .slider-wrapper {
+      width: 90%;
+      margin: auto;
+    }
+    .page-wrapper .slider-wrapper:hover::before, .page-wrapper .slider-wrapper.active::before {
+        opacity: 1;
+    }
+    .page-wrapper .dish-name {
+        text-align: center;
+        text-transform: capitalize; 
+        color: var(--temp-light-color);
+        transform: translateX(-50px);
+        opacity: 0;
+        transition: 0.5s;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .page-wrapper .slider-wrapper:hover .dish-name, .page-wrapper .slider-wrapper:hover .order-btn,
+    .page-wrapper .slider-wrapper.active .dish-name, .page-wrapper .slider-wrapper.active .order-btn {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+      .page-wrapper .slider-wrapper .order-btn { 
+          color: #000;
+    padding: 5px 20px;
+    font-size: 20px;
+     transform: translateX(-50px);
+        opacity: 0;
+        transition: 0.5s;
+    }
     /* ════════════════════════════════
        RESPONSIVE BREAKPOINTS
     ════════════════════════════════ */
@@ -483,7 +552,7 @@ width: 80%;
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-6 col-md-6 3col-sm-12">
           <div class="hygieneContent">
-            <h2>
+            <h2 class="text-center">
               Our Hygiene 
             </h2>
             <p>
@@ -519,14 +588,14 @@ width: 80%;
  
 
   <!-- slider section -->
-  <!-- <section class="slider-section">
+  <section class="slider-section">
     <div class="heading-row">
       <div class="heading-line-two"></div>
 
-      <h2>Our Menu</h2>
+      <h2 class="text-center">Our Menu</h2>
       <div class="heading-line-three"></div>
     </div>
-    <div class="container sliderContainer">
+    <div class="container-fluid px-0 sliderContainer">
       <div class="owl-carousel owl-theme">
           
           
@@ -593,7 +662,7 @@ width: 80%;
           
       </div>
     </div>
-</section> -->
+</section>
   
   </div>
 
@@ -626,24 +695,25 @@ width: 80%;
 
   var $owl = $('.owl-carousel').owlCarousel({
     loop: true,
-    margin: 4,
+    margin: 3,
     nav: true,
     dots: false,
     autoplay: false,
+    center: true,
     autoplayTimeout: 4000,
     smartSpeed: 2000,
     responsive: {
       0:   { items: 1 },
       576: { items: 2 },
       768: { items: 3 },
-      992: { items: 4 }
+      992: { items: 2 }
     }
   });
 
   function setActiveCard() {
     $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
     var $visibleItems = $('.owl-carousel .owl-item.active');
-    $visibleItems.eq(1).find('.slider-wrapper').addClass('active');
+    $visibleItems.eq(0).find('.slider-wrapper').addClass('active');
   }
 
   $owl.on('initialized.owl.carousel translated.owl.carousel', function () {
