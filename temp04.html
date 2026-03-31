@@ -22,7 +22,6 @@
 <!-- Animate Css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.1.1/animate.min.css"> 
  
-
 <style type="text/css">
 
   /* 
@@ -43,6 +42,7 @@
         --yellow : #ffb900;
         --white: #fff;
         --black: #000; 
+        background-color: #fff;
         } 
         
        .page-wrapper p {
@@ -101,6 +101,7 @@
     text-transform: uppercase;
     font-weight: 900;
     position: relative;
+    margin-bottom: 25px;
         } 
      
     
@@ -152,10 +153,22 @@
     .page-wrapper .headerSection {
           background: var(--dark-green  );
     padding: 150px 0;
+    overflow: hidden;
     }
-  .page-wrapper .headerImg {
-        transform: scale(1.3);
-    transform-origin: left;
+    .page-wrapper .headerSection::after { 
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774876737php4rHIAR.png');
+      width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    transform: scale(1.2);
+    opacity: 0.3;
+    }
+  .page-wrapper .headerImg { 
   }
   .page-wrapper .aboutHeading {
     display: flex;
@@ -208,6 +221,7 @@
     height: 300px;
     border-radius: 50px;
     filter: drop-shadow(2px 4px 6px #0000007a);
+    object-fit: cover;
   }
  .page-wrapper .aboutImgContainer.two {
     height: 100%;
@@ -265,6 +279,7 @@ width: 80%;
       transform: scale(1.7);
     width: 400px;
     transform-origin: left;
+    filter: drop-shadow(0px 8px 5px #000000b0);
 }
 
 
@@ -313,9 +328,10 @@ width: 80%;
                 to { transform: rotate(360deg); }
             }
             .page-wrapper .svgTxt {
-            font-size: 16px;
-        letter-spacing: 0.8px;
-        font-family: 'Roboto Condensed', sans-serif;
+              font-size: 12px;
+    letter-spacing: 0.4px;
+    fill: var(--dark-green);
+    font-weight: 700;
             }
             .page-wrapper .aboutSection h2, .page-wrapper .hygieneSection h2 {
               opacity: 0.2;
@@ -353,8 +369,9 @@ width: 80%;
     top: 0;
     width: 60%;
     height: 100%;
-    background-color: red;
+    background-color: var(--light-green);
     z-index: -1;
+    opacity: 0.8;
 }
 
 
@@ -371,25 +388,14 @@ width: 80%;
     cursor: pointer;
     text-align: center;
     }
-  
-    .page-wrapper .slider-wrapper::before {
-          content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: rgb(11 52 40);
-    z-index: -1;
-    opacity: 0;
-    transition: 0.5s;
-    }
+   
     .page-wrapper .slider-wrapper {
       width: 90%;
-      margin: auto;
+    margin: auto; 
     }
-    .page-wrapper .slider-wrapper:hover::before, .page-wrapper .slider-wrapper.active::before {
+    .page-wrapper .slider-wrapper:hover::before, .page-wrapper .slider-wrapper.active::before, .page-wrapper .slider-wrapper:hover .hoverContent, .page-wrapper .slider-wrapper.active .hoverContent {
         opacity: 1;
+        transition: all 0.1s linear;
     }
     .page-wrapper .dish-name {
         text-align: center;
@@ -398,11 +404,18 @@ width: 80%;
         transform: translateX(-50px);
         opacity: 0;
         transition: 0.5s;
-        color: #fff;
-        margin-bottom: 20px;
+        color: #fff; 
+        margin-bottom: 0;
+      
     }
-    .page-wrapper .slider-wrapper:hover .dish-name, .page-wrapper .slider-wrapper:hover .order-btn,
-    .page-wrapper .slider-wrapper.active .dish-name, .page-wrapper .slider-wrapper.active .order-btn {
+    .page-wrapper .cartImg {
+      width: 40px !important;
+      transform: translateX(50px);
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .page-wrapper .slider-wrapper:hover .dish-name, .page-wrapper .slider-wrapper:hover .order-btn, .page-wrapper .slider-wrapper:hover .cartImg,
+    .page-wrapper .slider-wrapper.active .dish-name, .page-wrapper .slider-wrapper.active .order-btn, .page-wrapper .slider-wrapper.active .cartImg {
         transform: translateX(0px);
         opacity: 1;
     }
@@ -413,6 +426,44 @@ width: 80%;
      transform: translateX(-50px);
         opacity: 0;
         transition: 0.5s;
+    }
+    .page-wrapper .videoSection {
+      background: var(--yellow);
+    padding: 75px 150px;
+    margin: 200px 0 50px;
+    }
+    .page-wrapper .leafImgOne {
+      position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 350px;
+    }
+    .page-wrapper .leafImgTwo {
+      position: absolute;
+    bottom: 0;
+    width: 250px;
+    right: 10%;
+    }
+    .page-wrapper .onionImgOne {
+      position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 200px;
+    }
+    .page-wrapper .onionImgTwo {
+      position: absolute;
+    right: 0;
+    width: 75px;
+    }
+    .page-wrapper .hoverContent {
+      display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: #0c3428;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.2s linear;
     }
     /* ════════════════════════════════
        RESPONSIVE BREAKPOINTS
@@ -432,23 +483,357 @@ width: 80%;
         }
 
     @media (max-width: 1499px) {
-    
+      .page-wrapper h1 {
+        font-size: 70px;
+      }
+      .page-wrapper h2 {
+        font-size: 65px;
+      }
+      .page-wrapper p {
+        font-size: 18px;
+      }
+      .page-wrapper h1 .spanOne {
+    font-size: 30px;
+}
+.page-wrapper h1 .spanTwo {
+    font-size: 48px;
+}
+      .page-wrapper .headerSection {
+        padding: 120px 0;
+      }
+      .page-wrapper .leafImgOne {
+        width: 250px;
+      }
+      .page-wrapper .leafImgTwo {
+        width: 150px;
+      }
+      .page-wrapper .onionImgOne {
+        width: 125px;
+      }
+      .page-wrapper .onionImgTwo {
+        width: 50px;
+      }
+
+      /* About */
+  .page-wrapper .aboutSection { padding: 80px 0; }
+  .page-wrapper .fa-quote-right { font-size: 100px; }
+  .page-wrapper .aboutContent { max-width: 90%; }
+  .page-wrapper .abtImg { height: 260px; }
+  .page-wrapper .aboutImgContainer.two .abtImg,
+  .page-wrapper .aboutImgContainer.three .abtImg { height: 210px; }
+
+  /* Banner */
+  .page-wrapper .bannerSection { margin: 80px 20px; }
+  .page-wrapper .bannerSection h2 { font-size: 46px; }
+  .page-wrapper .bannerSection h2 span { font-size: 66px; }
+  .page-wrapper .bannerSection .leftSideImg img { width: 320px; }
+
+  /* Video */
+  .page-wrapper .videoSection { padding: 50px  ; margin: 150px 0 40px; }
+
+  /* Hygiene */
+  .page-wrapper .hygieneSection { padding: 40px 0; }
+  .page-wrapper .hygieneContent { padding: 40px 20px 55px; }
+
+  /* Slider */
+  .page-wrapper .slider-wrapper { height: 380px; }
+  .page-wrapper .cartImg {
+    width: 35px !important;
+  }
     }
 
     @media (max-width: 1199px) {  
-          
+      .page-wrapper h1 {
+        font-size: 60px;
+    }
+    .page-wrapper h1 .spanOne {
+        font-size: 25px;
+    }
+    .page-wrapper h1 .spanTwo {
+        font-size: 43px;
+    }
+      .page-wrapper .headerSection {
+        padding: 100px 0;
+    }
+    .page-wrapper .leafImgOne {
+        width: 200px;
+    }
+    .page-wrapper .leafImgTwo {
+        width: 130px;
+    }
+    .page-wrapper .onionImgOne {
+        width: 100px;
+    }
+    .page-wrapper .onionImgTwo {
+        width: 35px;
+    }
+
+    /* About */
+  .page-wrapper .aboutSection { padding: 70px 0; }
+  .page-wrapper h2 { font-size: 50px; }
+  .page-wrapper .fa-quote-right { font-size: 100px; }
+  .page-wrapper .aboutContent { max-width: 95%; }
+  .page-wrapper .aboutContent p { font-size: 16px; }
+  .page-wrapper .abtImg {         height: 250px;
+    border-radius: 25px; }
+  .page-wrapper .aboutImgContainer.two .abtImg,
+  .page-wrapper .aboutImgContainer.three .abtImg { height: 180px; }
+  .orderBtn {
+    font-size: 18px;
+    padding: 8px 23px;
+  }
+  /* Banner */
+  .page-wrapper .bannerSection { margin: 70px 15px; }
+  .page-wrapper .bannerSection h2 { font-size: 38px; }
+  .page-wrapper .bannerSection h2 span { font-size: 54px; }
+  .page-wrapper .bannerSection .leftSideImg img { width: 270px; }
+
+  /* Video */
+  .page-wrapper .videoSection { padding: 50px; margin: 120px 0 30px; }
+
+  /* Hygiene */
+  .page-wrapper .hygieneSection { padding: 30px 0; }
+  .page-wrapper .hygieneContent { padding: 35px 18px 50px; }
+  .page-wrapper .hygieneContent p { font-size: 17px; }
+  .page-wrapper .hygieneRightContent { width: 90%; }
+
+  /* Slider */
+  .page-wrapper .slider-wrapper { height: 340px; }
+  .page-wrapper .slider-wrapper .order-btn { font-size: 17px; }
+
     }
 
     @media (max-width: 991px) {   
-          
+      .page-wrapper h1 {
+        font-size: 50px;
+    }
+    .page-wrapper h1 .spanOne {
+        font-size: 20px;
+    }
+    .page-wrapper h1 .spanTwo {
+        font-size: 32px;
+    }
+    .page-wrapper .headerSection {
+        padding: 75px 0;
+    }
+    .page-wrapper .leafImgOne {
+        width: 150px;
+    }
+    .page-wrapper .leafImgTwo {
+        width: 100px;
+    }
+    .page-wrapper .onionImgOne {
+        width: 80px;
+    }
+    .page-wrapper .onionImgTwo {
+        width: 30px;
+    }
+
+    /* About */
+  .page-wrapper .aboutSection { padding: 60px 0; }
+  .page-wrapper h2 { font-size: 40px; margin-bottom: 18px; }
+  .page-wrapper .fa-quote-right { font-size: 65px; }
+  .page-wrapper .aboutContent p { font-size: 16px; letter-spacing: 0; }
+  .page-wrapper .abtImg { height: 190px; border-radius: 35px; }
+  .page-wrapper .aboutImgContainer.two .abtImg,
+  .page-wrapper .aboutImgContainer.three .abtImg { height: 155px; }
+  .page-wrapper .aboutImgContainer.three { margin-right: -20px; } 
+
+  /* Banner */
+  .page-wrapper .bannerSection { margin: 60px 12px; }
+  .page-wrapper .bannerSection h2 { font-size: 30px; }
+  .page-wrapper .bannerSection h2 span { font-size: 39px; }
+  .page-wrapper .bannerSection .leftSideImg img { width: 220px; }
+
+  /* Video */
+  .page-wrapper .videoSection { padding: 20px; margin: 100px 0 25px; }
+
+  /* Hygiene */
+  .page-wrapper .hygieneSection { padding: 20px 0; }
+  .page-wrapper .hygieneContent { padding: 30px 15px 45px; }
+  .page-wrapper .hygieneContent p { font-size: 16px; }
+  .page-wrapper .hygieneRightContent { width: 100%; }
+  .page-wrapper .badge-wrapper {   margin: auto; }
+
+  /* Slider */
+  .page-wrapper .slider-wrapper { height: 250px; }
+  .page-wrapper .hoverContent { padding: 14px; }
+  .page-wrapper .slider-wrapper .order-btn { font-size: 15px; padding: 5px 14px; }
+
     }
         
     @media (max-width: 767px) { 
-        
+      .page-wrapper h1 {
+        font-size: 40px;
+    }
+    .page-wrapper .leafImgOne {
+        width: 125px;
+    }
+    .page-wrapper .leafImgTwo {
+        width: 80px;
+    }
+    .page-wrapper .onionImgOne {
+        width: 55px;
+    }
+    .page-wrapper .onionImgTwo {
+        width: 25px;
+    }
+    .page-wrapper .headerSection {
+        padding: 70px 0;
+    }
+    .page-wrapper h1 .spanOne {
+        font-size: 16px;
+    }
+    .page-wrapper h1 .spanTwo {
+        font-size: 25px;
+    }
+
+     /* About */
+  .page-wrapper .aboutSection { padding: 50px 0; }
+  .page-wrapper h2 { font-size: 30px; }
+  .page-wrapper .fa-quote-right { font-size: 50px; }
+  .page-wrapper .aboutContent { max-width: 100%; }
+  .page-wrapper .aboutContent p { font-size: 15px; }
+      .page-wrapper .abtImg {
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 25px;
+    }
+      .page-wrapper .aboutImgContainer.two .abtImg, .page-wrapper .aboutImgContainer.three .abtImg {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .page-wrapper .aboutImgContainer.two {
+      margin-top: 0;
+    }
+        .page-wrapper .aboutImgContainer.three {
+        margin-right: 0;
+        margin-top: 0;
+    } 
+
+  /* Banner */
+  .page-wrapper .bannerSection {         margin: 50px 10px;
+        padding: 10px 0; }
+  .page-wrapper .bannerSection h2 { font-size: 22px; }
+  .page-wrapper .bannerSection h2 span {         font-size: 29px;
+        -webkit-text-stroke: 0.5px #ffffff; }
+  .page-wrapper .bannerSection .leftSideImg img { width: 180px;
+        left: -20px;
+        position: relative; }
+
+  /* Video */
+  .page-wrapper .videoSection { margin: 80px 0 20px; }
+
+  /* Hygiene */
+  .page-wrapper .hygieneContent { padding: 25px 12px 40px; }
+  .page-wrapper .hygieneContent p { font-size: 15px; }
+  .page-wrapper .hygieneRightContent::after { width: 70%; }
+  .page-wrapper .badge-wrapper { max-width: 220px; }
+      .page-wrapper .hygieneRightContent {
+        width: 90%;
+        transform: scale(1.5);
+    }
+.page-wrapper .dish-name {
+  font-size: 20px;
+}
+  /* Slider */
+  .page-wrapper .slider-wrapper { height: 260px; }
+  .page-wrapper .cartImg { width: 22px !important; }
+
     }
 
     @media (max-width: 575px) {   
-          
+      .page-wrapper h1 {
+        margin: auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        transform: skew(0deg, 0deg) scaleY(1.0);
+        margin-bottom: 50px;
+      }  
+      .page-wrapper .headerSection .row {
+        flex-direction: column-reverse;
+      }
+      .page-wrapper .headerSection {
+        padding: 65px 0 50px;
+    }
+    .page-wrapper .leafImgOne {
+        width: 100px;
+    }
+
+    /* About — stack cols, images go below text */
+  .page-wrapper .aboutSection { padding: 40px 0; }
+  .page-wrapper h2 { font-size: 32px; }
+  .page-wrapper .fa-quote-right { font-size: 40px; }
+  .page-wrapper .aboutContent p { font-size: 14px; }
+  .page-wrapper .abtImg {         max-width: 350px;
+        margin: auto;
+        height: 100%;
+        border-radius: 20px;
+        display: flex; 
+      margin-bottom: 25px;}
+  .page-wrapper .aboutImgContainer.two .abtImg,
+  .page-wrapper .aboutImgContainer.three .abtImg { width: 100%; height: 100%; }
+  .page-wrapper .aboutImgContainer.three { margin-right: 0; align-items: flex-start; margin-top: 0px; }
+  .page-wrapper .aboutSection::before { width: 100%; opacity: 0.5; }
+  .page-wrapper .aboutSection::after { display: none; }
+  .page-wrapper .aboutContent {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .page-wrapper .aboutHeading {
+    justify-content: center;
+  }
+  .page-wrapper .aboutHeading h2::after {
+        left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+  }
+  .page-wrapper .aboutSection h2, .page-wrapper .hygieneSection h2 {
+    opacity: 1;
+}
+
+  /* Banner — stack cols */
+  .page-wrapper .bannerSection { margin: 40px 8px;        padding: 30px 0 10px; }
+  .page-wrapper .bannerSection .row { flex-direction: column-reverse; }
+  .page-wrapper .bannerSection h2 { font-size: 20px; text-align: center; }
+  .page-wrapper .bannerSection h2 span { font-size: 28px; }
+  .page-wrapper .bannerSection .leftSideImg { text-align: center; }
+  .page-wrapper .bannerSection .leftSideImg img { width: 200px;
+        transform: scale(1.3);
+        transform-origin: center top; 
+      left: 0;}
+
+  /* Video */
+  .page-wrapper .videoSection { padding: 5px; margin: 60px 0 15px; }
+
+  /* Hygiene — stack cols */
+  .page-wrapper .hygieneSection { padding: 30px 0; }
+  .page-wrapper .hygieneContent {         padding: 25px 12px 35px;
+        text-align: center; }
+  .page-wrapper .hygieneContent p { font-size: 14px; }
+  .page-wrapper .hygieneRightContent { width: 100%; margin-top: 30px;         transform: scale(1.1);}
+  .page-wrapper .hygieneRightContent::after { display: none; }
+  .page-wrapper .badge-wrapper { max-width: 100%; margin: auto; }
+
+  /* Slider */
+  .page-wrapper .slider-wrapper {         height: 300px;
+        max-width: 350px;
+        width: 90%; }
+  .page-wrapper .hoverContent { padding: 10px; }
+  .page-wrapper .dish-name { font-size: 14px; }
+  .page-wrapper .cartImg { width: 26px !important; }
+  .page-wrapper .slider-wrapper .order-btn { font-size: 13px; padding: 4px 10px; }
+
+  /* Order buttons */
+  .page-wrapper .orderBtn { font-size: 16px; padding: 8px 20px; }
+.page-wrapper .aboutImages {
+      max-width: 350px;
+    margin: auto;
+}
+
     }
 </style>
 
@@ -463,19 +848,27 @@ width: 80%;
 
 
 <div class="page-wrapper">    
+
+  <!-- First Section -->
     
   <section class="headerSection">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881029phpfo5tdR.png" class="img-fluid leafImgOne" alt="">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881029php7w3QcQ.png" class="img-fluid leafImgTwo" alt="">
+
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881029phpR5u8dS.png" class="img-fluid onionImgOne" alt="">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881029phpXecOeT.png" class="img-fluid onionImgTwo" alt="">
+
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="headerImgContainer">
-              <img src="./img1.png" alt="" class="headerImg">
+              <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774876737php6hQeZW.png" alt="" class="headerImg img-fluid">
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="headerContent">
               <h1> 
-                  <span class="spanOne">SPICY, SAVOURY & SWEET</span>
+                  <span class="spanOne">SPICY, SAVOURY &amp; SWEET</span>
                   <span class="spanTwo">THE TRUE TASTE OF</span>
                   <span class="spanThree">THAI!</span> 
               </h1>
@@ -488,7 +881,7 @@ width: 80%;
   <section class="aboutSection">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="aboutContainer">
             <div class="aboutHeading">
               <i class="fa-solid fa-quote-right"></i>
@@ -498,29 +891,29 @@ width: 80%;
               </div>
               <div class="aboutContent">
                 <p>
-                  Enjoy {Dish Name 1} and {Dish Name 2} with Quick & Easy Takeaway Service Why wait when you can enjoy your favourite meals in just a few clicks? At {TAKEAWAY NAME}, located in the heart of (TAKEAWAY TOWN}, we take pride in serving freshly made, high-quality food, packed securely and ready to go when you are. Whether you're picking up from our store or opting for fast delivery straight to your doorstep, our takeaway service ensures you get the same restaurant-quality taste-hot, fresh, and bursting with flavour.
+                  Enjoy {Dish Name 1} and {Dish Name 2} with Quick &amp; Easy Takeaway Service Why wait when you can enjoy your favourite meals in just a few clicks? At TEMP-1069-Kabana - 879533  GB, located in the heart of (TAKEAWAY TOWN}, we take pride in serving freshly made, high-quality food, packed securely and ready to go when you are. Whether you're picking up from our store or opting for fast delivery straight to your doorstep, our takeaway service ensures you get the same restaurant-quality taste-hot, fresh, and bursting with flavour.
                 </p>
                 <a href="/order-now" class="orderBtn">Order Now</a>
               </div>
             
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="aboutImages">
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="aboutImgContainer">
-                  <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png" class="abtImg img-fluid" alt="">
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774876736phpWtq932.jpg" class="abtImg img-fluid" alt="">
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                 <div class="aboutImgContainer two">
-                  <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png" class="abtImg two img-fluid" alt="">
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774876736phpAJLrKA.jpg" class="abtImg two img-fluid" alt="">
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                 <div class="aboutImgContainer three">
-                  <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png" class="abtImg two img-fluid" alt="">
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774876736phps2hgUj.jpg" class="abtImg two img-fluid" alt="">
                 </div>
               </div>
             </div>
@@ -533,13 +926,13 @@ width: 80%;
   <section class="bannerSection">
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="leftSideImg">
-            <img src="./img2.png" alt="">
+            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774877422phpy10W9H.png" alt="">
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <h2>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <h2 class="mb-0">
             TAKEAWAY <strong> PERFECTION </strong> <span> ONE CLICK AWAY </span>
           </h2>
         </div>
@@ -547,12 +940,18 @@ width: 80%;
     </div>
   </section>
 
+  <section class="videoSection">
+    <video autoplay="" muted="" loop="" class="video-sec w-100 h-100 d-block" id="myvideo">
+      <source src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774880139phpG91S1N.mp4" type="video/mp4">
+  </video>
+  </section>
+
   <section class="hygieneSection">
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-lg-6 col-md-6 3col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="hygieneContent">
-            <h2 class="text-center">
+            <h2>
               Our Hygiene 
             </h2>
             <p>
@@ -561,7 +960,7 @@ width: 80%;
                   <a href="/order-now" class="orderBtn">Order Now</a>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 3col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="hygieneRightContent">
             <div class="badge-wrapper mb-md-4 mb-sm-2">
                                   <svg class="badge-svg" viewBox="0 0 200 200">
@@ -570,12 +969,12 @@ width: 80%;
                                       </defs>
                                       <text fill="black" class="svgTxt">
                                           <textPath href="#circlePath">
-                                              • SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
+                                            PAD THAI PAD THAI PAD THAI PAD THAI PAD THAI PAD THAI PAD THAI PAD THAI PAD THAI
                                           </textPath>
                                       </text>
                                   </svg>
                                   <div class="inner-circle-static">
-                                          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1773863712phpEMUXmR.jpg" class="img-fluid spoonImg" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Waffle">
+                                          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774876971phppRdhFf.png" class="img-fluid spoonImg" alt="Domain545 - Loaded Burgers And Kebabs - 882534  GB June25 Waffle">
                                   </div>
                               </div> 
           </div>
@@ -586,8 +985,7 @@ width: 80%;
  
  
  
-
-  <!-- slider section -->
+    <!-- slider section -->
   <section class="slider-section">
     <div class="heading-row">
       <div class="heading-line-two"></div>
@@ -605,56 +1003,75 @@ width: 80%;
         
             <div class="item">
               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png') no-repeat center / cover;">
-                  
-                      <h4 class="dish-name">desserts</h4>
-                      <p class="order-btn">
-                        Order Now
-                      </p>
+                  <div class="hoverContent">
+                  <a href="/order-now">
+                      <h4 class="dish-name">wraps</h4>
+                  </a>
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881820phpdJc9Lr.png" class="img-fluid cartImg" alt="">
+                </div>
                    
               </div>
           </div>
    
             <div class="item">
               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/ce693c91e9581e28fb869f8560b9b7aa/img/1702492189phpuF4btI.jpg') no-repeat center / cover;">
+                <div class="hoverContent">
                   <a href="/order-now">
                       <h4 class="dish-name">wraps</h4>
                   </a>
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881820phpdJc9Lr.png" class="img-fluid cartImg" alt="">
+                </div>
               </div>
           </div> 
           
           <div class="item">
               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1726398756phpcN5B3C.png') no-repeat center / cover;">
+                 <div class="hoverContent">
                   <a href="/order-now">
-                      <h4 class="dish-name">Drinks</h4>
+                      <h4 class="dish-name">wraps</h4>
                   </a>
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881820phpdJc9Lr.png" class="img-fluid cartImg" alt="">
+                </div>
               </div>
           </div>
           <div class="item">
               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1703244026phpfskvcl.jpg') no-repeat center / cover;">
+                 <div class="hoverContent">
                   <a href="/order-now">
-                      <h4 class="dish-name">garlic bread</h4>
+                      <h4 class="dish-name">wraps</h4>
                   </a>
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881820phpdJc9Lr.png" class="img-fluid cartImg" alt="">
+                </div>
               </div>
           </div>
           <div class="item">
               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/ce693c91e9581e28fb869f8560b9b7aa/img/1702467747php8fPafs.jpg') no-repeat center / cover;">
+                  <div class="hoverContent">
                   <a href="/order-now">
-                      <h4 class="dish-name">chicken wings</h4>
+                      <h4 class="dish-name">wraps</h4>
                   </a>
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881820phpdJc9Lr.png" class="img-fluid cartImg" alt="">
+                </div>
               </div>
           </div>
           <div class="item">
               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png') no-repeat center / cover;">
+                 <div class="hoverContent">
                   <a href="/order-now">
-                      <h4 class="dish-name">desserts</h4>
+                      <h4 class="dish-name">wraps</h4>
                   </a>
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881820phpdJc9Lr.png" class="img-fluid cartImg" alt="">
+                </div>
               </div>
           </div> 
           <div class="item">
               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/ce693c91e9581e28fb869f8560b9b7aa/img/1702492189phpuF4btI.jpg') no-repeat center / cover;">
+                  <div class="hoverContent">
                   <a href="/order-now">
                       <h4 class="dish-name">wraps</h4>
                   </a>
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774881820phpdJc9Lr.png" class="img-fluid cartImg" alt="">
+                </div>
               </div>
           </div>      
           
@@ -696,7 +1113,7 @@ width: 80%;
   var $owl = $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 3,
-    nav: true,
+    nav: false,
     dots: false,
     autoplay: false,
     center: true,
