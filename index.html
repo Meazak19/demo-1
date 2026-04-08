@@ -233,11 +233,11 @@
         padding: 100px 0;
     }
     .page-wrapper .serviceBg:after {
-    content: '';
+       content: '';
     position: absolute;
     bottom: -40px;
-    left: 0;
-    width: 100%;
+    left: -1%;
+    width: 102%;
     height: 80%;
     background: #19272d;
     border-radius: 25px;
@@ -436,6 +436,9 @@
   .page-wrapper .aboutContent::after, .page-wrapper .aboutContent::before {
     height: 80%;
   }
+  .page-wrapper .serviceBg:after {
+    height: 85%;
+  }
 }
 
 /* ── ≤ 1199px ── */
@@ -475,17 +478,31 @@
     max-width: 90%;
   }
   .page-wrapper .templeImg {
-    width: 210px;
+            width: 240px;
+        top: 0;
   }
   .page-wrapper .experienceSection {
     margin-top: 140px;
   }
   .page-wrapper .serviceSection {
     padding: 40px 0 80px;
-  }
-  .page-wrapper .serviceContainer h2 {
-    margin-bottom: 30px;
-  }
+  } 
+      .page-wrapper .serviceBg:after {
+        height: 95%;
+            left: 0;
+    width: 100%;
+    }
+    .page-wrapper .serviceContainer p {
+    font-size: 13px; 
+    margin-bottom: 15px;
+}
+    .page-wrapper .serviceContainer h2 {
+        margin-bottom: 25px;
+        font-size: 40px;
+    }
+    .page-wrapper .serviceContainer { 
+    padding: 0 20px;
+}
 }
 
 /* ── ≤ 991px ── */
@@ -552,14 +569,13 @@
     margin-bottom: 20px;
   }
   .page-wrapper .serviceContainer p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .page-wrapper .serviceLineImg {
     width: 80%;
   }
   .page-wrapper .serviceBg::after {
-    bottom: -25px;
-    height: 75%;
+           height: 98%;
   }
   .page-wrapper .experienceSection {
     margin-top: 100px;
@@ -641,11 +657,16 @@
     top: 35px;
   }
   .page-wrapper .templeImg {
-    width: 130px;
-    transform: scale(1);
+           width: 185px;
+        transform: scale(1.5);
+        margin-left: auto;
+        margin-right: unset;
+        top: 60px;
   }
   .page-wrapper .serviceBg::after {
     border-radius: 15px;
+            height: 120%;
+        bottom: -10%;
   }
   .page-wrapper .serviceContainer h2 {
     font-size: 26px;
@@ -850,7 +871,7 @@
         <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1774965474phpKyjmFP.png" class="img-fluid templeImg" alt="">
         <div class="container serviceBg">
             <div class="row justify-content-between">
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-5 col-sm-8">
                     <div class="serviceContainer">
                         <h2>
                             Our Services
@@ -862,7 +883,7 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-5 col-sm-8">
                     <div class="serviceContainer">
                         <h2>
                             Our Values
