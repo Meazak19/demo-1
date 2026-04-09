@@ -312,10 +312,11 @@
         width: 100%;
         height: 100%;
         background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1775584687phpOShW8U.png');
-        opacity: 0.2;
+       opacity: 0.2;
     z-index: 0;
     background-size: cover;
     background-repeat: repeat;
+    filter: brightness(0.5);
      }
      .page-wrapper .wrapsSection::before { 
         content: '';
@@ -326,9 +327,8 @@
     height: 70%;
     background: #cf2c31;
     background: linear-gradient(90deg, rgb(0 0 0) 0%, rgb(253 29 29 / 0%) 50%, rgb(0 0 0) 100%);
-    filter: blur(31px);
+        filter: blur(60px);
     transform: scale(1.1);
-    transform-origin: top;
      }
      .page-wrapper .headerRightContent {
       position: absolute;
