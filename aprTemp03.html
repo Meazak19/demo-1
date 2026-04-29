@@ -249,6 +249,7 @@
     line-height: 1;
     margin-bottom: 0;
     padding-left: 100px;
+        filter: drop-shadow(1px 1px 1px black);
 }
 .page-wrapper .servicesContent {
   max-width: 650px;
@@ -267,7 +268,7 @@
     bottom: 0;
     margin: auto;
     transform: scale(1.5) translateX(30px);
-    width: 400px;
+    width: 350px;
     transform-origin: right;
 }
 .page-wrapper .likeImgOne {
@@ -464,6 +465,12 @@
    .page-wrapper h1 {
         font-size: 75px;
    }
+   .page-wrapper .wrapsSection h2 {
+    font-size: 60px;
+   }
+   .page-wrapper h3 {
+    font-size: 40px;
+   }
    .page-wrapper h1 .smallTxt{
         font-size: 35px;
    }
@@ -489,11 +496,38 @@
 .page-wrapper .slider-wrapper {
   height: 400px;
 }
+.page-wrapper .servicesContent {
+      padding: 30px;
+}
+.page-wrapper .likeImgTwo {
+  width: 120px;
+}
+.page-wrapper .likeImgOne {
+      transform: translate(-70px, 170px);
+    width: 150px;
+}
+.page-wrapper .likeImgThree {
+      transform: translate(-100px, -120px);
+}
+.page-wrapper .likeImgFour {
+      transform: translate(25px, 20px);
+    width: 70px;
+}
+.page-wrapper .wrapsSection {
+      padding: 50px 0;
+}
+.page-wrapper .wrapsImg {
+      transform: scale(1.5) translateX(-10px);
+    width: 300px;
+}
   }
 
   @media (max-width: 1199px) {
        .page-wrapper h1 {
         font-size: 60px;
+    }
+        .page-wrapper .wrapsSection h2 {
+        font-size: 45px;
     }
         .page-wrapper h1 .smallTxt {
         font-size: 30px;
@@ -528,6 +562,40 @@
     font-size: 18px;
     border-width: 1px;
 }
+    .page-wrapper h3 {
+        font-size: 35px;
+    }
+        .page-wrapper .servicesContent {
+        padding: 20px;
+    }
+    .page-wrapper .servicesContent::before {
+          transform: translate(20px, -20px);
+    }
+        .page-wrapper .likeImgTwo {
+        width: 100px;
+        transform: translate(0px, -140px);
+    }
+        .page-wrapper .likeImgOne {
+        transform: translate(-20px, 140px);
+        width: 110px;
+    }
+        .page-wrapper .likeImgThree {
+        transform: translate(-90px, -70px);
+        width: 50px;
+    }
+        .page-wrapper .likeImgFour {
+        transform: translate(15px, 25px);
+        width: 55px;
+    }
+        .page-wrapper .wrapsImg {
+        transform: scale(1.5) translateX(-10px);
+        width: 250px;
+        top: 0;
+    }
+    .page-wrapper .servicesContent p {
+      font-size: 15px;
+    }
+
   }
 
   @media (max-width: 991px) {
@@ -566,6 +634,34 @@
         .page-wrapper .orderBtn.two.yellowBtn {
         padding: 4px 25px;
         font-size: 16px; 
+    }
+    .page-wrapper .wrapsSection h2 {
+              font-size: 32px;
+        letter-spacing: 0;
+        padding-left: 50px;
+    }
+        .page-wrapper h3 {
+        font-size: 25px;
+    }
+        .page-wrapper .servicesContent p {
+        font-size: 14px;
+    }
+        .page-wrapper .servicesContent::before {
+        transform: translate(10px, -10px);
+    }
+    .page-wrapper .likeImgTwo {
+      width: 80px;
+    }
+        .page-wrapper .likeImgOne {
+        transform: translate(-10px, 120px);
+        width: 100px;
+    }
+        .page-wrapper .wrapsImg {
+        transform: scale(1.5) translateX(-20px);
+        width: 220px; 
+    }
+    .page-wrapper .wrapsSection {
+      margin: 115px 0;
     }
   }
 
@@ -986,24 +1082,24 @@
 
 gsap.registerPlugin(ScrollTrigger); 
 
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".firstSection",
-    start: "top top",
-    end: "+=180%",
-    scrub: 1.5,
-    pin: true
-  }
-})
-.fromTo(".heroImg",
-  { scale: 0.95, rotateY: -20 },
-  { scale: 1.2, rotateY: 0 }
-)
-.to(".heroImg", {
-  scale: 1.4,
-  rotateY: 10,
-  rotateX: -5
-});
+// gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".firstSection",
+//     start: "top top",
+//     end: "+=180%",
+//     scrub: 1.5,
+//     pin: true
+//   }
+// })
+// .fromTo(".heroImg",
+//   { scale: 0.95, rotateY: -20 },
+//   { scale: 1.2, rotateY: 0 }
+// )
+// .to(".heroImg", {
+//   scale: 1.4,
+//   rotateY: 10,
+//   rotateX: -5
+// });
 gsap.from(".fade-up", {
   scrollTrigger: {
     trigger: ".fade-up",
