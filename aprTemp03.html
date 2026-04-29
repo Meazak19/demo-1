@@ -701,6 +701,49 @@
       transition: all 0.2s linear;
       opacity: 1;
 }
+.page-wrapper .wrapsSection .row.justify-content-center{
+      justify-content: flex-end !important;
+}
+.page-wrapper .wrapsSection h2 {
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+    .page-wrapper .wrapsSection {
+        margin: 0px 0;
+    }
+        .page-wrapper .wrapsImg {
+        transform: scale(1.4) translateX(35px);
+        width: 150px;
+    }
+        .page-wrapper .likeImgOne {
+        transform: translate(-20px, 60px);
+        width: 80px;
+    }
+        .page-wrapper .likeImgTwo {
+        width: 60px;
+        transform: translate(10px, -60px);
+    }
+    .page-wrapper .likeImgThree {
+        transform: translate(-90px, -70px);
+        width: 50px;
+    }
+        .page-wrapper .likeImgFour {
+        transform: translate(15px, 25px);
+        width: 55px;
+    }
+        .page-wrapper .servicesContent::before {
+        transform: translate(10px, -10px);
+        height: 110%;
+    }
+    .page-wrapper .servicesContent {
+          transform: rotate(0deg);
+    }
+        .page-wrapper .servicesContent p { 
+        margin-bottom: 0;
+    } 
+    .page-wrapper .servicesContent::after {
+      height: 110%;
+    }
     
   }
 
@@ -741,6 +784,23 @@
         width: 98%;
         margin: auto;
     }
+        .page-wrapper .wrapsImg {
+        transform: unset;
+        width: 200px;
+        margin: auto;
+        transform-origin: center;
+        left: 0;
+        right: 0;
+        top: 0;
+    } 
+        .page-wrapper .wrapsSection h2 {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 0;
+        }
+        .page-wrapper .wrapsSection .row {
+          gap: 300px;
+        }
   }
 
   @media (max-width: 480px) {
@@ -937,12 +997,12 @@
     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776791111phpurMFu2.png" class="img-fluid wrapsImg" alt="">
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-lg-7 col-md-6 col-sm-12">
+        <div class="col-lg-7 col-md-6 col-sm-10">
           <h2>
             HOME-COOKED FLAVOURS DELIVERED WITH LOVE
           </h2>
         </div>
-        <div class="col-lg-5 col-md-6 col-sm-12">
+        <div class="col-lg-5 col-md-6 col-sm-10">
           <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpLIaYLB.png" class="img-fluid likeImgOne" alt="">
           <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpLecsL8.png" class="img-fluid likeImgTwo" alt="">
           <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpOSYHgn.png" class="img-fluid likeImgThree" alt="">
