@@ -96,6 +96,9 @@
     text-align: left;
     line-height: 1;
     margin-bottom: 0;
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(2px 4px 1px black);
      }
      .page-wrapper h2{ 
       font-family: "Poppins", sans-serif;
@@ -146,8 +149,8 @@
     margin-top: 25px;
      }
      .page-wrapper .headerImg img{
-      /* transform: scale(1.4); */
-      transform-origin: right;
+      transform: scale(1.4);
+      transform-origin: center;
      }
      .page-wrapper .heroImg {
       object-fit: cover;
@@ -586,9 +589,9 @@
 .page-wrapper .wrapsSection {
       padding: 50px 0;
 }
-.page-wrapper .wrapsImg {
-      transform: scale(1.5) translateX(-10px);
-    width: 300px;
+.page-wrapper .wrapsImg { 
+      transform: scale(1.5) translate(-50%,-50%) rotate(90deg);
+    width: 250px;
 }
   }
 
@@ -1352,6 +1355,16 @@ header1.from(".orderBtn", {
   ease: "power2.out"
 }, "-=0.3");
 
+
+let mm = gsap.matchMedia();
+
+mm.add({
+  desktop: "(min-width: 1500px)",
+  mobileOne: "(max-width: 1499px)"
+}, (context) => {
+
+  const { desktop, mobileOne } = context.conditions;
+
        /* ── Master timeline pinned to the .wrapsSection spacer ── */
        const tl = gsap.timeline({
         scrollTrigger: {
@@ -1365,15 +1378,16 @@ header1.from(".orderBtn", {
       });
 
        /* Phase 1 (0→0.4): wrap image slides from center to left + shrinks */
-       tl.to(".wrapsImg", {
-         left: 250,
-         top: 450,     
-         rotate: 0,    
-         ease: "power3.inOut",
-         duration: 1.4
-       }, 0);
+if (desktop) { 
+  tl.to(".wrapsImg", {
+    left: 250,
+    top: 450,     
+    rotate: 0,    
+    ease: "power3.inOut",
+    duration: 1.4
+  }, 0);
 
-       /* ── Phase 2: Content comes AFTER ── */
+   /* ── Phase 2: Content comes AFTER ── */
 tl.from(".servicesContent", {
   x: 150,
   opacity: 0,
@@ -1413,6 +1427,62 @@ tl.fromTo(".heart",
   ease: "sine.out"
 }, "-=0.3");
 
+}
+if (mobileOne) { 
+  tl.to(".wrapsImg", {
+    left: 150,
+    top: 350,     
+    rotate: 0,    
+    ease: "power3.inOut",
+    duration: 1.4
+  }, 0);
+}
+
+/* ── Phase 2: Content comes AFTER ── */
+tl.from(".servicesContent", {
+  x: 150,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out"
+}, "+=0.3"); // 👈 delay AFTER wrap animation
+
+/* ── Optional: Text animation ── */
+tl.from(".wrapsSection h2", { 
+  opacity: 0,
+  duration: 0.6
+}, "-=0.5");
+
+ 
+
+tl.fromTo(".heart",
+  {
+    opacity: 0,
+    scale: 0.6, 
+  },
+  {
+    opacity: 1,
+    scale: 1.1, 
+    duration: 0.6,
+    ease: "power3.out",
+    stagger: {
+      each: 0.12,
+      from: "center"
+    }
+  }
+)
+
+/* settle gently (no harsh snap) */
+.to(".heart", {
+  scale: 1,
+  duration: 0.4,
+  ease: "sine.out"
+}, "-=0.3");
+
+});
+
+
+      
+
     const d1 = gsap.timeline({
   scrollTrigger: {
     trigger: ".discoverSection",
@@ -1438,6 +1508,9 @@ dl.from(".stroke", {
     });
     return () => tl.kill();
   });
+
+
+
 </script>
  
 
