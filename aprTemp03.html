@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.1.1/animate.min.css"> 
  
 
+
 <style type="text/css">
 
   /* 
@@ -264,12 +265,13 @@
 }
 .page-wrapper .wrapsImg {
   position: absolute;
-    top: 100px;
-    bottom: 0;
+    left: 50%;
+    top: 80%; 
     margin: auto;
-    transform: scale(1.5) translateX(30px);
+    transform: scale(1.5) translate(-50%,-50%) rotate(90deg);
     width: 350px;
-    transform-origin: right;
+    transform-origin: center;
+    will-change: transform, width, left;
 }
 .page-wrapper .likeImgOne {
   position: absolute;
@@ -341,6 +343,13 @@
       transition: all 0.2s linear;
       opacity: 1;
 }
+.tomotoImgOne,
+.tomotoImgTwo,
+.leftImg,
+.rightImg,
+.heroImg {
+  will-change: transform;
+}
 .page-wrapper .owl-item .dish-content {
       transform: translateY(0px);
       transition: all 0.2s linear;
@@ -404,12 +413,26 @@
     line-height: 1.2;
 }
 .page-wrapper .discoverContainer h2 .spanOne{ 
-  -webkit-text-stroke: 3px #ffffff;
+  /* -webkit-text-stroke: 3px #ffffff;
     text-stroke: 3px #fff;
-    color: transparent;
+    color: transparent; */
     text-transform: uppercase;
     font-size: 62px;
     display: block;
+}
+.page-wrapper .discoverContainer h2.fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.page-wrapper .discoverContainer h2.stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
 }
 .page-wrapper .discoverContainer h2 .spanTwo{ 
   font-size: 45px;
@@ -424,6 +447,53 @@
     font-weight: 200;
     line-height: 1;
     margin-bottom: 30px;
+}
+
+
+
+.char {
+  display: inline-block;
+  will-change: transform;
+}
+.titleWrap {
+  position: relative;
+}
+
+/* Base heading */
+.stroke {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 800;
+}
+
+/* Word wrapper */
+.wordWrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* Stroke text */
+.strokeText {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+/* Fill text (overlay) */
+.fillText {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Optional spacing */
+.spanTwo {
+  display: block;
+  font-size: 40px;
 }
 .page-wrapper .friedchickImg {
   transform: scale(1.8);
@@ -840,7 +910,7 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="headerImg js-tilt">
+          <div class="headerImg">
             <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776779623phpGEedAx.png" class="img-fluid heroImg" alt="">
           </div>
         </div>
@@ -1003,11 +1073,11 @@
           </h2>
         </div>
         <div class="col-lg-5 col-md-6 col-sm-10">
-          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpLIaYLB.png" class="img-fluid likeImgOne" alt="">
-          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpLecsL8.png" class="img-fluid likeImgTwo" alt="">
-          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpOSYHgn.png" class="img-fluid likeImgThree" alt="">
-          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpaqtdgU.png" class="img-fluid likeImgFour" alt="">
-          <div class="js-tilt" style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg);">
+          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpLIaYLB.png" class="img-fluid likeImgOne heart" alt="">
+          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpLecsL8.png" class="img-fluid likeImgTwo heart" alt="">
+          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpOSYHgn.png" class="img-fluid likeImgThree heart" alt="">
+          <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpaqtdgU.png" class="img-fluid likeImgFour heart" alt="">
+          <div class="js-tilt" >
             <div class="servicesContent">
               <h3>
                 OUR SERVICES
@@ -1040,10 +1110,15 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="discoverContainer left js-tilt" style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg);">
-            <h2>
-              Takeaway <span class="spanOne">Perfection</span> <span class="spanTwo">One Click Away</span>
-            </h2>
+          <div class="discoverContainer left js-tilt" >
+            <h2 class="stroke">
+    Takeaway 
+    <span class="wordWrap">
+      <span class="strokeText">Perfection</span>
+      <span class="fillText">Perfection</span>
+    </span>
+    <span class="spanTwo">One Click Away</span>
+  </h2>
             <p>
               The Taste You Love, Ready to Go
             </p>
@@ -1051,7 +1126,7 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="discoverContainer js-tilt" style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg);">
+          <div class="discoverContainer js-tilt" >
             <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1777063942phphLpfkP.png" class="img-fluid footerFriesImg" alt="">
           </div>
         </div>
@@ -1139,55 +1214,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 <script> 
-
-gsap.registerPlugin(ScrollTrigger); 
-
-// gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".firstSection",
-//     start: "top top",
-//     end: "+=180%",
-//     scrub: 1.5,
-//     pin: true
-//   }
-// })
-// .fromTo(".heroImg",
-//   { scale: 0.95, rotateY: -20 },
-//   { scale: 1.2, rotateY: 0 }
-// )
-// .to(".heroImg", {
-//   scale: 1.4,
-//   rotateY: 10,
-//   rotateX: -5
-// });
-gsap.from(".fade-up", {
-  scrollTrigger: {
-    trigger: ".fade-up",
-    start: "top 80%"
-  },
-  y: 60,
-  opacity: 0,
-  duration: 1.2,
-  stagger: 0.3,
-  ease: "power2.out"
-});
-
-gsap.from(".hero-title .animOne", {
-  scrollTrigger: {
-    trigger: ".hero-title",
-    start: "top 80%",
-    toggleActions: "play reverse play reverse"
-  },
-  stagger: {
-    each: 0.05,
-    ease: "sine.inOut"   // 👈 creates wave feel
-  },
-  y: 60,
-  opacity: 0,
-  duration: 0.8,
-  stagger: 0.2,
-  ease: "power4.out"
-});
+ 
 
      $('.js-tilt').tilt({
          maxTilt: 5, 
@@ -1201,6 +1228,216 @@ easing: "cubic-bezier(.03,.98,.52,.99)", // animation curve
  
          
      }); 
+</script>
+
+<script>
+
+
+  $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js", function() {
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js", function() {
+      gsap.registerPlugin(ScrollTrigger); 
+
+       const header1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".firstSection",
+    start: "top top",
+    end: "+=180%",  
+  }
+});
+
+       
+      /* fade-up elements */
+header1.from(".fade-up", {
+  y: 60,
+  opacity: 0,
+  duration: 0.5,
+  stagger: 0.2,
+  ease: "power2.out"
+});
+
+      document.querySelectorAll(".animOne").forEach(el => {
+  let text = el.textContent;
+  el.innerHTML = text
+    .split("")
+    .map(char => `<span class="char">${char}</span>`)
+    .join("");
+});
+   
+/* hero title wave */
+header1.from(".char", {
+  y: (i) => Math.sin(i * 0.5) * 80, // 👈 wave curve
+  opacity: 0,
+  duration: 0.6,
+  ease: "power3.out",
+  stagger: {
+    each: 0.03
+  }
+});
+
+gsap.utils.toArray([
+  ".tomotoImgOne",
+  ".tomotoImgTwo",
+  ".leftImg",
+  ".rightImg"
+]).forEach((el) => {
+
+  function float() {
+    gsap.to(el, {
+      y: "random(-20, 20)",
+      x: "random(-10, 10)",
+      rotate: "random(-4, 4)",
+      duration: "random(1.8, 3)",
+      ease: "sine.inOut",
+      onComplete: float // loop organically
+    });
+  }
+
+  float();
+});
+
+const items = document.querySelectorAll(
+  ".tomotoImgOne, .tomotoImgTwo, .leftImg, .rightImg, .heroImg"
+);
+
+document.addEventListener("mousemove", (e) => {
+  let x = (e.clientX / window.innerWidth - 0.5) * 2;
+  let y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+  items.forEach((el, i) => {
+    let depth = (i + 1) * 10; // different depth per item
+
+    gsap.to(el, {
+      x: x * depth,
+      y: y * depth,
+      duration: 1.2,
+      ease: "power3.out"
+    });
+  });
+});
+ 
+
+/* ── SIDE IMAGES (sync with early words) ── */
+header1.from(".leftImg, .rightImg", {
+  scale: 0.6,
+  y: 60,
+  opacity: 0,
+  duration: 0.7,
+  ease: "power2.out",
+  stagger: 0.2
+}, "-=0.6"); // 👈 overlaps with text
+
+/* ── TOMATO POP (mid-wave accent) ── */
+header1.from(".tomotoImgOne, .tomotoImgTwo", {
+  scale: 0,
+  opacity: 0,
+  duration: 0.5,
+  ease: "back.out(2)",
+  stagger: 0.15
+}, "-=0.5");
+
+/* ── HERO IMAGE (lands with last word) ── */
+header1.from(".heroImg", {
+  scale: 0.7,
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  ease: "power4.out"
+}, "-=0.4");
+
+/* ── BUTTON (final touch) ── */
+header1.from(".orderBtn", {
+  y: 30,
+  opacity: 0,
+  duration: 0.5,
+  ease: "power2.out"
+}, "-=0.3");
+
+       /* ── Master timeline pinned to the .wrapsSection spacer ── */
+       const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".wrapsSection",
+          start: "top 20%",
+          end: "+=1200",   // ⬅️ VERY important for smoothness  
+          scrub: 1.5,
+          pin: true,
+          
+        }
+      });
+
+       /* Phase 1 (0→0.4): wrap image slides from center to left + shrinks */
+       tl.to(".wrapsImg", {
+         left: 250,
+         top: 450,     
+         rotate: 0,    
+         ease: "power3.inOut",
+         duration: 1.4
+       }, 0);
+
+       /* ── Phase 2: Content comes AFTER ── */
+tl.from(".servicesContent", {
+  x: 150,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out"
+}, "+=0.3"); // 👈 delay AFTER wrap animation
+
+/* ── Optional: Text animation ── */
+tl.from(".wrapsSection h2", { 
+  opacity: 0,
+  duration: 0.6
+}, "-=0.5");
+
+ 
+
+tl.fromTo(".heart",
+  {
+    opacity: 0,
+    scale: 0.6, 
+  },
+  {
+    opacity: 1,
+    scale: 1.1, 
+    duration: 0.6,
+    ease: "power3.out",
+    stagger: {
+      each: 0.12,
+      from: "center"
+    }
+  }
+)
+
+/* settle gently (no harsh snap) */
+.to(".heart", {
+  scale: 1,
+  duration: 0.4,
+  ease: "sine.out"
+}, "-=0.3");
+
+    const d1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".discoverSection",
+    start: "top 50%",
+    end: "top 30%",
+    scrub: 1
+  }
+});
+
+d1.to(".fillText", {
+  width: "100%",
+  duration: 1,
+  ease: "power2.out"
+})
+
+dl.from(".stroke", {
+  y: 60,
+  opacity: 0,
+  duration: 0.8
+}, 0)
+     
+        
+    });
+    return () => tl.kill();
+  });
 </script>
  
 
