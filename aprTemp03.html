@@ -158,6 +158,19 @@
   transform-style: preserve-3d;
   will-change: transform;
      }
+     .wrapsSection,
+.wrapsImg,
+.heart {
+  will-change: transform, auto, left;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+}
+ .page-wrapper .servicesContent {
+   will-change: transform, scale, opacity, y ;
+}
+ .page-wrapper .servicesContent h2{
+   will-change: transform, scale, opacity, y ;
+}
      .page-wrapper .tomotoImgOne {
       position: absolute;
     right: 0;
@@ -230,6 +243,7 @@
     z-index: -1;
     border: 1px solid #fff;
     filter: drop-shadow(7px 7px 10px #000000a6);
+    will-change: transform, opacity, left, x;
 }
 .page-wrapper .servicesContent::before {
   content: '';
@@ -254,6 +268,7 @@
     margin-bottom: 0;
     padding-left: 100px;
         filter: drop-shadow(1px 1px 1px black);
+        will-change: auto;
 }
 .page-wrapper .servicesContent {
   max-width: 650px;
@@ -266,6 +281,9 @@
   color: #d42a0b;
   font-size: 18px;
 }
+.page-wrapper .servicesContent{
+  will-change: transform, opacity, left, x;
+}
 .page-wrapper .wrapsImg {
   position: absolute;
     left: 50%;
@@ -274,7 +292,10 @@
     transform: scale(1.5) translate(-50%,-50%) rotate(90deg);
     width: 350px;
     transform-origin: center;
-    will-change: transform, width, left;
+    will-change: transform, width, top, left, rotate;
+}
+.page-wrapper .heart {
+  will-change: opacity, scale;
 }
 .page-wrapper .likeImgOne {
   position: absolute;
@@ -435,7 +456,7 @@
 
 .page-wrapper .discoverContainer h2.stroke {
   color: transparent;
-  -webkit-text-stroke: 2px #fff;
+  -webkit-text-stroke: 1px #fff;
 }
 .page-wrapper .discoverContainer h2 .spanTwo{ 
   font-size: 45px;
@@ -478,7 +499,7 @@
 /* Stroke text */
 .strokeText {
   color: transparent;
-  -webkit-text-stroke: 2px #fff;
+  -webkit-text-stroke: 1px #fff;
 }
 
 /* Fill text (overlay) */
@@ -487,7 +508,7 @@
   left: 0;
   top: 0;
   color: #fff;
-
+-webkit-text-stroke: 0px #fff;
   width: 0%;
   overflow: hidden;
   white-space: nowrap;
@@ -577,7 +598,7 @@
 }
 .page-wrapper .likeImgOne {
       transform: translate(-70px, 170px);
-    width: 150px;
+    width: 130px;
 }
 .page-wrapper .likeImgThree {
       transform: translate(-100px, -120px);
@@ -592,6 +613,24 @@
 .page-wrapper .wrapsImg { 
       transform: scale(1.5) translate(-50%,-50%) rotate(90deg);
     width: 250px;
+}
+.page-wrapper .aboutContent h2 {
+  font-size: 60px;
+}
+.page-wrapper p {
+  font-size: 25px;
+}
+.page-wrapper .discoverContainer h2 {
+  font-size: 55px;
+}
+.page-wrapper .discoverContainer h2 .spanTwo {
+  font-size: 35px;
+}
+.page-wrapper .aboutContent::before, .page-wrapper .aboutContent::after {
+  border-width: 4px;
+}
+.page-wrapper .footerFriesImg {
+      transform: scale(1.7) translateX(81px);
 }
   }
 
@@ -660,13 +699,28 @@
         transform: translate(15px, 25px);
         width: 55px;
     }
-        .page-wrapper .wrapsImg {
-        transform: scale(1.5) translateX(-10px);
-        width: 250px;
-        top: 0;
+        .page-wrapper .wrapsImg { 
+
+           transform: scale(1.5) translate(-50%,-50%) rotate(90deg);
+    width: 250px;
     }
     .page-wrapper .servicesContent p {
       font-size: 15px;
+    }
+        .page-wrapper .aboutContent h2 {
+        font-size: 50px;
+    } 
+        .page-wrapper p {
+        font-size: 20px;
+    }
+        .page-wrapper .discoverContainer h2 .spanTwo {
+        font-size: 32px;
+    }
+    .page-wrapper .friedchickImg {
+          transform: scale(1.7);
+    }
+        .page-wrapper .footerFriesImg {
+        transform: scale(1.7) translateX(73px);
     }
 
   }
@@ -729,16 +783,44 @@
         transform: translate(-10px, 120px);
         width: 100px;
     }
-        .page-wrapper .wrapsImg {
-        transform: scale(1.5) translateX(-20px);
-        width: 220px; 
+        .page-wrapper .wrapsImg { 
+        transform: scale(1.5) translate(-40%,-55%) rotate(90deg);
+    width: 220px; 
     }
     .page-wrapper .wrapsSection {
       margin: 115px 0;
     }
+    .page-wrapper .discoverContainer {
+          padding: 45px;
+    border-radius: 30px;
+    }
+        .page-wrapper .discoverContainer h2 {
+        font-size: 36px;
+    }
+        .page-wrapper .discoverContainer h2 .spanTwo {
+        font-size: 26px;
+    }
+    .page-wrapper .discoverContainer p {
+      font-size: 20px;
+    }
+        .page-wrapper .aboutContent h2 {
+        font-size: 40px;
+    }
+        .page-wrapper p {
+        font-size: 18px;
+    }
+        .page-wrapper .aboutContent::before, .page-wrapper .aboutContent::after {
+        border-width: 2px;
+    }
+    .page-wrapper .footerFriesImg {
+        transform: scale(1.7) translateX(49px);
+    }
   }
 
   @media (max-width: 767px) {
+    .page-wrapper .aboutContent {
+      margin-top: 50px;
+    }
          .page-wrapper h1 {
         font-size: 35px;
     }
@@ -784,9 +866,12 @@
     .page-wrapper .wrapsSection {
         margin: 0px 0;
     }
-        .page-wrapper .wrapsImg {
-        transform: scale(1.4) translateX(35px);
+        .page-wrapper .wrapsImg { 
         width: 150px;
+         top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5) rotate(0deg);
+  will-change: transform , auto , top, left;
     }
         .page-wrapper .likeImgOne {
         transform: translate(-20px, 60px);
@@ -938,7 +1023,7 @@
 
            
      
-          <div class="item">
+          <div class="item js-tilt">
                <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png') no-repeat center / cover;">
                  <div class="dish-content">
                     <a href="/order-now">
@@ -949,7 +1034,7 @@
                </div>
            </div>
            
-           <div class="item">
+           <div class="item js-tilt">
                <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1743001291phpE031zl.jpg') no-repeat center / cover;">
                    <div class="dish-content">
                     <a href="/order-now">
@@ -960,7 +1045,7 @@
                </div>
            </div> 
            
-            <div class="item">
+            <div class="item js-tilt">
                <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1738660060phpzPIZgp.png') no-repeat center / cover;">
                  <div class="dish-content">
                     <a href="/order-now">
@@ -971,7 +1056,7 @@
                </div>
            </div> 
            
-           <div class="item">
+           <div class="item js-tilt">
                <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1743000753phpyPEkSU.jpg') no-repeat center / cover;">
                  <div class="dish-content">
                     <a href="/order-now">
@@ -983,7 +1068,7 @@
            </div> 
            
            
-           <div class="item">
+           <div class="item js-tilt">
                <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1741626675phpElgQVg.png') no-repeat center / cover;">
                  <div class="dish-content">
                     <a href="/order-now">
@@ -994,7 +1079,7 @@
                </div>
            </div> 
            
-            <div class="item">
+            <div class="item js-tilt">
                <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png') no-repeat center / cover;">
                  <div class="dish-content">
                     <a href="/order-now">
@@ -1005,7 +1090,7 @@
                </div>
            </div> 
            
-            <div class="item">
+            <div class="item js-tilt">
                <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1743001291phpE031zl.jpg') no-repeat center / cover;">
                    <div class="dish-content">
                     <a href="/order-now">
@@ -1015,51 +1100,7 @@
                    </div>
                </div>
            </div> 
-           
-            <div class="item">
-               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1738660060phpzPIZgp.png') no-repeat center / cover;">
-                 <div class="dish-content">
-                    <a href="/order-now">
-                       <p class="dish-name mb-0">Drinks</p>
-                       </a>
-                       <a href="/order-now" class="orderBtn two yellowBtn" id="ord-btn">Order Now</a>
-                   </div>
-               </div>
-           </div> 
-           
-            <div class="item">
-               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1743000753phpyPEkSU.jpg') no-repeat center / cover;">
-                 <div class="dish-content">
-                    <a href="/order-now">
-                       <p class="dish-name mb-0">Garlic bread</p>
-                       </a><a href="/order-now" class="orderBtn two yellowBtn" id="ord-btn">Order Now</a>
-                   
-                   </div>
-               </div>
-           </div> 
-           
-            <div class="item">
-               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1741626675phpElgQVg.png') no-repeat center / cover;">
-                 <div class="dish-content">
-                    <a href="/order-now">
-                       <p class="dish-name mb-0">Chicken Wings</p>
-                       </a><a href="/order-now" class="orderBtn two yellowBtn" id="ord-btn">Order Now</a>
-                   
-                   </div>
-               </div>
-           </div> 
-           
-           <div class="item">
-               <div class="slider-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1727011136phpRJpw2h.png') no-repeat center / cover;">
-                 <div class="dish-content">
-                    <a href="/order-now">
-                       <h4 class="dish-name mb-0">Desserts</h4>
-                       </a><a href="/order-now" class="orderBtn two yellowBtn" id="ord-btn">Order Now</a>
-                   
-                   </div>
-               </div>
-           </div> 
-            
+               
           
           </div>
      </div>
@@ -1233,282 +1274,9 @@ easing: "cubic-bezier(.03,.98,.52,.99)", // animation curve
      }); 
 </script>
 
-<script>
-
-
-  $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js", function() {
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js", function() {
-      gsap.registerPlugin(ScrollTrigger); 
-
-       const header1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".firstSection",
-    start: "top top",
-    end: "+=180%",  
-  }
-});
-
-       
-      /* fade-up elements */
-header1.from(".fade-up", {
-  y: 60,
-  opacity: 0,
-  duration: 0.5,
-  stagger: 0.2,
-  ease: "power2.out"
-});
-
-      document.querySelectorAll(".animOne").forEach(el => {
-  let text = el.textContent;
-  el.innerHTML = text
-    .split("")
-    .map(char => `<span class="char">${char}</span>`)
-    .join("");
-});
-   
-/* hero title wave */
-header1.from(".char", {
-  y: (i) => Math.sin(i * 0.5) * 80, // 👈 wave curve
-  opacity: 0,
-  duration: 0.6,
-  ease: "power3.out",
-  stagger: {
-    each: 0.03
-  }
-});
-
-gsap.utils.toArray([
-  ".tomotoImgOne",
-  ".tomotoImgTwo",
-  ".leftImg",
-  ".rightImg"
-]).forEach((el) => {
-
-  function float() {
-    gsap.to(el, {
-      y: "random(-20, 20)",
-      x: "random(-10, 10)",
-      rotate: "random(-4, 4)",
-      duration: "random(1.8, 3)",
-      ease: "sine.inOut",
-      onComplete: float // loop organically
-    });
-  }
-
-  float();
-});
-
-const items = document.querySelectorAll(
-  ".tomotoImgOne, .tomotoImgTwo, .leftImg, .rightImg, .heroImg"
-);
-
-document.addEventListener("mousemove", (e) => {
-  let x = (e.clientX / window.innerWidth - 0.5) * 2;
-  let y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-  items.forEach((el, i) => {
-    let depth = (i + 1) * 10; // different depth per item
-
-    gsap.to(el, {
-      x: x * depth,
-      y: y * depth,
-      duration: 1.2,
-      ease: "power3.out"
-    });
-  });
-});
- 
-
-/* ── SIDE IMAGES (sync with early words) ── */
-header1.from(".leftImg, .rightImg", {
-  scale: 0.6,
-  y: 60,
-  opacity: 0,
-  duration: 0.7,
-  ease: "power2.out",
-  stagger: 0.2
-}, "-=0.6"); // 👈 overlaps with text
-
-/* ── TOMATO POP (mid-wave accent) ── */
-header1.from(".tomotoImgOne, .tomotoImgTwo", {
-  scale: 0,
-  opacity: 0,
-  duration: 0.5,
-  ease: "back.out(2)",
-  stagger: 0.15
-}, "-=0.5");
-
-/* ── HERO IMAGE (lands with last word) ── */
-header1.from(".heroImg", {
-  scale: 0.7,
-  y: 50,
-  opacity: 0,
-  duration: 1,
-  ease: "power4.out"
-}, "-=0.4");
-
-/* ── BUTTON (final touch) ── */
-header1.from(".orderBtn", {
-  y: 30,
-  opacity: 0,
-  duration: 0.5,
-  ease: "power2.out"
-}, "-=0.3");
-
-
-let mm = gsap.matchMedia();
-
-mm.add({
-  desktop: "(min-width: 1500px)",
-  mobileOne: "(max-width: 1499px)"
-}, (context) => {
-
-  const { desktop, mobileOne } = context.conditions;
-
-       /* ── Master timeline pinned to the .wrapsSection spacer ── */
-       const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".wrapsSection",
-          start: "top 20%",
-          end: "+=1200",   // ⬅️ VERY important for smoothness  
-          scrub: 1.5,
-          pin: true,
-          
-        }
-      });
-
-       /* Phase 1 (0→0.4): wrap image slides from center to left + shrinks */
-if (desktop) { 
-  tl.to(".wrapsImg", {
-    left: 250,
-    top: 450,     
-    rotate: 0,    
-    ease: "power3.inOut",
-    duration: 1.4
-  }, 0);
-
-   /* ── Phase 2: Content comes AFTER ── */
-tl.from(".servicesContent", {
-  x: 150,
-  opacity: 0,
-  duration: 0.8,
-  ease: "power2.out"
-}, "+=0.3"); // 👈 delay AFTER wrap animation
-
-/* ── Optional: Text animation ── */
-tl.from(".wrapsSection h2", { 
-  opacity: 0,
-  duration: 0.6
-}, "-=0.5");
+<script src="./script.js">
 
  
-
-tl.fromTo(".heart",
-  {
-    opacity: 0,
-    scale: 0.6, 
-  },
-  {
-    opacity: 1,
-    scale: 1.1, 
-    duration: 0.6,
-    ease: "power3.out",
-    stagger: {
-      each: 0.12,
-      from: "center"
-    }
-  }
-)
-
-/* settle gently (no harsh snap) */
-.to(".heart", {
-  scale: 1,
-  duration: 0.4,
-  ease: "sine.out"
-}, "-=0.3");
-
-}
-if (mobileOne) { 
-  tl.to(".wrapsImg", {
-    left: 150,
-    top: 350,     
-    rotate: 0,    
-    ease: "power3.inOut",
-    duration: 1.4
-  }, 0);
-}
-
-/* ── Phase 2: Content comes AFTER ── */
-tl.from(".servicesContent", {
-  x: 150,
-  opacity: 0,
-  duration: 0.8,
-  ease: "power2.out"
-}, "+=0.3"); // 👈 delay AFTER wrap animation
-
-/* ── Optional: Text animation ── */
-tl.from(".wrapsSection h2", { 
-  opacity: 0,
-  duration: 0.6
-}, "-=0.5");
-
- 
-
-tl.fromTo(".heart",
-  {
-    opacity: 0,
-    scale: 0.6, 
-  },
-  {
-    opacity: 1,
-    scale: 1.1, 
-    duration: 0.6,
-    ease: "power3.out",
-    stagger: {
-      each: 0.12,
-      from: "center"
-    }
-  }
-)
-
-/* settle gently (no harsh snap) */
-.to(".heart", {
-  scale: 1,
-  duration: 0.4,
-  ease: "sine.out"
-}, "-=0.3");
-
-});
-
-
-      
-
-    const d1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".discoverSection",
-    start: "top 50%",
-    end: "top 30%",
-    scrub: 1
-  }
-});
-
-d1.to(".fillText", {
-  width: "100%",
-  duration: 1,
-  ease: "power2.out"
-})
-
-dl.from(".stroke", {
-  y: 60,
-  opacity: 0,
-  duration: 0.8
-}, 0)
-     
-        
-    });
-    return () => tl.kill();
-  });
-
 
 
 </script>
