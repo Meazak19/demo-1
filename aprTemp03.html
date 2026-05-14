@@ -23,17 +23,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.1.1/animate.min.css"> 
  
 
-
 <style type="text/css">
 
   /* 
-
     font-family: "Poppins", sans-serif; 
     font-family: "Urbanist", sans-serif; 1 para
-
   */  
   
-  
+
   body .page-wrapper { 
     font-family: "Poppins", sans-serif; 
       color: #6c6a6a; 
@@ -456,7 +453,7 @@
 
 .page-wrapper .discoverContainer h2.stroke {
   color: transparent;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 2px #fff;
 }
 .page-wrapper .discoverContainer h2 .spanTwo{ 
   font-size: 45px;
@@ -552,8 +549,8 @@
       }
 
 /* =============================================
-     RESPONSIVE BREAKPOINTS
-     ============================================= */
+     RESPONSIVE BREAKPOINTS 
+     ============================================= */ 
 
   @media (max-width: 1499px) {
    .page-wrapper h1 {
@@ -722,7 +719,9 @@
         .page-wrapper .footerFriesImg {
         transform: scale(1.7) translateX(73px);
     }
-
+.page-wrapper .discoverContainer p {
+  font-size: 19px;
+}
   }
 
   @media (max-width: 991px) {
@@ -823,10 +822,12 @@
     }
          .page-wrapper h1 {
         font-size: 35px;
+        filter: drop-shadow(1px 1px 0px black);
     }
         .page-wrapper h1 .smallTxt {
-        font-size: 17px;
+          font-size: 17px;
         letter-spacing: 0;
+        font-weight: 400;
     }
         .page-wrapper .orderBtn {
         margin-top: 15px;
@@ -862,6 +863,7 @@
 .page-wrapper .wrapsSection h2 {
   margin-bottom: 50px;
   padding-left: 0;
+  text-align: center;
 }
     .page-wrapper .wrapsSection {
         margin: 0px 0;
@@ -870,7 +872,7 @@
         width: 150px;
          top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.5) rotate(0deg);
+  transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
   will-change: transform , auto , top, left;
     }
         .page-wrapper .likeImgOne {
@@ -902,13 +904,44 @@
     .page-wrapper .servicesContent::after {
       height: 110%;
     }
-    
+    .page-wrapper .discoverContainer {
+      padding: 25px;
+    }
+    .page-wrapper .discoverContainer h2 {
+        font-size: 30px;
+        letter-spacing: 0;
+        -webkit-text-stroke: 1px #fff;
+    }
+    .page-wrapper .footerFriesImg {
+        transform: scale(1.6) translateX(34px);
+    }
+    .page-wrapper .discoverContainer h2.stroke {
+          -webkit-text-stroke: 1px #fff;
+    }
+        .page-wrapper .discoverContainer h2 .spanTwo {
+        font-size: 23px;
+    }
+        .page-wrapper p {
+        font-size: 17px;
+    }
   }
 
   @media (max-width: 575px) {
+    .page-wrapper .orderBtn.two {
+          padding: 8px 20px; 
+    margin-top: 0px;
+    }
+    .page-wrapper .aboutSection {
+    padding-bottom: 10px;
+}
     .page-wrapper h1 {
       text-align: center;
       font-size: 32px;
+              max-width: 250px;
+        margin: auto;
+    }
+    .page-wrapper .discoverContainer p {
+      margin-top: 10px;
     }
      .page-wrapper .headerContent {
           text-align: center;
@@ -942,23 +975,44 @@
         width: 98%;
         margin: auto;
     }
-        .page-wrapper .wrapsImg {
-        transform: unset;
-        width: 200px;
-        margin: auto;
-        transform-origin: center;
-        left: 0;
-        right: 0;
-        top: 0;
+        .page-wrapper .wrapsImg { 
+       width: 150px;
+       top: 50%;
     } 
         .page-wrapper .wrapsSection h2 {
         font-size: 25px;
         text-align: center;
         margin-bottom: 0;
+        max-width: 350px;
+        margin: auto;
         }
         .page-wrapper .wrapsSection .row {
-          gap: 300px;
+          gap: 75px;
         }
+        .page-wrapper p {
+        font-size: 15px;
+    }
+    .page-wrapper .discoverContainer {
+        padding: 25px;
+        max-width: 300px;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .page-wrapper .aboutContent::before {
+          filter: drop-shadow(-10px 10px 0px #c0392b);
+              left: -15px;
+    }
+    .page-wrapper .aboutContent::after {
+          right: -15px;
+              filter: drop-shadow(10px 10px 0px #c0392b);
+    }
+    .page-wrapper .aboutContent::before, .page-wrapper .aboutContent::after {
+      bottom: 45px;
+    }
+        .page-wrapper .footerFriesImg {
+        transform: scale(1.6) translateX(39.5px);
+            clip-path: inset(0 9.9% 0 0);
+    }
   }
 
   @media (max-width: 480px) {
@@ -968,6 +1022,8 @@
   
 
 </style>
+
+
 
 
 </head>
@@ -1111,12 +1167,12 @@
     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776791111phpurMFu2.png" class="img-fluid wrapsImg" alt="">
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-lg-7 col-md-6 col-sm-10">
+        <div class="col-lg-7 col-md-6 col-sm-12">
           <h2>
             HOME-COOKED FLAVOURS DELIVERED WITH LOVE
           </h2>
         </div>
-        <div class="col-lg-5 col-md-6 col-sm-10">
+        <div class="col-lg-5 col-md-6 col-sm-12">
           <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpLIaYLB.png" class="img-fluid likeImgOne heart" alt="">
           <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpLecsL8.png" class="img-fluid likeImgTwo heart" alt="">
           <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1776462121phpOSYHgn.png" class="img-fluid likeImgThree heart" alt="">
@@ -1153,7 +1209,7 @@
   <section class="discoverSection">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
           <div class="discoverContainer left js-tilt" >
             <h2 class="stroke">
     Takeaway 
@@ -1169,7 +1225,7 @@
             <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1777063942phpxTLpp5.png" class="img-fluid friedchickImg" alt="">
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="discoverContainer js-tilt" >
             <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1777063942phphLpfkP.png" class="img-fluid footerFriesImg" alt="">
           </div>
@@ -1254,8 +1310,8 @@
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
 
 <script> 
  
@@ -1263,8 +1319,7 @@
      $('.js-tilt').tilt({
          maxTilt: 5, 
          maxGlare: .2,
-perspective: 1000 , // lower = more dramatic 3D effect
-scale: 1.05, 
+perspective: 1000 , // lower = more dramatic 3D effect 
 speed: 400,         // transition speed (higher = smoother/slower)
 easing: "cubic-bezier(.03,.98,.52,.99)", // animation curve     
     speed: 800,
@@ -1279,6 +1334,14 @@ easing: "cubic-bezier(.03,.98,.52,.99)", // animation curve
  
 
 
+</script>
+
+<script>
+  // gsap.registerPlugin(ScrollTrigger);
+
+  // gsap.ticker.lagSmoothing(0);
+
+  // ScrollTrigger.normalizeScroll(true);
 </script>
  
 
