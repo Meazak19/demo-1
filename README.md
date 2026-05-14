@@ -1,4 +1,7 @@
+
  
+
+       
 
 
   $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js", function() {
@@ -26,7 +29,7 @@ document.querySelectorAll(".animOne").forEach(el => {
     scrollTrigger: {
       trigger: el,
       start: "top 80%",
-      end: "bottom 20%",
+      end: "bottom 10%",
       toggleActions: "play reverse play reverse"
     }
   });
@@ -35,8 +38,8 @@ document.querySelectorAll(".animOne").forEach(el => {
        const header1 = gsap.timeline({
   scrollTrigger: {
     trigger: ".firstSection",
-    start: "top top",
-    end: "+=180%",  
+    start: "top 50%",
+    end: "+=10%",  
   }
 });
 
@@ -101,7 +104,7 @@ header1.from(".leftImg, .rightImg", {
   duration: 0.7,
   ease: "power2.out",
   stagger: 0.2
-}, "-=0.6"); // 👈 overlaps with text
+}, "+=0.2"); // 👈 overlaps with text
 
 /* ── TOMATO POP (mid-wave accent) ── */
 header1.from(".tomotoImgOne, .tomotoImgTwo", {
@@ -353,6 +356,30 @@ mm.add("(max-width: 767px)", () => {
 
 });
 
+mm.add("(max-width: 575px)", () => {
+ const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".wrapsSection",
+      start: "top 60%", // 👈 slightly later trigger for mobile
+      end: "bottom top",     // 👈 shorter scroll distance2
+      scrub: 1,
+      pin: false,   
+      
+    }
+  });
+
+   /* Image animation (adjusted) */
+  tl.to(".wrapsImg", {
+    x: 0,     // 👈 move LEFT
+    y: -200,      // 👈 slight down movement 
+    ease: "none"
+  }, 0);
+
+ 
+ 
+
+});
+
 
 
 // Footer
@@ -365,7 +392,7 @@ mm2.add("(min-width: 1199px)", () => {
     scrollTrigger: {
       trigger: ".discoverSection",
       start: "top 80%",
-      end: "bottom 10%",
+      end: "bottom 40%",
       scrub: 1.5
     }
   });
@@ -386,7 +413,7 @@ mm2.add("(min-width: 992px)", () => {
     scrollTrigger: {
       trigger: ".discoverSection",
       start: "top 80%",
-      end: "bottom 40%",
+      end: "bottom 50%",
       scrub: 1.5
     }
   });
@@ -410,7 +437,7 @@ mm2.add("(max-width: 991px)", () => {
     scrollTrigger: {
       trigger: ".discoverSection",
       start: "top 85%",
-      end: "top 10%",
+      end: "top 20%",
       scrub: 1
     }
   });
@@ -433,3 +460,8 @@ mm2.add("(max-width: 991px)", () => {
 
 
  
+     
+    
+
+
+
