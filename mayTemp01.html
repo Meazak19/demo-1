@@ -34,7 +34,20 @@
     https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1778973187phpcmEemY.jpg
   */  
   
-
+.headerContent h1 span.word {
+  display: inline-block;
+  will-change: transform;
+}
+.wave-letter{
+  display:inline-block;
+  will-change:transform;
+}
+.wave-letter{
+  display:inline-block;
+  will-change:transform;
+  backface-visibility:hidden;
+  transform-style:preserve-3d;
+}
   body .page-wrapper { 
       font-family: "Montserrat", sans-serif; 
       color: #6c6a6a; 
@@ -140,6 +153,8 @@
     filter: brightness(0) saturate(100%) invert(71%) sepia(80%) saturate(3122%) hue-rotate(5deg) brightness(111%) contrast(101%);
     background-size: cover;
      }
+
+     
      .page-wrapper .orderBtn {
       display: inline-block;
     background: #feb400;
@@ -203,6 +218,33 @@
     justify-content: center; 
   }
 
+  /* Allow hero image to overflow below the header section */
+.page-wrapper {
+  overflow: visible;          /* was: overflow: hidden — this was clipping */
+}
+/* In your existing CSS — reduce the scale so it fits */
+.page-wrapper .headerImg img {
+  transform       : scale(1.05) rotate(-5deg);   /* was scale(1.2) rotate(-10deg) */
+  transform-origin: bottom center;
+}
+
+@media (max-width: 767px) {
+  .page-wrapper .headerImg img {
+    transform: scale(1) rotate(0deg);
+    margin-top: 20px;
+  }
+}
+.headerSection {
+  overflow: visible;
+}
+
+/* GSAP pin creates this wrapper — must allow overflow */
+.pin-spacer {
+  overflow: visible !important;
+}
+ .step-icon-wrap.one {
+  padding: 10px;
+ }
   .step-icon-wrap {
     width: 150px;
     height: 150px;
@@ -807,8 +849,8 @@
             <div class="paymentContainer">
               <div class="step-card">
                 <div class="step-num">1</div>
-                <div class="step-icon-wrap">
-                  <img loading="lazy" src="https://assets.touch2success.com/static/f94bc5857391398efebdfc64c2ad4730/img/1749557495phpuD8ZFF.png" class="img-fluid" alt="">
+                <div class="step-icon-wrap one">
+                  <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1777992782phpz3YG8B.png" class="img-fluid" alt="">
                 </div>
                 <div class="step-title">Pick a dish</div>
                 <div class="step-desc">Choose your favorite dish from <br> our delectable menu.</div>
