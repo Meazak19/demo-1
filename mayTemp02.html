@@ -53,13 +53,13 @@
       position: relative;
       }  
      .page-wrapper p {
-      margin-bottom: 25px;
-    font-size: 25px;
-    color: #5b5a59;
+         margin-bottom: 25px;
+    font-size: 26px;
+    color: #030204;
     letter-spacing: 0px;
     line-height: 1.5;
-    font-weight: 400;
-    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
      }
   
      .page-wrapper p > a {
@@ -98,7 +98,7 @@
     letter-spacing: 0;
     font-weight: 500;
     line-height: 1;
-    margin-bottom: 0;
+        margin-bottom: 30px;
      }
    .page-wrapper h1 span {
     font-size: 115px;
@@ -106,38 +106,98 @@
     font-family: "Great Vibes", cursive;
 }
      .page-wrapper h2{ 
-      color: #1566c1;
-    font-size: 150px;
-    font-weight: 100;
-    filter: drop-shadow(2px 2px 0px #256cbe87);
-    margin-bottom: 40px;
+        color: #000000;
+    font-size: 60px;
+    letter-spacing: 0px;
+    margin-bottom: 25px;
     line-height: 1;
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
      }
      .page-wrapper h3{  
-      font-family: "Poppins", sans-serif;
-    font-size: 50px;
-    color: #d42a0b;
-    font-weight: 700;
+    font-size: 40px;
+    color: #000000;
+    font-family: "Jost", sans-serif;
      }
      .page-wrapper .headerSection {
           background: linear-gradient(90deg, rgb(68 64 168) 0%, rgb(93 189 237) 35%, rgb(184 255 255) 100%);
     padding: 100px 0;
      }
- 
- 
+     .page-wrapper h2 span{ 
+    font-size: 46px;
+    color: #4119a0;
+    font-family: "Great Vibes", cursive;
+    word-spacing: 10px;
+     }
+     .page-wrapper .orderBtn {
+          background: red;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 20px;
+    border: 3px solid #fff;
+     } 
+     .page-wrapper .aboutSection {
+      padding: 70px 0;
+     }
+     .page-wrapper .afterHeader .btmLine {
+          width: 70%;
+    height: 10px;
+    background-color: #ff0000;
+     }
+ .page-wrapper .afterHeader {
+      background: #c6c7ff;
+ }
+ .page-wrapper .aboutContent {
+      display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+ }
+ .page-wrapper .innerContent {
+      padding: 50px 25px;
+    text-align: center;
+    background: radial-gradient(circle at 50% 106%, rgba(126, 107, 216, 0.78) 0%, transparent 39%), linear-gradient(180deg, #441a9d 0%, #42169d 72%, #46209f 100%);
+    border: 6px solid #abaced;
+    box-shadow: 0 12px 30px rgb(205 205 255);
+    transition: transform 340ms ease, box-shadow 340ms ease, border-color 340ms ease, filter 340ms ease;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+ }
+ .page-wrapper .innerContent h2 {
+      color: #fff;
+    font-size: 55px;
+    font-family: "Great Vibes", cursive;
+ }
+  .page-wrapper .innerContent p {
+        font-size: 20px;
+    margin-bottom: 0;
+    color: #e1ddff;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+  .page-wrapper .serviceSection {
+        padding: 50px 0 100px;
+  }
+   .page-wrapper .innerContent::after {
+        content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(115deg, transparent 8%, rgba(255, 255, 255, 0.22) 28%, transparent 46%);
+    transform: translateX(-130%) skewX(-15deg);
+    transition: transform 760ms ease;
+    pointer-events: none;
+   }
+
+   .page-wrapper .innerContent:hover:after {
+    transform: translateX(130%) skewX(-15deg);
+   }
  
 
      
-     .page-wrapper .orderBtn {
-      display: inline-block;
-    background: #feb400;
-    font-size: 25px;
-    padding: 15px 25px;
-    color: #024288;
-    font-weight: 700;
-    border-radius: 10px;
-     } 
-
 
    @media(min-width:1200px){
           .page-wrapper .container{
@@ -200,7 +260,7 @@
           INDULGE IN <br>
           <span> Sweet Perfection </span>
         </h1>
-        <a href="/order-now">Order Now</a>
+        <a href="/order-now" class="orderBtn">Order Now</a>
       </div>
       <div class="col-lg-5 col-md-12">
         <div class="headerImg">
@@ -210,6 +270,94 @@
     </div>
   </div>
 </section>
+
+<div class="afterHeader">
+  <section class="aboutSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="aboutContent">
+            <h2>
+              DESSERTS FOR <span> Every Mood & Occasion </span>
+            </h2>
+            <div>
+              <h3>
+                About Us
+              </h3>
+              <div class="btmLine"> </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <p class="mb-0">
+            Indulge in the sweetest treats at {TAKEAWAY NAME}, your go-to dessert haven in {TAKEAWAY TOWN}. From classic favourites to innovative creations, our desserts are andcrafted with the finest ingredients to satisfy every craving.
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <p>
+            Whether you're celebrating a special moment or simply treating yourself, our cosy ambience and delightful menu make every visit a sweet escape.
+          </p>
+          <a href="/order-now" class="orderBtn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="serviceSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="innerContent">
+            <h2>
+              Our Services
+            </h2>
+            <p>
+              At (TAKEAWAY NAME), we take pride in serving delicious food with fast takeaway service in {TAKEAWAY TOWN). No matter the occasion or dietary need, we've got something for you. Find your new favourite meal today!
+            </p>
+          </div>
+        </div> 
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="innerContent">
+            <h2>
+              Our Services
+            </h2>
+            <p>
+              At (TAKEAWAY NAME), we take pride in serving delicious food with fast takeaway service in {TAKEAWAY TOWN). No matter the occasion or dietary need, we've got something for you. Find your new favourite meal today!
+            </p>
+          </div>
+        </div> 
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="innerContent">
+            <img src="https://assets.touch2success.com/static/8c45854cefaff577b5631714787b2042/img/1778257227phpu6R50D.jpg" class="img-fluid serviseImg" alt="">
+          </div>
+        </div> 
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="innerContent">
+            <h2>
+              Our Services
+            </h2>
+            <p>
+              At (TAKEAWAY NAME), we take pride in serving delicious food with fast takeaway service in {TAKEAWAY TOWN). No matter the occasion or dietary need, we've got something for you. Find your new favourite meal today!
+            </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="dessertsSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-6 col-sm-12">
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1779398456php50ZIdz.png" class="img-fluid crepeImg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
   
 
